@@ -5,15 +5,15 @@ toc: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/sceneries/DAOL/DAOL_BANNER.webp
-  teaser: /assets/images/sceneries/DAOL/DAOL07.webp
+  overlay_image: /assets/images/sceneries/daol/DAOL_BANNER.webp
+  teaser: /assets/images/sceneries/daol/DAOL07.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "#"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"
-    image: /assets/images/sceneries/DAOL/DAOL01.webp
+    image: /assets/images/sceneries/daol/DAOL01.webp
     image_alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
     text: "Tafraoui"
   - title: "ICAO"
@@ -26,29 +26,29 @@ sidebar:
     text: "Yes"
 
 gallery:
-  - url: /assets/images/sceneries/DAOL/DAOL01.webp
-    image_path: /assets/images/sceneries/DAOL/DAOL01.webp
+  - url: /assets/images/sceneries/daol/DAOL01.webp
+    image_path: /assets/images/sceneries/daol/DAOL01.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/DAOL/DAOL02.webp
-    image_path: /assets/images/sceneries/DAOL/DAOL02.webp
+  - url: /assets/images/sceneries/daol/DAOL02.webp
+    image_path: /assets/images/sceneries/daol/DAOL02.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/DAOL/DAOL03.webp
-    image_path: /assets/images/sceneries/DAOL/DAOL03.webp
+  - url: /assets/images/sceneries/daol/DAOL03.webp
+    image_path: /assets/images/sceneries/daol/DAOL03.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/DAOL/DAOL04.webp
-    image_path: /assets/images/sceneries/DAOL/DAOL04.webp
+  - url: /assets/images/sceneries/daol/DAOL04.webp
+    image_path: /assets/images/sceneries/daol/DAOL04.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/DAOL/DAOL05.webp
-    image_path: /assets/images/sceneries/DAOL/DAOL05.webp
+  - url: /assets/images/sceneries/daol/DAOL05.webp
+    image_path: /assets/images/sceneries/daol/DAOL05.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/DAOL/DAOL06.webp
-    image_path: /assets/images/sceneries/DAOL/DAOL06.webp
+  - url: /assets/images/sceneries/daol/DAOL06.webp
+    image_path: /assets/images/sceneries/daol/DAOL06.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/DAOL/DAOL07.webp
-    image_path: /assets/images/sceneries/DAOL/DAOL07.webp
+  - url: /assets/images/sceneries/daol/DAOL07.webp
+    image_path: /assets/images/sceneries/daol/DAOL07.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/DAOL/DAOL08.webp
-    image_path: /assets/images/sceneries/DAOL/DAOL08.webp
+  - url: /assets/images/sceneries/daol/DAOL08.webp
+    image_path: /assets/images/sceneries/daol/DAOL08.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
 ---
 

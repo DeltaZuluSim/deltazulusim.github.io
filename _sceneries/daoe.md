@@ -5,15 +5,15 @@ toc: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/sceneries/DAOE/DAOE_BANNER.webp
-  teaser: /assets/images/sceneries/DAOE/DAOE01.webp
+  overlay_image: /assets/images/sceneries/daoe/DAOE_BANNER.webp
+  teaser: /assets/images/sceneries/daoe/DAOE01.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "#"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"
-    image: /assets/images/sceneries/DAOE/DAOE01.webp
+    image: /assets/images/sceneries/daoe/DAOE01.webp
     image_alt: "DAOE AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
     text: "Bousfer"
   - title: "ICAO"
@@ -26,17 +26,17 @@ sidebar:
     text: "Yes"
 
 gallery:
-  - url: /assets/images/sceneries/DAOE/DAOE01.webp
-    image_path: /assets/images/sceneries/DAOE/DAOE01.webp
+  - url: /assets/images/sceneries/daoe/DAOE01.webp
+    image_path: /assets/images/sceneries/daoe/DAOE01.webp
     alt: "DAOE AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/DAOE/DAOE02.webp
-    image_path: /assets/images/sceneries/DAOE/DAOE02.webp
+  - url: /assets/images/sceneries/daoe/DAOE02.webp
+    image_path: /assets/images/sceneries/daoe/DAOE02.webp
     alt: "DAOE AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/DAOE/DAOE03.webp
-    image_path: /assets/images/sceneries/DAOE/DAOE03.webp
+  - url: /assets/images/sceneries/daoe/DAOE03.webp
+    image_path: /assets/images/sceneries/daoe/DAOE03.webp
     alt: "DAOE AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/DAOE/DAOE04.webp
-    image_path: /assets/images/sceneries/DAOE/DAOE04.webp
+  - url: /assets/images/sceneries/daoe/DAOE04.webp
+    image_path: /assets/images/sceneries/daoe/DAOE04.webp
     alt: "DAOE AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
 
 ---
