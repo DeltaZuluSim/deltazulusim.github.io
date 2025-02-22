@@ -6,15 +6,15 @@ toc: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/charts/daaa/banner.png
-  teaser: /assets/images/charts/daaa/teaser.png
+  overlay_image: /assets/images/charts/daaa/banner.webp
+  teaser: /assets/images/charts/daaa/teaser.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download all"
       url: "{% download_link cloud9.tar %}"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Country"
-    image: /assets/images/charts/daaa/teaser.png
+    image: /assets/images/charts/daaa/teaser.webp
     text: "Algeria"
   - title: "FIR"
     text: "DAAA"

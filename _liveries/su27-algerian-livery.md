@@ -5,15 +5,15 @@ toc: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\05.png
-  teaser: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\05.png
+  overlay_image: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/05.webp
+  teaser: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/05.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "#"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Aircraft"
-    image: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\05.png
+    image: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/05.webp
     image_alt: "DC-Designs SU-27 KJD"
     text: "DC-Designs SU-27"
   - title: "OACI"
@@ -26,29 +26,29 @@ sidebar:
     text: "Yes"
 
 gallery:
-  - url: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\01.png
-    image_path: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\01.png
+  - url: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/01.webp
+    image_path: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/01.webp
     alt: "Algerian Air Force Livery Pack for DC-Designs SU-27"
-  - url: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\02.png
-    image_path: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\02.png
+  - url: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/02.webp
+    image_path: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/02.webp
     alt: "Algerian Air Force Livery Pack for DC-Designs SU-27"
-  - url: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\03.png
-    image_path: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\03.png
+  - url: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/03.webp
+    image_path: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/03.webp
     alt: "Algerian Air Force Livery Pack for DC-Designs SU-27"
-  - url: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\04.png
-    image_path: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\04.png
+  - url: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/04.webp
+    image_path: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/04.webp
     alt: "Algerian Air Force Livery Pack for DC-Designs SU-27"
-  - url: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\05.png
-    image_path: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\05.png
+  - url: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/05.webp
+    image_path: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/05.webp
     alt: "Algerian Air Force Livery Pack for DC-Designs SU-27"
-  - url: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\06.png
-    image_path: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\06.png
+  - url: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/06.webp
+    image_path: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/06.webp
     alt: "Algerian Air Force Livery Pack for DC-Designs SU-27"
-  - url: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\07.png
-    image_path: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\07.png
+  - url: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/07.webp
+    image_path: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/07.webp
     alt: "Algerian Air Force Livery Pack for DC-Designs SU-27"
-  - url: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\08.png
-    image_path: /assets/images/liveries\dcdesigns-aircraft-su27-kjd\08.png
+  - url: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/08.webp
+    image_path: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/08.webp
     alt: "Algerian Air Force Livery Pack for DC-Designs SU-27"
 
 ---

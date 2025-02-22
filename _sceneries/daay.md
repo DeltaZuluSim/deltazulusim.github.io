@@ -6,15 +6,15 @@ toc: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/sceneries/daay/DAAY_BANNER.png
-  teaser: /assets/images/sceneries/daay/DAAY07.png
+  overlay_image: /assets/images/sceneries/daay/DAAY_BANNER.webp
+  teaser: /assets/images/sceneries/daay/DAAY07.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "#"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"
-    image: /assets/images/sceneries/daay/DAAY01.png
+    image: /assets/images/sceneries/daay/DAAY01.webp
     image_alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
     text: "Mecheria"
   - title: "ICAO"
@@ -27,29 +27,29 @@ sidebar:
     text: "Yes"
 
 gallery:
-  - url: /assets/images/sceneries/daay/DAAY01.png
-    image_path: /assets/images/sceneries/daay/DAAY01.png
+  - url: /assets/images/sceneries/daay/DAAY01.webp
+    image_path: /assets/images/sceneries/daay/DAAY01.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY02.png
-    image_path: /assets/images/sceneries/daay/DAAY02.png
+  - url: /assets/images/sceneries/daay/DAAY02.webp
+    image_path: /assets/images/sceneries/daay/DAAY02.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY03.png
-    image_path: /assets/images/sceneries/daay/DAAY03.png
+  - url: /assets/images/sceneries/daay/DAAY03.webp
+    image_path: /assets/images/sceneries/daay/DAAY03.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY04.png
-    image_path: /assets/images/sceneries/daay/DAAY04.png
+  - url: /assets/images/sceneries/daay/DAAY04.webp
+    image_path: /assets/images/sceneries/daay/DAAY04.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY05.png
-    image_path: /assets/images/sceneries/daay/DAAY05.png
+  - url: /assets/images/sceneries/daay/DAAY05.webp
+    image_path: /assets/images/sceneries/daay/DAAY05.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY06.png
-    image_path: /assets/images/sceneries/daay/DAAY06.png
+  - url: /assets/images/sceneries/daay/DAAY06.webp
+    image_path: /assets/images/sceneries/daay/DAAY06.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY07.png
-    image_path: /assets/images/sceneries/daay/DAAY07.png
+  - url: /assets/images/sceneries/daay/DAAY07.webp
+    image_path: /assets/images/sceneries/daay/DAAY07.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY08.png
-    image_path: /assets/images/sceneries/daay/DAAY08.png
+  - url: /assets/images/sceneries/daay/DAAY08.webp
+    image_path: /assets/images/sceneries/daay/DAAY08.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
 ---
 
