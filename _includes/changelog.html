@@ -5,8 +5,8 @@
     <thead>
       <tr>
         <th style="text-align: center;">Version</th>
-        <th style="text-align: left;">Date</th>
-        <th style="text-align: left;">Changes</th>
+        <th style="text-align: center;">Date</th>
+        <th style="text-align: center;">Changes</th>
         <th style="text-align: center;">Package</th>
       </tr>
     </thead>
@@ -16,9 +16,9 @@
           <td style="text-align: center">{{ v.version }}</td>
           <td style="text-align: left">{{ v.version_date }}</td>
           <td style="text-align: left">
-            {% for change in v.changes %}
-              - {{ change }} <br />
-            {% endfor %}
+              {% for change in v.changes %}
+                <li> {{ change }} </li>
+              {% endfor %}
           </td>
           <td style="text-align: center">
             <a href="{{ v.download_url }}" class="btn btn--primary btn--x-small"><i class="fas fa-download"></i> Download</a>

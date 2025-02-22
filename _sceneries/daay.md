@@ -12,7 +12,7 @@ header:
   teaser: /assets/images/sceneries/daay/DAAY07.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "#"
+      url: "https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daay-mecheria/V1.0.0/dzs-airport-daay-mecheria.zip"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"
@@ -57,7 +57,7 @@ gallery:
 changelog:
   - version: "1.0.0"
     version_date: "2025-02-01"
-    download_url: "#"
+    download_url: "https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daay-mecheria/V1.0.0/dzs-airport-daay-mecheria.zip"
     changes:
       - "initial version"
 ---
@@ -96,4 +96,4 @@ This scenery references some optional models from the following third party scen
 ## Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
 
-[<i class='fas fa-download'></i> Download](#){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download](https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daay-mecheria/V1.0.0/dzs-airport-daay-mecheria.zip){: .btn .btn--success .btn--x-large}

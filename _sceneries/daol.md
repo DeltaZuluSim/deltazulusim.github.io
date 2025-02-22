@@ -11,7 +11,7 @@ header:
   teaser: /assets/images/sceneries/daol/DAOL07.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "#"
+      url: "https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daol-tafaraoui/V1.0.0/dzs-airport-daol-tafaraoui.zip"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"
@@ -56,7 +56,7 @@ gallery:
 changelog:
   - version: "1.0.0"
     version_date: "2025-02-01"
-    download_url: "#"
+    download_url: "https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daol-tafaraoui/V1.0.0/dzs-airport-daol-tafaraoui.zip"
     changes:
       - "initial version"
 ---
@@ -83,5 +83,5 @@ This custom scenery for Tafraoui Military Base (DAOL) enhances the airfield with
 
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
 
-[<i class='fas fa-download'></i> Download](#){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download](https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daol-tafaraoui/V1.0.0/dzs-airport-daol-tafaraoui.zip){: .btn .btn--success .btn--x-large}
 
