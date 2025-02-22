@@ -1,0 +1,16 @@
+# main links
+main:
+  - title: "Home"
+    url: /
+  - title: "Sceneries"
+    url: /sceneries
+  - title: "Liveries"
+    url: /liveries
+  - title: "Charts"
+    url: /charts
+  - title: "Contact"
+    url: /contact/
+  # - title: "Sample Collections"
+    # url: /collection-archive/
+  # - title: "Sitemap"
+    # url: /sitemap/
