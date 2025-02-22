@@ -53,22 +53,12 @@ gallery:
     image_path: /assets/images/sceneries/daol/DAOL08.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
 
-versions:
+changelog:
   - version: "1.0.0"
     version_date: "2025-02-01"
     download_url: "#"
     changes:
       - "initial version"
-      - "another change"
-  - version: "0.5.0"
-    version_date: "2025-01-01"
-    download_url: "#"
-    changes:
-      - "Beta version"
-      - "Initial push change"
-      - "Third change"
-      - "Last change" 
-
 ---
 
 This custom scenery for Tafraoui Military Base (DAOL) enhances the airfield with more realistic structures, ground details, and lighting. Located near Oran, Algeria, DAOL is primarily used for military training and aviation operations.

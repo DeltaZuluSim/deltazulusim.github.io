@@ -3,6 +3,7 @@ title: "DAOE BOUSFER Airport"
 excerpt: "Microsoft Flight Simulation Scenery for BOUSFER (DAOE) Military Airport for MSFS2020 & MSFS2024"
 toc: true
 date: 2025-02-05T00:00:00+01:00
+last_modified_at: 2025-02-06T00:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -40,6 +41,12 @@ gallery:
     image_path: /assets/images/sceneries/daoe/DAOE04.webp
     alt: "DAOE AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
 
+changelog:
+  - version: "1.0.0"
+    version_date: "2025-02-01"
+    download_url: "#"
+    changes:
+      - "initial version"
 ---
 
 Bousfer Military Airport (DAOE) is an Algerian military airbase, located near Oran, plays a strategic role in regional operations and now comes to life in MSFS 2020 and MSFS 2024 with stunning accuracy.

@@ -1,8 +1,9 @@
 ---
-title: "SU-27 Algerian Air Force Livery Pack"
-excerpt: "Microsoft Flight Simulation Livery for DC-Designs SU-27"
+title: "Algerian Air Force Livery Pack for DC Designs SU-27"
+excerpt: "Microsoft Flight Simulator 2020/2024 Livery for DC-Designs SU-27"
 toc: true
 date: 2025-02-02T00:00:00+01:00
+last_modified_at: 2025-02-06T00:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -52,6 +53,12 @@ gallery:
     image_path: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/08.webp
     alt: "Algerian Air Force Livery Pack for DC-Designs SU-27"
 
+changelog:
+  - version: "1.0.0"
+    version_date: "2025-02-01"
+    download_url: "#"
+    changes:
+      - "initial version"
 ---
 
 Bring the might of the Algerian Air Force to Microsoft Flight Simulator with this detailed SU-27 livery pack. This pack includes six unique liveries, each meticulously crafted to reflect the different camouflage patterns and operational aesthetics of the Algerian Air Force. Whether you're flying combat missions or performing high-speed maneuvers, these liveries will make your SU-27 stand out with national pride.

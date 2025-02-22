@@ -3,6 +3,7 @@ title: "DAAY MECHERIA Airport"
 excerpt: "Microsoft Flight Simulation Scenery for Mecheria (DAAY) Military Airport for MSFS2020 & MSFS2024"
 toc: true
 date: 2025-02-04T00:00:00+01:00
+last_modified_at: 2025-02-06T00:00:00+01:00
 # comments: true
 header:
   overlay_color: "#000"
@@ -52,6 +53,13 @@ gallery:
   - url: /assets/images/sceneries/daay/DAAY08.webp
     image_path: /assets/images/sceneries/daay/DAAY08.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
+
+changelog:
+  - version: "1.0.0"
+    version_date: "2025-02-01"
+    download_url: "#"
+    changes:
+      - "initial version"
 ---
 
 Scenery for Mecheria Military Airport (DAAY), designed exclusively for Microsoft Flight Simulator 2020 and 2024. Situated in the arid expanses of Algeria, this airport is nestled amid rugged desert terrain and breathtaking mountains, providing a visually striking backdrop for your virtual flights.
