@@ -2,6 +2,7 @@
 title: "DAAY MECHERIA Airport"
 excerpt: "Microsoft Flight Simulation Scenery for Mecheria (DAAY) Military Airport for MSFS2020 & MSFS2024"
 toc: true
+date: 2025-02-04T00:00:00+01:00
 # comments: true
 header:
   overlay_color: "#000"

@@ -1,0 +1,30 @@
+{% if page.versions %}
+
+  <h2>Changelog</h2>
+  <table class="large-table">
+    <thead>
+      <tr>
+        <th style="text-align: center;">Version</th>
+        <th style="text-align: left;">Date</th>
+        <th style="text-align: left;">Changes</th>
+        <th style="text-align: center;">Package</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for v in page.versions %}
+        <tr>
+          <td style="text-align: center">{{ v.version }}</td>
+          <td style="text-align: left">{{ v.version_date }}</td>
+          <td style="text-align: left">
+            {% for change in v.changes %}
+              - {{ change }} <br />
+            {% endfor %}
+          </td>
+          <td style="text-align: center">
+            <a href="{{ v.download_url }}" class="btn btn--primary btn--x-small"><i class="fas fa-download"></i> Download</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+{% endif %}

@@ -2,6 +2,7 @@
 title: "SU-27 Algerian Air Force Livery Pack"
 excerpt: "Microsoft Flight Simulation Livery for DC-Designs SU-27"
 toc: true
+date: 2025-02-02T00:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

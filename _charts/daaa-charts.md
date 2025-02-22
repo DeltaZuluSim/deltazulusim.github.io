@@ -1,7 +1,9 @@
 ---
 title: "DAAA Charts"
 excerpt: "A complete updated set of IFR navigation charts for Algeria (DAAA FIR) available for download."
-toc: true
+toc: false
+date: 2025-02-03T00:00:00+01:00
+classes: wide
 # comments: true
 header:
   overlay_color: "#000"
@@ -21,18 +23,6 @@ sidebar:
   - title: "AIRAC"
     text: "2504"
 ---
-
-<style>
-    .charts table {
-        width: 100%;
-    }
-
-    table colgroup col {
-    width: auto !important;
-}
-</style>
-  
-  
 
 The IFR navigation charts offered on this page are exclusively for flight simulation and cannot and must not be used for real-world aviation.
 {: .notice--danger}
@@ -73,5 +63,5 @@ The IFR navigation charts offered on this page are exclusively for flight simula
 | DAUT | TIMIMOUN | [<i class='fas fa-download'></i> Download](#){: .btn .btn--success} | 
 | DAUU | OUARGLE, AIN BEIDA | [<i class='fas fa-download'></i> Download](#){: .btn .btn--success} | 
 | DAUZ | ZARZAITINE, IN AMENAS | [<i class='fas fa-download'></i> Download](#){: .btn .btn--success} | 
-{:.charts}
+{:.large-table}
 

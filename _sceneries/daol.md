@@ -2,6 +2,8 @@
 title: "DAOL Tafraoui Airport"
 excerpt: "Microsoft Flight Simulation Scenery for Tafraoui (DAOL) Military Airport for MSFS2020 & MSFS2024"
 toc: true
+date: 2025-02-06T00:00:00+01:00
+last_modified_at: 2025-02-06T00:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -50,6 +52,23 @@ gallery:
   - url: /assets/images/sceneries/daol/DAOL08.webp
     image_path: /assets/images/sceneries/daol/DAOL08.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
+
+versions:
+  - version: "1.0.0"
+    version_date: "2025-02-01"
+    download_url: "#"
+    changes:
+      - "initial version"
+      - "another change"
+  - version: "0.5.0"
+    version_date: "2025-01-01"
+    download_url: "#"
+    changes:
+      - "Beta version"
+      - "Initial push change"
+      - "Third change"
+      - "Last change" 
+
 ---
 
 This custom scenery for Tafraoui Military Base (DAOL) enhances the airfield with more realistic structures, ground details, and lighting. Located near Oran, Algeria, DAOL is primarily used for military training and aviation operations.
@@ -75,3 +94,4 @@ This custom scenery for Tafraoui Military Base (DAOL) enhances the airfield with
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
 
 [<i class='fas fa-download'></i> Download](#){: .btn .btn--success .btn--x-large}
+

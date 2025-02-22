@@ -2,6 +2,7 @@
 title: "DAOE BOUSFER Airport"
 excerpt: "Microsoft Flight Simulation Scenery for BOUSFER (DAOE) Military Airport for MSFS2020 & MSFS2024"
 toc: true
+date: 2025-02-05T00:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
