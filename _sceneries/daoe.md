@@ -11,7 +11,7 @@ header:
   teaser: /assets/images/sceneries/daoe/DAOE01.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daoe-bousfer/V1.0.0/dzs-airport-daoe-bousfer.zip"
+      url: "https://deltazulusim.short.gy/sceneries/daoe/v1.0.0"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"
@@ -44,7 +44,7 @@ gallery:
 changelog:
   - version: "1.0.0"
     version_date: "2025-02-01"
-    download_url: "https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daoe-bousfer/V1.0.0/dzs-airport-daoe-bousfer.zip"
+    download_url: "https://deltazulusim.short.gy/sceneries/daoe/v1.0.0"
     changes:
       - "initial version"
 ---
@@ -70,4 +70,4 @@ Bousfer Military Airport (DAOE) is an Algerian military airbase, located near Or
 
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
 
-[<i class='fas fa-download'></i> Download](https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daoe-bousfer/V1.0.0/dzs-airport-daoe-bousfer.zip){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/sceneries/daoe/v1.0.0){: .btn .btn--success .btn--x-large}

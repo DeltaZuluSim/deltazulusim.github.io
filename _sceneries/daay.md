@@ -8,15 +8,15 @@ last_modified_at: 2025-02-06T00:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/sceneries/daay/DAAY_BANNER.webp
-  teaser: /assets/images/sceneries/daay/DAAY07.webp
+  overlay_image: /assets/images/sceneries/daay/DAAY08.webp
+  teaser: /assets/images/sceneries/daay/DAAY08.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daay-mecheria/V1.0.0/dzs-airport-daay-mecheria.zip"
+      url: "https://deltazulusim.short.gy/sceneries/daay/v1.0.0"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"
-    image: /assets/images/sceneries/daay/DAAY01.webp
+    image: /assets/images/sceneries/daay/DAAY07.webp
     image_alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
     text: "Mecheria"
   - title: "ICAO"
@@ -57,7 +57,7 @@ gallery:
 changelog:
   - version: "1.0.0"
     version_date: "2025-02-01"
-    download_url: "https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daay-mecheria/V1.0.0/dzs-airport-daay-mecheria.zip"
+    download_url: "https://deltazulusim.short.gy/sceneries/daay/v1.0.0"
     changes:
       - "initial version"
 ---
@@ -96,4 +96,4 @@ This scenery references some optional models from the following third party scen
 ## Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
 
-[<i class='fas fa-download'></i> Download](https://filedn.eu/lSy9AlL3WrbhSlfr9a0q1nL/dzs/downloads/sceneries/dzs-airport-daay-mecheria/V1.0.0/dzs-airport-daay-mecheria.zip){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/sceneries/daay/v1.0.0){: .btn .btn--success .btn--x-large}
