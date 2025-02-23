@@ -10,9 +10,9 @@ main:
     url: /charts
   - title: "Contact"
     url: /contact/
-  - title: "Sitemap"
-    url: /sitemap/
-  - title: "Archive"
-    url: /year-archive/
-  - title: "Categories"
-    url: /categories/
+#  - title: "Sitemap"
+#    url: /sitemap/
+#  - title: "Archive"
+#    url: /year-archive/
+#  - title: "Categories"
+#    url: /categories/

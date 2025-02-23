@@ -1,8 +1,8 @@
 ---
 title: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
 excerpt: "Microsoft Flight Simulation Livery for Azurpoly Transall C160 on MSFS2020 & MSFS2024"
-date: 2025-02-01T00:00:00+01:00
-last_modified_at: 2025-02-06T00:00:00+01:00
+date: 2025-02-03T00:00:00+01:00
+last_modified_at: 2025-02-03T00:00:00+01:00
 toc: true
 header:
   overlay_color: "#000"
@@ -11,7 +11,7 @@ header:
   teaser: /assets/images/liveries/azurpoly-transall-c160-kjd/05.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "#"
+      url: "https://deltazulusim.short.gy/liveries/azurpoly-aircraft-transall-C160-KJD/v2.0.0"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 #header:
 #  image: /assets/images/liveries/azurpoly-transall-c160-kjd/05.webp
@@ -27,7 +27,7 @@ sidebar:
   - title: "OACI"
     text: "KJD"
   - title: "Version"
-    text: "1.0.0"
+    text: "2.0.0"
   - title: "MSFS 2020"
     text: "Yes"
   - title: "MSFS 2024"
@@ -72,6 +72,11 @@ gallery:
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
 
 changelog:
+  - version: "2.0.0"
+    version_date: "2025-02-23"
+    download_url: "https://deltazulusim.short.gy/liveries/azurpoly-aircraft-transall-C160-KJD/v2.0.0"
+    changes:
+      - "Corrected arabic writing"
   - version: "1.0.0"
     version_date: "2025-02-01"
     download_url: "#"
@@ -107,4 +112,4 @@ Each livery is crafted to offer high realism, capturing the unique characteristi
 ## Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
 
-[<i class='fas fa-download'></i> Download](#){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/liveries/azurpoly-aircraft-transall-C160-KJD/v2.0.0){: .btn .btn--success .btn--x-large}

@@ -2,8 +2,8 @@
 title: "Algerian Air Force Livery Pack for DC Designs SU-27"
 excerpt: "Microsoft Flight Simulator 2020/2024 Livery for DC-Designs SU-27"
 toc: true
-date: 2025-02-02T00:00:00+01:00
-last_modified_at: 2025-02-06T00:00:00+01:00
+date: 2025-02-23T00:00:00+01:00
+last_modified_at: 2025-02-23T00:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -11,7 +11,7 @@ header:
   teaser: /assets/images/liveries/dcdesigns-aircraft-su27-kjd/05.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "#"
+      url: "https://deltazulusim.short.gy/liveries/dcdesigns-aircraft-su27-kjd/v2.0.0"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Aircraft"
@@ -21,7 +21,7 @@ sidebar:
   - title: "OACI"
     text: "KJD"
   - title: "Version"
-    text: "1.0.0"
+    text: "2.0.0"
   - title: "MSFS 2020"
     text: "Yes"
   - title: "MSFS 2024"
@@ -54,6 +54,11 @@ gallery:
     alt: "Algerian Air Force Livery Pack for DC-Designs SU-27"
 
 changelog:
+  - version: "2.0.0"
+    version_date: "2025-02-23"
+    download_url: "https://deltazulusim.short.gy/liveries/dcdesigns-aircraft-su27-kjd/v2.0.0"
+    changes:
+      - "Added pack of same variation for multiplayer on MSFS Network: KF-12, KF-15, KF-16, KF-21, KF-33, KF-46"
   - version: "1.0.0"
     version_date: "2025-02-01"
     download_url: "#"
@@ -84,4 +89,4 @@ For any issues or feedback, please leave a comment, and it will be addressed pro
 ## Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator. Soar through the skies with pride, sporting the colors of the Algerian Air Force!
 
-[<i class='fas fa-download'></i> Download](#){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/liveries/dcdesigns-aircraft-su27-kjd/v2.0.0){: .btn .btn--success .btn--x-large}
