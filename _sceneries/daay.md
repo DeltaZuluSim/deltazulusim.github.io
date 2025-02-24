@@ -106,7 +106,7 @@ Our scenery package captures every detail of Mecheria Military Airport, from the
 ## Installation Instructions
 - Download the scenery package.
 - Extract the contents to your Community folder.
-- Launch MSFS and enjoy your flight over Bousfer!
+- Launch MSFS and enjoy your flight over Mecheria!
 
 {% capture notice-text %}
 

@@ -103,7 +103,7 @@ This custom scenery for Tafraoui Military Base (DAOL) enhances the airfield with
 ## Installation Instructions
 - Download the scenery package.
 - Extract the contents to your Community folder.
-- Launch MSFS and enjoy your flight over Bousfer!
+- Launch MSFS and enjoy your flight over Tafraoui and Oran area!
 
 {% capture notice-text %}
 
