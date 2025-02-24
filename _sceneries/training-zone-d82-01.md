@@ -2,8 +2,8 @@
 title: "SOP Training area D82-01"
 excerpt: "Virtual Spercial operations Training zone for MSFS simmers in the special area D82 HASSI BAHBAH"
 toc: true
-date: 2025-02-25T00:00:00+01:00
-last_modified_at: 2025-02-25T00:00:00+01:00
+date: 2025-02-24T00:00:00+01:00
+last_modified_at: 2025-02-24T00:00:00+01:00
 # comments: true
 header:
   overlay_color: "#000"
