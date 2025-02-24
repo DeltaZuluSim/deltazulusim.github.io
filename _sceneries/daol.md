@@ -7,15 +7,15 @@ last_modified_at: 2025-02-23T00:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/sceneries/daol/DAOL01.webp
-  teaser: /assets/images/sceneries/daol/DAOL01.webp
+  overlay_image: /content/images/sceneries/daol/DAOL01.webp
+  teaser: /content/images/sceneries/daol/DAOL01.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "https://deltazulusim.short.gy/sceneries/daol/v1.0.0"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"
-    image: /assets/images/sceneries/daol/DAOL01.webp
+    image: /content/images/sceneries/daol/DAOL01.webp
     image_alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
     text: "Tafraoui"
   - title: "ICAO"
@@ -28,29 +28,29 @@ sidebar:
     text: "Yes"
 
 gallery:
-  - url: /assets/images/sceneries/daol/DAOL01.webp
-    image_path: /assets/images/sceneries/daol/DAOL01.webp
+  - url: /content/images/sceneries/daol/DAOL01.webp
+    image_path: /content/images/sceneries/daol/DAOL01.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daol/DAOL02.webp
-    image_path: /assets/images/sceneries/daol/DAOL02.webp
+  - url: /content/images/sceneries/daol/DAOL02.webp
+    image_path: /content/images/sceneries/daol/DAOL02.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daol/DAOL03.webp
-    image_path: /assets/images/sceneries/daol/DAOL03.webp
+  - url: /content/images/sceneries/daol/DAOL03.webp
+    image_path: /content/images/sceneries/daol/DAOL03.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daol/DAOL04.webp
-    image_path: /assets/images/sceneries/daol/DAOL04.webp
+  - url: /content/images/sceneries/daol/DAOL04.webp
+    image_path: /content/images/sceneries/daol/DAOL04.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daol/DAOL05.webp
-    image_path: /assets/images/sceneries/daol/DAOL05.webp
+  - url: /content/images/sceneries/daol/DAOL05.webp
+    image_path: /content/images/sceneries/daol/DAOL05.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daol/DAOL06.webp
-    image_path: /assets/images/sceneries/daol/DAOL06.webp
+  - url: /content/images/sceneries/daol/DAOL06.webp
+    image_path: /content/images/sceneries/daol/DAOL06.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daol/DAOL07.webp
-    image_path: /assets/images/sceneries/daol/DAOL07.webp
+  - url: /content/images/sceneries/daol/DAOL07.webp
+    image_path: /content/images/sceneries/daol/DAOL07.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daol/DAOL08.webp
-    image_path: /assets/images/sceneries/daol/DAOL08.webp
+  - url: /content/images/sceneries/daol/DAOL08.webp
+    image_path: /content/images/sceneries/daol/DAOL08.webp
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
 
 changelog:
@@ -63,7 +63,33 @@ changelog:
 
 This custom scenery for Tafraoui Military Base (DAOL) enhances the airfield with more realistic structures, ground details, and lighting. Located near Oran, Algeria, DAOL is primarily used for military training and aviation operations.
 
-## Galery 
+<div id="map" style="height: 500px;"></div>
+
+<script>
+  // Define coordinates once
+  const centerCoords = [35.53, -0.52];
+
+  // Initialize the map
+  var map = L.map('map', {
+    center: centerCoords,
+    zoom: 7,
+    minZoom: 5
+  });
+
+  // Add OpenStreetMap tile layer
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    attribution: '&copy; <a href="https://www.esri.com/">Esri</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 16
+  }).addTo(map);
+
+  // Add a marker using the same coordinates
+  var marker = L.marker(centerCoords).addTo(map)
+    //.bindPopup('<a href="/sceneries/training-zone-d50e-01/">D50E-01</a>')
+    .openPopup();
+</script>
+
+
+## Gallery 
 {% include gallery caption="Some screenshots for the scenery from the sky!" %}
 
 ## Key Features
@@ -78,6 +104,26 @@ This custom scenery for Tafraoui Military Base (DAOL) enhances the airfield with
 - Download the scenery package.
 - Extract the contents to your Community folder.
 - Launch MSFS and enjoy your flight over Bousfer!
+
+{% capture notice-text %}
+
+This scenery references some optional models from the following third party sceneries: 
+* DAAQ, DAAN, DAAS and DAAJ Airports sceneries by [Rafik Pilote](https://rafikpilote.e-monsite.com/pages/categorie-invisible/scenery-fs2020.html)
+* [Ethnicfs Military Library](https://flightsim.to/file/44161/ethnicfs-military-library)
+* Aguenar (DAAT) scenery by [NetDesign](https://inibuilds.com/products/netdesign-aguenar-daat-msfs?srsltid=AfmBOorrtszEPqjNv4V4OrVqirz9LHv8eX9RURf_JEo9ws0G3j1eSnV0)
+* In Guezzam (DATG) scenery by [NetDesign](https://inibuilds.com/products/netdesign-in-guezzam-datg-msfs?srsltid=AfmBOoojYbnKrfM71YbOV1bDBHCfRfmyDMxqqXXKVcssrcO48rCGYu6T)
+* [Mikea.at - AssetPack](https://flightsim.to/file/1923/mikea-at-assetpack)
+* [Military Camp Library](https://flightsim.to/file/56383/military-camp-library) 
+* [Animated Human 3D Models Library](https://flightsim.to/file/33166/animated-humans-library)
+{% endcapture %}
+
+<div class="notice--warning">
+  <h2 class="no_toc">Important</h2>
+  {{ notice-text | markdownify }}
+</div>
+
+
+
 
 ## Download
 

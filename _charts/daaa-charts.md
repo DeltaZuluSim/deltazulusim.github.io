@@ -9,15 +9,15 @@ classes: wide
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/charts/daaa/banner.webp
-  teaser: /assets/images/charts/daaa/teaser.webp
+  overlay_image: /content/images/charts/daaa/banner.webp
+  teaser: /content/images/charts/daaa/teaser.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download all"
       url: "https://deltazulusim.short.gy/charts/daaa"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Country"
-    image: /assets/images/charts/daaa/teaser.webp
+    image: /content/images/charts/daaa/teaser.webp
     text: "Algeria"
   - title: "FIR"
     text: "DAAA"

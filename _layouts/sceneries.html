@@ -1,0 +1,74 @@
+---
+layout: archive
+---
+
+<h2>Sceneries map</h2>
+<div id="map" style="height: 500px;"></div>
+
+<script>
+
+  var map = L.map('map', {
+  center: [34.39, 3.77],
+  zoom: 6,
+  minZoom: 5,
+ 
+});
+
+// map.fitBounds([
+//   [19, 1], // Southwest corner
+//   [36, 5]  // Northeast corner
+// ]);
+
+
+  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    attribution: '&copy; <a href="https://www.esri.com/">Esri</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 16
+  }).addTo(map);
+
+  var blueFighter = L.icon({
+    iconUrl: '/assets/images/blue-fighter.png',
+    iconSize: [32, 32], // Size of the icon [width, height]
+    iconAnchor: [16, 32], // Anchor point (center bottom)
+    popupAnchor: [0, -32] // Popup position relative to marker
+});
+
+  var greenFighter = L.icon({
+    iconUrl: '/assets/images/green-fighter.png', 
+    iconSize: [32, 32], // Size of the icon [width, height]
+    iconAnchor: [16, 32], // Anchor point (center bottom)
+    popupAnchor: [0, -32] // Popup position relative to marker
+});
+//   // Add OpenStreetMap tile layer
+//   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+//     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+//   }).addTo(map);
+
+  // D50E-01
+  L.marker([34.38, -0.42], { icon: greenFighter }).addTo(map)
+    .bindPopup('<strong>Training area</strong><br /><a href="/sceneries/training-zone-d50e-01/">D50E-01</a>');
+
+  // D82-01
+  L.marker([34.93, 2.55], { icon: greenFighter }).addTo(map)
+    .bindPopup('<strong>Training area</strong><br /><a href="/sceneries/training-zone-d82-01/">D82-01</a>');
+
+  // DAOE
+  L.marker([35.73, -0.80], { icon: blueFighter }).addTo(map)
+    .bindPopup('<strong>Air Base</strong><br /><a href="/sceneries/daoe/">DAOE</a>');  
+
+  // DAOL
+  L.marker([35.53, -0.52], { icon: blueFighter }).addTo(map)
+    .bindPopup('<strong>Air Base</strong><br /><a href="/sceneries/daol/">DAOL</a>');  
+
+  // DAOL
+  L.marker([33.53, -0.24], { icon: blueFighter }).addTo(map)
+    .bindPopup('<strong>Air Base</strong> & Airport<br /><a href="/sceneries/daay/">DAAY</a>');     
+</script>
+<br />
+
+<h2>List of sceneries</h2>
+{{ content }}
+
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}
+</div>

@@ -8,15 +8,15 @@ last_modified_at: 2025-02-23T00:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/sceneries/daay/DAAY08.webp
-  teaser: /assets/images/sceneries/daay/DAAY08.webp
+  overlay_image: /content/images/sceneries/daay/DAAY08.webp
+  teaser: /content/images/sceneries/daay/DAAY08.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "https://deltazulusim.short.gy/sceneries/daay/v1.0.0"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"
-    image: /assets/images/sceneries/daay/DAAY07.webp
+    image: /content/images/sceneries/daay/DAAY07.webp
     image_alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
     text: "Mecheria"
   - title: "ICAO"
@@ -29,29 +29,29 @@ sidebar:
     text: "Yes"
 
 gallery:
-  - url: /assets/images/sceneries/daay/DAAY01.webp
-    image_path: /assets/images/sceneries/daay/DAAY01.webp
+  - url: /content/images/sceneries/daay/DAAY01.webp
+    image_path: /content/images/sceneries/daay/DAAY01.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY02.webp
-    image_path: /assets/images/sceneries/daay/DAAY02.webp
+  - url: /content/images/sceneries/daay/DAAY02.webp
+    image_path: /content/images/sceneries/daay/DAAY02.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY03.webp
-    image_path: /assets/images/sceneries/daay/DAAY03.webp
+  - url: /content/images/sceneries/daay/DAAY03.webp
+    image_path: /content/images/sceneries/daay/DAAY03.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY04.webp
-    image_path: /assets/images/sceneries/daay/DAAY04.webp
+  - url: /content/images/sceneries/daay/DAAY04.webp
+    image_path: /content/images/sceneries/daay/DAAY04.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY05.webp
-    image_path: /assets/images/sceneries/daay/DAAY05.webp
+  - url: /content/images/sceneries/daay/DAAY05.webp
+    image_path: /content/images/sceneries/daay/DAAY05.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY06.webp
-    image_path: /assets/images/sceneries/daay/DAAY06.webp
+  - url: /content/images/sceneries/daay/DAAY06.webp
+    image_path: /content/images/sceneries/daay/DAAY06.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY07.webp
-    image_path: /assets/images/sceneries/daay/DAAY07.webp
+  - url: /content/images/sceneries/daay/DAAY07.webp
+    image_path: /content/images/sceneries/daay/DAAY07.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
-  - url: /assets/images/sceneries/daay/DAAY08.webp
-    image_path: /assets/images/sceneries/daay/DAAY08.webp
+  - url: /content/images/sceneries/daay/DAAY08.webp
+    image_path: /content/images/sceneries/daay/DAAY08.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
 
 changelog:
@@ -66,7 +66,34 @@ Scenery for Mecheria Military Airport (DAAY), designed exclusively for Microsoft
 
 Our scenery package captures every detail of Mecheria Military Airport, from the accurately modeled runways and taxiways to the comprehensive depiction of airport infrastructure. Whether you're piloting a military aircraft or exploring the region in a civilian plane, you'll appreciate the authenticity and attention to detail we've poured into this scenery.
 
-## Galery 
+<div id="map" style="height: 500px;"></div>
+
+<script>
+  // Define coordinates once
+  const centerCoords = [33.53, -0.24];
+
+  // Initialize the map
+  var map = L.map('map',{
+  center: centerCoords,
+  zoom: 7,
+  minZoom: 5,
+ 
+});
+
+  // Add OpenStreetMap tile layer
+ L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+    attribution: '&copy; <a href="https://www.esri.com/">Esri</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+    maxZoom: 16
+  }).addTo(map);
+
+  // Add a marker
+  var marker = L.marker(centerCoords).addTo(map)
+    //.bindPopup('<a href="/sceneries/training-zone-d50e-01/">D50E-01</a>')
+    .openPopup();
+</script>
+
+
+## Gallery 
 {% include gallery caption="Some screenshots for the scenery from the sky!" %}
 
 ## Key Features
@@ -84,8 +111,9 @@ Our scenery package captures every detail of Mecheria Military Airport, from the
 {% capture notice-text %}
 
 This scenery references some optional models from the following third party sceneries: 
-* DAAK Boufarik Airport scenery by [Rafik Pilote](https://rafikpilote.e-monsite.com/pages/categorie-invisible/scenery-fs2020.html)
-* DAAT Tamanrasset Airport scenery by [Net Design](https://contrail.shop/collections/msfs-regional-airports/products/daat-aguenar-tamanrasset-airport-msfs)
+* DAAQ, DAAK, DAAJ, DAAP, DAAS & DAAN Airport sceneries by [Rafik Pilote](https://rafikpilote.e-monsite.com/pages/categorie-invisible/scenery-fs2020.html)
+* Aguenar (DAAT) scenery by [NetDesign](https://inibuilds.com/products/netdesign-aguenar-daat-msfs?srsltid=AfmBOorrtszEPqjNv4V4OrVqirz9LHv8eX9RURf_JEo9ws0G3j1eSnV0)
+
 {% endcapture %}
 
 <div class="notice--warning">

@@ -7,21 +7,21 @@ toc: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
-  overlay_image: /assets/images/liveries/azurpoly-transall-c160-kjd/05.webp
-  teaser: /assets/images/liveries/azurpoly-transall-c160-kjd/05.webp
+  overlay_image: /content/images/liveries/azurpoly-transall-c160-kjd/05.webp
+  teaser: /content/images/liveries/azurpoly-transall-c160-kjd/05.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "https://deltazulusim.short.gy/liveries/azurpoly-aircraft-transall-C160-KJD/v2.0.0"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 #header:
-#  image: /assets/images/liveries/azurpoly-transall-c160-kjd/05.webp
-#  teaser: /assets/images/liveries/azurpoly-transall-c160-kjd/05.webp
+#  image: /content/images/liveries/azurpoly-transall-c160-kjd/05.webp
+#  teaser: /content/images/liveries/azurpoly-transall-c160-kjd/05.webp
 #  actions:
 #    - label: "Download"
 #      url: "https://github.com/mmistakes/minimal-mistakes/"
 sidebar:
   - title: "Aircraft"
-    image: /assets/images/liveries/azurpoly-transall-c160-kjd/05.webp
+    image: /content/images/liveries/azurpoly-transall-c160-kjd/05.webp
     image_alt: "Azurpoly Transall C160 KJD"
     text: "Azurpoly Transall C160"
   - title: "OACI"
@@ -34,41 +34,41 @@ sidebar:
     text: "Yes"
 
 gallery:
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/01.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/01.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/01.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/01.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/02.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/02.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/02.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/02.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/03.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/03.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/03.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/03.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/04.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/04.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/04.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/04.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/05.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/05.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/05.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/05.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/06.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/06.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/06.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/06.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/07.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/07.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/07.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/07.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/08.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/08.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/08.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/08.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/09.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/09.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/09.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/09.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/10.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/10.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/10.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/10.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/11.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/11.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/11.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/11.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
-  - url: /assets/images/liveries/azurpoly-transall-c160-kjd/12.webp
-    image_path: /assets/images/liveries/azurpoly-transall-c160-kjd/12.webp
+  - url: /content/images/liveries/azurpoly-transall-c160-kjd/12.webp
+    image_path: /content/images/liveries/azurpoly-transall-c160-kjd/12.webp
     alt: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
 
 changelog:
@@ -101,7 +101,7 @@ A more modern take with subtle differences in camouflage distribution, this vers
 Each livery is crafted to offer high realism, capturing the unique characteristics of Algeria's military aviation fleet. These liveries are perfect for simmers looking to add an authentic Algerian military experience to their Azurpoly Transall C160.
 
 
-## Galery 
+## Gallery 
 {% include gallery caption="Some screenshots for the scenery from the sky!" %}
 
 ## Installation Instructions
