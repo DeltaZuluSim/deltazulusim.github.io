@@ -71,14 +71,24 @@ Pilots can navigate to the area by departing Aïn Oussera Air base (DAQQ) and he
   });
 
   // Add OpenStreetMap tile layer
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-    attribution: '&copy; <a href="https://www.esri.com/">Esri</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
-    maxZoom: 16
-  }).addTo(map);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
+    subdomains: 'abcd',
+    maxZoom: 20
+}).addTo(map);
 
   // Add a marker using the same coordinates
-  var marker = L.marker(centerCoords).addTo(map)
-    //.bindPopup('<a href="/sceneries/training-zone-d82-01/">D82-01</a>')
+  // Define a green marker icon
+  var milMarker = L.icon({
+    iconUrl: '/assets/images/mil-marker.png', // Replace with your green marker image
+    iconSize: [32, 32], // Size of the icon
+    iconAnchor: [16, 32], // Point of the icon that corresponds to the marker's location
+    popupAnchor: [0, -32] // Position of the popup relative to the icon
+  });
+
+  // Add a marker using the custom green icon
+  var marker = L.marker(centerCoords, { icon: milMarker }).addTo(map)
+    // .bindPopup('<a href="/sceneries/training-zone-d82-01/">D82-01</a>')
     .openPopup();
 </script>
 
