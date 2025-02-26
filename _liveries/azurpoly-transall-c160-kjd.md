@@ -102,12 +102,13 @@ Each livery is crafted to offer high realism, capturing the unique characteristi
 
 
 ## Gallery 
-{% include gallery caption="Some screenshots for the scenery from the sky!" %}
+{% include gallery %}
 
 ## Installation Instructions
-- [Download](#download) the scenery package.
-- Extract the contents to your Community folder.
-- Launch MSFS and enjoy your flight over Bousfer!
+- Download the ZIP file containing the livery pack.
+- Extract the contents of the ZIP file and copy the directory azurpoly-aircraft-transall-C160-KJD into your MSFS Community folder.
+- Launch Microsoft Flight Simulator and select the Azurpoly Transall C160 KJD.
+- Choose from one of the 3 Algerian Air Force liveries from the liveries menu.
 
 ## Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.

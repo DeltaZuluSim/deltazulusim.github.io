@@ -78,7 +78,7 @@ These liveries are designed specifically for the SU-27 by DC Designs.
 For any issues or feedback, please leave a comment, and it will be addressed promptly.
 
 ## Gallery 
-{% include gallery caption="Some screenshots for the scenery from the sky!" %}
+{% include gallery %}
 
 ## Installation Instructions
 - Download the ZIP file containing the livery pack.

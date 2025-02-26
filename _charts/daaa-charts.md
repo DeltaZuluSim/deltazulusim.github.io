@@ -1,6 +1,6 @@
 ---
 title: "DAAA Charts"
-excerpt: "A complete updated set of IFR navigation charts for Algeria (DAAA FIR) available for download."
+excerpt: "A complete set of IFR navigation charts for Algeria (DAAA FIR) from Jeppesen available for download."
 toc: false
 date: 2025-02-23T00:00:00+01:00
 last_modified_at: 2025-02-23T00:00:00+01:00
