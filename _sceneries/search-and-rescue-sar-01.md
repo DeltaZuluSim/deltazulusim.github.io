@@ -102,10 +102,10 @@ A container ship has caught fire in the Mediterranean Sea, north of Jijel, Alger
 - Report fire intensity, structural damage, and potential hazards for ground-based rescue teams.
 
 ## Mission Objectives
-✅ Locate the burning vessel.
-✅ Provide accurate coordinates for rescue operations.
-✅ Assess and describe the fire, damage, and crew status (if visible).
-✅ Return to base after completing the reconnaissance.
+- Locate the burning vessel.
+- Provide accurate coordinates for rescue operations.
+- Assess and describe the fire, damage, and crew status (if visible).
+- Return to base after completing the reconnaissance.
 
 This scenario is designed to test your observational skills, navigation, and SAR reporting capabilities in a realistic environment.
 
