@@ -12,7 +12,7 @@ header:
   teaser: /content/images/sceneries/d86-01/D86-0101.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0"
+      url: "/sceneries/training-zone-d86-01/#download"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Area"
@@ -49,9 +49,14 @@ gallery:
     alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
-  - version: "1.0.0"
+  - version: "MSFS 2020 | 1.0.0"
     version_date: "2025-03-06"
-    download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0"
+    download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2020"
+    changes:
+      - "initial version"
+  - version: "MSFS 2024 | 1.0.0"
+    version_date: "2025-03-06"
+    download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2024"
     changes:
       - "initial version"
 ---
@@ -127,4 +132,5 @@ This scenario is designed to test your observational skills, navigation, and SAR
 ## Download
 Get ready to test your aerial reconnaissance skills in this unique military scenario!
 
-[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download for MSFS 2020](https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2020){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download for MSFS 2024](https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2024){: .btn .btn--success .btn--x-large}
