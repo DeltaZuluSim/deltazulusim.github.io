@@ -19,6 +19,7 @@ sidebar:
     image: /content/images/sceneries/d86-01/D86-0103.webp
     image_alt: "SOP Search and Rescue – Burning Cargo Ship (Jijel, Algeria)"
     text: "D86-01"
+    gps: "037° 17' 3,97\" N<br /> 007° 09' 4,26\" E"
   - title: "ICAO"
     text: "None"
   - title: "Version"
