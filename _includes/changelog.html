@@ -13,8 +13,8 @@
     <tbody>
       {% for v in page.changelog %}
         <tr>
-          <td class="min-col" style="text-align: center">{{ v.version }}</td>
-          <td class="min-col" style="text-align: left">{{ v.version_date }}</td>
+          <td class="min-col" style="text-align: center; padding: 10px 10px 10px 0px;">{{ v.version }}</td>
+          <td class="min-col" style="text-align: left; padding: 10px 10px 10px 0px;">{{ v.version_date }}</td>
           <td class="max-col" style="text-align: left; padding: 10px 10px 10px 20px;">
               {% for change in v.changes %}
                 <li> {{ change }} </li>

@@ -49,12 +49,12 @@ gallery:
     alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
-  - version: "MSFS 2020 | 1.0.0"
+  - version: "<i>MSFS 2020</i> 1.0.0"
     version_date: "2025-03-06"
     download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2020"
     changes:
       - "initial version"
-  - version: "MSFS 2024 | 1.0.0"
+  - version: "<i>MSFS 2024</i> 1.0.0"
     version_date: "2025-03-06"
     download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2024"
     changes:
