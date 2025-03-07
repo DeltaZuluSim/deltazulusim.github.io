@@ -23,7 +23,7 @@ sidebar:
   - title: "ICAO"
     text: "None"
   - title: "Version"
-    text: "1.0.0"
+    text: "1.1.0"
   - title: "MSFS 2020"
     text: "Yes"
   - title: "MSFS 2024"
@@ -50,6 +50,16 @@ gallery:
     alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
+  - version: "<code>MSFS 2020</code> 1.1.0"
+    version_date: "2025-03-08"
+    download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.1.0/MSFS2020"
+    changes:
+      - "Split submarine locations"
+  - version: "<code>MSFS 2024</code> 1.1.0"
+    version_date: "2025-03-08"
+    download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.1.0/MSFS2024"
+    changes:
+      - "Split submarine locations"
   - version: "<code>MSFS 2020</code> 1.0.0"
     version_date: "2025-03-06"
     download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2020"
@@ -146,5 +156,5 @@ This scenario is designed to test your observational skills, navigation, and SAR
 ## Download
 Get ready to test your aerial reconnaissance skills in this unique military scenario!
 
-[<i class='fas fa-download'></i> Download for <code>MSFS 2020</code>](https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2020){: .btn .btn--success .btn--x-large}
-[<i class='fas fa-download'></i> Download for <code>MSFS 2024</code>](https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2024){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download for <code>MSFS 2020</code>](https://deltazulusim.short.gy/sceneries/d86-01/v1.1.0/MSFS2020){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download for <code>MSFS 2024</code>](https://deltazulusim.short.gy/sceneries/d86-01/v1.1.0/MSFS2024){: .btn .btn--success .btn--x-large}
