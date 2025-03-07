@@ -18,7 +18,7 @@ sidebar:
   - title: "Area"
     image: /content/images/sceneries/d82-01/D82-0103.webp
     image_alt: "MSFS Algerian Training zone"
-    text: "D82"
+    text: "DA – D82 HASSI BAHBAH"
   - title: "ICAO"
     text: "None"
   - title: "Version"
@@ -70,12 +70,24 @@ Pilots can navigate to the area by departing Aïn Oussera Air base (DAQQ) and he
     minZoom: 5
   });
 
-  // Add OpenStreetMap tile layer
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
     subdomains: 'abcd',
-    maxZoom: 20
-}).addTo(map);
+    maxZoom: 16
+}).addTo(map); 
+
+fetch('/assets/geojson/dz_asp.geojson') // Algeria's GeoJSON
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: '#03240f',      // Border color
+        weight: 2,         // Border thickness
+        fillColor: 'white', // Inside color
+        fillOpacity: 0.1   // Transparency
+      }
+    }).addTo(map);
+  });
 
   // Add a marker using the same coordinates
   // Define a green marker icon

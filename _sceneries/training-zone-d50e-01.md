@@ -18,7 +18,7 @@ sidebar:
   - title: "Area"
     image: /content/images/sceneries/d50e-01/D50E-0103.webp
     image_alt: "MSFS Algerian Training zone"
-    text: "D50E"
+    text: "DA-D50E"
   - title: "ICAO"
     text: "None"
   - title: "Version"
@@ -83,12 +83,24 @@ Designed with realism and immersion in mind, this scenery provides a challenging
  
 });
 
-  // Add OpenStreetMap tile layer
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
     subdomains: 'abcd',
-    maxZoom: 20
-}).addTo(map);
+    maxZoom: 16
+}).addTo(map); 
+
+fetch('/assets/geojson/dz_asp.geojson') // Algeria's GeoJSON
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: '#03240f',      // Border color
+        weight: 2,         // Border thickness
+        fillColor: 'white', // Inside color
+        fillOpacity: 0.1   // Transparency
+      }
+    }).addTo(map);
+  });
 
   var milMarker = L.icon({
     iconUrl: '/assets/images/mil-marker.png', // Replace with your green marker image

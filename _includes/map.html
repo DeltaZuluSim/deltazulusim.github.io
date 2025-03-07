@@ -20,7 +20,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
     subdomains: 'abcd',
     maxZoom: 20
-}).addTo(map);
+}).addTo(map); 
 
 
 
@@ -95,8 +95,9 @@ var marinesIcon = L.icon({
 //******** sop
 
   // Search And Rescue 02
-  L.marker([23.05, 2.27], { icon: rescueIcon }).addTo(map)
-    .bindPopup('<strong>Desert SOP | Search And Rescue</strong><br/><p style="color: red;">Coming soon</p>'); 
+  L.marker([36.57, 5.03], { icon: rescueIcon }).addTo(map)
+    .bindPopup('<strong>Sea SOP | Search And Rescue</strong><br/><img src="/content/images/sceneries/sar-02/sar-0201.webp" /><br /><a href="/sceneries/search-and-rescue-sar-02/">Search And Rescue 02</a>'); 
+
 
       // Search And Rescue 01 
   L.marker([37.10, 5.77], { icon: rescueIcon }).addTo(map)

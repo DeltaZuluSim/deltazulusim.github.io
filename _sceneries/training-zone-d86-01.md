@@ -18,7 +18,7 @@ sidebar:
   - title: "Area"
     image: /content/images/sceneries/d86-01/D86-0103.webp
     image_alt: "SOP Search and Rescue – Burning Cargo Ship (Jijel, Algeria)"
-    text: "D86-01"
+    text: "DA-D86"
     gps: "037° 17' 3,97\" N<br /> 007° 09' 4,26\" E"
   - title: "ICAO"
     text: "None"
@@ -85,11 +85,24 @@ Designed for special operations training, this mission challenges your navigatio
     minZoom: 5
   });
 
-  // Add OpenStreetMap tile layer
-  L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
-    attribution: '&copy; <a href="https://www.esri.com/">Esri</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
+    subdomains: 'abcd',
     maxZoom: 16
-  }).addTo(map);
+}).addTo(map); 
+
+fetch('/assets/geojson/dz_asp.geojson') // Algeria's GeoJSON
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: '#03240f',      // Border color
+        weight: 2,         // Border thickness
+        fillColor: 'white', // Inside color
+        fillOpacity: 0.1   // Transparency
+      }
+    }).addTo(map);
+  });
 
   // Add a marker using the same coordinates
   var marker = L.marker(centerCoords).addTo(map)

@@ -64,12 +64,24 @@ Bousfer Military Airport (DAOE) is an Algerian military Air base, located near O
     minZoom: 5
   });
 
-  // Add OpenStreetMap tile layer
 L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
     subdomains: 'abcd',
-    maxZoom: 20
-}).addTo(map);
+    maxZoom: 16
+}).addTo(map); 
+
+fetch('/assets/geojson/dz_asp.geojson') // Algeria's GeoJSON
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: '#03240f',      // Border color
+        weight: 2,         // Border thickness
+        fillColor: 'white', // Inside color
+        fillOpacity: 0.1   // Transparency
+      }
+    }).addTo(map);
+  });
 
    var milMarker = L.icon({
     iconUrl: '/assets/images/mil-marker.png', // Replace with your green marker image
