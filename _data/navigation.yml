@@ -10,6 +10,12 @@ main:
     url: /charts
   - title: "Contact"
     url: /contact/
+  - title: "Community Sceneries"
+    url: /categories/community-sceneries
+  - title: "Community Liveries"
+    url: /categories/community-liveries
+  - title: "Community Resources"
+    url: /categories/community-resources
 #  - title: "Sitemap"
 #    url: /sitemap/
 #  - title: "Archive"
