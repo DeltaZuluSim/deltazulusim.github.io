@@ -4,6 +4,7 @@ excerpt: "Explore detailed Algerian military airbases! Community-created hangars
 modified: 2025-03-08T16:00:00+01:00
 classes: wide
 toc: true
+author_profile: false
 header:
   teaser: /content/images/community/algerian-military-sceneries.webp
 categories: 

@@ -4,6 +4,7 @@ excerpt: "Explore detailed Algerian airports & landscapes crafted by the communi
 modified: 2025-03-08T16:00:00+01:00
 classes: wide
 toc: true
+author_profile: false
 header:
   teaser: /content/images/community/algerian-sceneries.webp
 categories: 

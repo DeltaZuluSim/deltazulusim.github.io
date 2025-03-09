@@ -3,7 +3,8 @@ title:  "Algerian Military Liveries"
 excerpt: "Fly with authentic Algerian military liveries! Community-made designs for fighter jets & transports in MSFS."
 modified: 2025-03-08T12:00:00+01:00
 classes: wide
-layout: single
+toc: true
+author_profile: false
 toc: true
 header:
   teaser: /content/images/community/algerian-military-liveries.webp
