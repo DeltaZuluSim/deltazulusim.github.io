@@ -1,22 +1,20 @@
 {% if include.id %}
-  {% assign feature_row = page[include.id] %}
+  {% assign third_party_row = page[include.id] %}
 {% else %}
-  {% assign feature_row = page.feature_row %}
+  {% assign third_party_row = page.third_party_row %}
 {% endif %}
 
-
-{% for f in feature_row %}
+{% for f in third_party_row %}
     {% if f.type == "title" %}
-      <h1 style="width: 100%; margin-left: 10px; margin-bottom: 20px; margin-top: 10px; color: white;">
+      <h1 style="width: 100%; margin-bottom: 20px; margin-top: 10px; color: white;">
         {{ f.title }}
       </h1>
     {% endif %}
   {% endfor %}
 
-<div class="feature__wrapper" style="border: 0px;">
+<div class="feature__wrapper">
 
-
-  {% for f in feature_row %}
+  {% for f in third_party_row %}
   {% unless f.type == "title" %}
     <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">
       <div class="archive__item">

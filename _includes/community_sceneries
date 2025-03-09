@@ -1,0 +1,59 @@
+{% include community_style %}
+
+{% for resource in page.resources %}
+
+<div class="resource-card">
+
+  <div class="flex-container markdown-title">
+    <span class="left">
+        {% capture title %}
+### {{ resource.icao }} - {{ resource.airport_name }}{% if resource.designer %} by {{ resource.designer }}{% endif %}
+        {% endcapture %}
+        {{ title | markdownify }}
+
+    </span>
+    <span class="right">
+      <a href="{{ resource.download_url }}" target="_blank" class="btn btn--success">
+          <i class='fas fa-download'></i> Download
+      </a>
+    </span>
+  </div>
+
+  <div class="flex-container" style="margin-top: 5px;">
+      <span class="left">
+          ICAO: <code>{{ resource.icao }}</code>
+      </span>
+      <span class="center">
+        {% if resource.MSFS2020 == true and resource.MSFS2024 == true %}
+            MSFS: <code>2020</code>/<code>2024</code>
+        {% elsif resource.MSFS2020 == true %}
+            MSFS <code>2020</code>
+        {% elsif resource.MSFS2024 == true %}
+            MSFS <code>2024</code>
+        {% endif %}
+    </span>
+      <span class="right">
+          By 
+          {% if resource.author_url %}
+              <a href="{{ resource.author_url }}" target="_blank" style="color: lightblue; text-decoration: none;">
+                  <code>{{ resource.author }}</code>
+              </a>
+          {% else %}
+              <code>{{ resource.author }}</code>
+          {% endif %}
+      </span>
+  </div>
+
+  {% if resource.notice %}
+  <div class="notice--info">
+     ⚠️ {{ resource.notice }}
+  </div>
+  {% endif %}
+
+  <img src="{{ resource.image_url }}" alt="GSX Profile {{ resource.icao }}" class="resource-image">
+
+</div>
+
+{% endfor %}
+
+
