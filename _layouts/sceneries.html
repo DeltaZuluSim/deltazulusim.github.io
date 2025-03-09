@@ -2,7 +2,10 @@
 layout: archive
 ---
 
-{% include map.html %}
+{% assign sceneries = site.data.sceneries %}
+
+{% include map.html sceneries=sceneries dz_asp="true" %}
+
 
 <br />
 

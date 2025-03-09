@@ -2,118 +2,83 @@
 <div id="map" style="height: 500px;"></div>
 
 <script>
-
   var map = L.map('map', {
-  center: [34.39, 3.77],
-  zoom: 6,
-  minZoom: 5,
- 
-});
+    center: [34.39, 3.77],
+    zoom: 6,
+    minZoom: 5
+  });
 
-// map.fitBounds([
-//   [19, 1], // Southwest corner
-//   [36, 5]  // Northeast corner
-// ]);
-
-
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
     subdomains: 'abcd',
     maxZoom: 20
-}).addTo(map); 
+  }).addTo(map);
 
+  fetch('/assets/geojson/algeria.geojson')
+    .then(response => response.json())
+    .then(data => {
+      L.geoJSON(data, {
+        style: {
+          color: '#03240f',
+          weight: 1,
+          fillColor: '#deffe7',
+          fillOpacity: 0.1
+        }
+      }).addTo(map);
+    });
 
+  {% if include.dz_asp != false and include.dz_asp != "false" %}
+  fetch('/assets/geojson/dz_asp.geojson')
+    .then(response => response.json())
+    .then(data => {
+      L.geoJSON(data, {
+        style: {
+          color: '#03240f',
+          weight: 2,
+          fillColor: 'white',
+          fillOpacity: 0.1
+        }
+      }).addTo(map);
+    });
+  {% endif %}
 
+  // Define icons
+  var icons = {
+    "Airport": L.icon({ iconUrl: '/assets/images/airport.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+    "Helipad": L.icon({ iconUrl: '/assets/images/helipad.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+    "Air base": L.icon({ iconUrl: '/assets/images/fighter.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+    "Training": L.icon({ iconUrl: '/assets/images/training.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+    "Search and Rescue": L.icon({ iconUrl: '/assets/images/rescue.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+    "Naval Recon": L.icon({ iconUrl: '/assets/images/marines.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] })
+  };
 
-fetch('/assets/geojson/algeria.geojson') // Algeria's GeoJSON
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      style: {
-        color: '#03240f',      // Border color
-        weight: 1,         // Border thickness
-        fillColor: '#deffe7', // Inside color
-        fillOpacity: 0.1   // Transparency
-      }
-    }).addTo(map);
+  // Sceneries data from Jekyll
+  var sceneries = [
+    {% for scenery in include.sceneries %}
+    {
+      name: "{{ scenery.name }}",
+      type: "{{ scenery.type }}",
+      description: "{{ scenery.description }}",
+      lat: {{ scenery.lat }},
+      lng: {{ scenery.lng }},
+      image: "{{ scenery.image }}",
+      link: "{{ scenery.link }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+  // Add markers to map
+  sceneries.forEach(scenery => {
+    let iconType = icons[scenery.type] || icons["Training"];
+    let imageSrc = scenery.image ? scenery.image : "/assets/images/default.png"; // Default image if missing
+
+    L.marker([scenery.lat, scenery.lng], { icon: iconType }).addTo(map)
+      .bindPopup(`
+        <code>${scenery.type}</code><br/>
+        <strong>${scenery.name}</strong><br/>
+        ${scenery.description}<br/>
+        <img src="${imageSrc}" width="auto"/><br/>
+        <a href="${scenery.link}" target="_self">View Details</a>
+      `);
   });
-
-fetch('/assets/geojson/dz_asp.geojson') // Algeria's GeoJSON
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      style: {
-        color: '#03240f',      // Border color
-        weight: 2,         // Border thickness
-        fillColor: 'white', // Inside color
-        fillOpacity: 0.1   // Transparency
-      }
-    }).addTo(map);
-  });
-
-  var fighterIcon = L.icon({
-    iconUrl: '/assets/images/fighter.png',
-    iconSize: [32, 32], // Size of the icon [width, height]
-    iconAnchor: [16, 32], // Anchor point (center bottom)
-    popupAnchor: [0, -32] // Popup position relative to marker
-});
-
-var trainingIcon = L.icon({
-    iconUrl: '/assets/images/training.png', 
-    iconSize: [32, 32], // Size of the icon [width, height]
-    iconAnchor: [16, 32], // Anchor point (center bottom)
-    popupAnchor: [0, -32] // Popup position relative to marker
-});
-
-var rescueIcon = L.icon({
-    iconUrl: '/assets/images/rescue.png',
-    iconSize: [32, 32], // Size of the icon [width, height]
-    iconAnchor: [16, 32], // Anchor point (center bottom)
-    popupAnchor: [0, -32] // Popup position relative to marker
-});
-
-var marinesIcon = L.icon({
-    iconUrl: '/assets/images/marines.png',
-    iconSize: [32, 32], // Size of the icon [width, height]
-    iconAnchor: [16, 32], // Anchor point (center bottom)
-    popupAnchor: [0, -32] // Popup position relative to marker
-});
-
-//*********** training 
-  // D50E-01
-  L.marker([34.38, -0.42], { icon: trainingIcon }).addTo(map)
-    .bindPopup('<strong>Training area - D50E</strong><br /><img src="/content/images/sceneries/d50e-01/D50E-0101.webp" /><br /><a href="/sceneries/training-zone-d50e-01/">D50E-01</a>');
-
-  // D82-01
-  L.marker([34.93, 2.55], { icon: trainingIcon }).addTo(map)
-    .bindPopup('<strong>Training area - D82</strong><br /><img src="/content/images/sceneries/d82-01/D82-0101.webp" /><br /><a href="/sceneries/training-zone-d82-01/">D82-01</a>');
-
-  // D86-01 
-  L.marker([37.28, 7.15], { icon: marinesIcon }).addTo(map)
-    .bindPopup('<strong>Sea SOP | Training area - D86</strong><br/><img src="/content/images/sceneries/d86-01/D86-0101.webp" /><br /><a href="/sceneries/training-zone-d86-01/">D86-01</a>'); 
-
-//******** sop
-
-  // Search And Rescue 02
-  L.marker([36.57, 5.03], { icon: rescueIcon }).addTo(map)
-    .bindPopup('<strong>Sea SOP | Search And Rescue</strong><br/><img src="/content/images/sceneries/sar-02/sar-0201.webp" /><br /><a href="/sceneries/search-and-rescue-sar-02/">Search And Rescue 02</a>'); 
-
-
-      // Search And Rescue 01 
-  L.marker([37.10, 5.77], { icon: rescueIcon }).addTo(map)
-    .bindPopup('<strong>Sea SOP | Search And Rescue</strong><br/><img src="/content/images/sceneries/sar-01/sar-0101.webp" /><br /><a href="/sceneries/search-and-rescue-sar-01/">Search And Rescue 01</a>'); 
-
-    //********* Air Bases 
-  // DAOE
-  L.marker([35.73, -0.80], { icon: fighterIcon }).addTo(map)
-    .bindPopup('<strong>Bousfer - Air Base</strong><br /><img src="/content/images/sceneries/daoe/DAOE_BANNER.webp" /><br /><a href="/sceneries/daoe/">DAOE</a>');  
-
-  // DAOL
-  L.marker([35.53, -0.52], { icon: fighterIcon }).addTo(map)
-    .bindPopup('<strong>Tafraoui - Air Base</strong><br /><img src="/content/images/sceneries/daol/DAOL01.webp" /><br /><a href="/sceneries/daol/">DAOL</a>');  
-
-  // DAAY
-  L.marker([33.53, -0.24], { icon: fighterIcon }).addTo(map)
-    .bindPopup('<strong>Mecheria - Air Base</strong> & Airport<br /><img src="/content/images/sceneries/daay/DAAY08.webp" /><br /><a href="/sceneries/daay/">DAAY</a>');     
-
 </script>

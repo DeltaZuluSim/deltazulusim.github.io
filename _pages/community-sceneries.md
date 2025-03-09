@@ -4,6 +4,11 @@ layout: category
 permalink: /categories/community-sceneries/
 taxonomy: Community Sceneries
 entries_layout: grid
+classes: wide
 ---
 
-Sample post listing for the category `Community Sceneries`.
+{% assign sceneries = site.data.community-military-sceneries | concat: site.data.community-sceneries %}
+
+{% include map.html dz_asp="false" sceneries=sceneries %}
+
+<br />

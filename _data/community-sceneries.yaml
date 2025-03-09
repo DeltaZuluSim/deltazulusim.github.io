@@ -1,0 +1,23 @@
+- name: "DAOO"
+  type: "Airport"
+  lat: 35.62
+  lng: -0.61
+  image: "https://cdn.flightsim.to/images/26/daoo-aroport-international-ahmed-ben-bella-oran-57256-1720270907-q7GCl.jpg?width=1400"
+  link: "/community%20sceneries/algerian-sceneries/#daoo---ahmed-ben-bella-international--airport"
+  description: "Ahmed Ben Bella international airport"
+
+- name: "DAON"
+  type: "Airport"
+  lat: 35.01
+  lng: -1.44
+  image: "https://cdn.flightsim.to/images/23/daon-tlemcen-zenata-messali-hadj-airport-cLyVe.jpg"
+  link: "/community%20sceneries/algerian-sceneries/#daon---tlemcen-zenata-messali-hadj"
+  description: "Tlemcen Zenata Messali Hadj airport"
+
+- name: "DAxx"
+  type: "Helipad"
+  lat: 36.73
+  lng: 3.11
+  image: "https://cdn.flightsim.to/images/27/algiers-city-helipad-811654-1739634541-k0hOu.jpg"
+  link: "/community%20sceneries/algerian-sceneries/#daxx---algiers-city-helipad"
+  description: "Algiers City Helipad"
