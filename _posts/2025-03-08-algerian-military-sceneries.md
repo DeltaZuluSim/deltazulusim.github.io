@@ -16,9 +16,9 @@ tags:
 resources:
   - icao: "DAAN"
     airport_name: "Reggane"
-    author: "Rafikpilote"
-    author_url : "https://rafikpilote.e-monsite.com/"
-    image_url: "/content/images/community/algerian-military-sceneries.webp"
+    author: "Algerian WINGS Sceneries"
+    author_url : "https://www.facebook.com/AlgerianWingsSceneries"
+    image_url: "/content/images/community/daan.webp"
     download_url: "https://drive.google.com/file/d/1dXJSVPNnjka3bgzFGJ4ab0bEzQEK7IH_/view"
     MSFS2020: true
     MSFS2024: false

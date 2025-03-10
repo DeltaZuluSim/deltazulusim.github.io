@@ -128,7 +128,7 @@ fetch('/assets/geojson/dz_asp.geojson') // Algeria's GeoJSON
 {% capture notice-text %}
 
 This scenery references some optional models from the following third party sceneries: 
-* DAAQ, DAAN, DAAS and DAAJ Airports sceneries by [Rafik Pilote](https://rafikpilote.e-monsite.com/pages/categorie-invisible/scenery-fs2020.html)
+* DAAQ, DAAN, DAAS and DAAJ Airports sceneries by [Algerian WINGS Sceneries](https://www.facebook.com/AlgerianWingsSceneries)
 * [Ethnicfs Military Library](https://flightsim.to/file/44161/ethnicfs-military-library)
 * Aguenar (DAAT) scenery by [NetDesign](https://inibuilds.com/products/netdesign-aguenar-daat-msfs?srsltid=AfmBOorrtszEPqjNv4V4OrVqirz9LHv8eX9RURf_JEo9ws0G3j1eSnV0)
 * In Guezzam (DATG) scenery by [NetDesign](https://inibuilds.com/products/netdesign-in-guezzam-datg-msfs?srsltid=AfmBOoojYbnKrfM71YbOV1bDBHCfRfmyDMxqqXXKVcssrcO48rCGYu6T)
