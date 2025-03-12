@@ -1,0 +1,23 @@
+<table class="large-table">
+    <thead>
+      <tr>
+        <th style="text-align: center">ICAO</th>
+        <th style="text-align: center">Airport</th>
+        <th style="text-align: center">Download</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for airport in page.airports %}
+      <tr>
+        <td style="text-align: center">{{ airport.icao }}</td>
+        <td style="text-align: left">{{ airport.name }}</td>
+        <td style="text-align: center">
+          <a href="https://deltazulusim.short.gy/charts/{{ airport.icao | downcase }}" class="btn btn--success">
+            <i class="fas fa-download"></i> Download
+          </a>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+  
