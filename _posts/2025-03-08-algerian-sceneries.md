@@ -22,12 +22,21 @@ resources:
     MSFS2020: true
     MSFS2024: false
 
-  - icao: "DAAE"
-    airport_name: "Forest Fires near Béjaïa airport"
-    author: "YounesCheikh"
-    author_url : "https://en.flightsim.to/profile/YounesCheikh"
-    image_url: "https://cdn.flightsim.to/images/27/forest-fires-near-bjaa-daae-airport-algeria---msfs-scenery-385522-1725906638-gqM0e.jpg"
-    download_url: "https://en.flightsim.to/file/81387/forest-fires-near-bejaia-daae-airport-algeria-msfs-scenery"
+  - icao: "DAON"
+    airport_name: "Tlemcen Zenata Messali Hadj"
+    author: "Abdelaziz"
+    author_url : "https://en.flightsim.to/profile/Abdelaziz"
+    image_url: "https://cdn.flightsim.to/images/23/daon-tlemcen-zenata-messali-hadj-airport-cLyVe.jpg"
+    download_url: "https://en.flightsim.to/file/35747/daon-tlemcen-zenata-messali-hadj-airport"
+    MSFS2020: true
+    MSFS2024: false   
+
+  - icao: "None"
+    airport_name: "Constantine City"
+    author: "Abdelkrim"
+    author_url : "https://flightsim.to/profile/Abdelkrim"
+    image_url: "https://cdn.flightsim.to/images/23/constantine-S3FM9.jpg?width=1400"
+    download_url: "https://flightsim.to/file/32172/constantine"
     MSFS2020: true
     MSFS2024: false
 
@@ -40,14 +49,7 @@ resources:
     MSFS2020: true
     MSFS2024: false
 
-  - icao: "DAON"
-    airport_name: "Tlemcen Zenata Messali Hadj"
-    author: "Abdelaziz"
-    author_url : "https://en.flightsim.to/profile/Abdelaziz"
-    image_url: "https://cdn.flightsim.to/images/23/daon-tlemcen-zenata-messali-hadj-airport-cLyVe.jpg"
-    download_url: "https://en.flightsim.to/file/35747/daon-tlemcen-zenata-messali-hadj-airport"
-    MSFS2020: true
-    MSFS2024: false   
+
 
 ---
 

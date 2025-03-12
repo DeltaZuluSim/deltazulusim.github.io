@@ -7,13 +7,13 @@
 
 {% for f in feature_row %}
     {% if f.type == "title" %}
-      <h1 style="width: 100%; margin-left: 10px; margin-bottom: 20px; margin-top: 10px; color: white;">
+      <h1 style="width: 100%; margin-left: 10px; margin-bottom: 20px; margin-top: 20px; color: white;">
         {{ f.title }}
       </h1>
     {% endif %}
   {% endfor %}
 
-<div class="feature__wrapper" style="border: 0px;">
+<div class="feature__wrapper" style="border: 0px; margin-bottom: 0px;">
 
 
   {% for f in feature_row %}

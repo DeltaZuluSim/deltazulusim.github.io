@@ -101,7 +101,7 @@ The IFR navigation charts offered on this page are exclusively for flight simula
 
 --- 
 
-**Important:** <br />All archive files on this page are password-protected. The passwords can be found on the [**DZS Discord channel**](https://discord.gg/Sf7Pkg4b).
+**Important:** <br />All archive files on this page are password-protected. The passwords can be found on the [**DZS Discord channel**](https://discord.gg/EEeKMt86xP).
 {: .notice}
 
 {% include pdf-download-table.html %}
