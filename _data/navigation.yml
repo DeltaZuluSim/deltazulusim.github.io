@@ -22,3 +22,37 @@ main:
 #    url: /year-archive/
 #  - title: "Categories"
 #    url: /categories/
+
+community:
+  - title: DZS Sceneries
+    url: /sceneries/
+  - title: DZS Liveries
+    url: /liveries
+  - title: DZS Charts
+    url: /charts/
+    children:
+      - title: "DAAA IFR Charts"
+        url: /charts/daaa-ifr-charts/
+      - title: "DAA VFR Charts"
+        url: /charts/daaa-vfr-charts/
+  - title: DZ Community Sceneries
+    url: /categories/community-sceneries
+    children:
+      - title: "Algerian sceneries"
+        url: /community%20sceneries/algerian-sceneries/
+      - title: "Algerian military sceneries"
+        url: /community%20sceneries/algerian-military-sceneries/
+  - title: DZ Community Liveries
+    url: /categories/community-liveries
+    children:
+      - title: "Algerian liveries"
+        url: /community%20liveries/algerian-liveries/
+      - title: "Algerian military liveries"
+        url: /community%20liveries/algerian-military-liveries/
+  - title: DZ Community Resources
+    url: /categories/community-resources
+    children:
+      - title: "GSX PRO profiles"
+        url: /community%20resources/gsx-pro-profiles/
+      - title: "Algerian SO Rules"
+        url: #

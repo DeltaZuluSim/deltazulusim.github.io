@@ -1,5 +1,5 @@
 ---
-title: "SOP Search and Rescue – Burning Cargo Ship (Jijel)"
+title: "SO Search and Rescue – Burning Cargo Ship (Jijel)"
 excerpt: "Search and Rescue scenario for MSFS simmers: locate and report a burning container ship adrift north of Jijel, Algeria."
 toc: true
 date: 2025-03-03T00:00:00+01:00
@@ -17,7 +17,7 @@ header:
 sidebar:
   - title: "Area"
     image: /content/images/sceneries/sar-01/sar-0103.webp
-    image_alt: "SOP Search and Rescue – Burning Cargo Ship (Jijel, Algeria)"
+    image_alt: "SO Search and Rescue – Burning Cargo Ship (Jijel, Algeria)"
     text: "SAR01 - North Jijel"
   - title: "ICAO"
     text: "None"
@@ -31,25 +31,25 @@ sidebar:
 gallery:
   - url: /content/images/sceneries/sar-01/sar-0101.webp
     image_path: /content/images/sceneries/sar-01/sar-0101.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/sar-01/sar-0102.webp
     image_path: /content/images/sceneries/sar-01/sar-0102.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/sar-01/sar-0103.webp
     image_path: /content/images/sceneries/sar-01/sar-0103.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/sar-01/sar-0104.webp
     image_path: /content/images/sceneries/sar-01/sar-0104.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/sar-01/sar-0105.webp
     image_path: /content/images/sceneries/sar-01/sar-0105.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/sar-01/sar-0106.webp
     image_path: /content/images/sceneries/sar-01/sar-0106.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/sar-01/sar-0107.webp
     image_path: /content/images/sceneries/sar-01/sar-0107.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
   - version: "1.0.0"
@@ -59,7 +59,7 @@ changelog:
       - "initial version"
 ---
 
-Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024
+Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024
 {:.notice}
 
 ## Mission Overview

@@ -1,6 +1,8 @@
 ---
-layout: archive
+layout: splash
 ---
+
+<h2>{{ page.title }}</h2>
 
 {% assign sceneries = site.data.sceneries %}
 
@@ -9,7 +11,6 @@ layout: archive
 
 <br />
 
-<h2>List of sceneries</h2>
 {{ content }}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}

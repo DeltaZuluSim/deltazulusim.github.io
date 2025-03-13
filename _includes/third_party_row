@@ -6,7 +6,7 @@
 
 {% for f in third_party_row %}
     {% if f.type == "title" %}
-      <h1 style="width: 100%; margin-bottom: 20px; margin-top: 10px; color: white;">
+      <h1 style="width: 100%; margin-bottom: 20px; margin-top: 10px;">
         {{ f.title }}
       </h1>
     {% endif %}

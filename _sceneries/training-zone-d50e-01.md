@@ -1,5 +1,5 @@
 ---
-title: "SOP Training area D50E-01"
+title: "SO Training area D50E-01"
 excerpt: "Virtual Spercial operations Training zone for MSFS simmers in the special area D50E on the south of Bousfer Air base (DAOE)"
 toc: true
 date: 2025-02-24T00:00:00+01:00
@@ -31,22 +31,22 @@ sidebar:
 gallery:
   - url: /content/images/sceneries/d50e-01/D50E-0101.webp
     image_path: /content/images/sceneries/d50e-01/D50E-0101.webp
-    alt: "Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d50e-01/D50E-0102.webp
     image_path: /content/images/sceneries/d50e-01/D50E-0102.webp
-    alt: "Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d50e-01/D50E-0103.webp
     image_path: /content/images/sceneries/d50e-01/D50E-0103.webp
-    alt: "Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d50e-01/D50E-0104.webp
     image_path: /content/images/sceneries/d50e-01/D50E-0104.webp
-    alt: "Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d50e-01/D50E-0105.webp
     image_path: /content/images/sceneries/d50e-01/D50E-0105.webp
-    alt: "Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d50e-01/D50E-0106.webp
     image_path: /content/images/sceneries/d50e-01/D50E-0106.webp
-    alt: "Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
   - version: "1.0.0"
@@ -56,10 +56,10 @@ changelog:
       - "initial version"
 ---
 
-Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024
+Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024
 {:.notice}
 
-This scenery has been developed for SOP Simmers to enhance their training exercises and enjoy realistic military operations. It is located within Military Area D50E, south of Oran and north of Mécheria, making it an ideal training ground for military and tactical flight operations.
+This scenery has been developed for SO Simmers to enhance their training exercises and enjoy realistic military operations. It is located within Military Area D50E, south of Oran and north of Mécheria, making it an ideal training ground for military and tactical flight operations.
 
 Pilots can reach the area by:
 

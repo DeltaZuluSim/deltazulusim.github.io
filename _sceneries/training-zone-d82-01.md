@@ -1,5 +1,5 @@
 ---
-title: "SOP Training area D82-01"
+title: "SO Training area D82-01"
 excerpt: "Virtual Spercial operations Training zone for MSFS simmers in the special area D82 HASSI BAHBAH"
 toc: true
 date: 2025-02-24T00:00:00+01:00
@@ -31,16 +31,16 @@ sidebar:
 gallery:
   - url: /content/images/sceneries/d82-01/D82-0101.webp
     image_path: /content/images/sceneries/d82-01/D82-0101.webp
-    alt: "Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d82-01/D82-0102.webp
     image_path: /content/images/sceneries/d82-01/D82-0102.webp
-    alt: "Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d82-01/D82-0103.webp
     image_path: /content/images/sceneries/d82-01/D82-0103.webp
-    alt: "Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d82-01/D82-0104.webp
     image_path: /content/images/sceneries/d82-01/D82-0104.webp
-    alt: "Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
   - version: "1.0.0"
@@ -50,10 +50,10 @@ changelog:
       - "initial version"
 ---
 
-Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024
+Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024
 {:.notice}
 
-This scenery brings to life an unpaved runway located within Military Area D82, in the Hassi Bahbah region, near Aïn Oussera Air base (DAQQ). Developed for SOP Simmers, it provides a realistic and challenging training environment for military and tactical flight operations.
+This scenery brings to life an unpaved runway located within Military Area D82, in the Hassi Bahbah region, near Aïn Oussera Air base (DAQQ). Developed for SO Simmers, it provides a realistic and challenging training environment for military and tactical flight operations.
 
 Pilots can navigate to the area by departing Aïn Oussera Air base (DAQQ) and heading southbound.
 

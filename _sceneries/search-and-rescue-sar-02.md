@@ -1,5 +1,5 @@
 ---
-title: "SOP SAR 02 – Search & Rescue Scenario, South of Bejaia, Algeria"
+title: "SO SAR 02 – Search & Rescue Scenario, South of Bejaia, Algeria"
 excerpt: " Search and Rescue (SAR) scenario in the southern region of Bejaia! Test your aerial reconnaissance and navigation skills as you locate a distress signal, report the situation, and navigate through challenging terrain."
 toc: true
 date: 2025-03-07T00:00:00+01:00
@@ -32,13 +32,13 @@ sidebar:
 gallery:
   - url: /content/images/sceneries/sar-02/sar-0202.webp
     image_path: /content/images/sceneries/sar-02/sar-0202.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/sar-02/sar-0203.webp
     image_path: /content/images/sceneries/sar-02/sar-0203.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/sar-02/sar-0204.webp
     image_path: /content/images/sceneries/sar-02/sar-0204.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
   - version: "1.0.0"
@@ -48,7 +48,7 @@ changelog:
       - "initial version"
 ---
 
-Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024
+Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024
 {:.notice}
 
 ## Mission Overview 🛩️ 

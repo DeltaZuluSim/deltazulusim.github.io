@@ -1,6 +1,6 @@
 ---
 title: Community Sceneries
-layout: category
+layout: dzs-category
 permalink: /categories/community-sceneries/
 taxonomy: Community Sceneries
 entries_layout: grid

@@ -20,7 +20,7 @@
   lng: 7.15
   image: "/content/images/sceneries/d86-01/D86-0101.webp"
   link: "/sceneries/training-zone-d86-01/"
-  description: "Sea SOP | Training area - D86"
+  description: "Sea SO | Training area - D86"
 
 - name: "SAR-02"
   type: "Search and Rescue"
@@ -28,7 +28,7 @@
   lng: 5.03
   image: "/content/images/sceneries/sar-02/sar-0201.webp"
   link: "/sceneries/search-and-rescue-sar-02/"
-  description: "Sea SOP | Search And Rescue 02"
+  description: "Sea SO | Search And Rescue 02"
 
 - name: "SAR-01"
   type: "Search and Rescue"
@@ -36,7 +36,7 @@
   lng: 5.77
   image: "/content/images/sceneries/sar-01/sar-0101.webp"
   link: "/sceneries/search-and-rescue-sar-01/"
-  description: "Sea SOP | Search And Rescue 01"
+  description: "Sea SO | Search And Rescue 01"
 
 - name: "DAOE"
   type: "Air base"

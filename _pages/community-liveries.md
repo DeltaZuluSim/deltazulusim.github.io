@@ -1,6 +1,6 @@
 ---
 title: Community Liveries
-layout: category
+layout: dzs-category
 permalink: /categories/community-liveries/
 taxonomy: Community Liveries
 entries_layout: grid

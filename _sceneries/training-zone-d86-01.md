@@ -1,5 +1,5 @@
 ---
-title: "SOP Naval Recon – Algerian Navy & Submarines (D86)"
+title: "SO Naval Recon – Algerian Navy & Submarines (D86)"
 excerpt: "Military reconnaissance scenario for MSFS simmers: locate and identify Algerian Navy assets, including submarines and warships, in the D86 special area north of Annaba, Algeria."
 toc: true
 date: 2025-03-06T00:00:00+01:00
@@ -17,7 +17,7 @@ header:
 sidebar:
   - title: "Area"
     image: /content/images/sceneries/d86-01/D86-0103.webp
-    image_alt: "SOP Search and Rescue – Burning Cargo Ship (Jijel, Algeria)"
+    image_alt: "SO Search and Rescue – Burning Cargo Ship (Jijel, Algeria)"
     text: "DA-D86"
     gps: "037° 17' 3,97\" N<br /> 007° 09' 4,26\" E"
   - title: "ICAO"
@@ -32,22 +32,22 @@ sidebar:
 gallery:
   - url: /content/images/sceneries/d86-01/D86-0101.webp
     image_path: /content/images/sceneries/d86-01/D86-0101.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d86-01/D86-0102.webp
     image_path: /content/images/sceneries/d86-01/D86-0102.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d86-01/D86-0103.webp
     image_path: /content/images/sceneries/d86-01/D86-0103.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d86-01/D86-0104.webp
     image_path: /content/images/sceneries/d86-01/D86-0104.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d86-01/D86-0105.webp
     image_path: /content/images/sceneries/d86-01/D86-0105.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d86-01/D86-0106.webp
     image_path: /content/images/sceneries/d86-01/D86-0106.webp
-    alt: "Custom SOP Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
+    alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
   - version: "<code>MSFS 2020</code> 1.1.0"
@@ -72,7 +72,7 @@ changelog:
       - "initial version"
 ---
 
-Custom SOP Scenery for Microsoft Flight Simulator 2020 & 2024
+Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024
 {:.notice}
 
 ## Mission Overview
