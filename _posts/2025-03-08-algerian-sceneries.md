@@ -31,6 +31,15 @@ resources:
     MSFS2020: true
     MSFS2024: false   
 
+  - icao: "DAOI"
+    airport_name: "Chlef"
+    author: "moh_3431"
+    author_url : "moh_3431"
+    image_url: "https://cdn.flightsim.to/images/26/daoi-airport-chlef-intl-v1-693876-1705754862-UnCsK.jpg?width=1400"
+    download_url: "https://fr.flightsim.to/file/67843/daoi-airport-chlef-intl-v1?fbclid=IwAR3-JiOdf-OWPGS_KYydehb_HT17NIRBiMBLYffYcNlLV8Bo9Iy4SZWKAX0"
+    MSFS2020: true
+    MSFS2024: false   
+
   - icao: "None"
     airport_name: "Constantine City"
     author: "Abdelkrim"
@@ -49,7 +58,14 @@ resources:
     MSFS2020: true
     MSFS2024: false
 
-
+  - icao: "DAAJ"
+    airport_name: "DJANET, TISKA"
+    author: "Algerian WINGS Sceneries"
+    author_url : "https://www.facebook.com/AlgerianWingsSceneries"
+    image_url: "/content/images/community/daaj.webp"
+    download_url: "https://drive.google.com/file/d/1mJALg4dvLxv6k5XIZIVZlTvethW5ll2k/view"
+    MSFS2020: true
+    MSFS2024: false
 
 ---
 

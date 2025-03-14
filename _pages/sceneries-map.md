@@ -12,6 +12,6 @@ author_profile: false
 
 <code><i>All Algerian sceneries, from DZ community, and from Delta-Zulu Simulations!</i></code>
 
-{% assign sceneries = site.data.sceneries | concat: site.data.community-sceneries %}
+{% assign sceneries = site.data.sceneries | concat: site.data.community-sceneries | concat: site.data.community-military-sceneries %}
 
 {% include map.html dz_asp="true" sceneries=sceneries height="60vh"  %}

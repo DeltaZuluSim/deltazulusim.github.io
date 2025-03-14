@@ -21,3 +21,20 @@
   image: "https://cdn.flightsim.to/images/27/algiers-city-helipad-811654-1739634541-k0hOu.jpg"
   link: "/community%20sceneries/algerian-sceneries/#daxx---algiers-city-helipad"
   description: "Algiers City Helipad"
+
+
+- name: "DAOI"
+  type: "Airport"
+  lat: 36.21
+  lng: 1.32
+  image: "https://cdn.flightsim.to/images/26/daoi-airport-chlef-intl-v1-693876-1705754862-UnCsK.jpg?width=1400"
+  link: "/community%20sceneries/algerian-sceneries/#daoi---chlef"
+  description: "Chlef international airport"  
+
+- name: "DAAJ"
+  type: "Airport"
+  lat: 24.28
+  lng: 9.46
+  image: "/content/images/community/daaj.webp"
+  link: "/community%20sceneries/algerian-sceneries/#daaj---djanet-tiska"
+  description: "DJANET, TISKA"  
