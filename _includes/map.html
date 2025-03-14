@@ -77,11 +77,18 @@
 
     L.marker([scenery.lat, scenery.lng], { icon: iconType }).addTo(map)
       .bindPopup(`
-        <code>${scenery.type}</code><br/>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <code style="background-color: #ccc;"><strong>${scenery.type}</strong></code>
+          <br/>
+</div>
+<div style="display: flex; justify-content: center; align-items: center;">
         <strong>${scenery.name}</strong><br/>
+        </div>
         ${scenery.description}<br/>
+        
         <img src="${imageSrc}" width="auto"/><br/>
         <a href="${scenery.link}" target="_self">View Details</a>
+        
       `);
   });
 
