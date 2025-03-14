@@ -8,6 +8,9 @@ author_profile: false
 toc: true
 header:
   teaser: /content/images/community/algerian-sop-videos.webp
+  video:
+    id: 3Cc7LKdniXo
+    provider: youtube
 categories: 
   - "Community Resources"
 tags:

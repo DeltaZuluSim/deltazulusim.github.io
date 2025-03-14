@@ -1,5 +1,8 @@
 
-<div id="map" style="height: 500px;"></div>
+<div id="map" style="width: 100%; height: {{ include.height | default: '500px' }};"></div>
+
+
+<!-- <div id="map" style="height: {{ include.height | default: 500 }}px;"></div> -->
 
 <script>
   var map = L.map('map', {
@@ -81,4 +84,23 @@
         <a href="${scenery.link}" target="_self">View Details</a>
       `);
   });
+
+  // Define the legend control
+var legend = L.control({ position: 'bottomright' });
+
+legend.onAdd = function (map) {
+    var div = L.DomUtil.create('div', 'legend');
+    div.innerHTML += '<h4>Legend</h4>';
+    div.innerHTML += '<div><img src="/assets/images/airport.png" width="32" height="32"> Airport</div>';
+    div.innerHTML += '<div><img src="/assets/images/helipad.png" width="32" height="32"> Helipad</div>';
+    div.innerHTML += '<div><img src="/assets/images/fighter.png" width="32" height="32"> Air Base</div>';
+    div.innerHTML += '<div><img src="/assets/images/training.png" width="32" height="32"> SO Training</div>';
+    div.innerHTML += '<div><img src="/assets/images/rescue.png" width="32" height="32"> SO Search & Rescue</div>';
+    div.innerHTML += '<div><img src="/assets/images/marines.png" width="32" height="32"> SO Naval Recon</div>';
+    
+    return div;
+};
+
+// Add legend to map
+legend.addTo(map);
 </script>

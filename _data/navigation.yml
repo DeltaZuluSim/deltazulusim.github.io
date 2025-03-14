@@ -2,14 +2,16 @@
 main:
   - title: "Home"
     url: /
-  - title: "Sceneries"
+  - title: "DZS Sceneries"
     url: /sceneries
-  - title: "Liveries"
+  - title: "DZS Liveries"
     url: /liveries
-  - title: "Charts"
-    url: /charts
+  - title: "Sceneries map"
+    url: /sceneries-map/
   - title: "Contact"
     url: /contact/
+  - title: "Charts"
+    url: /charts
   - title: "Community Sceneries"
     url: /categories/community-sceneries
   - title: "Community Liveries"

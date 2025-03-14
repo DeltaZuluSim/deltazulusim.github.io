@@ -1,11 +1,17 @@
 ---
 title: "All sceneries map"
 permalink: /sceneries-map/
-layout: single
+layout: splash
 classes: wide
 author_profile: false
 ---
 
+<br />
+
+# Global sceneries map
+
+<code><i>All Algerian sceneries, from DZ community, and from Delta-Zulu Simulations!</i></code>
+
 {% assign sceneries = site.data.sceneries | concat: site.data.community-sceneries %}
 
-{% include map.html dz_asp="true" sceneries=sceneries %}
+{% include map.html dz_asp="true" sceneries=sceneries height="60vh"  %}
