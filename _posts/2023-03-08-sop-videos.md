@@ -16,6 +16,10 @@ tags:
 
 ---
 
+### SU-27 with Algerian Livery trailer 
+{% include video id="Padt7-Y2nS0" provider="youtube" %}
+
+
 ### Algerian Fighters simulation on IVAO 
 {% include video id="3Cc7LKdniXo" provider="youtube" %}
 
