@@ -12,6 +12,7 @@ categories:
 tags:
   - Sceneries
   - Military
+  - Community
 
 resources:
   - icao: "DAAN"

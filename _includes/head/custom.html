@@ -50,6 +50,223 @@ a, a:visited, a:hover, a:active {
   }
   
   </style>
+
+
+<style>
+  /* ✅ Ensure parent menu items are positioned properly */
+  .masthead__menu-item {
+    position: relative !important;
+    display: inline-block !important; /* Ensure items align properly */
+    white-space: nowrap !important;
+  }
+  
+  /* ✅ Default state: Hide the submenu */
+  .masthead__menu-item .submenu {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+    position: absolute !important;
+    top: 100% !important;
+    left: 0 !important;
+    background: #fff !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+    border-radius: 4px !important;
+    list-style: none !important;
+    padding: 8px 0 !important;
+    min-width: 200px !important;
+    z-index: 1000 !important;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out !important;
+  }
+  
+  /* ✅ Make submenu **stay open** when hovering over parent or submenu */
+  .masthead__menu-item.has-children:hover .submenu,
+  .masthead__menu-item.has-children:focus-within .submenu,
+  .masthead__menu-item .submenu:hover {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* ✅ Ensure submenu remains visible when hovered */
+  .masthead__menu-item:hover .submenu,
+  .masthead__menu-item .submenu:hover {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* ✅ Fix disappearing issue by reducing hover gap */
+  .masthead__menu-item.has-children {
+    padding-bottom: 2px !important; /* Ensure no hover gap */
+  }
+  
+  /* ✅ Adjust submenu positioning */
+  .masthead__menu-item.has-children .submenu {
+    top: calc(100% + 2px) !important; /* Move submenu closer */
+    left: 0 !important;
+    background: #fff !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* ✅ Ensure submenu is fully visible */
+  .masthead__menu ul {
+    overflow: visible !important;
+    clear: none !important; /* Prevent unwanted clearing */
+  }
+  
+  /* ✅ Mobile-friendly dropdowns */
+  @media screen and (max-width: 768px) {
+    .masthead__menu-item.has-children > a::after {
+      content: " ▼" !important;
+      font-size: 12px !important;
+    }
+  
+    .masthead__menu-item .submenu {
+      position: static !important;
+      display: none !important;
+    }
+  
+    .masthead__menu-item.has-children:focus-within .submenu,
+    .masthead__menu-item.has-children:hover .submenu {
+      display: block !important;
+    }
+  }
+  
+  /* ✅ Ensure the hidden menu is displayed vertically */
+  .hidden-links {
+    display: block !important;
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+  
+  /* ✅ Ensure hidden menu items are displayed as a vertical list */
+  .hidden-links .masthead__menu-item {
+    display: block !important;
+    width: 100% !important;
+    text-align: left !important;
+  }
+  
+  /* ✅ Fix child menu inside hidden menu */
+  .hidden-links .masthead__menu-item .submenu {
+    position: static !important; /* Remove absolute positioning */
+    display: none !important; /* Keep it hidden initially */
+    visibility: hidden !important;
+    opacity: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* ✅ Show child items when the parent is hovered or focused */
+  .hidden-links .masthead__menu-item.has-children:hover > .submenu,
+  .hidden-links .masthead__menu-item.has-children:focus-within > .submenu {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* ✅ Ensure child items are vertical in the hidden menu */
+  .hidden-links .masthead__menu-item .submenu li {
+    display: block !important;
+    width: 100% !important;
+    padding: 5px 15px !important;
+    text-align: left !important;
+    white-space: nowrap !important;
+  }
+  
+  /* ✅ Fix submenu item alignment */
+  .hidden-links .masthead__menu-item .submenu a {
+    display: block !important;
+    padding: 10px 15px !important;
+    text-decoration: none !important;
+    color: #333 !important;
+  }
+  
+  /* ✅ Hover effect for hidden menu */
+  .hidden-links .masthead__menu-item .submenu a:hover {
+    background-color: #f4f4f4 !important;
+  }
+  
+  .greedy-nav .hidden-links {
+      position: absolute !important;
+      top: 100% !important;
+      right: 0 !important;
+      margin-top: 15px !important;
+      padding: 5px !important;
+      border: 1px solid rgb(205.5, 206.75, 208.75) !important;
+      border-radius: 4px !important;
+      background: #eee !important;
+      box-shadow: 0 2px 4px 0 rgba(0, 0, 0, .16), 0 2px 10px 0 rgba(0, 0, 0, .12) !important;
+  
+      /* ✅ Set max-width to prevent it from being too wide */
+      width: auto !important;
+      min-width: 200px !important; /* Ensure it's not too small */
+      max-width: 250px !important; /* Prevent it from being too large */
+      white-space: nowrap !important; /* Ensure text doesn't wrap */
+  }
+  
+  /* ✅ Make sure hidden menu items are properly aligned */
+  .greedy-nav .hidden-links li {
+      display: block !important;
+      width: 100% !important;
+      text-align: left !important;
+  }
+  
+  /* ✅ Ensure child menus inside hidden menu don't stretch */
+  .greedy-nav .hidden-links .masthead__menu-item .submenu {
+      width: 100% !important;
+      max-width: 220px !important;
+      background: #fff !important;
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) !important;
+  }
+  
+  /* ✅ Ensure child items inside hidden menu don't take too much space */
+  .greedy-nav .hidden-links .masthead__menu-item .submenu li {
+      width: 100% !important;
+  }
+  
+  /* ✅ Ensure submenu items inside the hidden menu are readable */
+  .greedy-nav .hidden-links .masthead__menu-item .submenu a {
+      width: 100% !important;
+      padding: 10px 15px !important;
+      display: block !important;
+  }
+  
+  /* ✅ Increase the hoverable area to prevent flickering */
+  .masthead__menu-item.has-children {
+    padding-bottom: 5px !important; /* Increase padding to reduce gap */
+  }
+  
+  .masthead__menu-item.has-children .submenu {
+    margin-top: -5px !important; /* Move submenu slightly closer */
+    padding-top: 5px !important; /* Increase hover area at the top */
+  }
+  
+  /* ✅ Ensure submenu remains open while hovering */
+  .masthead__menu-item.has-children:hover .submenu,
+  .masthead__menu-item.has-children:focus-within .submenu,
+  .masthead__menu-item .submenu:hover {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+  
+  /* Ensure the submenu icon is properly aligned */
+  .submenu-icon {
+    margin-left: 5px !important;  /* Space between text and icon */
+    font-size: 12px !important;  /* Adjust icon size */
+    color: #666 !important;  /* Light gray color */
+    display: inline-block !important;
+    transition: transform 0.2s ease-in-out !important; /* Smooth animation */
+  }
+  
+  /* Rotate the icon when hovering */
+  .masthead__menu-item.has-children:hover .submenu-icon {
+    transform: rotate(180deg) !important;
+  }
+  
+  
+  </style>
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
 <!-- end custom head snippets -->

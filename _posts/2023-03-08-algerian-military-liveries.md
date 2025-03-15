@@ -13,6 +13,7 @@ categories:
 tags:
   - Liveries
   - Military
+  - Community
 
 resources:
   - id: "C-130 Captain Exterior"

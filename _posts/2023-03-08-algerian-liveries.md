@@ -12,6 +12,7 @@ categories:
   - "Community Liveries"
 tags:
   - Liveries
+  - Community
 
 resources:
   - id: "A330-200GE"

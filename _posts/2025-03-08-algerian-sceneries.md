@@ -11,6 +11,7 @@ categories:
   - "Community Sceneries"
 tags:
   - Sceneries
+  - Community
 
 resources:
   - icao: "DAOO"

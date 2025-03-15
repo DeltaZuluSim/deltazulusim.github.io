@@ -11,6 +11,7 @@ categories:
   - Community Resources
 tags:
   - GSX Pro
+  - Community
 
 resources:
   - icao: "DAAG"
