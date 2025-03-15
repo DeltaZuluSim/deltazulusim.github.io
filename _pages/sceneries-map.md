@@ -10,7 +10,7 @@ author_profile: false
 
 # Global sceneries map
 
-<code><i>All Algerian sceneries, from DZ community, and from Delta-Zulu Simulations!</i></code>
+<code><i>All Algerian sceneries, from DZ community, and from DeltaZulu Simulations!</i></code>
 
 {% assign sceneries = site.data.sceneries | concat: site.data.community-sceneries | concat: site.data.community-military-sceneries %}
 

@@ -18,6 +18,12 @@ main:
     url: /categories/community-liveries
   - title: "Community Resources"
     url: /categories/community-resources
+  - title: "About"
+    url: /about/
+  - title: "Contribute"
+    url: /contribute/
+  - title: "Privacy Policy"
+    url: /privacy-policy/
 #  - title: "Sitemap"
 #    url: /sitemap/
 #  - title: "Archive"

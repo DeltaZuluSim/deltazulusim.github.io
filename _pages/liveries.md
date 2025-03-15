@@ -1,6 +1,6 @@
 ---
-title: "List of liveries by DZS"
-layout: dzs-collection
+title: List of liveries by DZS
+layout: liveries
 permalink: /liveries/
 collection: liveries
 entries_layout: grid
