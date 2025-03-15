@@ -1,3 +1,9 @@
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://teastman.github.io/Leaflet.pattern/leaflet.pattern.js"></script>
 
 <div id="map" style="width: 100%; height: {{ include.height | default: '500px' }};"></div>
 
@@ -11,21 +17,28 @@
     minZoom: 5
   });
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
-    subdomains: 'abcd',
-    maxZoom: 20
-  }).addTo(map);
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
+  subdomains: 'abcd',
+  maxZoom: 16
+}).addTo(map);
+
+
+
+
+
+
+
 
   fetch('/assets/geojson/algeria.geojson')
     .then(response => response.json())
     .then(data => {
       L.geoJSON(data, {
         style: {
-          color: '#03240f',
+          color: '#dddddd',
           weight: 1,
           fillColor: '#deffe7',
-          fillOpacity: 0.1
+          fillOpacity: 0.5
         }
       }).addTo(map);
     });
@@ -36,10 +49,10 @@
     .then(data => {
       L.geoJSON(data, {
         style: {
-          color: '#03240f',
+          color: '#dddddd',
           weight: 2,
-          fillColor: 'white',
-          fillOpacity: 0.1
+          fillColor: 'red',
+          fillOpacity: 0.08
         }
       }).addTo(map);
     });

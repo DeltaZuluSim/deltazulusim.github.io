@@ -4,6 +4,7 @@ excerpt: "Military reconnaissance scenario for MSFS simmers: locate and identify
 toc: true
 date: 2025-03-06T00:00:00+01:00
 last_modified_at: 2025-03-06T00:00:00+01:00
+coordinates: "[37.28, 7.15]"
 # comments: true
 header:
   overlay_color: "#000"
@@ -81,45 +82,7 @@ Prepare for a high-stakes military reconnaissance mission in Microsoft Flight Si
 
 Designed for special operations training, this mission challenges your navigation, observation, and reconnaissance skills in a realistic maritime environment.
 
-
-<div id="map" style="height: 500px;"></div>
-
-<script>
-  // Define coordinates once
-  const centerCoords = [37.28, 7.15];
-
-  // Initialize the map
-  var map = L.map('map', {
-    center: centerCoords,
-    zoom: 7,
-    minZoom: 5
-  });
-
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
-    subdomains: 'abcd',
-    maxZoom: 16
-}).addTo(map); 
-
-fetch('/assets/geojson/dz_asp.geojson') // Algeria's GeoJSON
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      style: {
-        color: '#03240f',      // Border color
-        weight: 2,         // Border thickness
-        fillColor: 'white', // Inside color
-        fillOpacity: 0.1   // Transparency
-      }
-    }).addTo(map);
-  });
-
-  // Add a marker using the same coordinates
-  var marker = L.marker(centerCoords).addTo(map)
-    //.bindPopup('<a href="/sceneries/training-zone-d86-01/">sar-01</a>')
-    .openPopup();
-</script>
-
+{% include map-single.html coordinates=page.coordinates %}
 
 ## Scenario Details
 

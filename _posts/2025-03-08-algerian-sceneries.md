@@ -35,6 +35,7 @@ resources:
     airport_name: "Chlef"
     author: "moh_3431"
     author_url : "moh_3431"
+    notice: "No military apron"
     image_url: "https://cdn.flightsim.to/images/26/daoi-airport-chlef-intl-v1-693876-1705754862-UnCsK.jpg?width=1400"
     download_url: "https://fr.flightsim.to/file/67843/daoi-airport-chlef-intl-v1?fbclid=IwAR3-JiOdf-OWPGS_KYydehb_HT17NIRBiMBLYffYcNlLV8Bo9Iy4SZWKAX0"
     MSFS2020: true

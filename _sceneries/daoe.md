@@ -4,6 +4,7 @@ excerpt: "Microsoft Flight Simulation Scenery for BOUSFER (DAOE) Military Airpor
 toc: true
 date: 2025-02-23T00:00:00+01:00
 last_modified_at: 2025-02-23T00:00:00+01:00
+coordinates: "[35.5, -1.5]"
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -51,50 +52,7 @@ changelog:
 
 Bousfer Military Airport (DAOE) is an Algerian military Air base, located near Oran, plays a strategic role in regional operations and now comes to life in MSFS 2020 and MSFS 2024 with stunning accuracy.
 
-<div id="map" style="height: 500px;"></div>
-
-<script>
-  // Define coordinates once
-  const centerCoords = [35.73, -0.80];
-
-  // Initialize the map
-  var map = L.map('map', {
-    center: centerCoords,
-    zoom: 7,
-    minZoom: 5
-  });
-
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
-    subdomains: 'abcd',
-    maxZoom: 16
-}).addTo(map); 
-
-fetch('/assets/geojson/dz_asp.geojson') // Algeria's GeoJSON
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      style: {
-        color: '#03240f',      // Border color
-        weight: 2,         // Border thickness
-        fillColor: 'white', // Inside color
-        fillOpacity: 0.1   // Transparency
-      }
-    }).addTo(map);
-  });
-
-   var milMarker = L.icon({
-    iconUrl: '/assets/images/mil-marker.png', // Replace with your green marker image
-    iconSize: [32, 32], // Size of the icon
-    iconAnchor: [16, 32], // Point of the icon that corresponds to the marker's location
-    popupAnchor: [0, -32] // Position of the popup relative to the icon
-  });
-
-  // Add a marker using the custom green icon
-  var marker = L.marker(centerCoords, { icon: milMarker }).addTo(map)
-    // .bindPopup('<a href="/sceneries/training-zone-d82-01/">D82-01</a>')
-    .openPopup();
-</script>
+{% include map-single.html coordinates=page.coordinates %}
 
 
 ## Gallery 

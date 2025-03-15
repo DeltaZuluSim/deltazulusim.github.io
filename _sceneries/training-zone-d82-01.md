@@ -4,6 +4,7 @@ excerpt: "Virtual Spercial operations Training zone for MSFS simmers in the spec
 toc: true
 date: 2025-02-24T00:00:00+01:00
 last_modified_at: 2025-02-24T00:00:00+01:00
+coordinates: "[34.93, 2.55]"
 # comments: true
 header:
   overlay_color: "#000"
@@ -57,53 +58,7 @@ This scenery brings to life an unpaved runway located within Military Area D82, 
 
 Pilots can navigate to the area by departing Aïn Oussera Air base (DAQQ) and heading southbound.
 
-<div id="map" style="height: 500px;"></div>
-
-<script>
-  // Define coordinates once
-  const centerCoords = [34.93, 2.55];
-
-  // Initialize the map
-  var map = L.map('map', {
-    center: centerCoords,
-    zoom: 7,
-    minZoom: 5
-  });
-
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
-    subdomains: 'abcd',
-    maxZoom: 16
-}).addTo(map); 
-
-fetch('/assets/geojson/dz_asp.geojson') // Algeria's GeoJSON
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      style: {
-        color: '#03240f',      // Border color
-        weight: 2,         // Border thickness
-        fillColor: 'white', // Inside color
-        fillOpacity: 0.1   // Transparency
-      }
-    }).addTo(map);
-  });
-
-  // Add a marker using the same coordinates
-  // Define a green marker icon
-  var milMarker = L.icon({
-    iconUrl: '/assets/images/mil-marker.png', // Replace with your green marker image
-    iconSize: [32, 32], // Size of the icon
-    iconAnchor: [16, 32], // Point of the icon that corresponds to the marker's location
-    popupAnchor: [0, -32] // Position of the popup relative to the icon
-  });
-
-  // Add a marker using the custom green icon
-  var marker = L.marker(centerCoords, { icon: milMarker }).addTo(map)
-    // .bindPopup('<a href="/sceneries/training-zone-d82-01/">D82-01</a>')
-    .openPopup();
-</script>
-
+{% include map-single.html coordinates=page.coordinates %}
 
 ## Key features:
 - Upgraded unpaved runway with improved ground surface.

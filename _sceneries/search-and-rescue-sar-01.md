@@ -4,6 +4,7 @@ excerpt: "Search and Rescue scenario for MSFS simmers: locate and report a burni
 toc: true
 date: 2025-03-03T00:00:00+01:00
 last_modified_at: 2025-03-03T00:00:00+01:00
+coordinates: "[37.10, 5.77]"
 # comments: true
 header:
   overlay_color: "#000"
@@ -67,43 +68,7 @@ Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024
 A container ship has caught fire in the Mediterranean Sea, north of Jijel, Algeria. Your role as a search and rescue (SAR) pilot is to locate the vessel, assess the situation, and report its exact coordinates and status.
 
 
-<div id="map" style="height: 500px;"></div>
-
-<script>
-  // Define coordinates once
-  const centerCoords = [37.10, 5.77];
-
-  // Initialize the map
-  var map = L.map('map', {
-    center: centerCoords,
-    zoom: 7,
-    minZoom: 5
-  });
-
-L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
-    subdomains: 'abcd',
-    maxZoom: 16
-}).addTo(map); 
-
-fetch('/assets/geojson/dz_asp.geojson') // Algeria's GeoJSON
-  .then(response => response.json())
-  .then(data => {
-    L.geoJSON(data, {
-      style: {
-        color: '#03240f',      // Border color
-        weight: 2,         // Border thickness
-        fillColor: 'white', // Inside color
-        fillOpacity: 0.1   // Transparency
-      }
-    }).addTo(map);
-  });
-
-  // Add a marker using the same coordinates
-  var marker = L.marker(centerCoords).addTo(map)
-    //.bindPopup('<a href="/sceneries/training-zone-sar-01/">sar-01</a>')
-    .openPopup();
-</script>
+{% include map-single.html coordinates=page.coordinates %}
 
 
 ## Scenario Details

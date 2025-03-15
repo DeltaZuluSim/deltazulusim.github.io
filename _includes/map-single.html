@@ -1,0 +1,55 @@
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://teastman.github.io/Leaflet.pattern/leaflet.pattern.js"></script>
+
+<div id="map" style="height: 500px;"></div>
+
+<script>
+  // Define coordinates using Jekyll variable
+  {% if include.coordinates %}
+    const centerCoords = {{ include.coordinates }};
+  {% endif %}
+
+  // Initialize the map
+  var map = L.map('map', {
+    center: {% if include.coordinates %} centerCoords {% else %} [33.53, -0.24] {% endif %},
+    zoom: 6,
+    minZoom: 5,
+  });
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
+  subdomains: 'abcd',
+  maxZoom: 16
+}).addTo(map);
+
+fetch('/assets/geojson/algeria.geojson')
+    .then(response => response.json())
+    .then(data => {
+      L.geoJSON(data, {
+        style: {
+          color: '#dddddd',
+          weight: 1,
+          fillColor: '#deffe7',
+          fillOpacity: 0.5
+        }
+      }).addTo(map);
+    });
+
+  {% if include.coordinates %}
+    // Add a marker
+    var milMarker = L.icon({
+      iconUrl: '/assets/images/mil-marker.png', // Replace with your marker image
+      iconSize: [32, 32], 
+      iconAnchor: [16, 32], 
+      popupAnchor: [0, -32]
+    });
+
+    // Add a marker using the custom icon
+    var marker = L.marker(centerCoords, { icon: milMarker }).addTo(map)
+      .openPopup();
+  {% endif %}
+</script>
