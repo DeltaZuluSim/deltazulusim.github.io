@@ -12,7 +12,7 @@ header:
   teaser: /content/images/sceneries/d50e-01/D50E-0101.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://deltazulusim.short.gy/sceneries/d50e-01/v1.0.0"
+      url: "#download"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Area"
@@ -29,6 +29,24 @@ sidebar:
     text: "Yes"
 
 gallery:
+  - url: /content/images/sceneries/d50e-01/D50E-0107.webp
+    image_path: /content/images/sceneries/d50e-01/D50E-0107.webp
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
+  - url: /content/images/sceneries/d50e-01/D50E-0108.webp
+    image_path: /content/images/sceneries/d50e-01/D50E-0108.webp
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
+  - url: /content/images/sceneries/d50e-01/D50E-0109.webp
+    image_path: /content/images/sceneries/d50e-01/D50E-0109.webp
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
+  - url: /content/images/sceneries/d50e-01/D50E-0110.webp
+    image_path: /content/images/sceneries/d50e-01/D50E-0110.webp
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
+  - url: /content/images/sceneries/d50e-01/D50E-0111.webp
+    image_path: /content/images/sceneries/d50e-01/D50E-0111.webp
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
+  - url: /content/images/sceneries/d50e-01/D50E-0112.webp
+    image_path: /content/images/sceneries/d50e-01/D50E-0112.webp
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
   - url: /content/images/sceneries/d50e-01/D50E-0101.webp
     image_path: /content/images/sceneries/d50e-01/D50E-0101.webp
     alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
@@ -49,12 +67,19 @@ gallery:
     alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
+  - version: "1.1.0"
+    version_date: "2025-03-15"
+    download_url: "https://deltazulusim.short.gy/sceneries/d50e-01/v1.1.0"
+    changes:
+      - "Removed big yellow circle"
+      - "Added 3 zones, with cars, trucks and containers"
   - version: "1.0.0"
     version_date: "2025-02-23"
     download_url: "https://deltazulusim.short.gy/sceneries/d50e-01/v1.0.0"
     changes:
       - "initial version"
 ---
+
 
 Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024
 {:.notice}
@@ -141,4 +166,4 @@ This scenery references some optional models from the following third party scen
 ## Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
 
-[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/sceneries/d50e-01/v1.0.0){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/sceneries/d50e-01/v1.1.0){: .btn .btn--success .btn--x-large}
