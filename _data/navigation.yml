@@ -28,12 +28,12 @@ main:
     url: /contact/
   - title: "Charts"
     url: /charts
-  - title: "Community Sceneries"
-    url: /categories/community-sceneries
-  - title: "Community Liveries"
-    url: /categories/community-liveries
-  - title: "Community Resources"
-    url: /categories/community-resources
+  # - title: "Community Sceneries"
+  #   url: /categories/community-sceneries
+  # - title: "Community Liveries"
+  #   url: /categories/community-liveries
+  # - title: "Community Resources"
+  #   url: /categories/community-resources
   - title: "About"
     url: /about/
   - title: "Contribute"
