@@ -67,7 +67,7 @@
         L.marker(airport.coordinates, { icon: airportIcon }).addTo(map)
           .bindPopup(`
     <strong>${airport.icao}</strong><br/>
-    <a href="/charts/${airport.icao.toLowerCase()}" target="_self">${airport.name}</a>
+    <a href="/charts/${airport.icao}" target="_self">${airport.name}</a>
   `);
         console.log(`📍 Added marker: ${airport.icao} at ${airport.coordinates}`);
       } else {
