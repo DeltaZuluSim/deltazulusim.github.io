@@ -7,9 +7,6 @@
 
 <div id="map" style="width: 100%; height: {{ include.height | default: '500px' }};"></div>
 
-
-<!-- <div id="map" style="height: {{ include.height | default: 500 }}px;"></div> -->
-
 <script>
   var map = L.map('map', {
     center: [34.39, 3.77],
@@ -18,17 +15,10 @@
   });
 
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
-  subdomains: 'abcd',
-  maxZoom: 16
-}).addTo(map);
-
-
-
-
-
-
-
+    attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
+    subdomains: 'abcd',
+    maxZoom: 16
+  }).addTo(map);
 
   fetch('/assets/geojson/algeria.geojson')
     .then(response => response.json())
@@ -68,6 +58,9 @@
     "Naval Recon": L.icon({ iconUrl: '/assets/images/marines.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] })
   };
 
+  // Track used icons
+  var usedMarkers = new Set();
+
   // Sceneries data from Jekyll
   var sceneries = [
     {% for scenery in include.sceneries %}
@@ -88,39 +81,41 @@
     let iconType = icons[scenery.type] || icons["Training"];
     let imageSrc = scenery.image ? scenery.image : "/assets/images/default.png"; // Default image if missing
 
+    usedMarkers.add(scenery.type); // Track used marker types
+
     L.marker([scenery.lat, scenery.lng], { icon: iconType }).addTo(map)
       .bindPopup(`
         <div style="display: flex; justify-content: center; align-items: center;">
           <code style="background-color: #ccc;"><strong>${scenery.type}</strong></code>
           <br/>
-</div>
-<div style="display: flex; justify-content: center; align-items: center;">
-        <strong>${scenery.name}</strong><br/>
+        </div>
+        <div style="display: flex; justify-content: center; align-items: center;">
+          <strong>${scenery.name}</strong><br/>
         </div>
         ${scenery.description}<br/>
         
         <img src="${imageSrc}" width="auto"/><br/>
         <a href="${scenery.link}" target="_self">View Details</a>
-        
       `);
   });
 
   // Define the legend control
-var legend = L.control({ position: 'bottomright' });
+  var legend = L.control({ position: 'bottomright' });
 
-legend.onAdd = function (map) {
+  legend.onAdd = function (map) {
     var div = L.DomUtil.create('div', 'legend');
     div.innerHTML += '<h4>Legend</h4>';
-    div.innerHTML += '<div><img src="/assets/images/airport.png" width="32" height="32"> Airport</div>';
-    div.innerHTML += '<div><img src="/assets/images/helipad.png" width="32" height="32"> Helipad</div>';
-    div.innerHTML += '<div><img src="/assets/images/fighter.png" width="32" height="32"> Air Base</div>';
-    div.innerHTML += '<div><img src="/assets/images/training.png" width="32" height="32"> SO Training</div>';
-    div.innerHTML += '<div><img src="/assets/images/rescue.png" width="32" height="32"> SO Search & Rescue</div>';
-    div.innerHTML += '<div><img src="/assets/images/marines.png" width="32" height="32"> SO Naval Recon</div>';
-    
-    return div;
-};
 
-// Add legend to map
-legend.addTo(map);
+    Object.keys(icons).forEach(type => {
+      if (usedMarkers.has(type)) { // Only show used markers
+        div.innerHTML += `<div><img src="${icons[type].options.iconUrl}" width="32" height="32"> ${type}</div>`;
+      }
+    });
+
+    return div;
+  };
+
+  // Add legend to map
+  legend.addTo(map);
 </script>
+

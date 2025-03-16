@@ -41,14 +41,14 @@
           <td style="text-align: center">{{ airport.name }}</td>
           <td style="text-align: center">{{ airport.documents | size }}</td> <!-- Displays count of PDFs -->
           <td style="text-align: center">
-            <button class="toggle-pdf btn btn-success">View</button>
+            <button class="toggle-pdf btn btn--success">View</button>
           </td>
         </tr>
         <tr class="pdf-row">
           <td colspan="4">
             <div class="pdf-container">
-              <button class="prev-doc btn btn-secondary">Previous Document</button>
-              <button class="next-doc btn btn-secondary">Next Document</button>
+              <button class="prev-doc btn btn--secondary">Previous Document</button>
+              <button class="next-doc btn btn--secondary">Next Document</button>
               <p class="loading-text">Loading PDF...</p>
             </div>
           </td>
@@ -177,8 +177,8 @@
                         let btn = r.previousElementSibling.querySelector(".toggle-pdf");
                         if (btn) {
                             btn.textContent = "View";
-                            btn.classList.remove("btn-danger");
-                            btn.classList.add("btn-success");
+                            btn.classList.remove("btn--danger");
+                            btn.classList.add("btn--success");
                         }
                     }
                 });
@@ -186,16 +186,16 @@
                 if (pdfRow.style.display === "table-row") {
                     pdfRow.style.display = "none";
                     this.textContent = "View";
-                    this.classList.remove("btn-danger");
-                    this.classList.add("btn-success");
+                    this.classList.remove("btn--danger");
+                    this.classList.add("btn--success");
                 } else {
                     pdfRow.style.display = "table-row";
                     pdfRow.setAttribute("data-index", currentIndex);
                     disableAllButtons(pdfRow);
                     loadPDF(pdfUrls[currentIndex], pdfRow);
                     this.textContent = "Close";
-                    this.classList.remove("btn-success");
-                    this.classList.add("btn-danger");
+                    this.classList.remove("btn--success");
+                    this.classList.add("btn--danger");
     
                     prevDocBtn.onclick = () => {
                         if (currentIndex > 0) {
