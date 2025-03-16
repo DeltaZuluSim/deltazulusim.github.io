@@ -1,0 +1,78 @@
+<!-- Leaflet CSS -->
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<!-- Leaflet JS -->
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://teastman.github.io/Leaflet.pattern/leaflet.pattern.js"></script>
+
+<div id="map" style="width: 100%; height: {{ include.height | default: '500px' }};"></div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    var map = L.map('map', {
+      center: [29.0, 2.0],
+      zoom: 5,
+      minZoom: 5
+    });
+
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+      attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
+      subdomains: 'abcd',
+      maxZoom: 16
+    }).addTo(map);
+
+    fetch('/assets/geojson/algeria.geojson')
+    .then(response => response.json())
+    .then(data => {
+      L.geoJSON(data, {
+        style: {
+          color: '#dddddd',
+          weight: 1,
+          fillColor: '#deffe7',
+          fillOpacity: 0.5
+        }
+      }).addTo(map);
+    });
+
+    console.log("✅ Leaflet map initialized!");
+
+    // Define Airport Icon
+    var airportIcon = L.icon({ 
+      iconUrl: '/assets/images/airport.png', 
+      iconSize: [32, 32], 
+      iconAnchor: [16, 32], 
+      popupAnchor: [0, -32] 
+    });
+
+    // Airports Data from Jekyll
+    var airports = [
+      {% for airport in include.airports %}
+      {
+        icao: "{{ airport.icao }}",
+        name: "{{ airport.name }}",
+        coordinates: [
+          {{ airport.coordinates | remove: '[' | remove: ']' | split: ', ' | first | plus: 0 }},
+          {{ airport.coordinates | remove: '[' | remove: ']' | split: ', ' | last | plus: 0 }}
+        ]
+      }{% unless forloop.last %},{% endunless %}
+      {% endfor %}
+    ];
+
+    console.log("📌 Loaded airports data:", airports);
+
+    // Add Markers
+    airports.forEach(airport => {
+      if (Array.isArray(airport.coordinates) && airport.coordinates.length === 2) {
+        L.marker(airport.coordinates, { icon: airportIcon }).addTo(map)
+          .bindPopup(`
+    <strong>${airport.icao}</strong><br/>
+    <a href="/charts/${airport.icao.toLowerCase()}" target="_self">${airport.name}</a>
+  `);
+        console.log(`📍 Added marker: ${airport.icao} at ${airport.coordinates}`);
+      } else {
+        console.error("❌ Invalid coordinates for", airport);
+      }
+    });
+  });
+</script>

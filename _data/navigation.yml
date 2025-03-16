@@ -2,40 +2,40 @@
 main:
   - title: "Home"
     url: /
-  - title: "DeltaZulu"
-    url: #
+  - title: "Sceneries"
+    url: /sceneries-map/
     children:
       - title: "DZS Sceneries"
         url: /sceneries
-      - title: "DZS Liveries"
-        url: /liveries
-  - title: "Comunity"
-    url: /community/
-    children:
       - title: "Community Sceneries"
         url: /categories/community-sceneries
+
+  - title: "Liveries"
+    url: #
+    children:
+      - title: "DZS Liveries"
+        url: /liveries
       - title: "Community Liveries"
         url: /categories/community-liveries
-      - title: "Community Resources"
-        url: /categories/community-resources
-  # - title: "DZS Sceneries"
-  #   url: /sceneries
-  # - title: "DZS Liveries"
-  #   url: /liveries
-  - title: "Sceneries map"
-    url: /sceneries-map/
-  - title: "Contact"
-    url: /contact/
+
   - title: "Charts"
     url: /charts
+    
+  - title: "Resources"
+    url: /categories/community-resources
+
+  - title: "About"
+    url: /about/
+  - title: "Contact"
+    url: /contact/
+
   # - title: "Community Sceneries"
   #   url: /categories/community-sceneries
   # - title: "Community Liveries"
   #   url: /categories/community-liveries
   # - title: "Community Resources"
   #   url: /categories/community-resources
-  - title: "About"
-    url: /about/
+
   - title: "Contribute"
     url: /contribute/
   - title: "Privacy Policy"

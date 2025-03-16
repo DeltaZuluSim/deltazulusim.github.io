@@ -158,6 +158,9 @@ author:
 # Site Footer
 footer:
   links:
+    - label: "Discord"
+      icon: "fa-brands fa-discord"
+      url: https://discord.gg/EEeKMt86xP
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: https://x.com/deltazulusim
