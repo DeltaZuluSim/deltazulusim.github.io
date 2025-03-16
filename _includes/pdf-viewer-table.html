@@ -60,173 +60,173 @@
     
   
   <script>
-  document.addEventListener("DOMContentLoaded", function () {
-      var pdfjsLib = window['pdfjs-dist/build/pdf'];
-      pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
-  
-      function loadPDF(pdfUrl, pdfRow) {
-          var container = pdfRow.querySelector(".pdf-container");
-          var existingIframe = container.querySelector("iframe");
-          var existingOpenIcon = container.querySelector(".open-external");
-          var pdfScrollContainer = container.querySelector(".pdf-scroll-container");
-  
-          // Remove any existing content
-          if (existingIframe) existingIframe.remove();
-          if (existingOpenIcon) existingOpenIcon.remove();
-          if (pdfScrollContainer) pdfScrollContainer.remove();
-  
-          // **Handle Google Drive PDFs with `<iframe>`**
-          if (pdfUrl.includes("drive.google.com")) {
-              var fileId = pdfUrl.match(/\/d\/(.*?)\//);
-              if (fileId) {
-                  pdfUrl = `https://drive.google.com/file/d/${fileId[1]}/preview`; // Correct Google Drive format
-              }
-  
-              var iframe = document.createElement("iframe");
-              iframe.src = pdfUrl;
-              iframe.width = "100%";
-              iframe.height = "600px";
-              iframe.style.border = "none";
-  
-              container.appendChild(iframe);
-              return;
-          }
-  
-          // **Handle Local PDFs with PDF.js**
-          var scrollContainer = document.createElement("div");
-          scrollContainer.classList.add("pdf-scroll-container");
-          scrollContainer.style.overflowY = "auto";
-          scrollContainer.style.height = "600px";
-          scrollContainer.style.border = "1px solid #ddd";
-          scrollContainer.style.padding = "0";
-          scrollContainer.style.margin = "0";
-          scrollContainer.style.backgroundColor = "#f8f8f8";
-  
-          container.appendChild(scrollContainer);
-  
-          // **Create an "Open in New Window" button (FontAwesome)**
-          var openIcon = document.createElement("a");
-          openIcon.href = pdfUrl;
-          openIcon.target = "_blank";
-          openIcon.classList.add("open-external");
-          openIcon.innerHTML = '<i class="fas fa-external-link-alt"></i>'; // FontAwesome icon
-          openIcon.style.position = "absolute";
-          openIcon.style.top = "10px";
-          openIcon.style.right = "10px";
-          openIcon.style.fontSize = "20px";
-          openIcon.style.color = "#007bff";
-          openIcon.style.cursor = "pointer";
-          openIcon.style.textDecoration = "none";
-          openIcon.style.background = "white";
-          openIcon.style.padding = "5px";
-          openIcon.style.borderRadius = "5px";
-          openIcon.style.boxShadow = "0px 2px 4px rgba(0,0,0,0.2)";
-  
-          container.style.position = "relative";
-          container.appendChild(openIcon);
-  
-          // **Load and Render All Pages**
-          pdfjsLib.getDocument({ url: pdfUrl, withCredentials: false }).promise.then(function (pdfDoc) {
-              for (let pageNum = 1; pageNum <= pdfDoc.numPages; pageNum++) {
-                  pdfDoc.getPage(pageNum).then(function (page) {
-                      var scale = 1.5;
-                      var viewport = page.getViewport({ scale: scale });
-  
-                      var canvas = document.createElement("canvas");
-                      canvas.width = viewport.width;
-                      canvas.height = viewport.height;
-                      canvas.style.display = "block";
-                      canvas.style.margin = "0 auto";
-  
-                      scrollContainer.appendChild(canvas);
-  
-                      var ctx = canvas.getContext("2d");
-                      var renderContext = {
-                          canvasContext: ctx,
-                          viewport: viewport
-                      };
-  
-                      page.render(renderContext);
-                  });
-              }
-          }).catch(error => console.error("Error loading PDF: ", error));
-      }
-  
-      document.querySelectorAll(".toggle-pdf").forEach(button => {
-          // Apply Bootstrap button styling
-          button.classList.add("btn", "btn--success");
-  
-          button.addEventListener("click", function () {
-              var row = this.closest("tr");
-              var pdfRow = row.nextElementSibling;
-              var pdfUrls = JSON.parse(row.getAttribute("data-pdfs"));
-              var currentIndex = 0;
-  
-              if (!pdfRow || !pdfRow.classList.contains("pdf-row")) return;
-  
-              let prevDocBtn = pdfRow.querySelector(".prev-doc");
-              let nextDocBtn = pdfRow.querySelector(".next-doc");
-  
-              // Hide document navigation buttons if there is only one document
-              if (pdfUrls.length === 1) {
-                  prevDocBtn.style.display = "none";
-                  nextDocBtn.style.display = "none";
-              } else {
-                  prevDocBtn.style.display = "inline-block";
-                  nextDocBtn.style.display = "inline-block";
-              }
-  
-              // **Close any other open viewers & reset their buttons**
-              document.querySelectorAll(".pdf-row").forEach(r => {
-                  if (r !== pdfRow) {
-                      r.style.display = "none";
-                      let btn = r.previousElementSibling.querySelector(".toggle-pdf");
-                      if (btn) {
-                          btn.textContent = "View";
-                          btn.classList.remove("btn-danger"); // Remove red color if it was "Close"
-                          btn.classList.add("btn-success"); // Ensure it's green again
-                      }
-                  }
-              });
-  
-              // **Toggle visibility**
-              if (pdfRow.style.display === "table-row") {
-                  pdfRow.style.display = "none";
-                  this.textContent = "View"; // Change button text back to "View"
-                  this.classList.remove("btn-danger"); // Remove red color
-                  this.classList.add("btn-success"); // Restore green color
-              } else {
-                  pdfRow.style.display = "table-row";
-                  loadPDF(pdfUrls[currentIndex], pdfRow);
-                  this.textContent = "Close"; // Change button text to "Close"
-                  this.classList.remove("btn-success"); // Remove green color
-                  this.classList.add("btn-danger"); // Change to red when active
-  
-                  function updateDocumentNavButtons() {
-                      prevDocBtn.disabled = (currentIndex === 0);
-                      nextDocBtn.disabled = (currentIndex === pdfUrls.length - 1);
-                  }
-  
-                  prevDocBtn.onclick = () => {
-                      if (currentIndex > 0) {
-                          currentIndex--;
-                          loadPDF(pdfUrls[currentIndex], pdfRow);
-                          updateDocumentNavButtons();
-                      }
-                  };
-  
-                  nextDocBtn.onclick = () => {
-                      if (currentIndex < pdfUrls.length - 1) {
-                          currentIndex++;
-                          loadPDF(pdfUrls[currentIndex], pdfRow);
-                          updateDocumentNavButtons();
-                      }
-                  };
-  
-                  updateDocumentNavButtons();
-              }
-          });
-      });
-  });
-  
-  </script>
+    document.addEventListener("DOMContentLoaded", function () {
+        var pdfjsLib = window['pdfjs-dist/build/pdf'];
+        pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+    
+        function disableAllButtons(pdfRow) {
+            let toggleButton = pdfRow.previousElementSibling.querySelector(".toggle-pdf");
+            let prevDocBtn = pdfRow.querySelector(".prev-doc");
+            let nextDocBtn = pdfRow.querySelector(".next-doc");
+    
+            toggleButton.disabled = true;
+            prevDocBtn.disabled = true;
+            nextDocBtn.disabled = true;
+        }
+    
+        function enableButtonsAfterDelay(pdfRow) {
+            setTimeout(() => {
+                let toggleButton = pdfRow.previousElementSibling.querySelector(".toggle-pdf");
+                let prevDocBtn = pdfRow.querySelector(".prev-doc");
+                let nextDocBtn = pdfRow.querySelector(".next-doc");
+                let pdfUrls = JSON.parse(pdfRow.previousElementSibling.getAttribute("data-pdfs"));
+                let currentIndex = parseInt(pdfRow.getAttribute("data-index")) || 0;
+    
+                toggleButton.disabled = false; // ✅ "Close" button is enabled
+    
+                prevDocBtn.disabled = (currentIndex === 0); // ✅ Enable if there's a previous document
+                nextDocBtn.disabled = (currentIndex >= pdfUrls.length - 1); // ✅ Enable if there's a next document
+            }, 2000); // ✅ Ensures buttons only re-enable after 2 seconds
+        }
+    
+        function loadPDF(pdfUrl, pdfRow) {
+            disableAllButtons(pdfRow);
+            var container = pdfRow.querySelector(".pdf-container");
+            var pdfViewer = container.querySelector(".pdf-scroll-container");
+            var loadingText = container.querySelector(".loading-text");
+    
+            if (!pdfViewer) {
+                pdfViewer = document.createElement("div");
+                pdfViewer.classList.add("pdf-scroll-container");
+                pdfViewer.style.overflowY = "auto";
+                pdfViewer.style.height = "600px";
+                pdfViewer.style.border = "1px solid #ddd";
+                pdfViewer.style.backgroundColor = "#f8f8f8";
+                container.appendChild(pdfViewer);
+            }
+    
+            pdfViewer.innerHTML = "";
+            loadingText.style.display = "block";
+    
+            if (pdfUrl.includes("drive.google.com")) {
+                var fileId = pdfUrl.match(/\/d\/(.*?)\//);
+                if (fileId) {
+                    pdfUrl = `https://drive.google.com/file/d/${fileId[1]}/preview`;
+                }
+    
+                var iframe = document.createElement("iframe");
+                iframe.src = pdfUrl;
+                iframe.width = "100%";
+                iframe.height = "600px";
+                iframe.style.border = "none";
+    
+                pdfViewer.appendChild(iframe);
+                loadingText.style.display = "none";
+                enableButtonsAfterDelay(pdfRow);
+                return;
+            }
+    
+            pdfjsLib.getDocument({ url: pdfUrl, withCredentials: false }).promise.then(pdfDoc => {
+                pdfDoc.getPage(1).then(page => {
+                    let scale = 1.5;
+                    let viewport = page.getViewport({ scale });
+    
+                    let canvas = document.createElement("canvas");
+                    canvas.width = viewport.width;
+                    canvas.height = viewport.height;
+                    pdfViewer.appendChild(canvas);
+    
+                    let ctx = canvas.getContext("2d");
+                    let renderContext = { canvasContext: ctx, viewport: viewport };
+    
+                    page.render(renderContext).promise.then(() => {
+                        loadingText.style.display = "none";
+                        enableButtonsAfterDelay(pdfRow);
+                    });
+                });
+            }).catch(error => {
+                console.error("Error loading PDF:", error);
+                loadingText.textContent = "Failed to load PDF.";
+                enableButtonsAfterDelay(pdfRow);
+            });
+        }
+    
+        document.querySelectorAll(".toggle-pdf").forEach(button => {
+            button.addEventListener("click", function () {
+                var row = this.closest("tr");
+                var pdfRow = row.nextElementSibling;
+                var pdfUrls = JSON.parse(row.getAttribute("data-pdfs"));
+                var currentIndex = 0;
+    
+                if (!pdfRow || !pdfRow.classList.contains("pdf-row")) return;
+    
+                let prevDocBtn = pdfRow.querySelector(".prev-doc");
+                let nextDocBtn = pdfRow.querySelector(".next-doc");
+    
+                if (pdfUrls.length === 1) {
+                    prevDocBtn.style.display = "none";
+                    nextDocBtn.style.display = "none";
+                } else {
+                    prevDocBtn.style.display = "inline-block";
+                    nextDocBtn.style.display = "inline-block";
+                }
+    
+                document.querySelectorAll(".pdf-row").forEach(r => {
+                    if (r !== pdfRow) {
+                        r.style.display = "none";
+                        let btn = r.previousElementSibling.querySelector(".toggle-pdf");
+                        if (btn) {
+                            btn.textContent = "View";
+                            btn.classList.remove("btn-danger");
+                            btn.classList.add("btn-success");
+                        }
+                    }
+                });
+    
+                if (pdfRow.style.display === "table-row") {
+                    pdfRow.style.display = "none";
+                    this.textContent = "View";
+                    this.classList.remove("btn-danger");
+                    this.classList.add("btn-success");
+                } else {
+                    pdfRow.style.display = "table-row";
+                    pdfRow.setAttribute("data-index", currentIndex);
+                    disableAllButtons(pdfRow);
+                    loadPDF(pdfUrls[currentIndex], pdfRow);
+                    this.textContent = "Close";
+                    this.classList.remove("btn-success");
+                    this.classList.add("btn-danger");
+    
+                    prevDocBtn.onclick = () => {
+                        if (currentIndex > 0) {
+                            currentIndex--;
+                            pdfRow.setAttribute("data-index", currentIndex);
+                            disableAllButtons(pdfRow);
+                            loadPDF(pdfUrls[currentIndex], pdfRow);
+                        }
+                    };
+    
+                    nextDocBtn.onclick = () => {
+                        if (currentIndex < pdfUrls.length - 1) {
+                            currentIndex++;
+                            pdfRow.setAttribute("data-index", currentIndex);
+                            disableAllButtons(pdfRow);
+                            loadPDF(pdfUrls[currentIndex], pdfRow);
+                        }
+                    };
+                }
+            });
+        });
+    
+        // ✅ Ensure buttons are disabled initially where needed
+        document.querySelectorAll(".pdf-row").forEach(pdfRow => {
+            let pdfUrls = JSON.parse(pdfRow.previousElementSibling.getAttribute("data-pdfs"));
+            let prevDocBtn = pdfRow.querySelector(".prev-doc");
+            let nextDocBtn = pdfRow.querySelector(".next-doc");
+    
+            prevDocBtn.disabled = true;
+            nextDocBtn.disabled = (pdfUrls.length <= 1);
+        });
+    });
+    </script>
+    

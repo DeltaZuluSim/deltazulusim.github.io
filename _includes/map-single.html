@@ -13,6 +13,13 @@
     const centerCoords = {{ include.coordinates }};
   {% endif %}
 
+  // Define military variable (default to true)
+  {% if include.military == false %}
+    const isMilitary = false;
+  {% else %}
+    const isMilitary = true;
+  {% endif %}
+
   // Initialize the map
   var map = L.map('map', {
     center: {% if include.coordinates %} centerCoords {% else %} [33.53, -0.24] {% endif %},
@@ -21,12 +28,12 @@
   });
 
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-  attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
-  subdomains: 'abcd',
-  maxZoom: 16
-}).addTo(map);
+    attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
+    subdomains: 'abcd',
+    maxZoom: 16
+  }).addTo(map);
 
-fetch('/assets/geojson/algeria.geojson')
+  fetch('/assets/geojson/algeria.geojson')
     .then(response => response.json())
     .then(data => {
       L.geoJSON(data, {
@@ -40,16 +47,17 @@ fetch('/assets/geojson/algeria.geojson')
     });
 
   {% if include.coordinates %}
-    // Add a marker
-    var milMarker = L.icon({
-      iconUrl: '/assets/images/mil-marker.png', // Replace with your marker image
+    // Determine the marker icon based on 'military' variable
+    var markerIcon = L.icon({
+      iconUrl: isMilitary ? '/assets/images/mil-marker.png' : '/assets/images/marker.png',
       iconSize: [32, 32], 
       iconAnchor: [16, 32], 
       popupAnchor: [0, -32]
     });
 
-    // Add a marker using the custom icon
-    var marker = L.marker(centerCoords, { icon: milMarker }).addTo(map)
+    // Add a marker using the selected icon
+    var marker = L.marker(centerCoords, { icon: markerIcon }).addTo(map)
       .openPopup();
   {% endif %}
 </script>
+
