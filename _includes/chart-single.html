@@ -1,7 +1,7 @@
 
 
 {% assign airport = site.data.airports | where: "icao", page.icao | first %}
-{% if airport and airport.coordinates %}
+{% if airport and airport.coordinates and airport.coordinates != "[]" %}
   {% include map-single.html coordinates=airport.coordinates military=false %}
 {% endif %}
 
