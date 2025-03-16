@@ -47,36 +47,70 @@ main:
 #  - title: "Categories"
 #    url: /categories/
 
-community:
-  - title: DZS Sceneries
-    url: /sceneries/
-  - title: DZS Liveries
-    url: /liveries
-  - title: DZS Charts
-    url: /charts/
-    children:
-      - title: "DAAA IFR Charts"
-        url: /charts/daaa-ifr-charts/
-      - title: "DAA VFR Charts"
-        url: /charts/daaa-vfr-charts/
-  - title: DZ Community Sceneries
-    url: /categories/community-sceneries
-    children:
-      - title: "Algerian sceneries"
-        url: /community%20sceneries/algerian-sceneries/
-      - title: "Algerian military sceneries"
-        url: /community%20sceneries/algerian-military-sceneries/
-  - title: DZ Community Liveries
-    url: /categories/community-liveries
-    children:
-      - title: "Algerian liveries"
-        url: /community%20liveries/algerian-liveries/
-      - title: "Algerian military liveries"
-        url: /community%20liveries/algerian-military-liveries/
-  - title: DZ Community Resources
-    url: /categories/community-resources
-    children:
-      - title: "GSX PRO profiles"
-        url: /community%20resources/gsx-pro-profiles/
-      - title: "Algerian SO Rules"
-        url: #
+charts:
+  - title: DAAD - BOU SAADA
+    url: /charts/DAAD/
+  - title: DAAE - BEJAIA
+    url: /charts/DAAE/
+  - title: DAAG - ALGIERS
+    url: /charts/DAAG/
+  - title: DAAJ - DJANET
+    url: /charts/DAAJ/
+  - title: DAAP - ILLIZI
+    url: /charts/DAAP/
+  - title: DAAS - SETIF
+    url: /charts/DAAS/
+  - title: DAAT - TAMENGHASSET
+    url: /charts/DAAT/
+  - title: DAAV - JIJEL
+    url: /charts/DAAV/
+  - title: DABB - ANNABA
+    url: /charts/DABB/
+  - title: DABC - CONSTANTINE
+    url: /charts/DABC/
+  - title: DABS - TEBESSA
+    url: /charts/DABS/
+  - title: DABT - BATNA
+    url: /charts/DABT/
+  - title: DAOB - TIARET
+    url: /charts/DAOB/
+  - title: DAOF - TINDOUF
+    url: /charts/DAOF/
+  - title: DAOI - CHLEF
+    url: /charts/DAOI/
+  - title: DAON - TLEMCEN
+    url: /charts/DAON/
+  - title: DAOO - ORAN
+    url: /charts/DAOO/
+  - title: DAOR - BECHAR
+    url: /charts/DAOR/
+  - title: DAOV - GHRISS
+    url: /charts/DAOV/
+  - title: DAOY - EL BAYADH
+    url: /charts/DAOY/
+  - title: DATG - IN GUEZZAM
+    url: /charts/DATG/
+  - title: DATM - BORDJ MOKHTAR
+    url: /charts/DATM/
+  - title: DAUA - ADRAR
+    url: /charts/DAUA/
+  - title: DAUB - BISKRA
+    url: /charts/DAUB/
+  - title: DAUE - EL GOLEA
+    url: /charts/DAUE/
+  - title: DAUG - GHARDAIA
+    url: /charts/DAUG/
+  - title: DAUH - OUED IRARA
+    url: /charts/DAUH/
+  - title: DAUI - IN SALAH
+    url: /charts/DAUI/
+  - title: DAUK - TOUGGOURT
+    url: /charts/DAUK/
+  - title: DAUO - EL OUED
+    url: /charts/DAUO/
+  - title: DAUT - TIMIMOUN
+    url: /charts/DAUT/
+  - title: DAUU - OUARGLA
+    url: /charts/DAUU/
+  - title: DAUZ - ZARZAITINE
+    url: /charts/DAUZ/
