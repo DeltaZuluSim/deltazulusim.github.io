@@ -57,7 +57,8 @@ changelog:
     version_date: "2025-03-17"
     download_url: "https://deltazulusim.short.gy/sceneries/d82-01-v1.1.0"
     changes:
-      - "initial version"
+      - "Fixed MSFS 2020 compatibility"
+      - "Added Carts and objects (containrs, radios...) for training"
   - version: "1.0.0"
     version_date: "2025-02-23"
     download_url: "https://deltazulusim.short.gy/sceneries/d82-01/v1.0.0"
