@@ -12,7 +12,7 @@ header:
   teaser: /content/images/sceneries/daol/DAOL01.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://deltazulusim.short.gy/sceneries/daol/v1.0.0"
+      url: "https://deltazulusim.short.gy/sceneries/daol/v1.1.0"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"
@@ -55,6 +55,12 @@ gallery:
     alt: "DAOL AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
 
 changelog:
+changelog:
+  - version: "1.1.0"
+    version_date: "2025-03-17"
+    download_url: "https://deltazulusim.short.gy/sceneries/daol/v1.1.0"
+    changes:
+      - "Fixed compatibility MSFS2020"
   - version: "1.0.0"
     version_date: "2025-02-23"
     download_url: "https://deltazulusim.short.gy/sceneries/daol/v1.0.0"
@@ -106,5 +112,5 @@ This scenery references some optional models from the following third party scen
 
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
 
-[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/sceneries/daol/v1.0.0){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/sceneries/daol/v1.1.0){: .btn .btn--success .btn--x-large}
 
