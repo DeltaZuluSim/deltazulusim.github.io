@@ -23,7 +23,7 @@ sidebar:
   - title: "ICAO"
     text: "DAAY"
   - title: "Version"
-    text: "1.0.0"
+    text: "1.1.0"
   - title: "MSFS 2020"
     text: "Yes"
   - title: "MSFS 2024"

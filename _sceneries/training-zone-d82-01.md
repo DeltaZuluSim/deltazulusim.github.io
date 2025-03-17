@@ -3,7 +3,7 @@ title: "SO Training area D82-01"
 excerpt: "Virtual Spercial operations Training zone for MSFS simmers in the special area D82 HASSI BAHBAH"
 toc: true
 date: 2025-02-24T00:00:00+01:00
-last_modified_at: 2025-02-24T00:00:00+01:00
+last_modified_at: 2025-03-17T20:00:00+01:00
 coordinates: "[34.93, 2.55]"
 # comments: true
 header:
@@ -13,7 +13,7 @@ header:
   teaser: /content/images/sceneries/d82-01/D82-0101.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://deltazulusim.short.gy/sceneries/d82-01/v1.0.0"
+      url: "https://deltazulusim.short.gy/sceneries/d82-01-v1.1.0"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Area"
@@ -23,7 +23,7 @@ sidebar:
   - title: "ICAO"
     text: "None"
   - title: "Version"
-    text: "1.0.0"
+    text: "1.1.0"
   - title: "MSFS 2020"
     text: "Yes"
   - title: "MSFS 2024"
@@ -42,8 +42,22 @@ gallery:
   - url: /content/images/sceneries/d82-01/D82-0104.webp
     image_path: /content/images/sceneries/d82-01/D82-0104.webp
     alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
+  - url: /content/images/sceneries/d82-01/D82-0105.webp
+    image_path: /content/images/sceneries/d82-01/D82-0105.webp
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
+  - url: /content/images/sceneries/d82-01/D82-0106.webp
+    image_path: /content/images/sceneries/d82-01/D82-0106.webp
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
+  - url: /content/images/sceneries/d82-01/D82-0107.webp
+    image_path: /content/images/sceneries/d82-01/D82-0107.webp
+    alt: "Custom SO Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
+  - version: "1.1.0"
+    version_date: "2025-03-17"
+    download_url: "https://deltazulusim.short.gy/sceneries/d82-01-v1.1.0"
+    changes:
+      - "initial version"
   - version: "1.0.0"
     version_date: "2025-02-23"
     download_url: "https://deltazulusim.short.gy/sceneries/d82-01/v1.0.0"
@@ -76,4 +90,4 @@ Pilots can navigate to the area by departing Aïn Oussera Air base (DAQQ) and he
 ## Download
 This scenery is designed to enhance realism, immersion, and operational training in Microsoft Flight Simulator 2020 & 2024.
 
-[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/sceneries/d82-01/v1.0.0){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/sceneries/d82-01-v1.1.0){: .btn .btn--success .btn--x-large}
