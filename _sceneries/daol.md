@@ -3,7 +3,7 @@ title: "DAOL Tafraoui Airport"
 excerpt: "Microsoft Flight Simulation Scenery for Tafraoui (DAOL) Military Airport for MSFS2020 & MSFS2024"
 toc: true
 date: 2025-02-23T00:00:00+01:00
-last_modified_at: 2025-02-23T00:00:00+01:00
+last_modified_at: 2025-03-17T00:00:00+01:00
 coordinates: "[35.53, -0.52]"
 header:
   overlay_color: "#000"
