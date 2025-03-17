@@ -32,6 +32,15 @@ resources:
     download_url: "https://en.flightsim.to/file/74193/algerian-air-force-7twrq"
     MSFS2020: true
 
+  - id: "MIG-29A"
+    name: "Algerian Air Force *fictional*"
+    designer: "Deimos Fulcrum"
+    author: "MoussaCherifBaya"
+    author_url : "https://flightsim.to/profile/MoussaCherifBaya"
+    image_url: "https://cdn.flightsim.to/images/26/algerian-air-force-mig-29s-livery-for-deimos-fulcrum-199247-1722871423-PwevI.jpg?width=1400"
+    download_url: "https://flightsim.to/file/79224/algerian-air-force-mig-29s-livery-for-deimos-fulcrum"
+    MSFS2020: true
+
 ---
 
 {% include community_liveries %}
