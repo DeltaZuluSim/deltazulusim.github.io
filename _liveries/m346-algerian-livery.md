@@ -1,9 +1,10 @@
 ---
-title: "Algerian Air Force Livery for Leonardo M-346 (Yak-130)"
-excerpt: "Microsoft Flight Simulator 2020/2024 Livery for the Leonardo M-346 by IndiaFoxEcho"
+title: "Algerian Air Force Livery Pack for Leonardo M-346 (Yak-130)"
+excerpt: "Livery pack featuring four variations of the Yak-130 in Algerian Air Force colors for the Leonardo M-346 by IndiaFoxEcho in Microsoft Flight Simulator 2020/2024."
+
 toc: true
-date: 2025-03-19T00:00:00+01:00
-last_modified_at: 2025-03-19T00:00:00+01:00
+date: 2025-03-18T00:00:00+01:00
+last_modified_at: 2025-03-19T20:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -63,33 +64,42 @@ gallery:
     alt: "Yak-130 Algerian Air Force Livery"
 
 changelog:
-  - version: "1.0.0"
+  - version: "1.1.0"
     version_date: "2025-03-19"
+    download_url: "https://deltazulusim.short.gy/liveries/dzs-M346-KJD/v1.1.0"
+    changes:
+      - "Added four variations of the Algerian Air Force Yak-130 livery."
+      - "Updated markings and serial numbers for improved accuracy."
+      - "Enhanced texture details and color correction."
+
+  - version: "1.0.0"
+    version_date: "2025-03-18"
     download_url: "https://deltazulusim.short.gy/liveries/dzs-M346-KJD/v1.0.0"
     changes:
       - "Initial release featuring Algerian Air Force desert camouflage."
 ---
 
-A new custom livery for the Leonardo M-346 by IndiaFoxEcho, bringing the Yak-130 of the Algerian Air Force into Microsoft Flight Simulator.
+A new livery pack for the Leonardo M-346 by IndiaFoxEcho, replicating the Yak-130 of the Algerian Air Force in Microsoft Flight Simulator. This pack includes four variations, each with unique markings and serial numbers (NY-31, NY-46, NY-44, and NY-57), specifically designed for Special Operations (SO) multiplayer mode.
 
-This livery accurately represents the desert camouflage used by the Algerian Air Force, featuring realistic insignias, detailed markings, and military identification numbers. Designed for military simulation enthusiasts, this livery offers an immersive experience for training and combat scenarios.
+These liveries accurately represent the desert camouflage used by the Algerian Air Force, featuring realistic insignias, detailed markings, and military identification numbers. Designed for military simulation enthusiasts, this pack provides an immersive experience for training and combat scenarios.
 
 ## Features
-- Realistic desert camouflage inspired by Algerian Yak-130s
-- Authentic insignias and markings for maximum realism
+- Four variations of the Yak-130 livery, optimized for SO multiplayer mode
+- Unique serial numbers: NY-31, NY-46, NY-44, and NY-57
+- Authentic desert camouflage based on Algerian Yak-130s
+- Realistic insignias and detailed markings for improved accuracy
 - Perfect for military roleplay, airbase operations, and tactical missions
-- Desert camouflage scheme based on the Algerian Yak-130.
-- Compatible with MSFS 2020 and MSFS 2024.
+- Compatible with MSFS 2020 and MSFS 2024
 
 ## Gallery
 {% include gallery %}
 
 ## Installation Instructions
 - Download the ZIP file from the link below.
-- Extract the contents and copy the folder `dzs-M346-KJD` into your MSFS Community folder.
+- Extract the contents and copy the folder dzs-M346-KJD into your MSFS Community folder.
 - Launch Microsoft Flight Simulator and select the Leonardo M-346.
-- Choose the Algerian Air Force Yak-130 livery from the aircraft selection menu.
+- Choose from one of the four Algerian Air Force Yak-130 liveries (NY-31, NY-46, NY-44, NY-57), designed to support Special Operations (SO) multiplayer mode, in the aircraft selection menu.
 
 ## Download
 
-[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/liveries/dzs-M346-KJD/v1.0.0){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/liveries/dzs-M346-KJD/v1.1.0){: .btn .btn--success .btn--x-large}
