@@ -4,7 +4,7 @@ excerpt: "Livery pack featuring four variations of the Yak-130 in Algerian Air F
 
 toc: true
 date: 2025-03-18T00:00:00+01:00
-last_modified_at: 2025-03-19T20:00:00+01:00
+modified: 2025-03-19T20:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

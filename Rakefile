@@ -94,7 +94,7 @@ file "docs/_docs/18-history.md" => "CHANGELOG.md" do |t|
     sidebar: {
       nav: "docs",
     },
-    last_modified_at: Time.now.iso8601,
+    modified: Time.now.iso8601,
     toc: false,
   }
   # https://stackoverflow.com/a/49553523/5958455

@@ -3,7 +3,7 @@ icao: "DATM"
 title: "DATM - BORDJ MOKHTAR Airport Charts"
 excerpt: "A set of IFR and VFR navigation charts for BORDJ MOKHTAR Airport"
 date: 2025-03-16T00:00:00+01:00
-last_modified_at: 2025-03-16T00:00:00+01:00
+modified: 2025-03-16T00:00:00+01:00
 classes: wide
 header:
   teaser: /content/images/charts/thumbnail.webp

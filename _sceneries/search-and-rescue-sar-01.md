@@ -3,7 +3,7 @@ title: "SO Search and Rescue – Burning Cargo Ship (Jijel)"
 excerpt: "Search and Rescue scenario for MSFS simmers: locate and report a burning container ship adrift north of Jijel, Algeria."
 toc: true
 date: 2025-03-03T00:00:00+01:00
-last_modified_at: 2025-03-03T00:00:00+01:00
+modified: 2025-03-03T00:00:00+01:00
 coordinates: "[37.10, 5.77]"
 # comments: true
 header:

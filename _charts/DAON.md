@@ -3,7 +3,7 @@ icao: "DAON"
 title: "DAON - TLEMCEN, ZENATA-MESSALI EL HADJ Airport Charts"
 excerpt: "A set of IFR and VFR navigation charts for TLEMCEN, ZENATA-MESSALI EL HADJ Airport"
 date: 2025-03-16T00:00:00+01:00
-last_modified_at: 2025-03-16T00:00:00+01:00
+modified: 2025-03-16T00:00:00+01:00
 classes: wide
 header:
   teaser: /content/images/charts/thumbnail.webp

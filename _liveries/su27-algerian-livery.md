@@ -3,7 +3,7 @@ title: "Algerian Air Force Livery Pack for DC Designs SU-27"
 excerpt: "Microsoft Flight Simulator 2020/2024 Livery for DC-Designs SU-27"
 toc: true
 date: 2025-02-23T00:00:00+01:00
-last_modified_at: 2025-02-23T00:00:00+01:00
+modified: 2025-02-23T00:00:00+01:00
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

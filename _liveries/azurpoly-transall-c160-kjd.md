@@ -2,7 +2,7 @@
 title: "Algerian Air Force Livery Pack for Azurpoly Transall C160"
 excerpt: "Microsoft Flight Simulation Livery for Azurpoly Transall C160 on MSFS2020 & MSFS2024"
 date: 2025-02-03T00:00:00+01:00
-last_modified_at: 2025-02-03T00:00:00+01:00
+modified: 2025-02-03T00:00:00+01:00
 toc: true
 header:
   overlay_color: "#000"
