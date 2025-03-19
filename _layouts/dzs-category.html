@@ -9,3 +9,16 @@ layout: splash
 <div class="entries-{{ entries_layout }}">
   {% include posts-category.html taxonomy=page.taxonomy type=entries_layout %}
 </div>
+
+{% if page.dzs-collection %}
+<br />
+{% if page.dzs-collection-title %}
+<h2 style="clear: both;">{{ page.dzs-collection-title }}</h2>
+{% else %}
+<h2 style="clear: both;">By DeltaZulu Simulations</h2>
+{% endif %}
+{% assign entries_layout = page.entries_layout | default: 'list' %}
+<div class="entries-{{ entries_layout }}">
+  {% include documents-collection.html collection=page.dzs-collection sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}
+</div>
+{% endif %}
