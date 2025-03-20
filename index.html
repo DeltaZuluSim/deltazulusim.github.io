@@ -42,6 +42,7 @@ third_party_row:
     title: "Community Contributions"
     
   - image_path: /content/images/community/community-sceneries-banner.webp
+    icon: "fas fa-map-marked-alt"
     alt: "Third Party Sceneries from Community"
     title: "Community Sceneries"
     excerpt: "Explore a growing collection of community-made airports and landscapes, bringing even more realism to your flights."
@@ -49,6 +50,7 @@ third_party_row:
     btn_class: "btn--primary"
     btn_label: "Browse"
   - image_path: /content/images/community/community-liveries-banner.webp
+    icon: "fas fa-paint-brush"
     alt: "DZS Liveries"
     title: "Community Liveries"
     excerpt: "Discover a variety of liveries designed by fellow simmers, offering unique and authentic aircraft paint schemes."
@@ -56,6 +58,7 @@ third_party_row:
     btn_class: "btn--primary"
     btn_label: "View"
   - image_path: /content/images/community/community-resources-banner.webp
+    icon: "fas fa-book-open"
     alt: "DZS Charts"
     title: "Community Resources"
     excerpt: " Access tutorials, guides, and helpful content from the flight simulation community to improve your skills and knowledge."
@@ -70,10 +73,12 @@ third_party_row:
 
 </div>
 
-<hr />
+
 {% include third_party_row %}
 
-<h2 class="archive__title">{{ site.data.ui-text[site.locale].last_updates | default: "Last Updates" }}</h2>
+<br />
+<hr />
+<h1 class="archive__title">{{ site.data.ui-text[site.locale].last_updates | default: "Last Updates" }}</h1>
 
 {% if paginator %}
   {% assign posts = paginator.posts %}
@@ -93,7 +98,7 @@ third_party_row:
 {% assign all_updates = posts | concat: all_docs %}
 
 {% assign entries_layout = page.entries_layout | default: 'grid' %}
-{% assign sorted_posts = all_updates | sort: "modified" | reverse %}
+{% assign sorted_posts = all_updates | sort: site.default_sort_by | reverse %}
 
 <div class="entries-{{ entries_layout }}">
   {% for post in sorted_posts limit:12 %}

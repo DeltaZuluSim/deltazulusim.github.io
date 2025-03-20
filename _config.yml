@@ -87,6 +87,9 @@ naver_site_verification  :
 yandex_site_verification :
 baidu_site_verification  :
 
+#posts order 
+default_sort_by          : "modified" # "asc" or "desc" (default)
+
 # Social Sharing
 twitter:
   username               : deltazulusim
@@ -130,9 +133,9 @@ analytics:
 
 # Site Author
 author:
-  name             : DZS
-  avatar           : "assets/images/DZS-full-512.webp" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : #"Bringing Algerian Skies to Life for Flight Simulation Enthusiasts!"
+  name             : Younes
+  avatar           : "assets/images/avatar-author.webp"
+  bio              : "creates military and civilian sceneries and liveries for MSFS, driven by a passion for aviation."
   location         : "Algeria"
   email            :
   links:
