@@ -102,4 +102,4 @@ These liveries accurately represent the desert camouflage used by the Algerian A
 
 ## Download
 
-[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/liveries/dzs-M346-KJD/v1.1.0){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}

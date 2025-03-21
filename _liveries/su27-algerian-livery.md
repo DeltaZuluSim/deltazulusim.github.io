@@ -89,4 +89,4 @@ For any issues or feedback, please leave a comment, and it will be addressed pro
 ## Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator. Soar through the skies with pride, sporting the colors of the Algerian Air Force!
 
-[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/liveries/dcdesigns-aircraft-su27-kjd/v2.0.0){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}

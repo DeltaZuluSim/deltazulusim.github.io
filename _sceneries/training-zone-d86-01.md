@@ -119,5 +119,9 @@ This scenario is designed to test your observational skills, navigation, and SAR
 ## Download
 Get ready to test your aerial reconnaissance skills in this unique military scenario!
 
-[<i class='fas fa-download'></i> Download for <code>MSFS 2020</code>](https://deltazulusim.short.gy/sceneries/d86-01/v1.1.0/MSFS2020){: .btn .btn--success .btn--x-large}
-[<i class='fas fa-download'></i> Download for <code>MSFS 2024</code>](https://deltazulusim.short.gy/sceneries/d86-01/v1.1.0/MSFS2024){: .btn .btn--success .btn--x-large}
+{% assign latest_msfs2020 = page.changelog | where_exp: "item", "item.version contains 'MSFS 2020'" | sort: "version_date" | last %}
+{% assign latest_msfs2024 = page.changelog | where_exp: "item", "item.version contains 'MSFS 2024'" | sort: "version_date" | last %}
+
+[<i class='fas fa-download'></i> Download for <code>MSFS 2020</code>]({{ latest_msfs2020.download_url }}){: .btn .btn--success .btn--x-large}
+
+[<i class='fas fa-download'></i> Download for <code>MSFS 2024</code>]({{ latest_msfs2024.download_url }}){: .btn .btn--success .btn--x-large}

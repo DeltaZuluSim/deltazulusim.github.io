@@ -113,4 +113,4 @@ Each livery is crafted to offer high realism, capturing the unique characteristi
 ## Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
 
-[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/liveries/azurpoly-aircraft-transall-C160-KJD/v2.0.0){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}

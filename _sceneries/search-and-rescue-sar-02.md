@@ -97,4 +97,4 @@ This scenario is designed for helicopter and bush pilots who enjoy low-altitude 
 ## Download
 This scenario is free for the community—fly safe and have fun! Feedback and screenshots are welcome!
 
-[<i class='fas fa-download'></i> Download](https://deltazulusim.short.gy/sceneries/sar-02/v1.0.0){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}
