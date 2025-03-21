@@ -13,7 +13,6 @@
     margin: 0 auto; /* Center the icon container */
 }
 
-
 </style>
 
 {% if include.id %}
@@ -24,7 +23,7 @@
 
 {% for f in third_party_row %}
     {% if f.type == "title" %}
-      <h1 style="width: 100%; margin-bottom: 40px; margin-top: 40px;">
+      <h1 style="width: 100%; margin-bottom: 40px; margin-top: 40px; text-align: center;">
         {{ f.title }}
       </h1>
     {% endif %}
@@ -35,7 +34,7 @@
   {% for f in third_party_row %}
   {% unless f.type == "title" %}
     <div class="feature__item{% if include.type %}--{{ include.type }}{% endif %}">
-      <div class="archive__item">
+      <div class="archive__item" >
         
         <a style="text-decoration: none;"  href="{{ f.url | relative_url }}"{% if f.title %} title="{{ f.title }}"{% endif %}>
          {% if f.icon %}
@@ -54,9 +53,9 @@
           </div>
         {% endif %}
 
-        <div class="archive__item-body">
+        <div class="archive__item-body" style="text-align: center;">
           {% if f.title %}
-            <h2 class="archive__item-title">{{ f.title }}</h2>
+            <h3 class="archive__item-title">{{ f.title }}</h3>
           {% endif %}
 
           {% if f.excerpt %}

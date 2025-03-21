@@ -7,7 +7,7 @@
 
 {% for f in feature_row %}
     {% if f.type == "title" %}
-      <h1 style="width: 100%; margin-left: 10px; margin-bottom: 20px; margin-top: 20px;">
+      <h1 style="width: 100%; margin-left: 10px; margin-bottom: 20px; margin-top: 20px; text-align: center;">
         {{ f.title }}
       </h1>
     {% endif %}
@@ -30,7 +30,7 @@
           </div>
         {% endif %}
 
-        <div class="archive__item-body">
+        <div class="archive__item-body" style="text-align: center;">
           {% if f.title %}
             <h2 class="archive__item-title">{{ f.title }}</h2>
           {% endif %}

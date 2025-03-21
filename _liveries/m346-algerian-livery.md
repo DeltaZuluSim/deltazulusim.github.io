@@ -1,6 +1,6 @@
 ---
-title: "Algerian Air Force Livery Pack for Leonardo M-346 (Yak-130)"
-excerpt: "Livery pack featuring four variations of the Yak-130 in Algerian Air Force colors for the Leonardo M-346 by IndiaFoxEcho in Microsoft Flight Simulator 2020/2024."
+title: "Algerian Air Force Livery Pack for Leonardo M-346"
+excerpt: "Livery pack featuring four variations of the <strong>Yak-130</strong> in Algerian Air Force colors for the Leonardo M-346 by IndiaFoxEcho in Microsoft Flight Simulator 2020/2024."
 
 toc: true
 date: 2025-03-18T00:00:00+01:00
