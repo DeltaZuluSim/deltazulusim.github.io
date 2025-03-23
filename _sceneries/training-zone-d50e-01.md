@@ -20,6 +20,7 @@ sidebar:
     image: /content/images/sceneries/d50e-01/D50E-0103.webp
     image_alt: "MSFS Algerian Training zone"
     text: "DA-D50E"
+    gps: "034° 22' 48\" N<br /> 000° 25' 11,9\" E"
   - title: "ICAO"
     text: "None"
   - title: "Version"

@@ -20,6 +20,7 @@ sidebar:
     image: /content/images/sceneries/sar-01/sar-0103.webp
     image_alt: "SO Search and Rescue – Burning Cargo Ship (Jijel, Algeria)"
     text: "SAR01 - North Jijel"
+    gps: "037° 06' 0\" N<br /> 005° 46' 11,9\" E"
   - title: "ICAO"
     text: "None"
   - title: "Version"

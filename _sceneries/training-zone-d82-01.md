@@ -17,9 +17,8 @@ header:
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Area"
-    image: /content/images/sceneries/d82-01/D82-0103.webp
-    image_alt: "MSFS Algerian Training zone"
     text: "DA – D82 HASSI BAHBAH"
+    gps: "034° 55' 56,9\" N<br /> 002° 33' 18,9\" E"
   - title: "ICAO"
     text: "None"
   - title: "Version"
@@ -75,20 +74,24 @@ Pilots can navigate to the area by departing Aïn Oussera Air base (DAQQ) and he
 
 {% include map-single.html coordinates=page.coordinates %}
 
-## Key features:
+## Key features
+
 - Upgraded unpaved runway with improved ground surface.
 - Added lighting for enhanced visibility during night operations.
 - Strategic location, making it ideal for approach and landing practice in rugged conditions.
 
-## Gallery 
+## Gallery
+
 {% include gallery caption="Some screenshots for the scenery from the sky!" %}
 
 ## Installation Instructions
+
 - Download the scenery package.
 - Extract the contents to your Community folder.
 - Launch MSFS and enjoy your flight over D82 areea
 
 ## Download
+
 This scenery is designed to enhance realism, immersion, and operational training in Microsoft Flight Simulator 2020 & 2024.
 
 [<i class='fas fa-download'></i> Download]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}

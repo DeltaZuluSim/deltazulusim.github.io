@@ -10,12 +10,13 @@
       {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
       {% if s.text %}{{ s.text | markdownify }}{% endif %}
       {% if s.gps %}
-      <span style="display: inline-flex; align-items: center; margin: 0px;">
-        <i class="fas fa-map-marker-alt" style="margin-right: 5px; font-size: 1em; line-height: 1;  position: relative; top: 1px;"></i> 
-        <code style="vertical-align: middle;">{{ s.gps | markdownify }}</code>
-    </span>
+      
+      <span style="display: flex; align-items: center; gap: 5px; margin: 0px;">
+        <i class="fas fa-map-marker-alt" style="font-size: 1em; flex-shrink: 0;"></i> 
+        <span style="display: inline-block; line-height: 1.2em; white-space: pre-line;font-size: 0.7em;">{{ s.gps }}</span>
+      </span>
+    {% endif %}
     
-      {% endif %}
       {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
     {% endfor %}
     {% if page.sidebar.nav %}
