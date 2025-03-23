@@ -1,5 +1,5 @@
 {% capture overlay_img_path %}{{ page.header.overlay_image | relative_url }}{% endcapture %}
-
+{% capture url_path %}{{ site.url }}{{ page.url }}{% endcapture %}
 {% if page.header.overlay_filter contains "gradient" %}
   {% capture overlay_filter %}{{ page.header.overlay_filter }}{% endcapture %}
 {% elsif page.header.overlay_filter contains "rgba" %}
@@ -37,12 +37,23 @@
       {% endif %}
       {% include page__meta.html %}
       {% if page.header.actions %}
-        <p>
-        {% for action in page.header.actions %}
-          <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">{{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}</a>
-        {% endfor %}
-        </p>
+      <p>
+      {% for action in page.header.actions %}
+
+      {% assign actionurl = action.url %}
+      {% assign first_char = action.url | slice: 0, 1 %}
+      
+      {% if first_char == "#" %}
+      <a href="{{ url_path }}{{ action.url }}" class="btn btn--light-outline btn--large">
+      {% else %}
+      <a href="{{ action.url | relative_url }}" class="btn btn--light-outline btn--large">
       {% endif %}
+          {{ action.label | default: site.data.ui-text[site.locale].more_label | default: "Learn More" }}
+        </a>
+      {% endfor %}
+      </p>
+    {% endif %}
+    
     </div>
   {% else %}
     <img src="{{ page.header.image | relative_url }}" alt="{{ image_description }}" class="page__hero-image">

@@ -13,7 +13,7 @@ header:
   teaser: /content/images/sceneries/d82-01/D82-0101.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://deltazulusim.short.gy/sceneries/d82-01-v1.1.0"
+      url: "#download"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Area"

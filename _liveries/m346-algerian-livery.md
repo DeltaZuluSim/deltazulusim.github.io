@@ -12,7 +12,7 @@ header:
   teaser: /content/images/liveries/indiafoxecho-m346-yak130/01.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "/liveries/m346-algerian-livery/#download"
+      url: "#download"
 sidebar:
   - title: "Aircraft"
     image: /content/images/liveries/indiafoxecho-m346-yak130/01.webp

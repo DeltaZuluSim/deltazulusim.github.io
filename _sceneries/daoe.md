@@ -12,7 +12,7 @@ header:
   teaser: /content/images/sceneries/daoe/DAOE01.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://deltazulusim.short.gy/sceneries/daoe/v1.1.0"
+      url: "#download"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Airport"

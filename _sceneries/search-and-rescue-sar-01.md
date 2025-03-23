@@ -13,7 +13,7 @@ header:
   teaser: /content/images/sceneries/sar-01/sar-0101.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://deltazulusim.short.gy/sceneries/sar-01/v1.0.0"
+      url: "#download"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Area"

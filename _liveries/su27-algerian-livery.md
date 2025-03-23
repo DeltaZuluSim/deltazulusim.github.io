@@ -11,7 +11,7 @@ header:
   teaser: /content/images/liveries/dcdesigns-aircraft-su27-kjd/05.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://deltazulusim.short.gy/liveries/dcdesigns-aircraft-su27-kjd/v2.0.0"
+      url: "#download"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Aircraft"

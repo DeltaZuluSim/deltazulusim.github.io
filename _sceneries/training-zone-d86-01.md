@@ -13,7 +13,7 @@ header:
   teaser: /content/images/sceneries/d86-01/D86-0101.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "/sceneries/training-zone-d86-01/#download"
+      url: "#download"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 sidebar:
   - title: "Area"
@@ -122,6 +122,6 @@ Get ready to test your aerial reconnaissance skills in this unique military scen
 {% assign latest_msfs2020 = page.changelog | where_exp: "item", "item.version contains 'MSFS 2020'" | sort: "version_date" | last %}
 {% assign latest_msfs2024 = page.changelog | where_exp: "item", "item.version contains 'MSFS 2024'" | sort: "version_date" | last %}
 
-[<i class='fas fa-download'></i> Download for <code>MSFS 2020</code>]({{ latest_msfs2020.download_url }}){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download <code>MSFS 2020</code>]({{ latest_msfs2020.download_url }}){: .btn .btn--success .btn--x-large}
 
-[<i class='fas fa-download'></i> Download for <code>MSFS 2024</code>]({{ latest_msfs2024.download_url }}){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download <code>MSFS 2024</code>]({{ latest_msfs2024.download_url }}){: .btn .btn--success .btn--x-large}

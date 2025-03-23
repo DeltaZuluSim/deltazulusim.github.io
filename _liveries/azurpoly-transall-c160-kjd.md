@@ -11,7 +11,7 @@ header:
   teaser: /content/images/liveries/azurpoly-transall-c160-kjd/05.webp
   actions:
     - label: "<i class='fas fa-download'></i> Download"
-      url: "https://deltazulusim.short.gy/liveries/azurpoly-aircraft-transall-C160-KJD/v2.0.0"
+      url: "#download"
   #caption: "Photo credit: [**DZS**](https://deltazulusim.com)"
 #header:
 #  image: /content/images/liveries/azurpoly-transall-c160-kjd/05.webp
