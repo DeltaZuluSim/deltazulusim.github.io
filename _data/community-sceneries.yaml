@@ -38,3 +38,81 @@
   image: "/content/images/community/daaj.webp"
   link: "/community%20sceneries/algerian-sceneries/#daaj---djanet-tiska"
   description: "DJANET, TISKA"  
+
+
+- name: "DAAT"
+  type: "Airport"
+  lat: 22.81
+  lng: 5.45
+  image: "/content/images/community/daat.webp"
+  link: "/community%20sceneries/algerian-sceneries/#daat---tamanrasset"
+  description: "Tamanrasset airport"
+
+- name: "DABB"
+  type: "Airport"
+  lat: 36.82
+  lng: 7.82
+  image: "/content/images/community/dabb.webp"
+  link: "/community%20sceneries/algerian-sceneries/#dabb---annaba"
+  description: "Annaba airport"
+
+
+- name: "DABA"
+  type: "Airport"
+  lat: 30.12
+  lng: -2.14
+  image: "/content/images/community/daba.webp"
+  link: "/community%20sceneries/algerian-sceneries/#daba---beni-abbes"
+  description: "Beni Abbes airport"
+
+
+- name: "DAGD"
+  type: "Airport"
+  lat: 26.88
+  lng: -7.16
+  image: "/content/images/community/dagd.webp"
+  link: "/community%20sceneries/algerian-sceneries/#dagd---el-aouinet-belagra"
+  description: "El Aouinet Belagra airport"
+
+
+- name: "DAAV"
+  type: "Airport"
+  lat: 36.79
+  lng: 5.87
+  image: "/content/images/community/daav.webp"
+  link: "/community%20sceneries/algerian-sceneries/#daav---jijel"
+  description: "Jijel airport"
+
+
+- name: "DA14"
+  type: "Airport"
+  lat: 35.90
+  lng: 0.14
+  image: "/content/images/community/da14.webp"
+  link: "/community%20sceneries/algerian-sceneries/#da14---mostaganem"
+  description: "Mostaganem airport"
+
+- name: "DA15"
+  type: "Airport"
+  lat: 34.89
+  lng: 0.15
+  image: "/content/images/community/da15.webp"
+  link: "/community%20sceneries/algerian-sceneries/#da15---saida"
+  description: "Saida airport"
+
+- name: "DAAE"
+  type: "Airport"
+  lat: 36.71
+  lng: 5.07
+  image: "/content/images/community/daae.webp"
+  link: "/community%20sceneries/algerian-sceneries/#daae---bejaia"
+  description: "Bejaia airport"
+
+- name: "DAOS"
+  type: "Airport"
+  lat: 35.17
+  lng: -0.59
+  image: "/content/images/community/daos.webp"
+  link: "/community%20sceneries/algerian-sceneries/#daos---sidi-bel-abbes"
+  description: "Sidi Bel Abbes airport"
+
