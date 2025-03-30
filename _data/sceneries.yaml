@@ -61,3 +61,11 @@
   image: "/content/images/sceneries/daay/DAAY08.webp"
   link: "/sceneries/daay/"
   description: "Mecheria - Air Base & Airport"
+
+- name: "DAUL"
+  type: "Air base"
+  lat: 33.75
+  lng: 2.93
+  image: "/content/images/sceneries/daul/DAUL04.webp"
+  link: "/sceneries/daul/"
+  description: "Laghouat - Air Base"
