@@ -1,0 +1,32 @@
+vors:
+  - ident: LAG
+    name: Laghouat VOR
+    lat: 33.7459819
+    lon: 2.9363123
+    alt_m: 765.0
+    frequency_mhz: 115.500
+    source: real
+
+  - ident: MCH
+    name: Mecheria VOR
+    lat: 33.5369444
+    lon: -0.2419444
+    alt_m: 1112.0
+    frequency_mhz: 112.600
+    source: real
+
+  - ident: BSF
+    name: Bousfer VOR
+    lat: 35.7272222
+    lon: -0.8252778
+    alt_m: 55.0
+    frequency_mhz: 113.400
+    source: fictional
+
+  - ident: TFR
+    name: Tafraoui VOR
+    lat: 35.5372222
+    lon: -0.5558333
+    alt_m: 105.0
+    frequency_mhz: 112.800
+    source: fictional

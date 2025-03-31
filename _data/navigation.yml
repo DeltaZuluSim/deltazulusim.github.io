@@ -18,21 +18,27 @@ main:
       - title: "Community Liveries"
         url: /categories/community-liveries
 
+  - title: "Mods"
+    url: /mods
+
+  - title: "About"
+    url: /about/
+
+  - title: "Contact"
+    url: /contact/
+
   - title: "Charts"
     url: /charts
-    children:
-      - title: "DAAA IFR"
-        url: /charts/daaa-ifr-charts/
-      - title: "DAAA VFR"
-        url: /charts/daaa-vfr-charts/  
+    # children:
+    #   - title: "DAAA IFR"
+    #     url: /charts/daaa-ifr-charts/
+    #   - title: "DAAA VFR"
+    #     url: /charts/daaa-vfr-charts/  
     
   - title: "Resources"
     url: /categories/community-resources
 
-  - title: "About"
-    url: /about/
-  - title: "Contact"
-    url: /contact/
+
 
   # - title: "Community Sceneries"
   #   url: /categories/community-sceneries
