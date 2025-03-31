@@ -145,4 +145,4 @@ To install the **DZ Military Navaids** mod:
 
 This mod is **free to download** and part of an ongoing effort to expand **Algerian military airfields** in Microsoft Flight Simulator.
 
-[<i class='fas fa-download'></i> Download]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download <code>v-{{ page.changelog | first | map: "version" }}</code>]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}

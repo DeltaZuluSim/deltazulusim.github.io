@@ -94,4 +94,4 @@ Pilots can navigate to the area by departing Aïn Oussera Air base (DAQQ) and he
 
 This scenery is designed to enhance realism, immersion, and operational training in Microsoft Flight Simulator 2020 & 2024.
 
-[<i class='fas fa-download'></i> Download]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download <code> V-{{ page.changelog | first | map: "version" }}</code>]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}

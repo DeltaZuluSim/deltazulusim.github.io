@@ -51,22 +51,22 @@ gallery:
     alt: "Custom SO Search and Rescue Scenery for Microsoft Flight Simulator 2020 & 2024"
 
 changelog:
-  - version: "<code>MSFS 2020</code> 1.1.0"
+  - version: "1.1.0 <code>MSFS 2020</code>"
     version_date: "2025-03-08"
     download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.1.0/MSFS2020"
     changes:
       - "Split submarine locations"
-  - version: "<code>MSFS 2024</code> 1.1.0"
+  - version: "1.1.0 <code>MSFS 2024</code>"
     version_date: "2025-03-08"
     download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.1.0/MSFS2024"
     changes:
       - "Split submarine locations"
-  - version: "<code>MSFS 2020</code> 1.0.0"
+  - version: "1.0.0 <code>MSFS 2020</code>"
     version_date: "2025-03-06"
     download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2020"
     changes:
       - "initial version"
-  - version: "<code>MSFS 2024</code> 1.0.0"
+  - version: "1.0.0 <code>MSFS 2024</code>"
     version_date: "2025-03-06"
     download_url: "https://deltazulusim.short.gy/sceneries/d86-01/v1.0.0/MSFS2024"
     changes:
@@ -122,6 +122,6 @@ Get ready to test your aerial reconnaissance skills in this unique military scen
 {% assign latest_msfs2020 = page.changelog | where_exp: "item", "item.version contains 'MSFS 2020'" | sort: "version_date" | last %}
 {% assign latest_msfs2024 = page.changelog | where_exp: "item", "item.version contains 'MSFS 2024'" | sort: "version_date" | last %}
 
-[<i class='fas fa-download'></i> Download <code>MSFS 2020</code>]({{ latest_msfs2020.download_url }}){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download <code> V-{{ latest_msfs2020.version }}</code>]({{ latest_msfs2020.download_url }}){: .btn .btn--success .btn--x-large}
 
-[<i class='fas fa-download'></i> Download <code>MSFS 2024</code>]({{ latest_msfs2024.download_url }}){: .btn .btn--success .btn--x-large}
+[<i class='fas fa-download'></i> Download <code> V-{{ latest_msfs2024.version }}</code>]({{ latest_msfs2024.download_url }}){: .btn .btn--success .btn--x-large}
