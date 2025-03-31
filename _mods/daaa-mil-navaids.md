@@ -3,8 +3,8 @@ layout: single
 title: "Algerian Military Navaids"
 excerpt: "Reference list of Algerian military navaids (VOR, DME, ILS), including real and fictional stations for MSFS use."
 description: "This page provides data on real and fictional Algerian military navigation aids used in Microsoft Flight Simulator, including coordinates, frequencies, and types."
-date: 2025-03-31T00:00:00+01:00
-modified: 2025-03-31T00:00:00+01:00
+date: 2025-03-30T00:00:00+01:00
+modified: 2025-03-31T13:00:00+01:00
 classes: wide
 toc: true
 header:
@@ -23,12 +23,17 @@ sidebar:
   - title: "MSFS 2020"
     text: "Yes"
   - title: "MSFS 2024"
-    text: "Not tested"
+    text: "Yes"
 
 
 changelog:
-  - version: "0.1.0"
+  - version: "1.0.0"
     version_date: "2025-03-31"
+    download_url: "https://deltazulusim.short.gy/mods/daaa-mil-navaids/v1.0.0"
+    changes:
+      - "Added auto installation scripts and tested on MSFS 2024"
+  - version: "0.1.0"
+    version_date: "2025-03-30"
     download_url: "https://deltazulusim.short.gy/mods/daaa-mil-navaids/v0.1.0"
     changes:
       - "Initial release for MSFS2020 and MSFS2024"
@@ -40,24 +45,27 @@ This mod enhances Microsoft Flight Simulator with a growing collection of **mili
 
 Whether you're planning tactical flights, practicing instrument approaches, or simply expanding your nav database, this package adds essential tools to your sim environment.
 
+<div class="notice--warning">
+<h4>Remark</h4>
+📡 <strong>Real-world frequencies and locations are based on official Algerian AIP charts provided by SIA ENNA.</strong>
+Data is extracted from the ENR 6.1 document:  
+<a href="https://www.sia-enna.dz/PDF/AIP/ENR/ENR6/ENR6.1.pdf" target="_blank">
+https://www.sia-enna.dz/PDF/AIP/ENR/ENR6/ENR6.1.pdf
+</a>
+</div>
+
+
 ---
 
 ## Features
 
 - Military VOR stations with frequency, coordinates, and altitude
-- Both **real** and **fictional** navaids for greater mission flexibility
+- Both [**real**](https://www.sia-enna.dz/PDF/AIP/ENR/ENR6/ENR6.1.pdf) and **fictional** navaids for greater mission flexibility
 - Compatibility with MSFS 2020 & 2024
-- Ready-to-use BGL file — just drop into your `Community` folder
-- Future updates will include **ILS approaches** for selected airbases
-- Designed to complement other DZS sceneries and GSX profiles
 
 ## Ongoing Development
 
 This add-on is **actively maintained and regularly updated** with new Algerian military airfields and navigation aids. We're continuously expanding coverage to support more realistic missions and flight operations across the region.
-
-Have a specific VOR, DME, or ILS you'd like to see included?  
-**Feel free to contact us or leave a comment below — your input helps shape future updates!**
-
 
 <div class="notice--info">
 💬 Have a specific VOR, DME, or ILS you'd like to see included? Contact us or leave a comment below — your input helps shape future updates!
@@ -105,6 +113,32 @@ Have a specific VOR, DME, or ILS you'd like to see included?
 
 Development in progress, ILS Data Coming soon 
 {: .notice}
+
+---
+
+## Installation
+
+To install the **DZ Military Navaids** mod:
+
+1. **Download** the ZIP archive.
+2. **Extract** the contents of the archive. You will find:
+   - `dzs-daaa-mil-navaids` (the mod folder)
+   - `scripts/` (installer utilities)
+   - `readme.txt` (detailed instructions)
+
+3. **Move** the `dzs-daaa-mil-navaids` folder to your **MSFS Community** directory:
+   - Typical paths:
+     - Steam: `C:\Users\YourName\AppData\Roaming\Microsoft Flight Simulator\Community`
+     - MS Store: `C:\Users\YourName\AppData\Local\Packages\Microsoft.FlightSimulator_8wekyb3d8bbwe\LocalCache\Packages\Community`
+
+4. **Run the installer**:
+   - Open the `scripts` folder
+   - Double-click on `install.bat`
+   - This will automatically register the mod in your `Content.xml` file, preserving backups and supporting both Steam and MS Store versions.
+
+<div class="notice--success">
+✔️ The installer is safe and portable, and will only modify your Content.xml file if required. It also creates a versioned backup before doing so.
+</div>
 
 
 ## Download
