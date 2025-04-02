@@ -160,6 +160,15 @@
         {% assign firstHeader = false %}
     {% endfor %}
 
+    {% if lastLevel == 2 and page.changelog %}
+        {% capture jekyll_toc %}
+            {{ jekyll_toc }}</li>
+            <li{{ listItemClass }}>
+                <a href="#changelog">Changelog</a>
+        {% endcapture %}
+        {% assign changelog_included = true %}
+    {% endif %}
+
     {% if flatToc == true %}
         {% assign repeatCount = 1 %}
     {% else %}
