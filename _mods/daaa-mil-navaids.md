@@ -31,7 +31,8 @@ changelog:
     version_date: "2025-03-31"
     download_url: "https://deltazulusim.short.gy/mods/daaa-mil-navaids/v1.0.0"
     changes:
-      - "Added auto installation scripts and tested on MSFS 2024"
+      - "Added auto installation scripts"
+      - "Tested on MSFS 2024"
   - version: "0.1.0"
     version_date: "2025-03-30"
     download_url: "https://deltazulusim.short.gy/mods/daaa-mil-navaids/v0.1.0"
