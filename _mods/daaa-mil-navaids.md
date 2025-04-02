@@ -15,15 +15,6 @@ header:
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "#download"
-# sidebar:
-#   - title: ""
-#     image: /content/images/mods/daaa-mil-navaids-thumbnail.webp
-#   - title: "Version"
-#     text: "1.0.0"
-#   - title: "MSFS 2020"
-#     text: "Yes"
-#   - title: "MSFS 2024"
-#     text: "Yes"
 
 changelog_level: 3
 changelog:
