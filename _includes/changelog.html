@@ -1,10 +1,10 @@
 {% if page.changelog %}
 
   <!-- <h2>Changelog</h2> -->
-
-  <h2 id="changelog" class="">Changelog<a class="header-link" href="#changelog" title="Permalink">
+  <!-- {% assign changelog_header_level = page.changelog_level | default: 2 %}
+  <h{{ changelog_header_level }} id="changelog" class="">Changelog<a class="header-link" href="#changelog" title="Permalink">
     <span class="sr-only">Permalink</span>
-    <!-- <i class="fas fa-link"></i> -->
+    <i class="fas fa-link"></i>
   </a>
   </h2>
   <table class="large-table">
@@ -32,5 +32,46 @@
         </tr>
       {% endfor %}
     </tbody>
-  </table>
+  </table> -->
+
+  {% assign changelog_header_level = page.changelog_level | default: 2 %}
+  <h{{ changelog_header_level }} class="expand-title" onclick="toggleExpand(this)">
+    <span class="expand-symbol"></span> Changelog
+    <a class="header-link" href="#changelog" title="Permalink" id="changelog">
+      <span class="sr-only">Permalink</span>
+      <i class="fas fa-link"></i>
+    </a>
+  </h{{ changelog_header_level }}>
+  
+
+{% capture content %}
+<table class="large-table">
+  <thead>
+    <tr>
+      <th class="min-col" style="text-align: center;">Version</th>
+      <th class="min-col" style="text-align: center;">Date</th>
+      <th class="max-col" style="text-align: center;">Changes</th>
+      <th class="min-col" style="text-align: center;">Package</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for v in page.changelog %}
+      <tr>
+        <td class="min-col" style="text-align: center; padding: 10px 10px 10px 0px;">{{ v.version }}</td>
+        <td class="min-col" style="text-align: left; padding: 10px 10px 10px 0px;">{{ v.version_date }}</td>
+        <td class="max-col" style="text-align: left; padding: 10px 10px 10px 20px;">
+            {% for change in v.changes %}
+              <li> {{ change }} </li>
+            {% endfor %}
+        </td>
+        <td class="min-col" style="text-align: center">
+          <a href="{{ v.download_url }}" class="btn btn--primary btn--x-small"><i class="fas fa-download"></i> Download</a>
+        </td>
+      </tr>
+    {% endfor %}
+  </tbody>
+</table>
+{% endcapture %}
+
+{% include expand-content.html content=content %}
 {% endif %}

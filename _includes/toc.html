@@ -160,14 +160,27 @@
         {% assign firstHeader = false %}
     {% endfor %}
 
-    {% if lastLevel == 2 and page.changelog %}
-        {% capture jekyll_toc %}
-            {{ jekyll_toc }}</li>
-            <li{{ listItemClass }}>
-                <a href="#changelog">Changelog</a>
-        {% endcapture %}
-        {% assign changelog_included = true %}
+    {% assign toc_changelog_level = page.changelog_level | default: 2 %}
+
+{% if page.changelog and minHeader <= toc_changelog_level and maxHeader >= toc_changelog_level %}
+    {% if lastLevel > toc_changelog_level %}
+        {% assign repeatCount = lastLevel | minus: toc_changelog_level %}
+        {% for i in (1..repeatCount) %}
+            {% capture jekyll_toc %}{{ jekyll_toc }}</li></{{ listModifier }}>{% endcapture %}
+        {% endfor %}
+        {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
+    {% elsif lastLevel == toc_changelog_level %}
+        {% capture jekyll_toc %}{{ jekyll_toc }}</li>{% endcapture %}
     {% endif %}
+
+    {% capture jekyll_toc %}
+        {{ jekyll_toc }}
+        <li class="{{ include.item_class | replace: '%level%', toc_changelog_level }}">
+            <a href="#changelog">Changelog</a>
+        </li>
+    {% endcapture %}
+{% endif %}
+
 
     {% if flatToc == true %}
         {% assign repeatCount = 1 %}

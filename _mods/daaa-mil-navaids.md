@@ -25,7 +25,7 @@ header:
 #   - title: "MSFS 2024"
 #     text: "Yes"
 
-
+changelog_level: 3
 changelog:
   - version: "1.0.0"
     version_date: "2025-03-31"
@@ -52,22 +52,29 @@ https://www.sia-enna.dz/PDF/AIP/ENR/ENR6/ENR6.1.pdf
 </a>
 </div>
 
+## <span class="expand-symbol"></span> Features
+{: .expand-title onclick="toggleExpand(this)" }
 
-## Features
-
+{% capture content %}
 - Military VOR stations with frequency, coordinates, and altitude
 - Both **real** and **fictional** navaids for greater mission flexibility
 - Compatibility with MSFS 2020 & 2024
+{% endcapture %}
 
-## Ongoing Development
+{% include expand-content.html content=content %}
 
+## <span class="expand-symbol"></span> Ongoing Development
+{: .expand-title onclick="toggleExpand(this)" }
+
+{% capture content %}
 This add-on is **actively maintained and regularly updated** with new Algerian military airfields and navigation aids. We're continuously expanding coverage to support more realistic missions and flight operations across the region.
 
 <div class="notice--info">
 💬 Have a specific VOR, DME, or ILS you'd like to see included? Contact us or leave a comment below — your input helps shape future updates!
 </div>
+{% endcapture %}
 
-
+{% include expand-content.html content=content %}
 
 ## VOR Stations
 
@@ -111,9 +118,19 @@ Development in progress, ILS Data Coming soon
 {: .notice}
 
 ---
+## Package
 
-## Installation
+### Download
 
+This mod is **free to download** and part of an ongoing effort to expand **Algerian military airfields** in Microsoft Flight Simulator.
+
+[<i class='fas fa-download'></i> Download <code>v-{{ page.changelog | first | map: "version" }}</code>]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}
+
+
+### <span class="expand-symbol"></span> Installation
+{: .expand-title onclick="toggleExpand(this)" }
+
+{% capture content %}
 To install the **DZ Military Navaids** mod:
 
 1. **Download** the ZIP archive.
@@ -135,10 +152,6 @@ To install the **DZ Military Navaids** mod:
 <div class="notice--success">
 ✔️ The installer is safe and portable, and will only modify your Content.xml file if required. It also creates a versioned backup before doing so.
 </div>
+{% endcapture %}
 
-
-## Download
-
-This mod is **free to download** and part of an ongoing effort to expand **Algerian military airfields** in Microsoft Flight Simulator.
-
-[<i class='fas fa-download'></i> Download <code>v-{{ page.changelog | first | map: "version" }}</code>]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}
+{% include expand-content.html content=content %}

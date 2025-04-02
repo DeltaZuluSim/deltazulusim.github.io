@@ -16,8 +16,60 @@
   
 <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
 
+<script>
+  // Set all symbols to [+] by default on page load
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll('.expand-symbol').forEach(function (el) {
+      el.textContent = '[+]';
+    });
+  });
+
+  function toggleExpand(element) {
+    const content = element.nextElementSibling;
+    const symbol = element.querySelector('.expand-symbol');
+
+    const expanded = content.style.display === 'block';
+    content.style.display = expanded ? 'none' : 'block';
+    symbol.textContent = expanded ? '[+]' : '[-]';
+  }
+</script>
+
 
 <style>
+
+.expand-box {
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.expand-title {
+  padding: 10px;
+  cursor: pointer;
+  background-color: #f7f7f7;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;               /* adds spacing between [+] and the title */
+  text-align: left;       /* makes sure heading content is left-aligned */
+}
+
+.expand-title:hover {
+  background-color: #eaeaea;
+}
+
+.expand-content {
+  padding: 10px;
+  display: none; /* hidden by default */
+}
+
+.expand-symbol {
+  font-weight: bold;
+  font-size: 1rem;
+  margin-right: 5px;
+  display: inline; /* ensure it's visible */
+}
+
 
 .page.full-width {
   width: 100%;
@@ -71,10 +123,6 @@ a, a:visited, a:hover, a:active {
 
   }
   
-  </style>
-
-
-<style>
   /* ✅ Ensure parent menu items are positioned properly */
   .masthead__menu-item {
     position: relative !important;

@@ -1,0 +1,10 @@
+<div class="expand-box">
+    <div class="expand-title" onclick="toggleExpand(this)">
+      <h2>{{ include.title }}</h2>
+      <span class="expand-symbol">[+]</span>
+    </div>
+    <div class="expand-content">
+      {{ include.content | markdownify }}
+    </div>
+  </div>
+  
