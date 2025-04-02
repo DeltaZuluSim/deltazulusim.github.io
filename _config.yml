@@ -362,8 +362,7 @@ defaults:
       comments: true 
       share: true
       related: false
-      sidebar:
-        nav: "sceneries"
+
   - scope:
       path: ""
       type: liveries
@@ -374,8 +373,7 @@ defaults:
       comments: true 
       share: true
       related: false
-      sidebar:
-        nav: "liveries"
+
   - scope:
       path: ""
       type: charts
@@ -386,8 +384,6 @@ defaults:
       comments: true 
       share: true
       related: false
-      sidebar:
-        nav: "charts"
 
   - scope:
       path: ""
@@ -399,8 +395,6 @@ defaults:
       comments: true 
       share: true
       related: false
-      sidebar:
-        nav: "mods"
 
   - scope:
       path: ""

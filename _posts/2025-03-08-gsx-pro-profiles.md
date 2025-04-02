@@ -2,8 +2,8 @@
 title:  "GSX Pro profiles"
 excerpt: "Enhance your ground services with GSX profiles tailored for Algerian airports! Community-made for realism."
 modified: 2025-02-16T16:03:49-04:00
-classes: wide
 toc: true
+toc_sticky: true
 author_profile: false
 header:
   teaser: /content/images/community/gsxpro.webp
@@ -25,13 +25,3 @@ resources:
 ---
 
 {% include community_resources %}
-
-
-
-
-
-
-
-
-
-

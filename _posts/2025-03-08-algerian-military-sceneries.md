@@ -2,8 +2,8 @@
 title:  "Algerian military sceneries"
 excerpt: "Explore detailed Algerian military airbases! Community-created hangars, jets, and helicopters for MSFS."
 modified: 2025-03-08T17:00:00+01:00
-classes: wide
 toc: true
+toc_sticky: true
 author_profile: false
 header:
   teaser: /content/images/community/algerian-military-sceneries.webp

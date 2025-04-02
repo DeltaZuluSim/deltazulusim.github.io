@@ -12,7 +12,7 @@
   {% assign crumb_path = site.category_archive.path %}
 {% endif %}
 
-<nav class="breadcrumbs">
+<nav class="breadcrumbs{% unless page.author_profile or layout.author_profile or page.sidebar %} full-width{% endunless %}">
   <ol itemscope itemtype="https://schema.org/BreadcrumbList">
     {% assign crumbs = page.url | split: '/' %}
     {% assign i = 1 %}

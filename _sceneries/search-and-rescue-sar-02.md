@@ -2,6 +2,7 @@
 title: "SO SAR 02 – Search & Rescue Scenario, South of Bejaia, Algeria"
 excerpt: " Search and Rescue (SAR) scenario in the southern region of Bejaia! Test your aerial reconnaissance and navigation skills as you locate a distress signal, report the situation, and navigate through challenging terrain."
 toc: true
+classes: wide
 date: 2025-03-07T00:00:00+01:00
 modified: 2025-03-07T00:00:00+01:00
 coordinates: "[36.57, 5.03]"

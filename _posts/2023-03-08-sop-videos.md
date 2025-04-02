@@ -2,10 +2,9 @@
 title:  "Algerian SO Videos"
 excerpt: "Learn Algerian aviation SOs! Community-made videos covering procedures for realistic MSFS flights."
 modified: 2025-03-08T12:00:00+01:00
-classes: wide
 toc: true
+toc_sticky: true
 author_profile: false
-toc: true
 header:
   teaser: /content/images/community/algerian-sop-videos.webp
   video:

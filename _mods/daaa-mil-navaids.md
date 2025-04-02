@@ -1,12 +1,12 @@
 ---
-layout: single
 title: "Algerian Military Navaids"
 excerpt: "Reference list of Algerian military navaids (VOR, DME, ILS), including real and fictional stations for MSFS use."
 description: "This page provides data on real and fictional Algerian military navigation aids used in Microsoft Flight Simulator, including coordinates, frequencies, and types."
 date: 2025-03-30T00:00:00+01:00
 modified: 2025-03-31T13:00:00+01:00
-classes: wide
+# classes: wide
 toc: true
+toc_sticky: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -15,15 +15,15 @@ header:
   actions:
     - label: "<i class='fas fa-download'></i> Download"
       url: "#download"
-sidebar:
-  - title: ""
-    image: /content/images/mods/daaa-mil-navaids-thumbnail.webp
-  - title: "Version"
-    text: "1.0.0"
-  - title: "MSFS 2020"
-    text: "Yes"
-  - title: "MSFS 2024"
-    text: "Yes"
+# sidebar:
+#   - title: ""
+#     image: /content/images/mods/daaa-mil-navaids-thumbnail.webp
+#   - title: "Version"
+#     text: "1.0.0"
+#   - title: "MSFS 2020"
+#     text: "Yes"
+#   - title: "MSFS 2024"
+#     text: "Yes"
 
 
 changelog:
@@ -39,14 +39,12 @@ changelog:
       - "Initial release for MSFS2020 and MSFS2024"
 ---
 
-## Description
-
 This mod enhances Microsoft Flight Simulator with a growing collection of **military VOR and ILS navigation aids** across Algerian airbases. Designed to support more immersive operations in both solo and multiplayer missions, the navaids include a mix of **real-world references** and **fictional enhancements** to complement custom sceneries and flight procedures.
 
 Whether you're planning tactical flights, practicing instrument approaches, or simply expanding your nav database, this package adds essential tools to your sim environment.
 
 <div class="notice--warning">
-<h4>Remark</h4>
+<strong>Remark</strong><br/>
 📡 <strong>Real-world frequencies and locations are based on official Algerian AIP charts provided by SIA ENNA.</strong>
 Data is extracted from the ENR 6.1 document:  
 <a href="https://www.sia-enna.dz/PDF/AIP/ENR/ENR6/ENR6.1.pdf" target="_blank">
@@ -55,12 +53,10 @@ https://www.sia-enna.dz/PDF/AIP/ENR/ENR6/ENR6.1.pdf
 </div>
 
 
----
-
 ## Features
 
 - Military VOR stations with frequency, coordinates, and altitude
-- Both [**real**](https://www.sia-enna.dz/PDF/AIP/ENR/ENR6/ENR6.1.pdf) and **fictional** navaids for greater mission flexibility
+- Both **real** and **fictional** navaids for greater mission flexibility
 - Compatibility with MSFS 2020 & 2024
 
 ## Ongoing Development

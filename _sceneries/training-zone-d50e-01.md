@@ -2,6 +2,7 @@
 title: "SO Training area D50E-01"
 excerpt: "Virtual Spercial operations Training zone for MSFS simmers in the special area D50E on the south of Bousfer Air base (DAOE)"
 toc: true
+classes: wide
 date: 2025-02-24T00:00:00+01:00
 modified: 2025-02-24T00:00:00+01:00
 coordinates: "[34.38, -0.42]"

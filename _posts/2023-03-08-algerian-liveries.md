@@ -2,10 +2,9 @@
 title:  "Algerian Liveries"
 excerpt: "Fly with pride! Discover stunning Algerian liveries made by the community for MSFS. Bring your flights to life!"
 modified: 2025-03-08T12:00:00+01:00
-classes: wide
+toc_sticky: true
 toc: true
 author_profile: false
-toc: true
 header:
   teaser: /content/images/community/algerian-liveries.webp
 categories: 

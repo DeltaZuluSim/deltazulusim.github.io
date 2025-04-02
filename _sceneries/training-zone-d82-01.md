@@ -2,6 +2,7 @@
 title: "SO Training area D82-01"
 excerpt: "Virtual Spercial operations Training zone for MSFS simmers in the special area D82 HASSI BAHBAH"
 toc: true
+classes: wide
 date: 2025-02-24T00:00:00+01:00
 modified: 2025-03-17T20:00:00+01:00
 coordinates: "[34.93, 2.55]"

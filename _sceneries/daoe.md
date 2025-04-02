@@ -2,6 +2,7 @@
 title: "DAOE BOUSFER Air base"
 excerpt: "Microsoft Flight Simulation Scenery for BOUSFER (DAOE) Military Airport for MSFS2020 & MSFS2024"
 toc: true
+classes: wide
 date: 2025-02-23T00:00:00+01:00
 modified: 2025-03-17T00:00:00+01:00
 coordinates: "[35.5, -1.5]"

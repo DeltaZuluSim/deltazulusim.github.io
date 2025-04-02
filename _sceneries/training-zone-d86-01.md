@@ -2,6 +2,7 @@
 title: "SO Naval Recon – Algerian Navy & Submarines (D86)"
 excerpt: "Military reconnaissance scenario for MSFS simmers: locate and identify Algerian Navy assets, including submarines and warships, in the D86 special area north of Annaba, Algeria."
 toc: true
+classes: wide
 date: 2025-03-06T00:00:00+01:00
 modified: 2025-03-06T00:00:00+01:00
 coordinates: "[37.28, 7.15]"

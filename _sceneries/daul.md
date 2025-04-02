@@ -2,6 +2,7 @@
 title: "DAUL LAGHOUAT Air Base"
 excerpt: "Microsoft Flight Simulator scenery for Laghouat (DAUL) Military Air Base for MSFS2020 & MSFS2024"
 toc: true
+classes: wide
 date: 2025-03-30T00:00:00+01:00
 modified: 2025-03-30T00:00:00+01:00
 coordinates: "[33.75, 2.93]"

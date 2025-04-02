@@ -2,6 +2,7 @@
 title: "DAAY MECHERIA Airport"
 excerpt: "Microsoft Flight Simulation Scenery for Mecheria (DAAY) Military Airport for MSFS2020 & MSFS2024"
 toc: true
+classes: wide
 date: 2025-02-23T00:00:00+01:00
 modified: 2025-03-17T00:00:00+01:00
 coordinates: "[33.53, -0.24]"
