@@ -116,3 +116,11 @@
   link: "/community%20sceneries/algerian-sceneries/#daos---sidi-bel-abbes"
   description: "Sidi Bel Abbes airport"
 
+
+- name: "DAUA"
+  type: "Airport"
+  lat: 27.841164
+  lng: -0.190025
+  image: "https://cdn.flightsim.to/images/24/adrar-daua-basic-airport-enhancement-7080-1674586463-bdPpz.jpg?width=1400"
+  link: "/community%20sceneries/algerian-sceneries/#daua----adrar"
+  description: "Adrar airport"
