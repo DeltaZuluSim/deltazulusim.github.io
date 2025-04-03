@@ -4,7 +4,7 @@ excerpt: "Microsoft Flight Simulator scenery for Laghouat (DAUL) Military Air Ba
 toc: true
 classes: wide
 date: 2025-03-30T00:00:00+01:00
-modified: 2025-03-30T00:00:00+01:00
+modified: 2025-04-03T00:00:00+01:00
 coordinates: "[33.75, 2.93]"
 header:
   overlay_color: "#000"
@@ -66,6 +66,11 @@ gallery:
     image_path: /content/images/sceneries/daul/DAUL12.webp
     alt: "DAUL AIR BASE MSFS FLIGHT SIMULATOR 2020/2024"
 changelog:
+  - version: "1.1.0"
+    version_date: "2025-04-03"
+    download_url: "https://deltazulusim.short.gy/sceneries/daul/v1.1.0"
+    changes:
+      - "Removed fictional VOR navaid to avoid confusions with real one"
   - version: "1.0.0"
     version_date: "2025-03-30"
     download_url: "https://deltazulusim.short.gy/sceneries/daul/v1.0.0"
