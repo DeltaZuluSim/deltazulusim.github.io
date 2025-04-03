@@ -62,7 +62,7 @@
   <script>
     document.addEventListener("DOMContentLoaded", function () {
         var pdfjsLib = window['pdfjs-dist/build/pdf'];
-        pdfjsLib.GlobalWorkerOptions.workerSrc = "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.worker.min.js";
+        pdfjsLib.GlobalWorkerOptions.workerSrc = '{{ "/assets/js/pdf.js/pdf.worker.js" | relative_url }}';
     
         function disableAllButtons(pdfRow) {
             let toggleButton = pdfRow.previousElementSibling.querySelector(".toggle-pdf");

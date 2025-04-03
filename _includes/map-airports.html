@@ -1,9 +1,4 @@
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-<script src="https://teastman.github.io/Leaflet.pattern/leaflet.pattern.js"></script>
 
 <div id="map" style="width: 100%; height: {{ include.height | default: '500px' }};"></div>
 
@@ -21,6 +16,13 @@
       subdomains: 'abcd',
       maxZoom: 16
     }).addTo(map);
+
+    L.Icon.Default.mergeOptions({
+  iconUrl: '{{ "/assets/images/leaflet/marker-icon.png" | relative_url }}',
+  iconRetinaUrl: '{{ "/assets/images/leaflet/marker-icon-2x.png" | relative_url }}',
+  shadowUrl: '{{ "/assets/images/leaflet/marker-shadow.png" | relative_url }}'
+});
+
 
     fetch('/assets/geojson/algeria.geojson')
     .then(response => response.json())

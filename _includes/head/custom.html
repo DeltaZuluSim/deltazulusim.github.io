@@ -14,7 +14,15 @@
   <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}">
   <meta property="og:type" content="article">
   
-<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+  <!-- Local Leaflet CSS -->
+<link rel="stylesheet" href="{{ '/assets/css/leaflet.css' | relative_url }}">
+
+<!-- Local Leaflet JS -->
+<script src="{{ '/assets/js/leaflet.js' | relative_url }}"></script>
+<script src="{{ '/assets/js/leaflet.pattern.js' | relative_url }}"></script>
+
+<script src="{{ '/assets/js/pdf.js/pdf.js' | relative_url }}"></script>
+
 
 <script>
   // Set all symbols to [+] by default on page load
