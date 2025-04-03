@@ -2,6 +2,7 @@
 permalink: /contact/
 title: "Contact"
 excerpt: "Contact us"
+center_content: true
 ---
 
 <p>We are also active on social networks! For the fastest response, join our Discord channel:</p>

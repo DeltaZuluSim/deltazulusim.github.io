@@ -3,6 +3,8 @@ title: "Privacy Policy"
 excerpt: "DeltaZulu Simulations does not collect personal data. However, third-party services like OpenStreetMap, FontAwesome, and Short.io may track anonymous interactions. Learn more about our privacy practices."
 sitemap: true
 permalink: /privacy-policy/
+toc: true
+toc_sticky: true
 ---
 
 ## 1. Introduction  

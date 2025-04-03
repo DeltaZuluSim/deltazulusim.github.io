@@ -3,6 +3,8 @@ title: "Contribute to DeltaZulu Simulations"
 excerpt: "Help grow the DeltaZulu Simulations community! Share your ideas, submit Algerian-themed sceneries and liveries, provide feedback, or recommend useful resources for simmers on IVAO and VATSIM."
 sitemap: true
 permalink: /contribute/
+toc: true
+toc_sticky: true
 ---
 
 <style>

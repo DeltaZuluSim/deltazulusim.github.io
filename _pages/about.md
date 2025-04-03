@@ -3,6 +3,8 @@ title: "About DeltaZulu Simulations"
 excerpt: "DeltaZulu Simulations is dedicated to enhancing the Algerian flight simulation experience by developing high-quality sceneries, liveries, and GSX profiles for MSFS. We support IVAO and VATSIM pilots with immersive content and tutorials."
 sitemap: true
 permalink: /about/
+toc: true
+toc_sticky: true
 ---
 
 <style>
