@@ -96,23 +96,7 @@ This scenery captures the full complexity of DAUL, featuring its **parallel runw
 - Enhanced night lighting across the base  
 - Optimized for MSFS 2020 & MSFS 2024  
 
-## Navigation Aids (NAVAIDs)
-
-For enhanced IFR training and realistic navigation simulation, Laghouat Air Base includes a **real-world VOR/DME station** referenced from official aviation charts. However, this navigation aid is **not included by default** in Microsoft Flight Simulator.
-
-To enable this VOR/DME in MSFS, users must install the [**Algerian Military Navaids** mod](/mods/daaa-mil-navaids/), which adds accurate military navigation aids across the country, including the one at DAUL.
-
-**VOR/DME LAG** ***(Real-world, custom implementation in MSFS)***
-
-- **Identifier:** LAG 
-- **Frequency:** 115.5 MHz  
-- **Type:** High VOR  
-- **Coordinates:** 33.744892° N, 2.936937° E  
-- **Elevation:** 765 m  
-- **DME:** Yes  
-- **Range:** 200 NM  
-
-This VOR/DME serves as a key navigation reference for enroute procedures, holding patterns, and IFR approaches around Laghouat Air Base.
+{% include navigation-aids.html icao="DAUL" %}
 
 ## Installation Instructions
 

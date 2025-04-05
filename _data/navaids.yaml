@@ -1,32 +1,73 @@
-vors:
-  - ident: LAG
-    name: Laghouat VOR
-    lat: 33.7459819
-    lon: 2.9363123
-    alt_m: 765.0
-    frequency_mhz: 115.500
-    source: real
-
-  - ident: MCH
-    name: Mecheria VOR
-    lat: 33.5369444
-    lon: -0.2419444
-    alt_m: 1112.0
-    frequency_mhz: 112.600
-    source: real
-
+vors: 
   - ident: BSF
-    name: Bousfer VOR
+    icao: DAOE
+    name: Bousfer
     lat: 35.7272222
     lon: -0.8252778
     alt_m: 55.0
     frequency_mhz: 113.400
     source: fictional
 
+  - ident: MCH
+    icao: DAAY
+    name: Mecheria
+    lat: 33.5369444
+    lon: -0.2419444
+    alt_m: 1112.0
+    frequency_mhz: 112.600
+    source: real
+
   - ident: TFR
-    name: Tafraoui VOR
+    icao: DAOL
+    name: Tafraoui
     lat: 35.5372222
     lon: -0.5558333
     alt_m: 105.0
     frequency_mhz: 112.800
+    source: fictional
+
+  - ident: RGN
+    icao: DAAN
+    name: Reggan
+    lat: 26.7227778
+    lon: 0.3077778
+    alt_m: 290.0
+    frequency_mhz: 112.500
+    source: fictional
+
+  - ident: OBG
+    icao: DABO
+    name: Oum El Bouaghi
+    lat: 35.8788889
+    lon: 7.2611111
+    alt_m: 900.0
+    frequency_mhz: 115.300
+    source: fictional
+
+
+  - ident: LAG
+    icao: DAUL
+    name: Laghouat
+    lat: 33.7459819
+    lon: 2.9363123
+    alt_m: 765.0
+    frequency_mhz: 115.500
+    source: real
+    
+  - ident: BFK
+    icao: DAAK
+    name: Boufarik
+    lat: 36.5638889
+    lon: 2.8961111
+    alt_m: 67.0
+    frequency_mhz: 114.100
+    source: fictional
+
+  - ident: AIN
+    icao: DAAQ
+    name: Ain Ouessara
+    lat: 35.5244444
+    lon: 2.9002778
+    alt_m: 650.0
+    frequency_mhz: 114.700
     source: fictional

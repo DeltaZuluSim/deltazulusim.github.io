@@ -56,6 +56,7 @@ gallery:
     image_path: /content/images/sceneries/daay/DAAY08.webp
     alt: "DAAY AIRPORT MSFS FLIGHT SIMULATOR 2020/2024"
 
+changelog_level: 3
 changelog:
   - version: "1.1.0"
     version_date: "2025-03-17"
@@ -88,7 +89,11 @@ Our scenery package captures every detail of Mecheria Military Airport, from the
 - Enhanced textures and lighting effects for a true-to-life experience
 - Compatible with MSFS 2020 and MSFS 2024
 
-## Installation Instructions
+
+{% include navigation-aids.html icao="DAAY" collapse=true %}
+
+## Package 
+### Installation Instructions
 - Download the scenery package.
 - Extract the contents to your Community folder.
 - Launch MSFS and enjoy your flight over Mecheria!
@@ -106,7 +111,7 @@ This scenery references some optional models from the following third party scen
   {{ notice-text | markdownify }}
 </div>
 
-## Download
+### Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
 
 [<i class='fas fa-download'></i> Download <code>v-{{ page.changelog | first | map: "version" }}</code>]({{ page.changelog | first | map: "download_url" }}){: .btn .btn--success .btn--x-large}

@@ -1,0 +1,44 @@
+{% assign matching_vor = site.data.navaids.vors | where: "icao", include.icao | first %}
+
+{% if matching_vor %}
+
+  {% capture content %}
+{% if matching_vor.source == "real" %}
+For enhanced IFR training and realistic navigation simulation, {{ matching_vor.name }} Air Base includes a **real-world VOR/DME station**, based on official aeronautical information. This navigation aid is **not included by default** in Microsoft Flight Simulator.
+{% else %}
+For enhanced IFR training and realistic navigation simulation, a fictional **VOR/DME station** is available near {{ matching_vor.name }} Air Base. This navigation aid is **not included by default** in Microsoft Flight Simulator.
+{% endif %}
+
+To enable this VOR/DME in MSFS, users must install the [**Algerian Military Navaids** mod](/mods/daaa-mil-navaids/), which adds accurate military navigation aids across the country, including the one at {{ matching_vor.icao }}.
+
+**VOR/DME {{ matching_vor.ident }}** *({{ matching_vor.source | capitalize }}-world, custom implementation in MSFS)*
+
+- **Identifier:** {{ matching_vor.ident }}  
+- **Frequency:** {{ matching_vor.frequency_mhz }} MHz  
+- **Type:** High VOR  
+- **Coordinates:** {{ matching_vor.lat }}° N, {{ matching_vor.lon }}° E  
+- **Elevation:** {{ matching_vor.alt_m }} m  
+- **DME:** Yes  
+- **Range:** 200 NM
+
+This VOR/DME serves as a key navigation reference for enroute procedures, holding patterns, and IFR approaches around {{ matching_vor.name }} Air Base.
+  {% endcapture %}
+
+  {% assign markdownified = content | markdownify %}
+
+  {% if include.collapse == true or include.collapse == "true" %}
+
+
+## <span class="expand-symbol"></span>Navigation Aids (NAVAIDs)  
+{: .expand-title onclick="toggleExpand(this)" }
+
+  {% include expand-content.html content=markdownified %}
+
+  {% else %}
+
+## Navigation Aids (NAVAIDs) 
+  {{ markdownified }}
+
+  {% endif %}
+
+{% endif %}

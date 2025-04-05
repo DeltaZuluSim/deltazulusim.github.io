@@ -3,7 +3,7 @@ title: "Algerian Military Navaids"
 excerpt: "Reference list of Algerian military navaids (VOR, DME, ILS), including real and fictional stations for MSFS use."
 description: "This page provides data on real and fictional Algerian military navigation aids used in Microsoft Flight Simulator, including coordinates, frequencies, and types."
 date: 2025-03-30T00:00:00+01:00
-modified: 2025-03-31T13:00:00+01:00
+modified: 2025-04-05T13:00:00+01:00
 # classes: wide
 toc: true
 toc_sticky: true
@@ -18,6 +18,14 @@ header:
 
 changelog_level: 3
 changelog:
+  - version: "1.1.0"
+    version_date: "2025-04-05"
+    download_url: "https://deltazulusim.short.gy/mods/daaa-mil-navaids/v1.1.0"
+    changes:
+      - "Added VOR for DAAK Boufarik"
+      - "Added VOR for DAAQ Ain Ouessara"
+      - "Added VOR for DAAN Reggan"
+      - "Added VOR for DABO Oum El Bouaghi"
   - version: "1.0.0"
     version_date: "2025-03-31"
     download_url: "https://deltazulusim.short.gy/mods/daaa-mil-navaids/v1.0.0"
@@ -73,8 +81,9 @@ This add-on is **actively maintained and regularly updated** with new Algerian m
 <table class="large-table">
   <thead>
     <tr>
-      <th>Ident</th>
+      <th>ICAO</th>
       <th>Name</th>
+      <th>Ident</th>
       <th>Latitude</th>
       <th>Longitude</th>
       <th>Altitude (m)</th>
@@ -83,22 +92,34 @@ This add-on is **actively maintained and regularly updated** with new Algerian m
     </tr>
   </thead>
   <tbody>
-    {% for vor in site.data.navaids.vors %}
-    <tr>
-      <td>{{ vor.ident }}</td>
-      <td>{{ vor.name }}</td>
-      <td>{{ vor.lat }}</td>
-      <td>{{ vor.lon }}</td>
-      <td>{{ vor.alt_m }}</td>
-      <td>{{ vor.frequency_mhz }}</td>
-      <td>
-        {% if vor.source == "real" %}
-          <span style="color: green;">Real</span>
-        {% else %}
-          <span style="color: orange;">Fictional</span>
-        {% endif %}
-      </td>
-    </tr>
+    {% assign sorted_vors = site.data.navaids.vors | sort: "ident" %}
+    {% for vor in sorted_vors %}
+      {% assign match_scenery = site.data.sceneries | where: "name", vor.icao | first %}
+      {% assign match_community = site.data.community-military-sceneries | where: "name", vor.icao | first %}
+      {% assign matched_link = match_scenery.link | default: match_community.link %}
+
+      <tr>
+        <td>
+          {% if matched_link %}
+            <a href="{{ matched_link }}"><code>{{ vor.icao }}<span title="Scenery available">🗺️</span></code></a>
+          {% else %}
+            <code>{{ vor.icao }}</code>
+          {% endif %}
+        </td>
+        <td>{{ vor.name }}</td>
+        <td>{{ vor.ident }}</td>
+        <td>{{ vor.lat }}</td>
+        <td>{{ vor.lon }}</td>
+        <td>{{ vor.alt_m }}</td>
+        <td>{{ vor.frequency_mhz }}</td>
+        <td>
+          {% if vor.source == "real" %}
+            <span style="color: green;">Real</span>
+          {% else %}
+            <span style="color: orange;">Fictional</span>
+          {% endif %}
+        </td>
+      </tr>
     {% endfor %}
   </tbody>
 </table>

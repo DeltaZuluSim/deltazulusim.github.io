@@ -15,15 +15,6 @@ tags:
 
 resources:
 
-  - icao: "DAUA "
-    airport_name: "Adrar"
-    author: "EDDB2020"
-    author_url: "https://fr.flightsim.to/profile/EDDB2020"
-    image_url: "https://cdn.flightsim.to/images/24/adrar-daua-basic-airport-enhancement-7080-1674586463-bdPpz.jpg?width=1400"
-    download_url: "https://fr.flightsim.to/file/48583/adrar-daua-basic-airport-enhancement"
-    MSFS2020: true
-    MSFS2024: false
-
   - icao: "DAOO"
     airport_name: "Ahmed Ben Bella international  airport"
     author: "mokhtarbo33"
@@ -42,6 +33,16 @@ resources:
     MSFS2020: true
     MSFS2024: false   
 
+  - icao: "DAUA "
+    airport_name: "Adrar"
+    author: "EDDB2020"
+    author_url: "https://fr.flightsim.to/profile/EDDB2020"
+    notice: "This scenery is not updated anymore by the author."
+    image_url: "https://cdn.flightsim.to/images/24/adrar-daua-basic-airport-enhancement-7080-1674586463-bdPpz.jpg?width=1400"
+    download_url: "https://fr.flightsim.to/file/48583/adrar-daua-basic-airport-enhancement"
+    MSFS2020: true
+    MSFS2024: false
+    
   - icao: "DAOI"
     airport_name: "Chlef"
     author: "moh_3431"

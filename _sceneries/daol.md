@@ -84,6 +84,8 @@ This custom scenery for Tafraoui Military Base (DAOL) enhances the airfield with
 - Custom lighting for enhanced visibility at night
 - Optimized for performance
 
+{% include navigation-aids.html icao="DAOL" %}
+
 ## Installation Instructions
 - Download the scenery package.
 - Extract the contents to your Community folder.

@@ -72,6 +72,8 @@ Bousfer Military Airport (DAOE) is an Algerian military Air base, located near O
 - Realistic lighting and static objects for added immersion
 - Optimized performance for smooth gameplay
 
+{% include navigation-aids.html icao="DAOE" %}
+
 ## Installation Instructions
 - Download the scenery package.
 - Extract the contents to your Community folder.

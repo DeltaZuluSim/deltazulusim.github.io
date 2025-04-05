@@ -51,7 +51,13 @@
   {% endif %}
 
   <img src="{{ resource.image_url }}" alt="GSX Profile {{ resource.icao }}" class="resource-image">
-
+  
+  {% assign matching_vor = site.data.navaids.vors | where: "icao", resource.icao | first %}
+  {% if matching_vor %}
+  <div class="notice--success">
+    VOR <code style="font-weight: bold; font-size: 120%;">{{ matching_vor.ident }}</code> is available for this scenery, install the <a href="/mods/daaa-mil-navaids/"><strong>Algerian Mil Navaids</strong> mod</a>.<br>
+  </div>
+  {% endif %}
 </div>
 
 {% endfor %}
