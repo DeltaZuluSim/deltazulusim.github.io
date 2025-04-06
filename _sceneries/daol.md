@@ -5,7 +5,7 @@ toc: true
 classes: wide
 date: 2025-02-23T00:00:00+01:00
 modified: 2025-03-17T00:00:00+01:00
-coordinates: "[35.53, -0.52]"
+
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -71,7 +71,7 @@ changelog:
 
 This custom scenery for Tafraoui Military Base (DAOL) enhances the airfield with more realistic structures, ground details, and lighting. Located near Oran, Algeria, DAOL is primarily used for military training and aviation operations.
 
-{% include map-single.html coordinates=page.coordinates %}
+{% include map-single.html icao="DAOL" %}
 
 ## Gallery 
 {% include gallery caption="Some screenshots for the scenery from the sky!" %}

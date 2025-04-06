@@ -95,7 +95,7 @@ This add-on is **actively maintained and regularly updated** with new Algerian m
     {% assign sorted_vors = site.data.navaids.vors | sort: "ident" %}
     {% for vor in sorted_vors %}
       {% assign match_scenery = site.data.sceneries | where: "name", vor.icao | first %}
-      {% assign match_community = site.data.community-military-sceneries | where: "name", vor.icao | first %}
+      {% assign match_community = site.data.community-sceneries.military | where: "name", vor.icao | first %}
       {% assign matched_link = match_scenery.link | default: match_community.link %}
 
       <tr>

@@ -5,7 +5,7 @@ toc: true
 classes: wide
 date: 2025-03-30T00:00:00+01:00
 modified: 2025-04-03T00:00:00+01:00
-coordinates: "[33.75, 2.93]"
+
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -82,7 +82,7 @@ Scenery for **Laghouat Air Base (DAUL)**, designed for Microsoft Flight Simulato
 
 This scenery captures the full complexity of DAUL, featuring its **parallel runways**, **dispersed hardened shelters**, and **dedicated helicopter aprons**. The airbase layout supports various mission profiles, from fast jet ops to rotary-wing deployments. Whether you’re planning formation flights, training sorties, or immersive combat scenarios, DAUL brings you a rich, high-performance platform with day and night usability.
 
-{% include map-single.html coordinates=page.coordinates %}
+{% include map-single.html icao="DAUL" %}
 
 ## Gallery  
 {% include gallery caption="A selection of screenshots from the DAUL scenery in MSFS" %}

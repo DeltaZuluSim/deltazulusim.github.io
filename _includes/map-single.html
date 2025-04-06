@@ -1,11 +1,16 @@
-
-
 <div id="map" style="height: 500px;"></div>
 
 <script>
-  // Define coordinates using Jekyll variable
+  // Try to get coordinates from include.coordinates or from the sceneries data using ICAO
+  {% assign airport = nil %}
+  {% if include.icao %}
+    {% assign airport = site.data.sceneries | where: "name", include.icao | first %}
+  {% endif %}
+
   {% if include.coordinates %}
     const centerCoords = {{ include.coordinates }};
+  {% elsif airport %}
+    const centerCoords = [{{ airport.lat }}, {{ airport.lng }}];
   {% endif %}
 
   // Define military variable (default to true)
@@ -17,17 +22,19 @@
 
   // Initialize the map
   var map = L.map('map', {
-    center: {% if include.coordinates %} centerCoords {% else %} [33.53, -0.24] {% endif %},
+    center: {% if include.coordinates or airport %} centerCoords {% else %} [33.53, -0.24] {% endif %},
     zoom: 6,
     minZoom: 5,
   });
 
+  // Tile layer
   L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
     attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
     subdomains: 'abcd',
     maxZoom: 16
   }).addTo(map);
 
+  // Country geojson
   fetch('/assets/geojson/algeria.geojson')
     .then(response => response.json())
     .then(data => {
@@ -41,18 +48,16 @@
       }).addTo(map);
     });
 
-  {% if include.coordinates %}
-    // Determine the marker icon based on 'military' variable
+  // Place marker if coordinates exist
+  {% if include.coordinates or airport %}
     var markerIcon = L.icon({
       iconUrl: isMilitary ? '/assets/images/mil-marker.png' : '/assets/images/marker.png',
-      iconSize: [32, 32], 
-      iconAnchor: [16, 32], 
+      iconSize: [32, 32],
+      iconAnchor: [16, 32],
       popupAnchor: [0, -32]
     });
 
-    // Add a marker using the selected icon
     var marker = L.marker(centerCoords, { icon: markerIcon }).addTo(map)
       .openPopup();
   {% endif %}
 </script>
-

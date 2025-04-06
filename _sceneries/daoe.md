@@ -5,7 +5,7 @@ toc: true
 classes: wide
 date: 2025-02-23T00:00:00+01:00
 modified: 2025-03-17T00:00:00+01:00
-coordinates: "[35.5, -1.5]"
+
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
@@ -59,7 +59,7 @@ changelog:
 
 Bousfer Military Airport (DAOE) is an Algerian military Air base, located near Oran, plays a strategic role in regional operations and now comes to life in MSFS 2020 and MSFS 2024 with stunning accuracy.
 
-{% include map-single.html coordinates=page.coordinates %}
+{% include map-single.html icao="DAOE" %}
 
 
 ## Gallery 

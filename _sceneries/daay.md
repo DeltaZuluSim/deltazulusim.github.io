@@ -5,7 +5,7 @@ toc: true
 classes: wide
 date: 2025-02-23T00:00:00+01:00
 modified: 2025-03-17T00:00:00+01:00
-coordinates: "[33.53, -0.24]"
+
 # comments: true
 header:
   overlay_color: "#000"
@@ -75,7 +75,7 @@ Scenery for Mecheria Military Airport (DAAY), designed exclusively for Microsoft
 Our scenery package captures every detail of Mecheria Military Airport, from the accurately modeled runways and taxiways to the comprehensive depiction of airport infrastructure. Whether you're piloting a military aircraft or exploring the region in a civilian plane, you'll appreciate the authenticity and attention to detail we've poured into this scenery.
 
 
-{% include map-single.html coordinates=page.coordinates %}
+{% include map-single.html icao="DAAY" %}
 
 
 

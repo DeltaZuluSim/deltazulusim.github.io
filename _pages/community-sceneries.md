@@ -9,7 +9,7 @@ dzs-collection: 'sceneries'
 dzs-collection-title: 'Other sceneries by DeltaZulu Simulations'
 ---
 
-{% assign sceneries = site.data.community-military-sceneries | concat: site.data.community-sceneries %}
+{% assign sceneries = site.data.community-sceneries.military | concat: site.data.community-sceneries.civilian %}
 
 {% include map.html dz_asp="false" sceneries=sceneries %}
 
