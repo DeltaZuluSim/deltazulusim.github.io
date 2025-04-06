@@ -58,6 +58,27 @@ main:
 #  - title: "Categories"
 #    url: /categories/
 
+footer:
+  - title: "Home"
+    url: /
+    icon: fas fa-home
+
+  - title: "About"
+    url: /about/
+    icon: fas fa-info-circle
+
+  - title: "Contribute"
+    url: /contribute/
+    icon: fas fa-hands-helping
+
+  - title: "Privacy Policy"
+    url: /privacy-policy/
+    icon: fas fa-user-shield
+
+  - title: "Contact"
+    url: /contact/
+    icon: fas fa-envelope
+
 charts:
   - title: DAAD - BOU SAADA
     url: /charts/DAAD/
