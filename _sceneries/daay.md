@@ -99,12 +99,6 @@ Our scenery package captures every detail of Mecheria Military Airport, from the
 
 {% include navigation-aids.html icao="DAAY" collapse=true %}
 
-## Package 
-### Installation Instructions
-- Download the scenery package.
-- Extract the contents to your Community folder.
-- Launch MSFS and enjoy your flight over Mecheria!
-
 ## Credits
 
 This scenery makes use of selected 3D models and assets originally created by the following authors, with respect to their work:
@@ -114,6 +108,12 @@ This scenery makes use of selected 3D models and assets originally created by th
 
 All rights remain with the original authors. Their excellent work has helped enhance the realism and atmosphere of this DAUL scenery. If you enjoy this package, we encourage you to explore and support their creations as well.
 {: .notice--primary}
+
+## Package 
+### Installation Instructions
+- Download the scenery package.
+- Extract the contents to your Community folder.
+- Launch MSFS and enjoy your flight over Mecheria!
 
 ### Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
