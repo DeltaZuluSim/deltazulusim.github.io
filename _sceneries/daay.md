@@ -4,7 +4,7 @@ excerpt: "Microsoft Flight Simulation Scenery for Mecheria (DAAY) Military Airpo
 toc: true
 classes: wide
 date: 2025-02-23T00:00:00+01:00
-modified: 2025-03-17T00:00:00+01:00
+modified: 2025-04-06T00:00:00+01:00
 
 # comments: true
 header:
@@ -24,7 +24,7 @@ sidebar:
   - title: "ICAO"
     text: "DAAY"
   - title: "Version"
-    text: "1.1.0"
+    text: "1.2.0"
   - title: "MSFS 2020"
     text: "Yes"
   - title: "MSFS 2024"
@@ -58,6 +58,13 @@ gallery:
 
 changelog_level: 3
 changelog:
+  - version: "1.2.0"
+    version_date: "2025-04-06"
+    download_url: "https://deltazulusim.short.gy/sceneries/daay/v1.2.0"
+    changes:
+      - "Remove light from runway 16 landing area"
+      - "Included external models" 
+      - "Replaced buildings with generic" 
   - version: "1.1.0"
     version_date: "2025-03-17"
     download_url: "https://deltazulusim.short.gy/sceneries/daay/v1.1.0"
@@ -98,18 +105,15 @@ Our scenery package captures every detail of Mecheria Military Airport, from the
 - Extract the contents to your Community folder.
 - Launch MSFS and enjoy your flight over Mecheria!
 
-{% capture notice-text %}
+## Credits
 
-This scenery references some optional models from the following third party sceneries: 
-* DAAQ, DAAK, DAAJ, DAAP, DAAS & DAAN Airport sceneries by [Algerian WINGS Sceneries](https://www.facebook.com/AlgerianWingsSceneries)
-* Aguenar (DAAT) scenery by [NetDesign](https://inibuilds.com/products/netdesign-aguenar-daat-msfs?srsltid=AfmBOorrtszEPqjNv4V4OrVqirz9LHv8eX9RURf_JEo9ws0G3j1eSnV0)
+This scenery makes use of selected 3D models and assets originally created by the following authors, with respect to their work:
 
-{% endcapture %}
+- **[Algerian WINGS Sceneries](https://www.facebook.com/AlgerianWingsSceneries)** – static objects and details from DAAN, DAAK and DAAJ airport packages.  
+- **[NetDesign](https://inibuilds.com/products/netdesign-aguenar-daat-msfs)** – additional models adapted from the DAAT (Aguenar) scenery.
 
-<div class="notice--warning">
-  <h4 class="no_toc">Important</h4>
-  {{ notice-text | markdownify }}
-</div>
+All rights remain with the original authors. Their excellent work has helped enhance the realism and atmosphere of this DAUL scenery. If you enjoy this package, we encourage you to explore and support their creations as well.
+{: .notice--primary}
 
 ### Download
 This project is free to download and is part of an effort to bring more detailed Algerian airfields to Microsoft Flight Simulator.
