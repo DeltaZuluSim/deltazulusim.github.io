@@ -5,6 +5,7 @@ modified: 2025-03-08T14:00:00+01:00
 toc: true
 toc_sticky: true
 author_profile: false
+comments: true
 toc: true
 header:
   teaser: /content/images/community/algerian-military-liveries.webp

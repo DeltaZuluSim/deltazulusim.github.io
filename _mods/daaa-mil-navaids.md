@@ -4,6 +4,7 @@ excerpt: "Reference list of Algerian military navaids (VOR, DME, ILS), including
 description: "This page provides data on real and fictional Algerian military navigation aids used in Microsoft Flight Simulator, including coordinates, frequencies, and types."
 date: 2025-03-30T00:00:00+01:00
 modified: 2025-04-05T13:00:00+01:00
+comments: true
 # classes: wide
 toc: true
 toc_sticky: true

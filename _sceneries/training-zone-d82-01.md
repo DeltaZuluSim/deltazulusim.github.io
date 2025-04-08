@@ -6,7 +6,7 @@ classes: wide
 date: 2025-02-24T00:00:00+01:00
 modified: 2025-03-17T20:00:00+01:00
 coordinates: "[34.93, 2.55]"
-# comments: true
+comments: true
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
