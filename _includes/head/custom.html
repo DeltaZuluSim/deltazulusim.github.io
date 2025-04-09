@@ -11,8 +11,19 @@
   <meta property="og:title" content="{{ page.title | escape }}">
   <meta property="og:description" content="{{ page.excerpt | strip_html | escape }}">
   <meta property="og:url" content="{{ page.url | absolute_url }}">
-  <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}">
-  <meta property="og:type" content="article">
+  <!-- <meta property="og:image" content="{% if page.image %}{{ page.image | absolute_url }}{% else %}{{ site.logo | absolute_url }}{% endif %}"> -->
+  
+  <meta property="og:image" content="{% if page.image %}
+  {{ page.image | absolute_url }}
+{% elsif page.header.teaser %}
+  {{ page.header.teaser | absolute_url }}
+{% elsif page.header.overlay_image %}
+  {{ page.header.overlay_image | absolute_url }}
+{% else %}
+  {{ site.logo | absolute_url }}
+{% endif %}">
+
+  <meta property="og:type" content="article"> 
   
   <!-- Local Leaflet CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/leaflet.css' | relative_url }}">
