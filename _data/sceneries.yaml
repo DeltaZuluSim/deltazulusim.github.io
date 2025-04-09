@@ -69,3 +69,12 @@
   image: "/content/images/sceneries/daul/DAUL04.webp"
   link: "/sceneries/daul/"
   description: "Laghouat - Air Base"
+
+
+- name: "DAOY"
+  type: "Airport"
+  lat: 33.719953
+  lng: 1.092771
+  image: "/content/images/sceneries/daoy/DAOY01.webp"
+  link: "/sceneries/daoy/"
+  description: "El Bayadh - Airport"

@@ -63,6 +63,10 @@ footer:
     url: /
     icon: fas fa-home
 
+  - title: "Charts"
+    url: /charts/
+    icon: fas fa-route
+    
   - title: "About"
     url: /about/
     icon: fas fa-info-circle
