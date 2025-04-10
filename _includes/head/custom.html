@@ -24,6 +24,22 @@
 {% endif %}">
 
   <meta property="og:type" content="article"> 
+
+  <!-- Twitter Card data -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@DeltaZuluSim">
+<meta name="twitter:title" content="{{ page.title | escape }}">
+<meta name="twitter:description" content="{{ page.excerpt | strip_html | normalize_whitespace | truncate: 160 }}">
+<meta name="twitter:image" content="{% if page.image %}
+  {{ page.image | absolute_url }}
+{% elsif page.header.teaser %}
+  {{ page.header.teaser | absolute_url }}
+{% elsif page.header.overlay_image %}
+  {{ page.header.overlay_image | absolute_url }}
+{% else %}
+  {{ site.logo | absolute_url }}
+{% endif %}">
+<meta name="twitter:creator" content="@DeltaZuluSim">
   
   <!-- Local Leaflet CSS -->
 <link rel="stylesheet" href="{{ '/assets/css/leaflet.css' | relative_url }}">
