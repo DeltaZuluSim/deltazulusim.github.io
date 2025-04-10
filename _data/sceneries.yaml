@@ -78,3 +78,11 @@
   image: "/content/images/sceneries/daoy/DAOY01.webp"
   link: "/sceneries/daoy/"
   description: "El Bayadh - Airport"
+
+- name: "DAAQ"
+  type: "Mod"
+  lat: 35.52
+  lng: 2.87
+  image: "/content/images/mods/daaq-light-mod/daaq-mod01.webp"
+  link: "/mods/daaq-light-enhancement/"
+  description: "Ain Oussera Air base - Light Enhancement Mod"
