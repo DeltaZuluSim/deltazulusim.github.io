@@ -6,6 +6,7 @@ toc: true
 toc_sticky: true
 author_profile: false
 comments: true
+featured: true
 header:
   teaser: /content/images/community/gsxpro.webp
 categories: 

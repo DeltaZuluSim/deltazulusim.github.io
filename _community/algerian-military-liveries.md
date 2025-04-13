@@ -7,6 +7,7 @@ toc_sticky: true
 author_profile: false
 comments: true
 toc: true
+featured: true
 header:
   teaser: /content/images/community/algerian-military-liveries.webp
 categories: 

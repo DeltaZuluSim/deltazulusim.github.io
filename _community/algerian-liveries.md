@@ -4,6 +4,7 @@ excerpt: "Fly with pride! Discover stunning Algerian liveries made by the commun
 modified: 2025-03-08T12:00:00+01:00
 toc_sticky: true
 toc: true
+featured: true
 author_profile: false
 comments: true
 header:
