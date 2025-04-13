@@ -1,6 +1,7 @@
 {% include community_style %}
 
-{% for resource in page.resources %}
+{% assign sorted_resources = page.resources | sort: "icao" %}
+{% for resource in sorted_resources %}
 
 <div class="resource-card">
 
