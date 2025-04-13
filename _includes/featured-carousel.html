@@ -1,0 +1,48 @@
+<section class="home-section">
+    <h1 class="archive__title" style="text-align: center; margin-bottom: 2rem;">
+      {{ include.title }}
+    </h1>
+  
+    <div class="dzs-carousel-wrapper">
+      <button class="scroll-btn left" aria-label="Scroll left">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+  
+      <div class="dzs-carousel" id="dzs-scroll-{{ include.collection }}">
+        {% assign featured_items = site[include.collection] | where: "featured", true %}
+        {% for item in featured_items limit: 12 %}
+          <div class="dzs-carousel-card">
+            <a href="{{ item.url | relative_url }}">
+              {% if item.header.teaser %}
+                <img src="{{ item.header.teaser }}" alt="{{ item.title }}">
+              {% endif %}
+              <div class="dzs-carousel-meta">
+                <h3>{{ item.title }}</h3>
+                <p>{{ item.excerpt | truncate: 100 }}</p>
+              </div>
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+  
+      <button class="scroll-btn right" aria-label="Scroll right">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </section>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const container = document.getElementById("dzs-scroll-{{ include.collection }}");
+      if (!container) return;
+  
+      container.parentElement.querySelector(".scroll-btn.left").addEventListener("click", () => {
+        container.scrollBy({ left: -320, behavior: "smooth" });
+      });
+  
+      container.parentElement.querySelector(".scroll-btn.right").addEventListener("click", () => {
+        container.scrollBy({ left: 320, behavior: "smooth" });
+      });
+    });
+  </script>
+  

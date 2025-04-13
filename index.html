@@ -124,38 +124,8 @@ third_party_row:
 
 <br />
 <hr />
-<section class="home-section">
-  <h1 class="archive__title" style="text-align: center; margin-bottom: 2rem;">
-    Featured Community Content
-  </h1>
 
-  <div class="dzs-carousel-wrapper">
-    <button class="scroll-btn left" aria-label="Scroll left">
-      <i class="fas fa-chevron-left"></i>
-    </button>
-
-    <div class="dzs-carousel" id="dzs-scroll">
-      {% assign featured_community = site.community | where: "featured", true %}
-      {% for item in featured_community limit: 12 %}
-        <div class="dzs-carousel-card">
-          <a href="{{ item.url | relative_url }}">
-            {% if item.header.teaser %}
-              <img src="{{ item.header.teaser }}" alt="{{ item.title }}">
-            {% endif %}
-            <div class="dzs-carousel-meta">
-              <h3>{{ item.title }}</h3>
-              <p>{{ item.excerpt | truncate: 100 }}</p>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-
-    <button class="scroll-btn right" aria-label="Scroll right">
-      <i class="fas fa-chevron-right"></i>
-    </button>
-  </div>
-</section>
+{% include featured-carousel.html title="Featured Community Content" collection="community" %}
 
 
 <hr />
