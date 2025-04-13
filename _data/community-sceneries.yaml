@@ -4,7 +4,7 @@ civilian:
     lat: 35.62
     lng: -0.61
     image: "https://cdn.flightsim.to/images/26/daoo-aroport-international-ahmed-ben-bella-oran-57256-1720270907-q7GCl.jpg?width=1400"
-    link: "/community%20sceneries/algerian-sceneries/#daoo---ahmed-ben-bella-international--airport"
+    link: "/community/algerian-sceneries/#daoo---ahmed-ben-bella-international--airport"
     description: "Ahmed Ben Bella international airport"
 
   - name: "DAON"
@@ -12,7 +12,7 @@ civilian:
     lat: 35.01
     lng: -1.44
     image: "https://cdn.flightsim.to/images/23/daon-tlemcen-zenata-messali-hadj-airport-cLyVe.jpg"
-    link: "/community%20sceneries/algerian-sceneries/#daon---tlemcen-zenata-messali-hadj"
+    link: "/community/algerian-sceneries/#daon---tlemcen-zenata-messali-hadj"
     description: "Tlemcen Zenata Messali Hadj airport"
 
   - name: "DAxx"
@@ -20,7 +20,7 @@ civilian:
     lat: 36.73
     lng: 3.11
     image: "https://cdn.flightsim.to/images/27/algiers-city-helipad-811654-1739634541-k0hOu.jpg"
-    link: "/community%20sceneries/algerian-sceneries/#daxx---algiers-city-helipad"
+    link: "/community/algerian-sceneries/#daxx---algiers-city-helipad"
     description: "Algiers City Helipad"
 
 
@@ -29,7 +29,7 @@ civilian:
     lat: 36.21
     lng: 1.32
     image: "https://cdn.flightsim.to/images/26/daoi-airport-chlef-intl-v1-693876-1705754862-UnCsK.jpg?width=1400"
-    link: "/community%20sceneries/algerian-sceneries/#daoi---chlef"
+    link: "/community/algerian-sceneries/#daoi---chlef"
     description: "Chlef international airport"  
 
   - name: "DAAJ"
@@ -37,7 +37,7 @@ civilian:
     lat: 24.28
     lng: 9.46
     image: "/content/images/community/daaj.webp"
-    link: "/community%20sceneries/algerian-sceneries/#daaj---djanet-tiska"
+    link: "/community/algerian-sceneries/#daaj---djanet-tiska"
     description: "DJANET, TISKA"  
 
 
@@ -46,7 +46,7 @@ civilian:
     lat: 22.81
     lng: 5.45
     image: "/content/images/community/daat.webp"
-    link: "/community%20sceneries/algerian-sceneries/#daat---tamanrasset"
+    link: "/community/algerian-sceneries/#daat---tamanrasset"
     description: "Tamanrasset airport"
 
   - name: "DABB"
@@ -54,7 +54,7 @@ civilian:
     lat: 36.82
     lng: 7.82
     image: "/content/images/community/dabb.webp"
-    link: "/community%20sceneries/algerian-sceneries/#dabb---annaba"
+    link: "/community/algerian-sceneries/#dabb---annaba"
     description: "Annaba airport"
 
 
@@ -63,7 +63,7 @@ civilian:
     lat: 30.12
     lng: -2.14
     image: "/content/images/community/daba.webp"
-    link: "/community%20sceneries/algerian-sceneries/#daba---beni-abbes"
+    link: "/community/algerian-sceneries/#daba---beni-abbes"
     description: "Beni Abbes airport"
 
 
@@ -72,7 +72,7 @@ civilian:
     lat: 26.88
     lng: -7.16
     image: "/content/images/community/dagd.webp"
-    link: "/community%20sceneries/algerian-sceneries/#dagd---el-aouinet-belagra"
+    link: "/community/algerian-sceneries/#dagd---el-aouinet-belagra"
     description: "El Aouinet Belagra airport"
 
 
@@ -81,7 +81,7 @@ civilian:
     lat: 36.79
     lng: 5.87
     image: "/content/images/community/daav.webp"
-    link: "/community%20sceneries/algerian-sceneries/#daav---jijel"
+    link: "/community/algerian-sceneries/#daav---jijel"
     description: "Jijel airport"
 
 
@@ -90,7 +90,7 @@ civilian:
     lat: 35.90
     lng: 0.14
     image: "/content/images/community/da14.webp"
-    link: "/community%20sceneries/algerian-sceneries/#da14---mostaganem"
+    link: "/community/algerian-sceneries/#da14---mostaganem"
     description: "Mostaganem airport"
 
   - name: "DA15"
@@ -98,7 +98,7 @@ civilian:
     lat: 34.89
     lng: 0.15
     image: "/content/images/community/da15.webp"
-    link: "/community%20sceneries/algerian-sceneries/#da15---saida"
+    link: "/community/algerian-sceneries/#da15---saida"
     description: "Saida airport"
 
   - name: "DAAE"
@@ -106,7 +106,7 @@ civilian:
     lat: 36.71
     lng: 5.07
     image: "/content/images/community/daae.webp"
-    link: "/community%20sceneries/algerian-sceneries/#daae---bejaia"
+    link: "/community/algerian-sceneries/#daae---bejaia"
     description: "Bejaia airport"
 
   - name: "DAOS"
@@ -114,7 +114,7 @@ civilian:
     lat: 35.17
     lng: -0.59
     image: "/content/images/community/daos.webp"
-    link: "/community%20sceneries/algerian-sceneries/#daos---sidi-bel-abbes"
+    link: "/community/algerian-sceneries/#daos---sidi-bel-abbes"
     description: "Sidi Bel Abbes airport"
 
 
@@ -123,7 +123,7 @@ civilian:
     lat: 27.841164
     lng: -0.190025
     image: "https://cdn.flightsim.to/images/24/adrar-daua-basic-airport-enhancement-7080-1674586463-bdPpz.jpg?width=1400"
-    link: "/community%20sceneries/algerian-sceneries/#daua----adrar"
+    link: "/community/algerian-sceneries/#daua----adrar"
     description: "Adrar airport"
 
 
@@ -133,7 +133,7 @@ military:
     lat: 26.71
     lng: 0.28
     image: "/content/images/community/daan.webp"
-    link: "/community%20sceneries/algerian-military-sceneries/#daan---reggane"
+    link: "/community/algerian-military-sceneries/#daan---reggane"
     description: "Reggane regional airport"
 
   - name: "DAAK"
@@ -141,7 +141,7 @@ military:
     lat: 36.55
     lng: 2.88
     image: "/content/images/community/daak.webp"
-    link: "/community%20sceneries/algerian-military-sceneries/#daak---boufarik"
+    link: "/community/algerian-military-sceneries/#daak---boufarik"
     description: "Boufarik airport"
 
   - name: "DAAM"
@@ -149,7 +149,7 @@ military:
     lat: 36.10
     lng: 6.36
     image: "/content/images/community/daam.webp"
-    link: "/community%20sceneries/algerian-military-sceneries/#daam---teleghma"
+    link: "/community/algerian-military-sceneries/#daam---teleghma"
     description: "Teleghma airport"
 
   - name: "DAAP"
@@ -157,7 +157,7 @@ military:
     lat: 26.72
     lng: 8.61
     image: "/content/images/community/daap.webp"
-    link: "/community%20sceneries/algerian-military-sceneries/#daap---illizi"
+    link: "/community/algerian-military-sceneries/#daap---illizi"
     description: "Illizi airport"
 
   - name: "DAAQ"
@@ -165,7 +165,7 @@ military:
     lat: 35.52
     lng: 2.87
     image: "/content/images/community/daaq.webp"
-    link: "/community%20sceneries/algerian-military-sceneries/#daaq---ain-ouessara"
+    link: "/community/algerian-military-sceneries/#daaq---ain-ouessara"
     description: "Ain Oussera airport"
 
   - name: "DAAS"
@@ -173,7 +173,7 @@ military:
     lat: 36.17
     lng: 5.32
     image: "/content/images/community/daas.webp"
-    link: "/community%20sceneries/algerian-military-sceneries/#daaq---setif"
+    link: "/community/algerian-military-sceneries/#daaq---setif"
     description: "Setif airport"
 
   - name: "DAAX"
@@ -181,7 +181,7 @@ military:
     lat: 36.77
     lng: 2.92
     image: "/content/images/community/daax.webp"
-    link: "/community%20sceneries/algerian-military-sceneries/#daax---cheraga"
+    link: "/community/algerian-military-sceneries/#daax---cheraga"
     description: "Cheraga airstrip"
 
   - name: "DAAB"
@@ -189,5 +189,13 @@ military:
     lat: 36.49
     lng: 2.81
     image: "/content/images/community/daab.webp"
-    link: "/community%20sceneries/algerian-sceneries/#daab---blida"
+    link: "/community/algerian-sceneries/#daab---blida"
     description: "Blida Airport"
+
+  - name: "DABC"
+    type: "Airport"
+    lat: 36.28
+    lng: 6.61
+    image: "/content/images/community/dabc.webp"
+    link: "/community/algerian-sceneries/#dabc---constantine"
+    description: "Constantine Mohamed Boudiaf Airport"

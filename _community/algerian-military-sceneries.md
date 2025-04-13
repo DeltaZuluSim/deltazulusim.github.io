@@ -88,7 +88,6 @@ resources:
     MSFS2020: true
     MSFS2024: false
 
-
 ---
 
 {% include community_sceneries %}

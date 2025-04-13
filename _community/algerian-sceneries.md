@@ -163,6 +163,16 @@ resources:
     download_url: "https://deltazulusim.short.gy/sceneries/dagd"
     MSFS2020: true
     MSFS2024: false
+
+  - icao: "DABC"
+    airport_name: "Constantine"
+    author: "Algerian WINGS Sceneries"
+    author_url: "https://www.facebook.com/AlgerianWingsSceneries"
+    image_url: "/content/images/community/dabc.webp"
+    download_url: "https://deltazulusim.short.gy/sceneries/dabc"
+    MSFS2020: true
+    MSFS2024: false
+
 ---
 
 {% include community_sceneries %}

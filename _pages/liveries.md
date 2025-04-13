@@ -1,6 +1,6 @@
 ---
 title: List of liveries by DZS
-layout: liveries
+layout: dzs-collection
 permalink: /liveries/
 collection: liveries
 entries_layout: grid

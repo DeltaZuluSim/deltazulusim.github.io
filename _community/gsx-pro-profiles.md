@@ -23,6 +23,14 @@ resources:
     image_url: "https://cdn.flightsim.to/images/26/gsx-profile--netdesign-daag-alger-houari-boumedieneinternational-461864-1712103895-cKrXo.jpg"
     download_url: "https://en.flightsim.to/file/72310/gsx-profile-netdesign-daag-alger-houari-boumedieneinternational"
 
+  - icao: "DABC"
+    airport_name: "Constantine Mohamed Boudiaf"
+    # designer: "NetDesign"
+    author: "Unknown"
+    # author_url : "https://en.flightsim.to/profile/Pretzed"
+    # image_url: "https://cdn.flightsim.to/images/26/gsx-profile--netdesign-daag-alger-houari-boumedieneinternational-461864-1712103895-cKrXo.jpg"
+    download_url: "https://deltazulusim.short.gy/gsx/dabc"
+
 ---
 
 {% include community_resources %}

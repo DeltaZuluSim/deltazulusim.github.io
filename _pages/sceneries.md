@@ -1,6 +1,6 @@
 ---
 title: MSFS Sceneries by DZS
-layout: sceneries
+layout: dzs-collection
 permalink: /sceneries/
 collection: sceneries
 entries_layout: grid
@@ -11,3 +11,8 @@ header:
   overlay_image: /content/images/charts/sceneries-banner.webp
 ---
 
+{% assign sceneries = site.data.sceneries %}
+
+{% include map.html sceneries=sceneries dz_asp="true" %}
+
+<br />

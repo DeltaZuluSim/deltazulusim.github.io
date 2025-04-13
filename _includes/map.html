@@ -1,5 +1,6 @@
 
 
+
 <div id="map" style="width: 100%; height: {{ include.height | default: '500px' }};"></div>
 
 <script>
@@ -72,28 +73,30 @@
     {% endfor %}
   ];
 
-  // Add markers to map
-  sceneries.forEach(scenery => {
-    let iconType = icons[scenery.type] || icons["Training"];
-    let imageSrc = scenery.image ? scenery.image : "/assets/images/default.png"; // Default image if missing
+  var markers = L.markerClusterGroup();
 
-    usedMarkers.add(scenery.type); // Track used marker types
+sceneries.forEach(scenery => {
+  let iconType = icons[scenery.type] || icons["Training"];
+  let imageSrc = scenery.image ? scenery.image : "/assets/images/default.png";
 
-    L.marker([scenery.lat, scenery.lng], { icon: iconType }).addTo(map)
-      .bindPopup(`
-        <div style="display: flex; justify-content: center; align-items: center;">
-          <code style="background-color: #ccc;"><strong>${scenery.type}</strong></code>
-          <br/>
-        </div>
-        <div style="display: flex; justify-content: center; align-items: center;">
-          <strong>${scenery.name}</strong><br/>
-        </div>
-        ${scenery.description}<br/>
-        
-        <img src="${imageSrc}" width="auto"/><br/>
-        <a href="${scenery.link}" target="_self">View Details</a>
-      `);
-  });
+  let marker = L.marker([scenery.lat, scenery.lng], { icon: iconType }).bindPopup(`
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <code style="background-color: #ccc;"><strong>${scenery.type}</strong></code><br/>
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <strong>${scenery.name}</strong><br/>
+    </div>
+    ${scenery.description}<br/>
+    <img src="${imageSrc}" width="auto"/><br/>
+    <a href="${scenery.link}" target="_self">View Details</a>
+  `);
+
+  usedMarkers.add(scenery.type);
+  markers.addLayer(marker);
+});
+
+map.addLayer(markers);
+
 
   // Define the legend control
   var legend = L.control({ position: 'bottomright' });
@@ -114,4 +117,3 @@
   // Add legend to map
   legend.addTo(map);
 </script>
-

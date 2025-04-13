@@ -2,24 +2,22 @@
 main:
   - title: "Home"
     url: /
-  - title: "Sceneries"
+  - title: "Sceneries Map"
     url: /sceneries-map/
     children:
       - title: "DZS Sceneries"
         url: /sceneries
-      - title: "Community Sceneries"
-        url: /categories/community-sceneries
+      - title: "Community Sceneries Map"
+        url: /community-sceneries
 
   - title: "Liveries"
-    url: #
-    children:
-      - title: "DZS Liveries"
-        url: /liveries
-      - title: "Community Liveries"
-        url: /categories/community-liveries
+    url: /liveries
 
   - title: "Mods"
     url: /mods
+
+  - title: "Blog"
+    url: /blog/
 
   - title: "About"
     url: /about/
@@ -34,11 +32,6 @@ main:
     #     url: /charts/daaa-ifr-charts/
     #   - title: "DAAA VFR"
     #     url: /charts/daaa-vfr-charts/  
-    
-  - title: "Resources"
-    url: /categories/community-resources
-
-
 
   # - title: "Community Sceneries"
   #   url: /categories/community-sceneries

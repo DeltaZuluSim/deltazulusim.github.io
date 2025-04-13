@@ -8,11 +8,6 @@ author_profile: false
 comments: true
 header:
   teaser: /content/images/community/algerian-liveries.webp
-categories: 
-  - "Community Liveries"
-tags:
-  - Liveries
-  - Community
 
 resources:
   - id: "A330-200GE"

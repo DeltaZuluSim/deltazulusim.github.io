@@ -1,7 +1,7 @@
 ---
 title: Community Sceneries
-layout: dzs-category
-permalink: /categories/community-sceneries/
+layout: single
+permalink: /community-sceneries/
 taxonomy: Community Sceneries
 entries_layout: grid
 classes: wide
@@ -11,6 +11,7 @@ dzs-collection-title: 'Other sceneries by DeltaZulu Simulations'
 
 {% assign sceneries = site.data.community-sceneries.military | concat: site.data.community-sceneries.civilian %}
 
-{% include map.html dz_asp="false" sceneries=sceneries %}
+{% include map.html dz_asp="false" sceneries=sceneries height="60vh" %}
 
 <br />
+

@@ -135,7 +135,7 @@ analytics:
 author:
   name             : Younes
   avatar           : "assets/images/avatar-author.webp"
-  bio              : "creates military and civilian sceneries and liveries for MSFS, driven by a passion for aviation."
+  bio              : "Creates military and civilian sceneries and liveries for MSFS, driven by a passion for aviation."
   location         : "Algeria"
   email            :
   links:
@@ -188,11 +188,13 @@ footer:
 include:
   - .htaccess
   - _pages
+  - blog
   - _posts
   - _sceneries
   - _liveries
   - _charts
   - _mods
+  - _community
 exclude:
   - "*.sublime-project"
   - "*.sublime-workspace"
@@ -343,7 +345,7 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: ""
+      path: "_posts"
       type: posts
     values:
       layout: single
@@ -352,6 +354,8 @@ defaults:
       comments: true 
       share: true
       related: true
+      permalink: /blog/:categories/:title/
+      categories: []
   - scope:
       path: ""
       type: sceneries
@@ -395,6 +399,16 @@ defaults:
       comments: true 
       share: true
       related: false
+  - scope:
+      path: ""
+      type: community
+    values:
+      layout: single
+      author_profile: false
+      read_time: false
+      comments: true 
+      share: true
+      related: false  
 
   - scope:
       path: ""
@@ -420,3 +434,7 @@ collections:
   mods:
     output: true
     permalink: /:collection/:path/
+  community:
+    output: true
+    permalink: /:collection/:path/
+  

@@ -1,6 +1,10 @@
-{% assign posts = site.categories[include.taxonomy] | where_exp: "post", "post.hidden != true" %}
-{% assign sorted_posts = posts | sort: site.default_sort_by | reverse %}
+{% if include.taxonomy and site.categories[include.taxonomy] %}
+  {% assign posts = site.categories[include.taxonomy] | where_exp: "post", "post.hidden != true" %}
+  {% assign sorted_posts = posts | sort: site.default_sort_by | reverse %}
 
-{%- for post in sorted_posts -%}
-  {% include archive-single.html %}
-{%- endfor -%}
+  {%- for post in sorted_posts -%}
+    {% include archive-single.html %}
+  {%- endfor -%}
+{% else %}
+  <p>No posts found for this category.</p>
+{% endif %}

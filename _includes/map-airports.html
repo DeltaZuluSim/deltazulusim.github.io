@@ -1,7 +1,4 @@
-
-
 <div id="map" style="width: 100%; height: {{ include.height | default: '500px' }};"></div>
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -22,7 +19,6 @@
   iconRetinaUrl: '{{ "/assets/images/leaflet/marker-icon-2x.png" | relative_url }}',
   shadowUrl: '{{ "/assets/images/leaflet/marker-shadow.png" | relative_url }}'
 });
-
 
     fetch('/assets/geojson/algeria.geojson')
     .then(response => response.json())
@@ -63,18 +59,24 @@
 
     console.log("📌 Loaded airports data:", airports);
 
-    // Add Markers
-    airports.forEach(airport => {
-      if (Array.isArray(airport.coordinates) && airport.coordinates.length === 2) {
-        L.marker(airport.coordinates, { icon: airportIcon }).addTo(map)
-          .bindPopup(`
-    <strong>${airport.icao}</strong><br/>
-    <a href="/charts/${airport.icao}" target="_self">${airport.name}</a>
-  `);
-        console.log(`📍 Added marker: ${airport.icao} at ${airport.coordinates}`);
-      } else {
-        console.error("❌ Invalid coordinates for", airport);
-      }
-    });
+   // Initialize Marker Cluster Group
+var markers = L.markerClusterGroup();
+
+// Add Markers to Cluster Group
+airports.forEach(airport => {
+  if (Array.isArray(airport.coordinates) && airport.coordinates.length === 2) {
+    let marker = L.marker(airport.coordinates, { icon: airportIcon }).bindPopup(`
+      <strong>${airport.icao}</strong><br/>
+      <a href="/charts/${airport.icao}" target="_self">${airport.name}</a>
+    `);
+    markers.addLayer(marker);
+    console.log(`📍 Added marker: ${airport.icao} at ${airport.coordinates}`);
+  } else {
+    console.error("❌ Invalid coordinates for", airport);
+  }
+});
+
+map.addLayer(markers); // Add cluster group to map
+
   });
 </script>

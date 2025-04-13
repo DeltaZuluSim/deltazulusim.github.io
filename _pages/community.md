@@ -1,7 +1,7 @@
 ---
-layout: tag-grid
 title: "Community"
-taxonomy: "Community"
+layout: dzs-collection
+collection: community
 permalink: /community/
 entries_layout: grid
 classes: wide
