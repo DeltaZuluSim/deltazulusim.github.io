@@ -23,7 +23,7 @@
   // Initialize the map
   var map = L.map('map', {
     center: {% if include.coordinates or airport %} centerCoords {% else %} [33.53, -0.24] {% endif %},
-    zoom: 6,
+    zoom: 5,
     minZoom: 5,
   });
 
