@@ -7,6 +7,8 @@ toc_sticky: true
 author_profile: false
 comments: true
 featured: true
+flags:
+  - scenery
 header:
   teaser: /content/images/community/algerian-sceneries.webp
 categories: 

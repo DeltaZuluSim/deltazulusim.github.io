@@ -1,4 +1,6 @@
-{% assign entries = site[include.collection] | where_exp: "post", "post.hidden != true" %}
+{% assign docs = include.custom_collection | default: site[include.collection] %}
+
+{% assign entries = docs | where_exp: "post", "post.hidden != true" %}
 
 {% if include.sort_by %}
   {% assign entries = entries | sort: include.sort_by %}

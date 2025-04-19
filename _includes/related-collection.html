@@ -1,0 +1,30 @@
+{% comment %}
+  Include file: related-collection.html
+  Usage: 
+    {% include related-collection.html 
+      related_collection=page.related_collection 
+      related_flags=page.related_items 
+      entries_layout=page.entries_layout 
+    %}
+{% endcomment %}
+
+{% assign related_items = site[include.related_collection] | where_exp: "item", "item.flags" %}
+{% assign filtered_related = "" | split: "" %}
+
+{% for item in related_items %}
+  {% for flag in item.flags %}
+    {% if include.related_flags contains flag %}
+      {% assign filtered_related = filtered_related | push: item %}
+      {% break %}
+    {% endif %}
+  {% endfor %}
+{% endfor %}
+
+{% if filtered_related.size > 0 %}
+<section class="related-items-block" style="margin-top: 3rem;">
+  <h2>{{ include.related_title | default: "Related Items" }}</h2>
+  <div class="entries-{{ include.entries_layout | default: 'list' }}">
+    {% include documents-collection.html collection='filtered_related' custom_collection=filtered_related type=include.entries_layout %}
+  </div>
+</section>
+{% endif %}

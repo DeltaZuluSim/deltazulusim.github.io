@@ -8,6 +8,8 @@ author_profile: false
 comments: true
 toc: true
 featured: true
+flags:
+  - military-livery
 header:
   teaser: /content/images/community/algerian-military-liveries.webp
 categories: 

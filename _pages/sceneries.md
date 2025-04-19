@@ -5,6 +5,11 @@ permalink: /sceneries/
 collection: sceneries
 entries_layout: grid
 classes: wide
+related_collection_title: "Other sceneries by community"
+related_collection: community
+related_items:
+  - scenery
+  - military-scenery
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

@@ -7,6 +7,8 @@ toc_sticky: true
 author_profile: false
 comments: true
 featured: true
+flags:
+  - military-scenery
 header:
   teaser: /content/images/community/algerian-military-sceneries.webp
 categories: 

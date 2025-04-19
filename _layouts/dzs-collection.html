@@ -2,13 +2,26 @@
 layout: splash
 ---
 
-
-
 <h2>{{ page.title }}</h2>
 
 {{ content }}
 
 {% assign entries_layout = page.entries_layout | default: 'list' %}
+
+<!-- Main Collection Block -->
 <div class="entries-{{ entries_layout }}">
   {% include documents-collection.html collection=page.collection sort_by=page.sort_by sort_order=page.sort_order type=entries_layout %}
 </div>
+
+<!-- Add a CLEAR DIV to break flex/grid -->
+<div style="clear: both; margin-top: 3rem;"></div>
+
+<!-- Related Items Block -->
+{% if page.related_collection and page.related_items %}
+  {% include related-collection.html 
+    related_collection=page.related_collection 
+    related_flags=page.related_items 
+    entries_layout=entries_layout 
+    related_title=page.related_collection_title
+  %}
+{% endif %}

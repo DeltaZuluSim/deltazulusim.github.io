@@ -7,6 +7,8 @@ toc: true
 featured: true
 author_profile: false
 comments: true
+flags:
+  - livery
 header:
   teaser: /content/images/community/algerian-liveries.webp
 
