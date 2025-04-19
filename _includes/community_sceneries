@@ -47,7 +47,7 @@
 
   {% if resource.notice %}
   <div class="notice--info">
-     ⚠️ {{ resource.notice }}
+     ⚠️ {{ resource.notice | markdownify | remove: '<p>' | remove: '</p>' }}
   </div>
   {% endif %}
 

@@ -1,23 +1,19 @@
 {% comment %}
   Include file: related-collection.html
-  Usage: 
-    {% include related-collection.html 
-      related_collection=page.related_collection 
-      related_flags=page.related_items 
-      entries_layout=page.entries_layout 
-    %}
 {% endcomment %}
 
-{% assign related_items = site[include.related_collection] | where_exp: "item", "item.flags" %}
+{% assign related_items = site[include.related_collection] %}
 {% assign filtered_related = "" | split: "" %}
 
 {% for item in related_items %}
-  {% for flag in item.flags %}
-    {% if include.related_flags contains flag %}
-      {% assign filtered_related = filtered_related | push: item %}
-      {% break %}
-    {% endif %}
-  {% endfor %}
+  {% if item.flags %}
+    {% for flag in item.flags %}
+      {% if include.related_flags contains flag %}
+        {% assign filtered_related = filtered_related | push: item %}
+        {% break %}
+      {% endif %}
+    {% endfor %}
+  {% endif %}
 {% endfor %}
 
 {% if filtered_related.size > 0 %}

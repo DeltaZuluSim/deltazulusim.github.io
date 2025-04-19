@@ -17,11 +17,12 @@ layout: splash
 <div style="clear: both; margin-top: 3rem;"></div>
 
 <!-- Related Items Block -->
-{% if page.related_collection and page.related_items %}
+{% if page.related_items %}
   {% include related-collection.html 
-    related_collection=page.related_collection 
-    related_flags=page.related_items 
-    entries_layout=entries_layout 
-    related_title=page.related_collection_title
+    related_collection=page.related_items.collection
+    related_flags=page.related_items.flags
+    entries_layout=entries_layout
+    related_title=page.related_items.title
   %}
 {% endif %}
+

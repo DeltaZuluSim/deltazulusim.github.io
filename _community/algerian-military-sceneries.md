@@ -63,6 +63,7 @@ resources:
     download_url: "https://deltazulusim.short.gy/sceneries/daaq"
     MSFS2020: true
     MSFS2024: false
+    notice: "Light mode [available here](/mods/daaq-light-enhancement/) as night light enhancement for runways and taxiways."
 
   - icao: "DAAS"
     airport_name: "Setif"

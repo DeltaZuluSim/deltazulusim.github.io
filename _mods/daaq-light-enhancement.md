@@ -64,7 +64,7 @@ changelog:
       - "Fully compatible with MSFS 2020 & 2024"
 ---
 
-Lighting enhancement mod for **Ain Ouessara Military Air Base (DAAQ)**, built for Microsoft Flight Simulator 2020 and 2024. Strategically located in central Algeria, DAAQ serves as a major military airfield featuring dual runways and an extensive taxiway network connecting dispersal shelters and support areas.
+Lighting enhancement mod for [**Ain Ouessara Military Air Base (DAAQ)**](/community/algerian-military-sceneries/#daaq---ain-ouessara), built for Microsoft Flight Simulator 2020 and 2024. Strategically located in central Algeria, DAAQ serves as a major military airfield featuring dual runways and an extensive taxiway network connecting dispersal shelters and support areas.
 
 This mod focuses on **night lighting** across all key operational zones—runways, taxiways, aprons, and shelter areas—making the base fully functional and immersive for night ops, tactical missions, and formation flying in low visibility conditions.
 
