@@ -4,77 +4,87 @@
 <div id="map" style="width: 100%; height: {{ include.height | default: '500px' }};"></div>
 
 <script>
-  var map = L.map('map', {
-    center: [30.00, 3.77],
-    zoom: 5,
-    minZoom: 5
+var map = L.map('map', {
+  center: [30.00, 3.77],
+  zoom: 5,
+  minZoom: 5
+});
+
+L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
+  attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
+  subdomains: 'abcd',
+  maxZoom: 16
+}).addTo(map);
+
+// Load Algeria borders
+fetch('/assets/geojson/algeria.geojson')
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: '#dddddd',
+        weight: 1,
+        fillColor: '#deffe7',
+        fillOpacity: 0.5
+      }
+    }).addTo(map);
   });
 
-  L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
-    attribution: '&copy; <a href="https://carto.com/">CartoDB</a>',
-    subdomains: 'abcd',
-    maxZoom: 16
-  }).addTo(map);
+// Optional dz_asp layer
+{% if include.dz_asp != false and include.dz_asp != "false" %}
+fetch('/assets/geojson/dz_asp.geojson')
+  .then(response => response.json())
+  .then(data => {
+    L.geoJSON(data, {
+      style: {
+        color: '#dddddd',
+        weight: 2,
+        fillColor: 'red',
+        fillOpacity: 0.08
+      }
+    }).addTo(map);
+  });
+{% endif %}
 
-  fetch('/assets/geojson/algeria.geojson')
-    .then(response => response.json())
-    .then(data => {
-      L.geoJSON(data, {
-        style: {
-          color: '#dddddd',
-          weight: 1,
-          fillColor: '#deffe7',
-          fillOpacity: 0.5
-        }
-      }).addTo(map);
-    });
+// Define icons
+var icons = {
+  "Airport": L.icon({ iconUrl: '/assets/images/airport.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+  "Helipad": L.icon({ iconUrl: '/assets/images/helipad.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+  "Air base": L.icon({ iconUrl: '/assets/images/fighter.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+  "Training": L.icon({ iconUrl: '/assets/images/training.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+  "Search and Rescue": L.icon({ iconUrl: '/assets/images/rescue.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+  "Naval Recon": L.icon({ iconUrl: '/assets/images/marines.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
+  "Mod": L.icon({ iconUrl: '/assets/images/mod.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] })
+};
 
-  {% if include.dz_asp != false and include.dz_asp != "false" %}
-  fetch('/assets/geojson/dz_asp.geojson')
-    .then(response => response.json())
-    .then(data => {
-      L.geoJSON(data, {
-        style: {
-          color: '#dddddd',
-          weight: 2,
-          fillColor: 'red',
-          fillOpacity: 0.08
-        }
-      }).addTo(map);
-    });
-  {% endif %}
+// Track used marker types
+var usedMarkers = new Set();
 
-  // Define icons
-  var icons = {
-    "Airport": L.icon({ iconUrl: '/assets/images/airport.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
-    "Helipad": L.icon({ iconUrl: '/assets/images/helipad.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
-    "Air base": L.icon({ iconUrl: '/assets/images/fighter.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
-    "Training": L.icon({ iconUrl: '/assets/images/training.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
-    "Search and Rescue": L.icon({ iconUrl: '/assets/images/rescue.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
-    "Naval Recon": L.icon({ iconUrl: '/assets/images/marines.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
-    "Mod": L.icon({ iconUrl: '/assets/images/mod.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] })
-  };
+// Sceneries data from Jekyll
+var sceneries = [
+  {% for scenery in include.sceneries %}
+  {
+    name: "{{ scenery.name }}",
+    type: "{{ scenery.type }}",
+    description: "{{ scenery.description }}",
+    lat: {{ scenery.lat }},
+    lng: {{ scenery.lng }},
+    image: "{{ scenery.image }}",
+    link: "{{ scenery.link }}"
+  }{% unless forloop.last %},{% endunless %}
+  {% endfor %}
+];
 
-  // Track used icons
-  var usedMarkers = new Set();
+// Create one global cluster group
+var markerClusters = L.markerClusterGroup();
 
-  // Sceneries data from Jekyll
-  var sceneries = [
-    {% for scenery in include.sceneries %}
-    {
-      name: "{{ scenery.name }}",
-      type: "{{ scenery.type }}",
-      description: "{{ scenery.description }}",
-      lat: {{ scenery.lat }},
-      lng: {{ scenery.lng }},
-      image: "{{ scenery.image }}",
-      link: "{{ scenery.link }}"
-    }{% unless forloop.last %},{% endunless %}
-    {% endfor %}
-  ];
+// Create per-type marker arrays
+var markerGroups = {};
+Object.keys(icons).forEach(type => {
+  markerGroups[type] = [];
+});
 
-  var markers = L.markerClusterGroup();
-
+// Add markers directly
 sceneries.forEach(scenery => {
   let iconType = icons[scenery.type] || icons["Training"];
   let imageSrc = scenery.image ? scenery.image : "/assets/images/default.png";
@@ -92,28 +102,54 @@ sceneries.forEach(scenery => {
   `);
 
   usedMarkers.add(scenery.type);
-  markers.addLayer(marker);
+  markerGroups[scenery.type].push(marker);
+  markerClusters.addLayer(marker);
 });
 
-map.addLayer(markers);
+// Add the cluster group to the map
+map.addLayer(markerClusters);
 
+// Define the legend
+var legend = L.control({ position: 'bottomright' });
 
-  // Define the legend control
-  var legend = L.control({ position: 'bottomright' });
+legend.onAdd = function (map) {
+  var div = L.DomUtil.create('div', 'legend');
+  div.innerHTML += '<h4>Legend</h4>';
 
-  legend.onAdd = function (map) {
-    var div = L.DomUtil.create('div', 'legend');
-    div.innerHTML += '<h4>Legend</h4>';
+  Object.keys(icons).forEach(type => {
+    if (usedMarkers.has(type)) {
+      div.innerHTML += `
+        <div class="legend-item" data-type="${type}" style="cursor: pointer; margin-bottom: 5px; display: flex; align-items: center;">
+          <img src="${icons[type].options.iconUrl}" width="24" height="24" style="margin-right: 8px;"> 
+          <span>${type}</span>
+        </div>`;
+    }
+  });
 
-    Object.keys(icons).forEach(type => {
-      if (usedMarkers.has(type)) { // Only show used markers
-        div.innerHTML += `<div><img src="${icons[type].options.iconUrl}" width="32" height="32"> ${type}</div>`;
+  return div;
+};
+
+legend.addTo(map);
+
+// Handle clicks on legend
+map.whenReady(() => {
+  document.querySelectorAll('.legend-item').forEach(item => {
+    item.addEventListener('click', function() {
+      var type = this.getAttribute('data-type');
+      var markers = markerGroups[type];
+
+      if (markers && markers.length > 0) {
+        if (markerClusters.hasLayer(markers[0])) {
+          markers.forEach(marker => markerClusters.removeLayer(marker));
+          this.style.opacity = '0.5'; // Dim when hidden
+        } else {
+          markers.forEach(marker => markerClusters.addLayer(marker));
+          this.style.opacity = '1'; // Normal when visible
+        }
       }
     });
+  });
+});
 
-    return div;
-  };
 
-  // Add legend to map
-  legend.addTo(map);
 </script>
