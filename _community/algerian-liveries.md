@@ -13,6 +13,17 @@ header:
   teaser: /content/images/community/algerian-liveries.webp
 
 resources:
+
+  - id: "A350-1000"
+    name: "Air Algérie Livery"
+    designer: "Inibuilds"
+    author: "MushuFasa"
+    author_url : "https://flightsim.to/profile/MushuFasa"
+    image_url: "https://cdn.flightsim.to/images/27/2024-air-algerie-fictional--a350-1000-8k4k-11556-1743602282-WeDHJ.jpg?width=1400"
+    download_url: "https://flightsim.to/file/90751/20-24-air-algerie-fictional-a350-1000-8k-4k"
+    MSFS2024: true
+    MSFS2020: true
+
   - id: "A330-200GE"
     name: "Air Algérie Livery"
     designer: "Inibuilds"
