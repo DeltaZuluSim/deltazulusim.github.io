@@ -4,6 +4,7 @@ permalink: /sceneries-map/
 layout: splash
 classes: wide
 author_profile: false
+image: /content/images/sceneries-map.webp
 ---
 
 <br />
