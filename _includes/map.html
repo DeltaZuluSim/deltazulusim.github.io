@@ -1,7 +1,64 @@
-
-
-
 <div id="map" style="width: 100%; height: {{ include.height | default: '500px' }};"></div>
+
+<style>
+.legend {
+  background: white;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+}
+
+.legend h4 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.legend-buttons {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+
+.legend-buttons button {
+  flex: 1;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background: #f8f8f8;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.legend-buttons button:hover {
+  background: #e0e0e0;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+  margin-bottom: 5px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s, opacity 0.3s;
+}
+
+.legend-item img {
+  margin-right: 8px;
+}
+
+.legend-item:hover {
+  background: #f0f0f0;
+}
+
+.legend-item.inactive {
+  opacity: 0.5;
+}
+</style>
 
 <script>
 var map = L.map('map', {
@@ -48,6 +105,7 @@ fetch('/assets/geojson/dz_asp.geojson')
 
 // Define icons
 var icons = {
+  "City": L.icon({ iconUrl: '/assets/images/city.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
   "Airport": L.icon({ iconUrl: '/assets/images/airport.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
   "Helipad": L.icon({ iconUrl: '/assets/images/helipad.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
   "Air base": L.icon({ iconUrl: '/assets/images/fighter.png', iconSize: [32, 32], iconAnchor: [16, 32], popupAnchor: [0, -32] }),
@@ -89,13 +147,20 @@ sceneries.forEach(scenery => {
   let iconType = icons[scenery.type] || icons["Training"];
   let imageSrc = scenery.image ? scenery.image : "/assets/images/default.png";
 
+  let nameDiv = '';
+  if (scenery.name && scenery.name !== "None") {
+    nameDiv = `
+      <div style="display: flex; justify-content: center; align-items: center;">
+        <strong>${scenery.name}</strong><br/>
+      </div>
+    `;
+  }
+
   let marker = L.marker([scenery.lat, scenery.lng], { icon: iconType }).bindPopup(`
     <div style="display: flex; justify-content: center; align-items: center;">
       <code style="background-color: #ccc;"><strong>${scenery.type}</strong></code><br/>
     </div>
-    <div style="display: flex; justify-content: center; align-items: center;">
-      <strong>${scenery.name}</strong><br/>
-    </div>
+    ${nameDiv}
     ${scenery.description}<br/>
     <img src="${imageSrc}" width="auto"/><br/>
     <a href="${scenery.link}" target="_self">View Details</a>
@@ -109,18 +174,42 @@ sceneries.forEach(scenery => {
 // Add the cluster group to the map
 map.addLayer(markerClusters);
 
+// Function to update the map view to visible markers
+function updateMapView() {
+  var visibleMarkers = [];
+
+  Object.keys(markerGroups).forEach(type => {
+    markerGroups[type].forEach(marker => {
+      if (markerClusters.hasLayer(marker)) {
+        visibleMarkers.push(marker.getLatLng());
+      }
+    });
+  });
+
+  if (visibleMarkers.length > 0) {
+    var bounds = L.latLngBounds(visibleMarkers);
+    map.fitBounds(bounds, { padding: [50, 50] });
+  }
+}
+
 // Define the legend
 var legend = L.control({ position: 'bottomright' });
 
 legend.onAdd = function (map) {
   var div = L.DomUtil.create('div', 'legend');
-  div.innerHTML += '<h4>Legend</h4>';
+  div.innerHTML += `
+    <h4>Legend</h4>
+    <div class="legend-buttons">
+      <button id="showAllBtn">Show All</button>
+      <button id="hideAllBtn">Hide All</button>
+    </div>
+  `;
 
   Object.keys(icons).forEach(type => {
     if (usedMarkers.has(type)) {
       div.innerHTML += `
-        <div class="legend-item" data-type="${type}" style="cursor: pointer; margin-bottom: 5px; display: flex; align-items: center;">
-          <img src="${icons[type].options.iconUrl}" width="24" height="24" style="margin-right: 8px;"> 
+        <div class="legend-item" data-type="${type}">
+          <img src="${icons[type].options.iconUrl}" width="24" height="24"> 
           <span>${type}</span>
         </div>`;
     }
@@ -131,7 +220,7 @@ legend.onAdd = function (map) {
 
 legend.addTo(map);
 
-// Handle clicks on legend
+// Handle clicks on legend items
 map.whenReady(() => {
   document.querySelectorAll('.legend-item').forEach(item => {
     item.addEventListener('click', function() {
@@ -141,15 +230,48 @@ map.whenReady(() => {
       if (markers && markers.length > 0) {
         if (markerClusters.hasLayer(markers[0])) {
           markers.forEach(marker => markerClusters.removeLayer(marker));
-          this.style.opacity = '0.5'; // Dim when hidden
+          this.classList.add('inactive');
         } else {
           markers.forEach(marker => markerClusters.addLayer(marker));
-          this.style.opacity = '1'; // Normal when visible
+          this.classList.remove('inactive');
         }
+        updateMapView(); // Adjust view after toggling
       }
     });
   });
+
+  // Handle Show All button
+  document.getElementById('showAllBtn').addEventListener('click', function() {
+    document.querySelectorAll('.legend-item').forEach(item => {
+      var type = item.getAttribute('data-type');
+      var markers = markerGroups[type];
+      if (markers) {
+        markers.forEach(marker => {
+          if (!markerClusters.hasLayer(marker)) {
+            markerClusters.addLayer(marker);
+          }
+        });
+        item.classList.remove('inactive');
+      }
+    });
+    updateMapView(); // Adjust view
+  });
+
+  // Handle Hide All button
+  document.getElementById('hideAllBtn').addEventListener('click', function() {
+    document.querySelectorAll('.legend-item').forEach(item => {
+      var type = item.getAttribute('data-type');
+      var markers = markerGroups[type];
+      if (markers) {
+        markers.forEach(marker => {
+          if (markerClusters.hasLayer(marker)) {
+            markerClusters.removeLayer(marker);
+          }
+        });
+        item.classList.add('inactive');
+      }
+    });
+    updateMapView(); // Adjust view
+  });
 });
-
-
 </script>

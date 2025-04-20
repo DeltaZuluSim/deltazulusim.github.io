@@ -1,7 +1,7 @@
 ---
-title:  "Algerian sceneries"
+title:  "Algerian Airport Sceneries"
 excerpt: "Explore detailed Algerian airports & landscapes crafted by the community. Fly immersive & realistic sceneries!"
-modified: 2025-03-08T16:00:00+01:00
+modified: 2025-04-20T02:00:00+01:00
 toc: true
 toc_sticky: true
 author_profile: false
@@ -10,17 +10,12 @@ featured: true
 flags:
   - scenery
 header:
-  teaser: /content/images/community/algerian-sceneries.webp
-categories: 
-  - "Community Sceneries"
-tags:
-  - Sceneries
-  - Community
+  teaser: /content/images/community/algerian-airport-sceneries.webp
 
 resources:
 
   - icao: "DAOO"
-    airport_name: "Ahmed Ben Bella international  airport"
+    airport_name: "Oran Ahmed Ben Bella"
     author: "mokhtarbo33"
     author_url : "https://en.flightsim.to/profile/mokhtarbo33"
     image_url: "https://cdn.flightsim.to/images/26/daoo-aroport-international-ahmed-ben-bella-oran-57256-1720270907-q7GCl.jpg?width=1400"
@@ -37,7 +32,7 @@ resources:
     MSFS2020: true
     MSFS2024: false   
 
-  - icao: "DAUA "
+  - icao: "DAUA"
     airport_name: "Adrar"
     author: "EDDB2020"
     author_url: "https://fr.flightsim.to/profile/EDDB2020"
@@ -56,24 +51,6 @@ resources:
     download_url: "https://deltazulusim.short.gy/sceneries/daoi"
     MSFS2020: true
     MSFS2024: false   
-
-  - icao: "None"
-    airport_name: "Constantine City"
-    author: "Abdelkrim"
-    author_url : "https://flightsim.to/profile/Abdelkrim"
-    image_url: "https://cdn.flightsim.to/images/23/constantine-S3FM9.jpg?width=1400"
-    download_url: "https://deltazulusim.short.gy/sceneries/constantine-city"
-    MSFS2020: true
-    MSFS2024: false
-
-  - icao: "DAxx"
-    airport_name: "Algiers City Helipad"
-    author: "lithame"
-    author_url : "https://en.flightsim.to/profile/lithame"
-    image_url: "https://cdn.flightsim.to/images/27/algiers-city-helipad-811654-1739634541-k0hOu.jpg"
-    download_url: "https://deltazulusim.short.gy/sceneries/ext/DAxx"
-    MSFS2020: true
-    MSFS2024: false
 
   - icao: "DAAJ"
     airport_name: "DJANET, TISKA"

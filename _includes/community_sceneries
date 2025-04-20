@@ -1,6 +1,7 @@
 {% include community_style %}
 
-{% assign sorted_resources = page.resources | sort: "icao" %}
+{% assign sorted_resources = page.resources | sort: "icao" | sort: "airport_name" %}
+
 {% for resource in sorted_resources %}
 
 <div class="resource-card">
@@ -8,7 +9,7 @@
   <div class="flex-container markdown-title">
     <span class="left">
         {% capture title %}
-### {{ resource.icao }} - {{ resource.airport_name }}{% if resource.designer %} by {{ resource.designer }}{% endif %}
+### {{ resource.airport_name }}{% unless resource.icao == nil or resource.icao == "None" %} ({{ resource.icao }}){% endunless %} {% if resource.designer %} by {{ resource.designer }}{% endif %}
         {% endcapture %}
         {{ title | markdownify }}
 
