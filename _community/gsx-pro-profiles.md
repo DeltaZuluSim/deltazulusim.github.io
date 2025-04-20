@@ -1,7 +1,7 @@
 ---
 title:  "GSX Pro profiles"
 excerpt: "Enhance your ground services with GSX profiles tailored for Algerian airports! Community-made for realism."
-modified: 2025-02-16T16:03:49-04:00
+modified: 2025-04-20T16:03:49-04:00
 toc: true
 toc_sticky: true
 author_profile: false
@@ -27,9 +27,9 @@ resources:
   - icao: "DABC"
     airport_name: "Constantine Mohamed Boudiaf"
     # designer: "NetDesign"
-    author: "Unknown"
-    # author_url : "https://en.flightsim.to/profile/Pretzed"
-    # image_url: "https://cdn.flightsim.to/images/26/gsx-profile--netdesign-daag-alger-houari-boumedieneinternational-461864-1712103895-cKrXo.jpg"
+    author: "Pretzed"
+    author_url : "https://en.flightsim.to/profile/Pretzed"
+    image_url: "/content/images/community/dabc.webp"
     download_url: "https://deltazulusim.short.gy/gsx/dabc"
 
 ---
