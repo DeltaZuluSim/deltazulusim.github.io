@@ -227,18 +227,21 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let activeButton = null;
 
-const gistUser = "{{ page.svg_charts.gist_user }}";
-const gistId = "{{ page.svg_charts.gist_id }}";
-const commitHash = "{{ page.svg_charts.commit_hash }}";
+  const githubUser = "{{ page.svg_charts.github_user }}";
+  const githubRepo = "{{ page.svg_charts.github_repo }}";
+  const branch = "{{ page.svg_charts.branch }}";
+  const icao = "{{ page.svg_charts.icao }}";
 
-const charts = [
-  {% for item in page.svg_charts.files %}
-    {
-      title: "{{ item.ref }} {{ item.title }}",
-      url: `https://gist.githubusercontent.com/${gistUser}/${gistId}/raw/${commitHash}/{{ item.file }}.xml`
-    }{% unless forloop.last %},{% endunless %}
-  {% endfor %}
-];
+  const charts = [
+    {% for item in page.svg_charts.files %}
+      {
+        title: "{{ item.ref }} {{ item.title }}",
+        url: `https://raw.githubusercontent.com/${githubUser}/${githubRepo}/refs/heads/${branch}/${icao}/{{ item.file }}`
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ];
+
+
 
 
 const sidebar = document.getElementById('sidebar');
@@ -304,10 +307,19 @@ async function loadSVG(url) {
   try {
     const response = await fetch(url);
     if (!response.ok) throw new Error("Failed to fetch SVG");
-    const svgText = await response.text();
-    svgContainer.innerHTML = svgText; // Insert SVG code into container
+    let reversedBase64 = await response.text();
 
-    // ⬇️ NEW: Adjust SVG properties
+    // Clean it (remove spaces, newlines)
+    reversedBase64 = reversedBase64.trim().replace(/\s+/g, '');
+
+    // ➡️ Unobfuscate: Reverse it back
+    const base64 = reversedBase64.split('').reverse().join('');
+
+    // ➡️ Decode Base64
+    const svgText = atob(base64);
+
+    svgContainer.innerHTML = svgText;
+
     const svgElement = svgContainer.querySelector('svg');
     if (svgElement) {
       svgElement.setAttribute('width', '100%');
@@ -315,16 +327,13 @@ async function loadSVG(url) {
       svgElement.setAttribute('preserveAspectRatio', 'xMidYMid meet');
     }
 
-    zoomLevel = 1; // Reset zoom to natural
+    zoomLevel = 1;
     applyZoom();
   } catch (err) {
     svgContainer.innerHTML = "Error loading chart.";
     console.error(err);
   }
 }
-
-
-
 
 // Modify your applyZoom function:
 function applyZoom() {
