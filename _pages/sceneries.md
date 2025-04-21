@@ -17,8 +17,8 @@ header:
   overlay_image: /content/images/charts/sceneries-banner.webp
 ---
 
-{% assign sceneries = site.data.sceneries %}
+{% assign sceneries = site.data.sceneries | concat: site.data.community-sceneries.civilian | concat: site.data.community-sceneries.military %}
 
-{% include map.html sceneries=sceneries dz_asp="true" %}
+{% include map.html dz_asp="true" sceneries=sceneries height="60vh"  %}
 
 <br />

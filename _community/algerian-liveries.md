@@ -1,7 +1,7 @@
 ---
 title:  "Algerian Liveries"
 excerpt: "Fly with pride! Discover stunning Algerian liveries made by the community for MSFS. Bring your flights to life!"
-modified: 2025-03-08T12:00:00+01:00
+modified: 2025-04-20T12:00:00+01:00
 toc_sticky: true
 toc: true
 featured: true
@@ -13,6 +13,26 @@ header:
   teaser: /content/images/community/algerian-liveries.webp
 
 resources:
+
+  - id: "FENIX A320 V2 CFM"
+    name: "Khalifa Airways"
+    designer: "FENIX"
+    author: "Pretzed"
+    author_url : "https://en.flightsim.to/profile/Pretzed"
+    image_url: "https://cdn.flightsim.to/images/26/fenix-a320-livery-for-khalifa-airways-a320-200-7t-vko-fictional-461864-1709177885-s48YZ.jpg?width=1400"
+    download_url: "https://en.flightsim.to/file/69978/fenix-a320-livery-for-khalifa-airways-a320-200-7t-vko-fictional"
+    MSFS2020: true
+
+  - id: "A350-1000"
+    name: "Air Algérie Livery"
+    designer: "Inibuilds"
+    author: "MushuFasa"
+    author_url : "https://flightsim.to/profile/MushuFasa"
+    image_url: "https://cdn.flightsim.to/images/27/2024-air-algerie-fictional--a350-1000-8k4k-11556-1743602282-WeDHJ.jpg?width=1400"
+    download_url: "https://flightsim.to/file/90751/20-24-air-algerie-fictional-a350-1000-8k-4k"
+    MSFS2024: true
+    MSFS2020: true
+
   - id: "A330-200GE"
     name: "Air Algérie Livery"
     designer: "Inibuilds"

@@ -2,13 +2,13 @@
 main:
   - title: "Home"
     url: /
-  - title: "Sceneries Map"
-    url: /sceneries-map/
-    children:
-      - title: "DZS Sceneries"
-        url: /sceneries
-      - title: "Community Sceneries Map"
-        url: /community-sceneries
+  - title: "Sceneries"
+    url: /sceneries/
+    # children:
+    #   - title: "DZS Sceneries"
+    #     url: /sceneries
+    #   - title: "Community Sceneries Map"
+    #     url: /community-sceneries
 
   - title: "Liveries"
     url: /liveries
