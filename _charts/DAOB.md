@@ -12,6 +12,19 @@ sidebar:
   title: "All charts"
   nav: charts
 
+svg_charts:
+  icao: "DAOB"
+  files:
+    - ref: "10-9"
+      file: "DAOB1.txt"
+      title: "AIRPORT, AIRPORT INFO, TAKE-OFF MNMS"
+    - ref: "10-9S"
+      file: "DAOB2.txt"
+      title: "EASA AIR OPS MNMS"
+    - ref: "13-1"
+      file: "DAOB3.txt"
+      title: "VOR DME OR VOR RWY 26"
+
 ---
 
 {% include chart-single.html %}

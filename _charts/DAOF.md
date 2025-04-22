@@ -12,6 +12,26 @@ sidebar:
   title: "All charts"
   nav: charts
 
+svg_charts:
+  icao: "DAOF"
+  files:
+    - ref: "10-9"
+      file: "DAOF1.txt"
+      title: "AIRPORT, AIRPORT INFO, TAKE-OFF MNMS"
+    - ref: "10-9S"
+      file: "DAOF2.txt"
+      title: "EASA AIR OPS MNMS"
+    - ref: "11-1"
+      file: "DAOF3.txt"
+      title: "ILS OR LOC RWY 26R"
+    - ref: "13-1"
+      file: "DAOF4.txt"
+      title: "VOR RWY 26R"
+    - ref: "16-1"
+      file: "DAOF5.txt"
+      title: "NDB RWY 26L"
+
+
 ---
 
 {% include chart-single.html %}

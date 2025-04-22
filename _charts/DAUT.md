@@ -12,6 +12,22 @@ sidebar:
   title: "All charts"
   nav: charts
 
+svg_charts:
+  icao: "DAUT"
+  files:
+    - ref: "10-9"
+      file: "DAUT1.txt"
+      title: "AIRPORT, AIRPORT INFO, TAKE-OFF MNMS"
+    - ref: "10-9S"
+      file: "DAUT2.txt"
+      title: "EASA AIR OPS MNMS"
+    - ref: "13-1"
+      file: "DAUT3.txt"
+      title: "VOR DME RWY 06"
+    - ref: "13-2"
+      file: "DAUT4.txt"
+      title: "VOR RWY 06"
+
 ---
 
 {% include chart-single.html %}

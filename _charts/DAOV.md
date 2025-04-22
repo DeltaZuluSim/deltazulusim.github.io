@@ -12,6 +12,19 @@ sidebar:
   title: "All charts"
   nav: charts
 
+svg_charts:
+  icao: "DAOV"
+  files:
+    - ref: "10-9"
+      file: "DAOV1.txt"
+      title: "AIRPORT, AIRPORT INFO, TAKE-OFF MNMS"
+    - ref: "13-1"
+      file: "DAOV2.txt"
+      title: "VOR RWY 08"
+    - ref: "16-1"
+      file: "DAOV3.txt"
+      title: "NDB RWY 08"
+
 ---
 
 {% include chart-single.html %}

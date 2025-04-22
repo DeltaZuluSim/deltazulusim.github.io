@@ -12,6 +12,20 @@ sidebar:
   title: "All charts"
   nav: charts
 
+svg_charts:
+  icao: "DAUE"
+  files:
+    - ref: "10-9"
+      file: "DAUE1.txt"
+      title: "AIRPORT, PARKING, AIRPORT INFO, TAKE-OFF MNMS"
+    - ref: "10-9S"
+      file: "DAUE2.txt"
+      title: "EASA AIR OPS MNMS"
+    - ref: "13-1"
+      file: "DAUE3.txt"
+      title: "VOR RWY 36"
+
+
 ---
 
 {% include chart-single.html %}

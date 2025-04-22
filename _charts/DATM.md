@@ -12,6 +12,22 @@ sidebar:
   title: "All charts"
   nav: charts
 
+svg_charts:
+  icao: "DATM"
+  files:
+    - ref: "10-9"
+      file: "DATM1.txt"
+      title: "AIRPORT, AIRPORT INFO, PARKING, TAKE-OFF MNMS"
+    - ref: "10-9S"
+      file: "DATM2.txt"
+      title: "EASA AIR OPS MNMS"
+    - ref: "13-1"
+      file: "DATM3.txt"
+      title: "VOR DME RWY 26 (CAT C & D)"
+    - ref: "13-2"
+      file: "DATM4.txt"
+      title: "VOR DME RWY 26 (CAT A & B)"
+
 ---
 
 {% include chart-single.html %}

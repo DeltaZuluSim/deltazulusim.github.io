@@ -191,7 +191,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 {% endif %}
 
-{% if page.svg_charts %}
+{% if site.svg_charts and page.svg_charts %}
 
   <h2 class="expand-title" onclick="toggleExpand(this)">
     <span class="expand-symbol"></span> IFR Charts Viewer
@@ -216,7 +216,7 @@ document.addEventListener("DOMContentLoaded", function () {
       <button id="zoomOut" style="padding: 5px 10px; font-size: 12px;">➖</button>
       <button id="resetZoom" style="padding: 5px 10px; font-size: 12px;">🔄</button>
     </div>
-    <div id="svgScrollContainer" style="width: 100%; height: 100%; overflow: auto; border: 1px solid #ccc; background: white;">
+    <div id="svgScrollContainer" style="width: 100%; height: auto; overflow: auto; border: 1px solid #ccc; background: white;">
       <div id="svgContainer" style="transform-origin: top left;"></div>
     </div>
   </div>
@@ -227,9 +227,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   let activeButton = null;
 
-  const githubUser = "{{ page.svg_charts.github_user }}";
-  const githubRepo = "{{ page.svg_charts.github_repo }}";
-  const branch = "{{ page.svg_charts.branch }}";
+  const githubUser = "{{ site.svg_charts.github_user }}";
+  const githubRepo = "{{ site.svg_charts.github_repo }}";
+  const branch = "{{ site.svg_charts.branch }}";
   const icao = "{{ page.svg_charts.icao }}";
 
   const charts = [
@@ -330,8 +330,8 @@ async function loadSVG(url) {
     zoomLevel = 1;
     applyZoom();
   } catch (err) {
-    svgContainer.innerHTML = "Error loading chart.";
-    console.error(err);
+    svgContainer.innerHTML = "<div style='padding:20px; color:red;'>❌ Error loading chart. Please try again later.</div>";
+    console.error("Error loading SVG:", err);
   }
 }
 
@@ -370,7 +370,9 @@ svgScrollContainer.addEventListener('dblclick', (e) => {
 
 
 // Load the first chart by default
-loadSVG(charts[0].url);
+if (charts.length > 0) {
+  loadSVG(charts[0].url);
+}
 
 // 🖐️ Add Dragging functionality
 let isDragging = false;

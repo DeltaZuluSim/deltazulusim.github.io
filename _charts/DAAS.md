@@ -12,6 +12,26 @@ sidebar:
   title: "All charts"
   nav: charts
 
+svg_charts:
+  icao: "DAAS"
+  files:
+    - ref: "10-9"
+      file: "DAAS1.txt"
+      title: "AIRPORT, PARKING, AIRPORT INFO, TAKE-OFF MNMS"
+    - ref: "10-9S"
+      file: "DAAS2.txt"
+      title: "EASA AIR OPS MNMS"
+    - ref: "11-1"
+      file: "DAAS3.txt"
+      title: "LOC RWY 27"
+    - ref: "13-1"
+      file: "DAAS4.txt"
+      title: "VOR DME RWY 09"
+    - ref: "13-2"
+      file: "DAAS5.txt"
+      title: "VOR RWY 27"
+
+
 ---
 
 {% include chart-single.html %}

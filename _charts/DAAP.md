@@ -12,6 +12,20 @@ sidebar:
   title: "All charts"
   nav: charts
 
+svg_charts:
+  icao: "DAAP"
+  files:
+    - ref: "10-9"
+      file: "DAAP1.txt"
+      title: "AIRPORT, PARKING, AIRPORT INFO, TAKE-OFF MNMS"
+    - ref: "13-1"
+      file: "DAAP2.txt"
+      title: "VOR DME RWY 27"
+    - ref: "13-2"
+      file: "DAAP3.txt"
+      title: "VOR RWY 27"
+
+
 ---
 
 {% include chart-single.html %}

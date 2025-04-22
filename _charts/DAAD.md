@@ -12,11 +12,8 @@ header:
 #   title: "All charts"
 #   nav: charts
 
-svg_charts_off:
-  github_user: "DeltaZuluSim"
-  github_repo: ""
-  branch: "main" # (default branch, you can adjust if needed)
-  icao: "daad"
+svg_charts:
+  icao: "DAAD"
   files:
     - ref: "10-9"
       file: "DAAD1.txt"

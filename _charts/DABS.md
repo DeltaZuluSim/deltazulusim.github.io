@@ -12,6 +12,23 @@ sidebar:
   title: "All charts"
   nav: charts
 
+svg_charts:
+  icao: "DABS"
+  files:
+    - ref: "10-9"
+      file: "DABS1.txt"
+      title: "AIRPORT, PARKING, AIRPORT INFO, TAKE-OFF MNMS"
+    - ref: "10-9S"
+      file: "DABS2.txt"
+      title: "EASA AIR OPS MNMS"
+    - ref: "13-1"
+      file: "DABS3.txt"
+      title: "VOR DME RWY 11 & 12"
+    - ref: "13-2"
+      file: "DABS4.txt"
+      title: "VOR RWY 11 & 12"
+
+
 ---
 
 {% include chart-single.html %}

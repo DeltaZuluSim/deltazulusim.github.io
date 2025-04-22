@@ -12,6 +12,22 @@ sidebar:
   title: "All charts"
   nav: charts
 
+svg_charts:
+  icao: "DATG"
+  files:
+    - ref: "10-9"
+      file: "DATG1.txt"
+      title: "AIRPORT, AIRPORT INFO, TAKE-OFF MNMS"
+    - ref: "10-9S"
+      file: "DATG2.txt"
+      title: "EASA AIR OPS MNMS"
+    - ref: "13-1"
+      file: "DATG3.txt"
+      title: "VOR RWY 08 (CAT A & B)"
+    - ref: "16-1"
+      file: "DATG4.txt"
+      title: "NDB RWY 08 (CAT A & B)"
+
 ---
 
 {% include chart-single.html %}
