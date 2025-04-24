@@ -8,13 +8,16 @@ classes: wide
 comments: true
 header:
   teaser: /content/images/charts/thumbnail.webp
-# sidebar:
-#   title: "All charts"
-#   nav: charts
+sidebar:
+  title: "All charts"
+  nav: charts
 
 svg_charts:
   icao: "DAAD"
   files:
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DAAD1.txt"
       title: "AIRPORT INFO, TAKEOFF MNMS"

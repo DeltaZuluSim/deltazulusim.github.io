@@ -15,6 +15,9 @@ sidebar:
 svg_charts:
   icao: "DAOI"
   files:
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DAOI1.txt"
       title: "AIRPORT, AIRPORT INFO, TAKE-OFF MNMS"

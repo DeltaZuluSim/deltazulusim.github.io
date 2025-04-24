@@ -437,7 +437,7 @@ collections:
     output: true
     permalink: /:collection/:path/
   
-svg_charts_off:
-  github_user: ""
-  github_repo: ""
-  branch: ""
+svg_charts:
+  github_user: "DeltaZuluSim"
+  github_repo: "Data"
+  branch: "main"

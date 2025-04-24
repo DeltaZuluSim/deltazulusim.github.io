@@ -6,6 +6,8 @@ date: 2025-02-23T00:00:00+01:00
 modified: 2025-02-23T00:00:00+01:00
 classes: wide
 comments: true
+hidden: true
+published: false
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"

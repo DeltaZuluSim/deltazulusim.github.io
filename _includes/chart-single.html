@@ -5,223 +5,98 @@
   {% include map-single.html coordinates=airport.coordinates military=false %}
 {% endif %}
 
+---
 
-<h2>IFR Charts</h2>
+The navigation charts offered on this page are exclusively for flight simulation and cannot and must not be used for real-world aviation.
+{: .notice--danger}
 
-<a href="https://deltazulusim.short.gy/charts/{{ page.icao | downcase }}" class="btn btn--success">
-    <i class="fas fa-download"></i> Download
-</a>
-
-
-
-{% assign airport = site.data.airports | where: "icao", page.icao | first %}
-{% if airport and airport.documents and airport.documents.size > 0 %}
-
-<h2>VFR Charts</h2>
-<button id="togglePdfButton" class="btn btn--success"><i class="fas fa-eye"></i> View</button>
-
-<div id="pdfContainer" class="pdf-container" style="display: none;">
-    <button id="prevDoc" class="prev-doc btn btn-secondary">Previous Document</button>
-    <button id="nextDoc" class="next-doc btn btn-secondary">Next Document</button>
-    <p class="loading-text">Loading PDF...</p>
-    <div id="pdfViewer" class="pdf-scroll-container"></div>
-</div>
-
-<style>
-    .pdf-container {
-        margin-top: 10px;
-        position: relative;
-    }
-    
-    .pdf-scroll-container {
-        overflow-y: auto;
-        height: 600px;
-        border: 1px solid #ddd;
-        padding: 0;
-        margin: 0;
-        background-color: #f8f8f8;
-        position: relative;
-    }
-
-    .open-external {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        font-size: 20px;
-        color: #007bff;
-        cursor: pointer;
-        text-decoration: none;
-        background: white;
-        padding: 5px;
-        border-radius: 5px;
-        box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
-    }
-</style>
-
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    var pdfjsLib = window['pdfjs-dist/build/pdf'];
-    pdfjsLib.GlobalWorkerOptions.workerSrc = '{{ "/assets/js/pdf.js/pdf.worker.js" | relative_url }}';
-
-    // ✅ Extracting the URLs dynamically from Jekyll YAML data
-    var pdfUrls = [
-        {% for doc in airport.documents %}
-            "{{ doc }}"{% unless forloop.last %}, {% endunless %}
-        {% endfor %}
-    ];
-
-    var currentIndex = 0;
-    var toggleButton = document.getElementById("togglePdfButton");
-    var pdfContainer = document.getElementById("pdfContainer");
-    var pdfViewer = document.getElementById("pdfViewer");
-    var loadingText = document.querySelector(".loading-text");
-    var prevDocBtn = document.getElementById("prevDoc");
-    var nextDocBtn = document.getElementById("nextDoc");
-
-    let pdfLoadingTask = null;
-    let renderTask = null;
-    let isLoading = false;
-
-    function disableButtonsForTwoSeconds() {
-        toggleButton.disabled = true;
-        prevDocBtn.disabled = true;
-        nextDocBtn.disabled = true;
-
-        setTimeout(() => {
-            toggleButton.disabled = false;
-            prevDocBtn.disabled = (currentIndex === 0);
-            nextDocBtn.disabled = (currentIndex === pdfUrls.length - 1);
-        }, 2000);
-    }
-
-    async function loadPDF(pdfUrl) {
-        disableButtonsForTwoSeconds();
-        pdfViewer.innerHTML = "";
-        loadingText.style.display = "block";
-
-        try {
-            if (pdfUrl.includes("drive.google.com")) {
-                let fileId = pdfUrl.match(/\/d\/(.*?)\//);
-                if (fileId) {
-                    pdfUrl = `https://drive.google.com/file/d/${fileId[1]}/preview`;
-                }
-
-                let iframe = document.createElement("iframe");
-                iframe.src = pdfUrl;
-                iframe.width = "100%";
-                iframe.height = "600px";
-                iframe.style.border = "none";
-
-                pdfViewer.appendChild(iframe);
-                loadingText.style.display = "none";
-                return;
-            }
-
-            pdfLoadingTask = pdfjsLib.getDocument({ url: pdfUrl });
-            let pdfDoc = await pdfLoadingTask.promise;
-            loadingText.style.display = "none";
-
-            let page = await pdfDoc.getPage(1);
-            let scale = 1.5;
-            let viewport = page.getViewport({ scale: scale });
-
-            let canvas = document.createElement("canvas");
-            canvas.width = viewport.width;
-            canvas.height = viewport.height;
-            pdfViewer.appendChild(canvas);
-
-            let ctx = canvas.getContext("2d");
-            let renderContext = {
-                canvasContext: ctx,
-                viewport: viewport
-            };
-
-            renderTask = page.render(renderContext);
-            await renderTask.promise;
-
-        } catch (error) {
-            console.error("Error loading PDF:", error);
-            loadingText.textContent = "Failed to load PDF. Click View again.";
-        }
-    }
-
-    prevDocBtn.addEventListener("click", function () {
-        if (!isLoading && currentIndex > 0) {
-            currentIndex--;
-            disableButtonsForTwoSeconds();
-            loadPDF(pdfUrls[currentIndex]);
-        }
-    });
-
-    nextDocBtn.addEventListener("click", function () {
-        if (!isLoading && currentIndex < pdfUrls.length - 1) {
-            currentIndex++;
-            disableButtonsForTwoSeconds();
-            loadPDF(pdfUrls[currentIndex]);
-        }
-    });
-
-    toggleButton.addEventListener("click", function () {
-        disableButtonsForTwoSeconds();
-        let icon = this.querySelector("i");
-        let textNode = this.querySelector("span"); // Target the span for text
-
-        if (pdfContainer.style.display === "block") {
-            pdfContainer.style.display = "none";
-            icon.classList.remove("fa-eye-slash");
-            icon.classList.add("fa-eye");
-            textNode.textContent = " View";
-            toggleButton.classList.remove("btn-danger");
-            toggleButton.classList.add("btn-success");
-        } else {
-            pdfContainer.style.display = "block";
-            loadPDF(pdfUrls[currentIndex]);
-            icon.classList.remove("fa-eye");
-            icon.classList.add("fa-eye-slash");
-            textNode.textContent = " Close";
-            toggleButton.classList.remove("btn-success");
-            toggleButton.classList.add("btn-danger");
-        }
-    });
-
-    prevDocBtn.disabled = (currentIndex === 0);
-    nextDocBtn.disabled = (currentIndex === pdfUrls.length - 1);
-});
-</script>
-
-{% endif %}
+---
 
 {% if site.svg_charts and page.svg_charts %}
 
-  <h2 class="expand-title" onclick="toggleExpand(this)">
-    <span class="expand-symbol"></span> IFR Charts Viewer
-    <a class="header-link" href="#ifrcharts" title="Permalink" id="changelog">
-      <span class="sr-only">Permalink</span>
-      <i class="fas fa-link"></i>
-    </a>
-  </h2>
+  <h2>Navigation Charts</h2>
 
-{% capture content %}
 
 <div style="display: flex;">
-
-  <!-- Sidebar for titles -->
-  <div id="sidebar" style="width: 30%; overflow-y: auto; background: #f0f0f0; padding: 10px; border-right: 1px solid #ccc;">
-    <!-- Titles will be added here dynamically -->
-  </div>
 
   <!-- Viewer for charts -->
   <div id="viewer" style="width: 70%; padding: 10px; position: relative;">
     <div style="position: absolute; top: 10px; right: 10px; z-index: 10;">
-      <button id="zoomIn" style="padding: 5px 10px; font-size: 12px;">➕</button>
-      <button id="zoomOut" style="padding: 5px 10px; font-size: 12px;">➖</button>
-      <button id="resetZoom" style="padding: 5px 10px; font-size: 12px;">🔄</button>
     </div>
-    <div id="svgScrollContainer" style="width: 100%; height: auto; overflow: auto; border: 1px solid #ccc; background: white;">
+    <div id="svgScrollContainer" style="width: 100%; height: auto; overflow: auto; border: 1px solid #ccc; background: white; padding-top: 30px;">
+      <!-- Floating zoom & popout controls -->
+      <div id="viewerControls" style="
+      position: absolute;
+      top: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      background: rgba(255,255,255,0.95);
+      padding: 5px 8px;
+      border-radius: 12px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      display: flex;
+      gap: 6px;
+    ">
+    
+<button id="zoomIn" style="padding: 5px 10px; font-size: 12px;">➕</button>
+<button id="zoomOut" style="padding: 5px 10px; font-size: 12px;">➖</button>
+<button id="resetZoom" style="padding: 5px 10px; font-size: 12px;">🔄</button>
+<button id="popoutViewer" style="padding: 5px 10px; font-size: 12px;">⛶</button>
+</div>
       <div id="svgContainer" style="transform-origin: top left;"></div>
     </div>
   </div>
+
+  <!-- Sidebar for titles -->
+  <div id="sidebar" style="width: 30%; overflow-y: auto; background: #f0f0f0; padding: 10px; border-left: 1px solid #ccc;">
+  </div>
 </div>
+
+
+<div id="fullscreenBackdrop" style="
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 9998;
+"></div>
+
+<div id="fullscreenViewer" style="
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  background: white;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  border-radius: 8px;
+">
+  <button id="closeFullscreenBtn" style="
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+">
+  ✖
+</button>
+
+  <div id="fullscreenContent" style="width: 100%; height: 100%; overflow: auto; border: 1px solid #ccc;">
+  </div>
+</div>
+
 
 
 <script>
@@ -251,13 +126,17 @@ const svgContainer = document.getElementById('svgContainer');
 const zoomInBtn = document.getElementById('zoomIn');
 const zoomOutBtn = document.getElementById('zoomOut');
 const resetZoomBtn = document.getElementById('resetZoom');
-
-
+const popoutBtn = document.getElementById('popoutViewer');
+const fullscreen = document.getElementById('fullscreenViewer');
+const fullscreenContent = document.getElementById('fullscreenContent');
+const viewerControls = document.getElementById('viewerControls');
+const backdrop = document.getElementById('fullscreenBackdrop');
 
 let zoomLevel = 1;
 
-// Create sidebar buttons dynamically
-charts.forEach((chart) => {
+let firstButton = null;
+
+charts.forEach((chart, index) => {
   const button = document.createElement('button');
   button.textContent = chart.title;
   button.style.display = "block";
@@ -272,22 +151,31 @@ charts.forEach((chart) => {
   button.style.fontSize = "10px";
 
   button.addEventListener('click', () => {
-  loadSVG(chart.url);
+    loadSVG(chart.url);
 
-  // Highlight active button
-  if (activeButton) {
-    activeButton.style.backgroundColor = '#ffffff'; // Reset previous
-    activeButton.style.color = '#000000';
-  }
-  button.style.backgroundColor = '#007bff'; // Bootstrap blue or whatever you want
-  button.style.color = '#ffffff'; // White text
-  activeButton = button;
-});
+    if (activeButton) {
+      activeButton.style.backgroundColor = '#ffffff';
+      activeButton.style.color = '#000000';
+    }
+    button.style.backgroundColor = '#007bff';
+    button.style.color = '#ffffff';
+    activeButton = button;
+  });
 
   sidebar.appendChild(button);
+
+  if (index === 0) {
+    firstButton = button;
+  }
 });
 
-// ADD this after defining your constants:
+if (firstButton) {
+  window.addEventListener('DOMContentLoaded', () => {
+    firstButton.click();
+  });
+}
+
+
 const zoomLevelDisplay = document.createElement('div');
 zoomLevelDisplay.style.position = 'absolute';
 zoomLevelDisplay.style.top = '10px';
@@ -302,7 +190,6 @@ document.getElementById('viewer').appendChild(zoomLevelDisplay);
 
 
 
-// Load SVG function
 async function loadSVG(url) {
   svgContainer.innerHTML = "Loading chart...";
   try {
@@ -310,13 +197,10 @@ async function loadSVG(url) {
     if (!response.ok) throw new Error("Failed to fetch SVG");
     let reversedBase64 = await response.text();
 
-    // Clean it (remove spaces, newlines)
     reversedBase64 = reversedBase64.trim().replace(/\s+/g, '');
 
-    // ➡️ Unobfuscate: Reverse it back
     const base64 = reversedBase64.split('').reverse().join('');
 
-    // ➡️ Decode Base64
     const svgText = atob(base64);
 
     svgContainer.innerHTML = svgText;
@@ -336,11 +220,17 @@ async function loadSVG(url) {
   }
 }
 
-// Modify your applyZoom function:
 function applyZoom() {
   svgContainer.style.transform = `scale(${zoomLevel})`;
   zoomLevelDisplay.textContent = `${Math.round(zoomLevel * 100)}%`;
+
+  svgScrollContainer.style.overflow = 'hidden';
+  setTimeout(() => {
+    svgScrollContainer.style.overflow = 'auto';
+  }, 10);
 }
+
+
 
 zoomInBtn.addEventListener('click', () => {
   zoomLevel += 0.2;
@@ -365,17 +255,15 @@ setTimeout(() => {
 });
 
 svgScrollContainer.addEventListener('dblclick', (e) => {
-  zoomLevel += 0.5; // Zoom in faster with double-click
+  zoomLevel += 0.5; 
   applyZoom();
 });
 
 
-// Load the first chart by default
 if (charts.length > 0) {
   loadSVG(charts[0].url);
 }
 
-// 🖐️ Add Dragging functionality
 let isDragging = false;
 let startX, startY, scrollLeft, scrollTop;
 
@@ -451,7 +339,46 @@ svgScrollContainer.addEventListener('touchend', () => {
   lastTouchDistance = null;
 });
 
+
+
+  const closeFullscreenBtn = document.getElementById('closeFullscreenBtn');
+  const originalViewerContainer = document.getElementById('viewer');
+
+  popoutBtn.addEventListener('click', () => {
+  fullscreenContent.appendChild(svgScrollContainer);
+  fullscreen.style.display = 'block';
+  backdrop.style.display = 'block';
+  setTimeout(() => {
+  svgScrollContainer.style.overflow = 'hidden';
+  setTimeout(() => {
+    svgScrollContainer.style.overflow = 'auto';
+  }, 10);
+}, 50);
+popoutBtn.style.display = 'none';
+svgScrollContainer.scrollLeft = 0;
+svgScrollContainer.scrollTop = 0;
+
+});
+
+closeFullscreenBtn.addEventListener('click', () => {
+  originalViewerContainer.appendChild(svgScrollContainer);
+  fullscreen.style.display = 'none';
+  backdrop.style.display = 'none';
+  popoutBtn.style.display = 'inline-block';
+});
+
+backdrop.addEventListener('click', () => {
+  closeFullscreenBtn.click(); // Reuse the close logic
+});
+
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape' && fullscreen.style.display === 'block') {
+    closeFullscreenBtn.click();
+  }
+});
+
+
+
 </script>
-{% endcapture %}
-{% include expand-content.html content=content %}
+
 {% endif %}

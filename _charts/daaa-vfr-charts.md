@@ -5,6 +5,8 @@ toc: false
 date: 2025-03-12T00:00:00+01:00
 modified: 2025-03-12T00:00:00+01:00
 classes: wide
+hidden: true
+published: false
 comments: true
 header:
   overlay_color: "#000"
@@ -35,7 +37,7 @@ airports:
       - "https://drive.google.com/file/d/1_w4SvQ9Vpu5Zil-ZpWMVJ_zZisj8sX6m/view"
   - icao: "DAAG"
     name: "ALGIERS, HOUARI BOUMEDIENE"
-    documents:
+    documents: 
       - "https://drive.google.com/file/d/1JQtnGcg-hHs6ORBe5QFHtDJivDILkRdH/view"
       - "https://drive.google.com/file/d/1wu0MRYUViMnTgfenwiai_AqnZRgUATQj/view"
   - icao: "DAAJ"
