@@ -14,7 +14,7 @@ The navigation charts offered on this page are exclusively for flight simulation
 
 {% if site.svg_charts and page.svg_charts %}
 
-  <h2>Navigation Charts</h2>
+  <h2>Navigation Charts for {{ page.svg_charts.icao }}</h2>
 
 
 <div style="display: flex;">
@@ -39,10 +39,22 @@ The navigation charts offered on this page are exclusively for flight simulation
       gap: 6px;
     ">
     
-<button id="zoomIn" style="padding: 5px 10px; font-size: 12px;">➕</button>
-<button id="zoomOut" style="padding: 5px 10px; font-size: 12px;">➖</button>
-<button id="resetZoom" style="padding: 5px 10px; font-size: 12px;">🔄</button>
-<button id="popoutViewer" style="padding: 5px 10px; font-size: 12px;">⛶</button>
+    <button id="zoomOut" style="padding: 5px 10px; font-size: 12px;">➖</button>
+    <div id="zoomDisplay" style="
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 40px;
+      font-size: 12px;
+      font-weight: bold;
+      background: #f0f0f0;
+      border-radius: 4px;
+      padding: 0 8px;
+    ">100%</div>
+    <button id="zoomIn" style="padding: 5px 10px; font-size: 12px;">➕</button>
+    <button id="resetZoom" style="padding: 5px 10px; font-size: 12px;">🔄</button>
+    <button id="popoutViewer" style="margin-left: 10px; padding: 5px 10px; font-size: 12px;">⛶</button>
+    
 </div>
       <div id="svgContainer" style="transform-origin: top left;"></div>
     </div>
@@ -97,8 +109,6 @@ The navigation charts offered on this page are exclusively for flight simulation
   </div>
 </div>
 
-
-
 <script>
 
   let activeButton = null;
@@ -133,7 +143,7 @@ const viewerControls = document.getElementById('viewerControls');
 const backdrop = document.getElementById('fullscreenBackdrop');
 
 let zoomLevel = 1;
-
+let currentWorker = null;
 let firstButton = null;
 
 charts.forEach((chart, index) => {
@@ -175,60 +185,66 @@ if (firstButton) {
   });
 }
 
-
-const zoomLevelDisplay = document.createElement('div');
-zoomLevelDisplay.style.position = 'absolute';
-zoomLevelDisplay.style.top = '10px';
-zoomLevelDisplay.style.left = '10px';
-zoomLevelDisplay.style.backgroundColor = 'rgba(255,255,255,0.8)';
-zoomLevelDisplay.style.padding = '5px 10px';
-zoomLevelDisplay.style.borderRadius = '5px';
-zoomLevelDisplay.style.fontSize = '12px';
-zoomLevelDisplay.style.fontWeight = 'bold';
-zoomLevelDisplay.style.zIndex = '10';
-document.getElementById('viewer').appendChild(zoomLevelDisplay);
-
-
-
 async function loadSVG(url) {
   svgContainer.innerHTML = "Loading chart...";
+
   try {
-    const response = await fetch(url);
-    if (!response.ok) throw new Error("Failed to fetch SVG");
-    let reversedBase64 = await response.text();
-
-    reversedBase64 = reversedBase64.trim().replace(/\s+/g, '');
-
-    const base64 = reversedBase64.split('').reverse().join('');
-
-    const svgText = atob(base64);
-
-    svgContainer.innerHTML = svgText;
-
-    const svgElement = svgContainer.querySelector('svg');
-    if (svgElement) {
-      svgElement.setAttribute('width', '100%');
-      svgElement.setAttribute('height', 'auto');
-      svgElement.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+    // Cancel the previous worker if still running
+    if (currentWorker) {
+      currentWorker.terminate();
+      currentWorker = null;
     }
 
-    zoomLevel = 1;
-    applyZoom();
-  } catch (err) {
-    svgContainer.innerHTML = "<div style='padding:20px; color:red;'>❌ Error loading chart. Please try again later.</div>";
-    console.error("Error loading SVG:", err);
+    // Create a new worker
+    const worker = new Worker("{{ '/assets/js/svgWorker.js' | relative_url }}");
+    currentWorker = worker; // track the current one
+
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Failed to fetch SVG");
+
+    const reversedBase64 = await response.text();
+    worker.postMessage(reversedBase64);
+
+    worker.onmessage = function (e) {
+      if (e.data.success) {
+        svgContainer.innerHTML = e.data.svg;
+        const svgElement = svgContainer.querySelector('svg');
+        if (svgElement) {
+          svgElement.setAttribute('width', '100%');
+          svgElement.setAttribute('height', 'auto');
+          svgElement.setAttribute('preserveAspectRatio', 'xMidYMid meet');
+        }
+        zoomLevel = 1;
+        applyZoom();
+      } else {
+        svgContainer.innerHTML = `<div style="color:red;">❌ Worker error: ${e.data.error}</div>`;
+      }
+
+      // Cleanup: clear the reference
+      worker.terminate();
+      currentWorker = null;
+    };
+  } catch (error) {
+    svgContainer.innerHTML = `<div style="color:red;">❌ Error: ${error.message}</div>`;
   }
 }
 
+
+
 function applyZoom() {
   svgContainer.style.transform = `scale(${zoomLevel})`;
-  zoomLevelDisplay.textContent = `${Math.round(zoomLevel * 100)}%`;
+
+  const zoomDisplay = document.getElementById('zoomDisplay');
+  if (zoomDisplay) {
+    zoomDisplay.textContent = `${Math.round(zoomLevel * 100)}%`;
+  }
 
   svgScrollContainer.style.overflow = 'hidden';
   setTimeout(() => {
     svgScrollContainer.style.overflow = 'auto';
   }, 10);
 }
+
 
 
 
