@@ -357,6 +357,11 @@ defaults:
       categories: []
   - scope:
       path: ""
+      ext: js.liquid
+    values:
+      layout: nil
+  - scope:
+      path: ""
       type: sceneries
     values:
       layout: single

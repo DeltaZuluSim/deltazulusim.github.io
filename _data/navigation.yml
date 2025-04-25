@@ -16,17 +16,18 @@ main:
   - title: "Mods"
     url: /mods
 
+  - title: "Charts"
+    url: /charts
+
   - title: "Blog"
     url: /blog/
-
+    
   - title: "About"
     url: /about/
 
   - title: "Contact"
     url: /contact/
 
-  - title: "Charts"
-    url: /charts
     # children:
     #   - title: "DAAA IFR"
     #     url: /charts/daaa-ifr-charts/
