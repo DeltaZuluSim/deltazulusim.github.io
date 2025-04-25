@@ -1,10 +1,11 @@
 ---
 title: "DAOY El Bayadh Airport"
 excerpt: "Microsoft Flight Simulation Scenery for El Bayadh (DAOY) Airport for MSFS2020 & MSFS2024"
+icao: "DAOY"
 toc: true
 classes: wide
 date: 2025-04-08T00:00:00+01:00
-modified: 2025-04-09T00:00:00+01:00
+modified: 2025-04-25T00:00:00+01:00
 comments: true
 
 header:
@@ -71,7 +72,11 @@ changelog:
       - "Night lighting and VFR-friendly layout"
 ---
 
+
+
 Scenery for **El Bayadh Airport (DAOY)**, crafted for Microsoft Flight Simulator 2020 and 2024. Located on Algeria’s high inland plateau, this regional airport offers a distinctive flying experience with its elevated terrain, vast open fields, and nearby hills—ideal for both VFR navigation and regional hops.
+
+{% include available-charts.html icao=page.icao %}
 
 Our custom scenery recreates every essential aspect of El Bayadh Airport with precision, from the runway markings and taxiway signs to the custom aprons, and nighttime lighting. Whether you're flying a regional jet, or a turboprop, this scenery provides a realistic and immersive environment.
 

@@ -1,7 +1,7 @@
 ---
 title:  "Algerian Military Liveries"
 excerpt: "Fly with authentic Algerian military liveries! Community-made designs for fighter jets & transports in MSFS."
-modified: 2025-03-08T14:00:00+01:00
+modified: 2025-04-25T14:00:00+01:00
 toc: true
 toc_sticky: true
 author_profile: false
@@ -12,12 +12,6 @@ flags:
   - military-livery
 header:
   teaser: /content/images/community/algerian-military-liveries.webp
-categories: 
-  - "Community Liveries"
-tags:
-  - Liveries
-  - Military
-  - Community
 
 resources:
   - id: "C-130 Captain Exterior"

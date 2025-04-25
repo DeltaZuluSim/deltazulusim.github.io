@@ -1,0 +1,10 @@
+{% assign current_icao = include.icao | upcase %}
+{% assign charts = site.charts | where_exp: "chart", "chart.svg_charts.icao == current_icao" %}
+
+{% if charts.size > 0 %}
+  <div class="notice--success mt-4" role="alert">
+    <i class="fas fa-map"></i>
+    Navigation charts are available for <strong>{{ current_icao }}</strong>! 
+    <a href="{{ charts[0].url }}">View Charts</a>
+  </div>
+{% endif %}

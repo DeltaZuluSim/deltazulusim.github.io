@@ -9,11 +9,6 @@ comments: true
 featured: true
 header:
   teaser: /content/images/community/gsxpro.webp
-categories: 
-  - Community Resources
-tags:
-  - GSX Pro
-  - Community
 
 resources:
   - icao: "DAAG"

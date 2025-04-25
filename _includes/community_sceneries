@@ -60,6 +60,8 @@
     VOR <code style="font-weight: bold; font-size: 120%;">{{ matching_vor.ident }}</code> is available for this scenery, install the <a href="/mods/daaa-mil-navaids/"><strong>Algerian Mil Navaids</strong> mod</a>.<br>
   </div>
   {% endif %}
+
+  {% include available-charts.html icao=resource.icao %}
 </div>
 
 {% endfor %}
