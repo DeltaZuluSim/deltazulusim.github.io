@@ -179,16 +179,11 @@ The navigation charts offered on this page are exclusively for flight simulation
 </script>
 
 <script src="{{ '/assets/js/svg-annotator.js' | relative_url }}"></script>
-<script>
-  initSvgViewer(charts, githubUser, githubRepo, branch, icao, svgWorkerPath);
-
-  document.getElementById('chartSelector').addEventListener('change', function () {
-    const selectedIndex = this.selectedIndex;
-    loadSvgChart(charts[selectedIndex].url);
-  });
-</script>
 
 <script>
+
+initSvgViewer(charts, githubUser, githubRepo, branch, icao, svgWorkerPath);
+
   function toggleDropdownMenu() {
     const menu = document.getElementById('chartDropdownMenu');
     menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';

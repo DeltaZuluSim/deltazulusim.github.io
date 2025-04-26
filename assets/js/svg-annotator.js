@@ -1,4 +1,4 @@
-function initSvgViewer(charts, githubUser, githubRepo, branch, icao) {
+function initSvgViewer(charts, githubUser, githubRepo, branch, icao, svgWorkerPath) {
   const svgScrollContainer = document.getElementById('svgScrollContainer');
   const svgContainer = document.getElementById('svgContainer');
   const zoomInBtn = document.getElementById('zoomIn');
@@ -14,7 +14,6 @@ function initSvgViewer(charts, githubUser, githubRepo, branch, icao) {
 
   window.loadSvgChart = async function(url) {
     svgContainer.innerHTML = "Loading chart...";
-
     try {
       if (currentWorker) {
         currentWorker.terminate();
@@ -42,14 +41,14 @@ function initSvgViewer(charts, githubUser, githubRepo, branch, icao) {
           zoomLevel = 1;
           applyZoom();
         } else {
-          svgContainer.innerHTML = `<div style="color:red;">❌ Worker error: ${e.data.error}</div>`;
+          svgContainer.innerHTML = `<div style="color:red;">\u274C Worker error: ${e.data.error}</div>`;
         }
 
         worker.terminate();
         currentWorker = null;
       };
     } catch (error) {
-      svgContainer.innerHTML = `<div style="color:red;">❌ Error: ${error.message}</div>`;
+      svgContainer.innerHTML = `<div style="color:red;">\u274C Error: ${error.message}</div>`;
     }
   };
 
@@ -59,42 +58,24 @@ function initSvgViewer(charts, githubUser, githubRepo, branch, icao) {
     if (zoomDisplay) {
       zoomDisplay.textContent = `${Math.round(zoomLevel * 100)}%`;
     }
-
     svgScrollContainer.style.overflow = 'hidden';
-    setTimeout(() => {
-      svgScrollContainer.style.overflow = 'auto';
-    }, 10);
+    setTimeout(() => { svgScrollContainer.style.overflow = 'auto'; }, 10);
   }
 
-  zoomInBtn.addEventListener('click', () => {
-    zoomLevel += 0.2;
-    applyZoom();
-  });
-
-  zoomOutBtn.addEventListener('click', () => {
-    zoomLevel = Math.max(0.2, zoomLevel - 0.2);
-    applyZoom();
-  });
-
+  zoomInBtn.addEventListener('click', () => { zoomLevel += 0.2; applyZoom(); });
+  zoomOutBtn.addEventListener('click', () => { zoomLevel = Math.max(0.2, zoomLevel - 0.2); applyZoom(); });
   resetZoomBtn.addEventListener('click', () => {
     zoomLevel = 1;
     applyZoom();
     svgScrollContainer.scrollLeft = 0;
     svgScrollContainer.scrollTop = 0;
     svgScrollContainer.style.overflow = 'hidden';
-    setTimeout(() => {
-      svgScrollContainer.style.overflow = 'auto';
-    }, 50);
+    setTimeout(() => { svgScrollContainer.style.overflow = 'auto'; }, 50);
   });
 
-  svgScrollContainer.addEventListener('dblclick', () => {
-    zoomLevel += 0.5;
-    applyZoom();
-  });
+  svgScrollContainer.addEventListener('dblclick', () => { zoomLevel += 0.5; applyZoom(); });
 
-  if (charts.length > 0) {
-    loadSvgChart(charts[0].url);
-  }
+  if (charts.length > 0) { loadSvgChart(charts[0].url); }
 
   let isDragging = false;
   let startX, startY, scrollLeft, scrollTop;
@@ -108,15 +89,8 @@ function initSvgViewer(charts, githubUser, githubRepo, branch, icao) {
     svgScrollContainer.style.cursor = "grabbing";
   });
 
-  svgScrollContainer.addEventListener('mouseleave', () => {
-    isDragging = false;
-    svgScrollContainer.style.cursor = "default";
-  });
-
-  svgScrollContainer.addEventListener('mouseup', () => {
-    isDragging = false;
-    svgScrollContainer.style.cursor = "default";
-  });
+  svgScrollContainer.addEventListener('mouseleave', () => { isDragging = false; svgScrollContainer.style.cursor = "default"; });
+  svgScrollContainer.addEventListener('mouseup', () => { isDragging = false; svgScrollContainer.style.cursor = "default"; });
 
   svgScrollContainer.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
@@ -150,9 +124,7 @@ function initSvgViewer(charts, githubUser, githubRepo, branch, icao) {
     }
   }, { passive: false });
 
-  svgScrollContainer.addEventListener('touchend', () => {
-    window.lastTouchDistance = null;
-  });
+  svgScrollContainer.addEventListener('touchend', () => { window.lastTouchDistance = null; });
 
   const closeFullscreenBtn = document.getElementById('closeFullscreenBtn');
   const originalViewerContainer = document.getElementById('viewer');
@@ -163,9 +135,7 @@ function initSvgViewer(charts, githubUser, githubRepo, branch, icao) {
     backdrop.style.display = 'block';
     setTimeout(() => {
       svgScrollContainer.style.overflow = 'hidden';
-      setTimeout(() => {
-        svgScrollContainer.style.overflow = 'auto';
-      }, 10);
+      setTimeout(() => { svgScrollContainer.style.overflow = 'auto'; }, 10);
     }, 50);
     popoutBtn.style.display = 'none';
     svgScrollContainer.scrollLeft = 0;
@@ -179,22 +149,213 @@ function initSvgViewer(charts, githubUser, githubRepo, branch, icao) {
     popoutBtn.style.display = 'inline-block';
   });
 
-  backdrop.addEventListener('click', () => {
-    closeFullscreenBtn.click();
-  });
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && fullscreen.style.display === 'block') {
-      closeFullscreenBtn.click();
-    }
-  });
-
-  // ↓ Your annotation system stays untouched ↓
-  // ✅ Keep everything below this line exactly as it is from your current file
-  // (drawing, selecting, undo/redo, freehand, etc.)
-
-  // ... [Annotation logic remains unchanged]
-  // (Just keep it under this section as in your current code)
+  backdrop.addEventListener('click', () => { closeFullscreenBtn.click(); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && fullscreen.style.display === 'block') { closeFullscreenBtn.click(); } });
 
   console.log("Viewer initialized for:", icao);
 }
+
+// ✍️ Full Corrected Drawing System for your Toolbar
+
+let drawMode = null;
+let tempShape = null;
+let drawStart = null;
+let freehandPoints = [];
+let selectedElement = null;
+let isMoving = false;
+let moveOffset = { x: 0, y: 0 };
+
+const undoStack = [];
+const redoStack = [];
+
+// Activate drawing mode when clicking toolbar buttons
+document.querySelectorAll('.toggle-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const mode = btn.getAttribute('data-mode');
+    if (drawMode === mode) {
+      drawMode = null;
+      btn.classList.remove('active');
+    } else {
+      drawMode = mode;
+      document.querySelectorAll('.toggle-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+    }
+  });
+});
+
+// Start drawing or selecting
+const scrollContainer = document.getElementById('svgScrollContainer');
+scrollContainer.addEventListener('mousedown', (e) => {
+  const svg = document.querySelector('#svgScrollContainer svg');
+  if (!svg || !drawMode || e.target.closest('#annotationToolbar')) return;
+
+  const pt = svg.createSVGPoint();
+  pt.x = e.clientX;
+  pt.y = e.clientY;
+  const loc = pt.matrixTransform(svg.getScreenCTM().inverse());
+
+  drawStart = loc;
+  const color = document.getElementById('colorPicker').value || '#ff0000';
+
+  if (drawMode === 'line' || drawMode === 'arrow') {
+    tempShape = document.createElementNS('http://www.w3.org/2000/svg', 'line');
+    tempShape.setAttribute('x1', loc.x);
+    tempShape.setAttribute('y1', loc.y);
+    tempShape.setAttribute('x2', loc.x);
+    tempShape.setAttribute('y2', loc.y);
+    tempShape.setAttribute('stroke', color);
+    tempShape.setAttribute('stroke-width', '2');
+    tempShape.classList.add('annotation');
+    if (drawMode === 'arrow') {
+      tempShape.setAttribute('marker-end', 'url(#arrowhead)');
+      tempShape.setAttribute('color', color);
+    }
+    svg.appendChild(tempShape);
+  } else if (drawMode === 'circle') {
+    tempShape = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+    tempShape.setAttribute('cx', loc.x);
+    tempShape.setAttribute('cy', loc.y);
+    tempShape.setAttribute('r', 0);
+    tempShape.setAttribute('stroke', color);
+    tempShape.setAttribute('stroke-width', '2');
+    tempShape.setAttribute('fill', 'none');
+    tempShape.classList.add('annotation');
+    svg.appendChild(tempShape);
+  } else if (drawMode === 'freehand') {
+    tempShape = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+    freehandPoints = [`M${loc.x},${loc.y}`];
+    tempShape.setAttribute('d', freehandPoints.join(' '));
+    tempShape.setAttribute('stroke', color);
+    tempShape.setAttribute('stroke-width', '2');
+    tempShape.setAttribute('fill', 'none');
+    tempShape.classList.add('annotation');
+    svg.appendChild(tempShape);
+  } else if (drawMode === 'text') {
+    const text = prompt('Enter text:', 'Note');
+    if (text) {
+      const textEl = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+      textEl.setAttribute('x', loc.x);
+      textEl.setAttribute('y', loc.y);
+      textEl.setAttribute('fill', color);
+      textEl.setAttribute('font-size', '16');
+      textEl.textContent = text;
+      textEl.classList.add('annotation');
+      svg.appendChild(textEl);
+      undoStack.push(textEl);
+      redoStack.length = 0;
+    }
+    drawStart = null;
+  } else if (drawMode === 'select') {
+    const target = e.target.closest('.annotation');
+    if (target) {
+      if (selectedElement) selectedElement.classList.remove('selected');
+      selectedElement = target;
+      selectedElement.classList.add('selected');
+
+      const pt = svg.createSVGPoint();
+      pt.x = e.clientX;
+      pt.y = e.clientY;
+      const loc = pt.matrixTransform(svg.getScreenCTM().inverse());
+
+      if (selectedElement.tagName === 'text') {
+        moveOffset.x = loc.x - parseFloat(selectedElement.getAttribute('x'));
+        moveOffset.y = loc.y - parseFloat(selectedElement.getAttribute('y'));
+      } else {
+        moveOffset.x = 0;
+        moveOffset.y = 0;
+      }
+
+      isMoving = true;
+    } else {
+      if (selectedElement) selectedElement.classList.remove('selected');
+      selectedElement = null;
+    }
+  }
+});
+
+scrollContainer.addEventListener('mousemove', (e) => {
+  if (!drawStart || !tempShape) return;
+  const svg = document.querySelector('#svgScrollContainer svg');
+  const pt = svg.createSVGPoint();
+  pt.x = e.clientX;
+  pt.y = e.clientY;
+  const loc = pt.matrixTransform(svg.getScreenCTM().inverse());
+
+  if (drawMode === 'line' || drawMode === 'arrow') {
+    tempShape.setAttribute('x2', loc.x);
+    tempShape.setAttribute('y2', loc.y);
+  } else if (drawMode === 'circle') {
+    const dx = loc.x - drawStart.x;
+    const dy = loc.y - drawStart.y;
+    tempShape.setAttribute('r', Math.sqrt(dx * dx + dy * dy));
+  } else if (drawMode === 'freehand') {
+    freehandPoints.push(`L${loc.x},${loc.y}`);
+    tempShape.setAttribute('d', freehandPoints.join(' '));
+  }
+
+  if (isMoving && selectedElement && drawMode === 'select') {
+    const pt = svg.createSVGPoint();
+    pt.x = e.clientX;
+    pt.y = e.clientY;
+    const loc = pt.matrixTransform(svg.getScreenCTM().inverse());
+    if (selectedElement.tagName === 'text') {
+      selectedElement.setAttribute('x', loc.x - moveOffset.x);
+      selectedElement.setAttribute('y', loc.y - moveOffset.y);
+    }
+  }
+});
+
+scrollContainer.addEventListener('mouseup', () => {
+  if (tempShape) {
+    undoStack.push(tempShape);
+    redoStack.length = 0;
+  }
+  tempShape = null;
+  drawStart = null;
+  isMoving = false;
+});
+
+function undoAnnotation() {
+  const svg = document.querySelector('#svgScrollContainer svg');
+  if (!svg || !undoStack.length) return;
+  const last = undoStack.pop();
+  if (svg.contains(last)) {
+    svg.removeChild(last);
+    redoStack.push(last);
+  }
+}
+
+function redoAnnotation() {
+  const svg = document.querySelector('#svgScrollContainer svg');
+  if (!svg || !redoStack.length) return;
+  const redoEl = redoStack.pop();
+  svg.appendChild(redoEl);
+  undoStack.push(redoEl);
+}
+
+function deleteSelected() {
+  if (selectedElement) {
+    selectedElement.remove();
+    selectedElement = null;
+  }
+}
+
+function clearAnnotations() {
+  const svg = document.querySelector('#svgScrollContainer svg');
+  if (svg) svg.querySelectorAll('.annotation').forEach(el => el.remove());
+  selectedElement = null;
+}
+
+// Create the SVG defs for the arrow marker once
+if (!document.getElementById('arrowhead')) {
+  const defs = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  defs.innerHTML = `
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto" markerUnits="strokeWidth">
+        <polygon points="0 0, 10 3.5, 0 7" fill="currentColor" />
+      </marker>
+    </defs>
+  `;
+  document.body.appendChild(defs);
+}
+
