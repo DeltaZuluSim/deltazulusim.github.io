@@ -81,6 +81,7 @@ function initSvgViewer(charts, githubUser, githubRepo, branch, icao, svgWorkerPa
   let startX, startY, scrollLeft, scrollTop;
 
   svgScrollContainer.addEventListener('mousedown', (e) => {
+    if (drawMode && drawMode !== 'select') return; // ➔ Disable dragging when a drawing tool is active
     isDragging = true;
     startX = e.pageX - svgScrollContainer.offsetLeft;
     startY = e.pageY - svgScrollContainer.offsetTop;
@@ -88,6 +89,7 @@ function initSvgViewer(charts, githubUser, githubRepo, branch, icao, svgWorkerPa
     scrollTop = svgScrollContainer.scrollTop;
     svgScrollContainer.style.cursor = "grabbing";
   });
+  
 
   svgScrollContainer.addEventListener('mouseleave', () => { isDragging = false; svgScrollContainer.style.cursor = "default"; });
   svgScrollContainer.addEventListener('mouseup', () => { isDragging = false; svgScrollContainer.style.cursor = "default"; });
