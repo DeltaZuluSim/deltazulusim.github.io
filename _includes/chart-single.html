@@ -10,9 +10,19 @@ The navigation charts offered on this page are exclusively for flight simulation
 
 ---
 
-{% if site.svg_charts and page.svg_charts %}
+{% assign sceneries = site.data.sceneries | concat: site.data.community-sceneries.civilian | concat: site.data.community-sceneries.military %}
 
-{% include available-charts.html icao=page.icao %}
+{% assign current_icao = page.icao | upcase %}
+{% assign matched_scenery = sceneries | where: "name", current_icao | first %}
+
+{% if matched_scenery %}
+  <div class="alert notice--success mt-4" role="alert">
+    <i class="fas fa-map-marker-alt"></i>
+    A <a href="{{ matched_scenery.link }}">custom scenery</a> for <strong>{{ matched_scenery.description }} ({{ current_icao }})</strong> is available!
+  </div>
+{% endif %}
+
+{% if site.svg_charts and page.svg_charts %}
 
 <style>
   .annotation {

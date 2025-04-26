@@ -9,7 +9,7 @@
       </button>
   
       <div class="dzs-carousel" id="dzs-scroll-{{ include.collection }}">
-        {% assign featured_items = site[include.collection] | where: "featured", true %}
+        {% assign featured_items = site[include.collection] | where: "featured", true | sort: "modified" | reverse %}
         {% for item in featured_items limit: 12 %}
           <div class="dzs-carousel-card">
             <a href="{{ item.url | relative_url }}">

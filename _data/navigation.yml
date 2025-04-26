@@ -19,9 +19,12 @@ main:
   - title: "Charts"
     url: /charts
 
+  - title: "GSX"
+    url: /community/gsx-pro-profiles/
+
   - title: "Blog"
     url: /blog/
-    
+
   - title: "About"
     url: /about/
 
