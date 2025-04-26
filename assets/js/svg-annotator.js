@@ -361,3 +361,17 @@ if (!document.getElementById('arrowhead')) {
   document.body.appendChild(defs);
 }
 
+document.addEventListener('DOMContentLoaded', function () {
+  const toggleToolbarBtn = document.getElementById('toggleToolbarBtn');
+  const annotationToolbar = document.getElementById('annotationToolbar');
+
+  if (toggleToolbarBtn && annotationToolbar) {
+    toggleToolbarBtn.addEventListener('click', function () {
+      if (annotationToolbar.style.display === 'none' || annotationToolbar.style.display === '') {
+        annotationToolbar.style.display = 'flex';
+      } else {
+        annotationToolbar.style.display = 'none';
+      }
+    });
+  }
+});

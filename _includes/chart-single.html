@@ -65,26 +65,30 @@ The navigation charts offered on this page are exclusively for flight simulation
   }
 </style>
 
-<div class="dropdown" style="margin-bottom: 1rem;">
-  <strong style="font-size: 1.0rem; margin-right: 10px;">Navigation Charts:</strong>
+<div class="dropdown" style="margin-bottom: 1rem; position: relative;">
+  <div style="display: flex; align-items: center; justify-content: space-between; width: 100%;">
+    <strong style="font-size: 1.0rem;">Navigation Charts</strong>
 
-  <button id="chartDropdownBtn"
-          onclick="toggleDropdownMenu()"
-          style="
-            background-color: #f8f9fa;
-            border: 1px solid #ced4da;
-            border-radius: 6px;
-            padding: 8px 14px;
-            font-size: 1rem;
-            cursor: pointer;
-            box-shadow: 0 1px 2px rgba(0,0,0,0.1);
-          ">
-    Select Chart ▾
-  </button>
+    <button id="chartDropdownBtn"
+            onclick="toggleDropdownMenu()"
+            style="
+              background-color: #f8f9fa;
+              border: 1px solid #ced4da;
+              border-radius: 6px;
+              padding: 8px 14px;
+              font-size: 1rem;
+              cursor: pointer;
+              box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+            ">
+      <strong>Select Chart ▾</strong>
+    </button>
+  </div>
 
   <ul id="chartDropdownMenu" class="dropdown-menu show" style="
     display: none;
     position: absolute;
+    top: calc(100% + 4px);
+    right: 0; /* important: open under the button */
     z-index: 1000;
     list-style: none;
     padding: 0;
@@ -108,6 +112,7 @@ The navigation charts offered on this page are exclusively for flight simulation
     {% endfor %}
   </ul>
 </div>
+
 
 
 
@@ -139,12 +144,28 @@ The navigation charts offered on this page are exclusively for flight simulation
   </div>
 </div>
 
-<!-- Fullscreen viewer -->
 <div id="fullscreenBackdrop" style="display:none;position:fixed;top:0;left:0;width:100vw;height:100vh;background:rgba(0,0,0,0.6);z-index:9998;"></div>
 <div id="fullscreenViewer" style="display:none;position:fixed;top:50%;left:50%;transform:translate(-50%, -50%);width:80vw;height:80vh;background:white;z-index:9999;padding:20px;box-sizing:border-box;box-shadow:0 0 20px rgba(0,0,0,0.3);border-radius:8px;">
+
   <button id="closeFullscreenBtn" style="position:absolute;top:10px;right:30px;padding:8px 10px;border-radius:12px;background:white;box-shadow:0 2px 8px rgba(0,0,0,0.15);border:none;font-size:16px;cursor:pointer;">✖</button>
   <button id="toggleToolbarBtn" title="Toggle annotation tools" style="position:absolute;top:10px;left:10px;padding:6px 10px;border-radius:10px;background:white;box-shadow:0 1px 4px rgba(0,0,0,0.2);border:none;font-size:14px;z-index:10001;cursor:pointer;">🛠️</button>
-  <div id="annotationToolbar" style="position:absolute;top:60px;left:10px;width:48px;background:rgba(255,255,255,0.95);border:1px solid #ccc;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,0.2);display:flex;flex-direction:column;align-items:center;gap:6px;padding:6px;z-index:10000;">
+  <div id="annotationToolbar" style="
+  display: none; /* <<< this is the key */
+  position: absolute;
+  top: 60px;
+  left: 10px;
+  width: 48px;
+  background: rgba(255,255,255,0.95);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 6px;
+  z-index: 10000;
+">
+
     <button onclick="undoAnnotation()" title="Undo"><i class="fas fa-undo"></i></button>
     <button onclick="redoAnnotation()" title="Redo"><i class="fas fa-redo"></i></button>  
     <button class="toggle-btn" data-mode="line" title="Line"><i class="fas fa-slash"></i></button>
