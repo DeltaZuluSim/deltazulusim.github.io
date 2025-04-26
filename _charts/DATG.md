@@ -30,7 +30,7 @@ svg_charts:
     - ref: "16-1"
       file: "DATG4.txt"
       title: "NDB RWY 08 (CAT A & B)"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

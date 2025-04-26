@@ -27,7 +27,7 @@ svg_charts:
     - ref: "13-2"
       file: "DAOY4.txt"
       title: "VOR DME RWY 04 (CAT A & B)"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

@@ -66,7 +66,7 @@ svg_charts:
     - ref: "13-6"
       file: "DAOO15.txt"
       title: "VOR DME RWY 25R"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

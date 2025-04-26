@@ -33,7 +33,7 @@ svg_charts:
     - ref: "13-2"
       file: "DAUK5.txt"
       title: "VOR RWY 01"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

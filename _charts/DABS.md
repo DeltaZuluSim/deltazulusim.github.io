@@ -31,7 +31,7 @@ svg_charts:
       file: "DABS4.txt"
       title: "VOR RWY 11 & 12"
 
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

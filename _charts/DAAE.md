@@ -43,7 +43,7 @@ svg_charts:
       file: "DAAE8.txt"
       title: "NDB RWY 26"
 
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

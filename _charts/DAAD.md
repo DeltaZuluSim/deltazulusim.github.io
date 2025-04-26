@@ -8,6 +8,8 @@ classes: wide
 comments: true
 header:
   teaser: /content/images/charts/thumbnail.webp
+
+sidebar-map: true
 sidebar:
   title: "All charts"
   nav: charts

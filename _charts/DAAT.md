@@ -37,7 +37,7 @@ svg_charts:
       file: "DAAT6.txt"
       title: "VOR RWY 08"
 
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

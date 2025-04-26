@@ -28,7 +28,7 @@ svg_charts:
       file: "DAUE3.txt"
       title: "VOR RWY 36"
 
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

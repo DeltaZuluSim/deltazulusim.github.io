@@ -34,7 +34,7 @@ svg_charts:
       file: "DAAS5.txt"
       title: "VOR RWY 27"
 
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

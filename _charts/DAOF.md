@@ -34,7 +34,7 @@ svg_charts:
       file: "DAOF5.txt"
       title: "NDB RWY 26L"
 
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

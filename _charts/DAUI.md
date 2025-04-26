@@ -30,7 +30,7 @@ svg_charts:
     - ref: "13-2"
       file: "DAUI4.txt"
       title: "VOR RWY 05"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

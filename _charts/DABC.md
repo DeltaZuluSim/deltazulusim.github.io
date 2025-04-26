@@ -42,7 +42,7 @@ svg_charts:
     - ref: "13-2"
       file: "DABC8.txt"
       title: "VOR DME RWY 34"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

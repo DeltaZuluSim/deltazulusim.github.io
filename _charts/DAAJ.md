@@ -36,7 +36,7 @@ svg_charts:
     - ref: "13-2"
       file: "DAAJ6.txt"
       title: "VOR DME RWY 12"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

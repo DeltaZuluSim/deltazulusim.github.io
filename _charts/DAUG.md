@@ -33,7 +33,7 @@ svg_charts:
     - ref: "16-1"
       file: "DAUG5.txt"
       title: "NDB RWY 36"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

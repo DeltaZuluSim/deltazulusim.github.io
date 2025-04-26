@@ -46,7 +46,7 @@ svg_charts:
       file: "DABB9.txt"
       title: "LCTR RWY 18"
 
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

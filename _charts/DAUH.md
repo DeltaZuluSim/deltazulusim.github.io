@@ -45,7 +45,7 @@ svg_charts:
     - ref: "13-2"
       file: "DAUH9.txt"
       title: "VOR DME RWY 36"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

@@ -27,7 +27,7 @@ svg_charts:
     - ref: "13-1"
       file: "DAOB3.txt"
       title: "VOR DME OR VOR RWY 26"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

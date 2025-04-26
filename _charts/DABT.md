@@ -34,7 +34,7 @@ svg_charts:
       file: "DABT5.txt"
       title: "VOR DME RWY 23"
 
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

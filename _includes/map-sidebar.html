@@ -1,0 +1,25 @@
+{% assign airport = nil %}
+{% if include.icao %}
+  {% assign airport = site.data.sceneries | where: "name", include.icao | first %}
+{% endif %}
+
+{% if include.coordinates %}
+  {% assign centerCoords = include.coordinates %}
+{% elsif airport %}
+  {% assign centerCoords = "[#{airport.lat}, #{airport.lng}]" %}
+{% else %}
+  {% assign centerCoords = "[33.53, -0.24]" %}
+{% endif %}
+
+{% if include.military == false %}
+  {% assign isMilitary = false %}
+{% else %}
+  {% assign isMilitary = true %}
+{% endif %}
+
+<div id="map" style="height: 200px;"
+     data-center-coords='{{ centerCoords }}'
+     data-is-military='{{ isMilitary }}'>
+</div>
+
+<script src="/assets/js/map-sidebar.js"></script>

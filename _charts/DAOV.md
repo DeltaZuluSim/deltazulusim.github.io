@@ -27,7 +27,7 @@ svg_charts:
     - ref: "16-1"
       file: "DAOV3.txt"
       title: "NDB RWY 08"
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}

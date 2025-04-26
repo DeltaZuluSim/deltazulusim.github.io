@@ -37,7 +37,7 @@ svg_charts:
       file: "DAAV6.txt"
       title: "VOR RWY 17 (CAT C & D)"
 
-
+sidebar-map: true
 ---
 
 {% include chart-single.html %}
