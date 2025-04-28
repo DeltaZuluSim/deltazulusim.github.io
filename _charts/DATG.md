@@ -15,9 +15,6 @@ sidebar:
 svg_charts:
   icao: "DATG"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DATG1.txt"
       title: "AIRPORT, AIRPORT INFO, TAKE-OFF MNMS"
@@ -30,6 +27,9 @@ svg_charts:
     - ref: "16-1"
       file: "DATG4.txt"
       title: "NDB RWY 08 (CAT A & B)"
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
 sidebar-map: true
 ---
 

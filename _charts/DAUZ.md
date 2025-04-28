@@ -15,9 +15,6 @@ sidebar:
 svg_charts:
   icao: "DAUZ"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DAUZ1.txt"
       title: "AIRPORT, PARKING, AIRPORT INFO, TAKE-OFF MNMS"
@@ -33,6 +30,10 @@ svg_charts:
     - ref: "16-1"
       file: "DAUZ5.txt"
       title: "NDB RWY 23"
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
+      
 sidebar-map: true
 ---
 

@@ -15,9 +15,6 @@ sidebar:
 svg_charts:
   icao: "DABC"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DABC1.txt"
       title: "AIRPORT, PARKING, AIRPORT INFO, TAKE-OFF MNMS"
@@ -42,6 +39,9 @@ svg_charts:
     - ref: "13-2"
       file: "DABC8.txt"
       title: "VOR DME RWY 34"
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
 sidebar-map: true
 ---
 

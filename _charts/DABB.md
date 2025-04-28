@@ -15,9 +15,6 @@ sidebar:
 svg_charts:
   icao: "DABB"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DABB1.txt"
       title: "AIRPORT, AIRPORT INFO, TAKE-OFF MNMS"
@@ -45,7 +42,10 @@ svg_charts:
     - ref: "16-1"
       file: "DABB9.txt"
       title: "LCTR RWY 18"
-
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
+      
 sidebar-map: true
 ---
 

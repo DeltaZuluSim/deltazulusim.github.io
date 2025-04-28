@@ -15,9 +15,6 @@ sidebar:
 svg_charts:
   icao: "DAAE"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DAAE1.txt"
       title: "AIRPORT INFO, TAKE-OFF MNMS"
@@ -42,7 +39,10 @@ svg_charts:
     - ref: "16-1"
       file: "DAAE8.txt"
       title: "NDB RWY 26"
-
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
+      
 sidebar-map: true
 ---
 

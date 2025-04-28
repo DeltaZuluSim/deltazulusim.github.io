@@ -15,9 +15,6 @@ sidebar:
 svg_charts:
   icao: "DAUK"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DAUK1.txt"
       title: "AIRPORT, AIRPORT INFO, TAKE-OFF MNMS"
@@ -33,6 +30,10 @@ svg_charts:
     - ref: "13-2"
       file: "DAUK5.txt"
       title: "VOR RWY 01"
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
+      
 sidebar-map: true
 ---
 

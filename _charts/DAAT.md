@@ -15,9 +15,6 @@ sidebar:
 svg_charts:
   icao: "DAAT"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DAAT1.txt"
       title: "AIRPORT, PARKING, AIRPORT INFO, TAKE-OFF MNMS"
@@ -36,7 +33,10 @@ svg_charts:
     - ref: "13-2"
       file: "DAAT6.txt"
       title: "VOR RWY 08"
-
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
+      
 sidebar-map: true
 ---
 

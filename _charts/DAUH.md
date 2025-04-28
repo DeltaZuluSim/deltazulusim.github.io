@@ -15,9 +15,6 @@ sidebar:
 svg_charts:
   icao: "DAUH"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-2"
       file: "DAUH1.txt"
       title: "ARRS"
@@ -45,6 +42,9 @@ svg_charts:
     - ref: "13-2"
       file: "DAUH9.txt"
       title: "VOR DME RWY 36"
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
 sidebar-map: true
 ---
 

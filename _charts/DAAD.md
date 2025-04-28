@@ -17,9 +17,6 @@ sidebar:
 svg_charts:
   icao: "DAAD"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DAAD1.txt"
       title: "AIRPORT INFO, TAKEOFF MNMS"
@@ -32,7 +29,9 @@ svg_charts:
     - ref: "16-1"
       file: "DAAD4.txt"
       title: "NDB RWY22"
-
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
 ---
 
 {% include chart-single.html %}

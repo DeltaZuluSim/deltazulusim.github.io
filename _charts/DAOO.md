@@ -15,12 +15,6 @@ sidebar:
 svg_charts:
   icao: "DAOO"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts (routing)"
-    - ref: "VAC2"
-      file: "VAC2_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-2"
       file: "DAOO1.txt"
       title: "ARRS"
@@ -66,6 +60,13 @@ svg_charts:
     - ref: "13-6"
       file: "DAOO15.txt"
       title: "VOR DME RWY 25R"
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts (routing)"
+    - ref: "VAC2"
+      file: "VAC2_page1.txt"
+      title: "Visual Approach Charts"
+      
 sidebar-map: true
 ---
 

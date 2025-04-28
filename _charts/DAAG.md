@@ -16,12 +16,6 @@ sidebar:
 svg_charts:
   icao: "DAAG"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
-    - ref: "VAC2"
-      file: "VAC2_page1.txt"
-      title: "Visual Approach Charts (Helicopter)"
     - ref: "10-1R"
       file: "DAAG1.txt"
       title: "RADAR MNM ALTS"
@@ -91,7 +85,13 @@ svg_charts:
     - ref: "13-3"
       file: "DAAG23.txt"
       title: "VOR RWY 27"
-
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
+    - ref: "VAC2"
+      file: "VAC2_page1.txt"
+      title: "Visual Approach Charts (Helicopter)"
+      
 sidebar-map: true
 ---
 

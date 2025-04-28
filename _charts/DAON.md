@@ -15,9 +15,6 @@ sidebar:
 svg_charts:
   icao: "DAON"
   files:
-    - ref: "VAC1"
-      file: "VAC1_page1.txt"
-      title: "Visual Approach Charts"
     - ref: "10-9"
       file: "DAON1.txt"
       title: "AIRPORT, AIRPORT INFO, TAKE-OFF MNMS"
@@ -33,6 +30,9 @@ svg_charts:
     - ref: "13-1"
       file: "DAON5.txt"
       title: "VOR DME RWY 25"
+    - ref: "VAC1"
+      file: "VAC1_page1.txt"
+      title: "Visual Approach Charts"
 sidebar-map: true
 ---
 
