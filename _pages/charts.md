@@ -1,5 +1,5 @@
 ---
-title: Charts
+title: "Algeria Navigation Charts"
 layout: dzs-collection
 permalink: /charts/
 collection: charts

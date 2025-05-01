@@ -1,5 +1,5 @@
 ---
-title:  "GSX Pro profiles"
+title:  "Algerian Airports GSX Pro profiles by community"
 excerpt: "Enhance your ground services with GSX profiles tailored for Algerian airports! Community-made for realism."
 modified: 2025-04-26T08:03:49+01:00
 toc: true

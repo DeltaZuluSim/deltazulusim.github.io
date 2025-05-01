@@ -1,5 +1,5 @@
 ---
-title: List of liveries by DZS
+title: "Algerian MSFS Liveries"
 layout: dzs-collection
 permalink: /liveries/
 collection: liveries

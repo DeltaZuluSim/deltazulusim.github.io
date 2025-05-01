@@ -1,5 +1,5 @@
 ---
-title: MSFS Sceneries by DZS
+title: "Algerian MSFS Sceneries"
 layout: dzs-collection
 permalink: /sceneries/
 collection: sceneries

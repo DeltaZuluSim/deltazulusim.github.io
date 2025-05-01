@@ -1,5 +1,5 @@
 ---
-title:  "Algerian City Sceneries"
+title:  "Algerian City Sceneries by community"
 excerpt: "Explore detailed Algerian citites & landscapes crafted by the community. Fly immersive & realistic sceneries!"
 modified: 2025-04-20T02:00:00+01:00
 toc: true

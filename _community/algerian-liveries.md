@@ -1,5 +1,5 @@
 ---
-title:  "Algerian Liveries"
+title:  "Algerian Liveries by community"
 excerpt: "Fly with pride! Discover stunning Algerian liveries made by the community for MSFS. Bring your flights to life!"
 modified: 2025-04-20T12:00:00+01:00
 toc_sticky: true

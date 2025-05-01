@@ -1,5 +1,5 @@
 ---
-title: Mods
+title: "Algerian MSFS Mods"
 layout: dzs-collection
 permalink: /mods/
 collection: mods
