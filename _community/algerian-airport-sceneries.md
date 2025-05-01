@@ -14,6 +14,16 @@ header:
 
 resources:
 
+  - icao: "DAAG"
+    airport_name: "Algiers Houari Boumediene"
+    notice: "DAAG Taxiways Improvements and ground markings"
+    author: "mrbadis"
+    author_url : "https://flightsim.to/profile/mrbadis"
+    image_url: "https://cdn.flightsim.to/images/24/daag-taxiways-improvements-and-ground-markings-FJxWN.jpg?width=1400"
+    download_url: "https://deltazulusim.short.gy/sceneries/daag"
+    MSFS2020: true
+    MSFS2024: false
+
   - icao: "DAOO"
     airport_name: "Oran Ahmed Ben Bella"
     author: "mokhtarbo33"

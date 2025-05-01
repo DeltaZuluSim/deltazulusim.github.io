@@ -1,7 +1,16 @@
 civilian:
+
+  - name: "DAAG"
+    type: "Airport"
+    lat: 36.698286
+    lng: 3.206823
+    image: "https://cdn.flightsim.to/images/24/daag-taxiways-improvements-and-ground-markings-FJxWN.jpg?width=1400"
+    link: "/community/algerian-airport-sceneries/#algiers-houari-boumediene-daag"
+    description: "Algiers Houari Boumediene airport"
+
   - name: "DAOO"
     type: "Airport"
-    lat: 35.62
+    lat: 35.62 
     lng: -0.61
     image: "https://cdn.flightsim.to/images/26/daoo-aroport-international-ahmed-ben-bella-oran-57256-1720270907-q7GCl.jpg?width=1400"
     link: "/community/algerian-airport-sceneries/#oran-ahmed-ben-bella-daoo"
