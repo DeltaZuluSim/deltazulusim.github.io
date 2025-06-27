@@ -27,7 +27,7 @@ resources:
     author: "Algerian WINGS Sceneries"
     author_url : "https://www.facebook.com/AlgerianWingsSceneries"
     image_url: "/content/images/community/daak.webp"
-    download_url: "https://deltazulusim.short.gy/sceneries/daan"
+    download_url: "https://deltazulusim.short.gy/sceneries/daak"
     MSFS2020: true
     MSFS2024: false
 
