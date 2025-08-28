@@ -173,6 +173,14 @@ civilian:
     link: "/community/algerian-city-sceneries/#constantine-city"
     description: "Constantine City"
 
+  - name: "DAOB"
+    type: "Airport"
+    lat: 35.345374
+    lng: 1.470125
+    image: "https://cdn.flightsim.to/images/25/daob-abdelhafid-boussouf-bou-chekif-tiaret-57256-1682322604-sc0ui.jpg?width=1400"
+    link: "/community/algerian-airport-sceneries/#tiaret-daob"
+    description: "Tiaret Airport"
+
 military:
   - name: "DAAN"
     type: "Air base"
@@ -237,4 +245,3 @@ military:
     image: "/content/images/community/daab.webp"
     link: "/community/algerian-airport-sceneries/#blida-daab"
     description: "Blida Airport"
-
