@@ -22,7 +22,7 @@ sidebar:
     image_alt: "CowanSim H125 (AS350)"
     text: "CowanSim H125 (AS350)"
   - title: "Version"
-    text: "1.0.0"
+    text: "1.1.0"
   - title: "MSFS 2020"
     text: "Yes"
   - title: "MSFS 2024"
