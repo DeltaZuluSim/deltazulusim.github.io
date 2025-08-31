@@ -65,7 +65,11 @@ changelog:
       - "Initial release: Algerian Gendarmerie Nationale (EG-72) livery."
       - "Accurate green/white color scheme, national emblem, and Arabic markings."
       - "Optimized PBR textures for day and night rendering."
-
+  - version: "1.1.0"
+    version_date: "2025-09-01"
+    download_url: "https://deltazulusim.short.gy/liveries/dzs-cowanSim-h125-kjd/v1.1.0"
+    changes:
+      - "Accurate colors scheme"
 ---
 
 Algerian **Gendarmerie Nationale** (EG-72) livery for the **AS350/H125 CowanSim** in Microsoft Flight Simulator 2020.  
