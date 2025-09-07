@@ -7,6 +7,9 @@ date: 2025-03-18T00:00:00+01:00
 modified: 2025-03-19T20:00:00+01:00
 comments: true
 header:
+  video:
+    id: bRVRPYDjJhY
+    provider: youtube
   overlay_color: "#000"
   overlay_filter: "0.5"
   overlay_image: /content/images/liveries/indiafoxecho-m346-yak130/01.webp
@@ -92,7 +95,13 @@ These liveries accurately represent the desert camouflage used by the Algerian A
 - Perfect for military roleplay, airbase operations, and tactical missions
 - Compatible with MSFS 2020 and MSFS 2024
 
-## Gallery
+
+## Showcase Video 
+
+{% include dzs-youtube.html id="bRVRPYDjJhY" title="Yak-130 Algerian Livery" ratio="16:9" %}
+
+## Gallery 
+
 {% include gallery %}
 
 ## Installation Instructions
