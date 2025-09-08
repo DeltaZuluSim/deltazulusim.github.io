@@ -1,0 +1,363 @@
+<!-- _includes/companies-browser.html -->
+<div class="dzs-companies" data-total="{{ site.data.companies | size }}">
+  <!-- Controls -->
+  <div class="dzs-controls" role="search">
+    <label class="dzs-visuallyhidden" for="dzs-q">Search</label>
+    <input id="dzs-q" type="search" placeholder="Search name, callsign, ICAO…" aria-label="Search companies">
+
+    <label class="dzs-visuallyhidden" for="dzs-network">Network</label>
+    <select id="dzs-network" aria-label="Filter by network">
+      <option value="">All networks</option>
+      <option value="IVAO">IVAO</option>
+      <option value="VATSIM">VATSIM</option>
+      <option value="OFFLINE">OFFLINE</option>
+    </select>
+
+    <label class="dzs-visuallyhidden" for="dzs-ops">Operations</label>
+    <select id="dzs-ops" aria-label="Filter by ops">
+      <option value="">All ops</option>
+      <option value="civil">Civil</option>
+      <option value="military">Military</option>
+      <option value="helicopter">Helicopter</option>
+      <option value="ga">GA</option>
+    </select>
+
+    <label class="dzs-visuallyhidden" for="dzs-hub">Hub</label>
+    <input id="dzs-hub" type="search" placeholder="Filter by hub (e.g., DAUL)" aria-label="Filter by hub">
+
+    <span id="dzs-count" class="dzs-count"></span>
+  </div>
+
+  <!-- Grid -->
+  <div id="dzs-grid" class="dzs-grid" role="list">
+    {% assign items = site.data.companies | sort: 'title' %}
+    {% for c in items %}
+      {% capture data_json %}
+      {
+        "id": {{ c.id | jsonify }},
+        "title": {{ c.title | jsonify }},
+        "callsign": {{ c.callsign | jsonify }},
+        "icao": {{ c.icao | jsonify }},
+        "network": {{ c.network | default: "OFFLINE" | jsonify }},
+        "ops": {{ c.ops | jsonify }},
+        "hubs": {{ c.hubs | jsonify }},
+        "founded": {{ c.founded | jsonify }},
+        "status": {{ c.status | jsonify }},
+        "recruiting": {{ c.recruiting | jsonify }},
+        "director": {{ c.director | jsonify }},
+        "website": {{ c.website | jsonify }},
+        "tracker": {{ c.tracker | jsonify }},
+        "discord": {{ c.discord | jsonify }},
+        "logo": {{ c.logo | jsonify }},
+        "banner": {{ c.banner | jsonify }},
+        "fleet": {{ c.fleet | jsonify }},
+        "summary": {{ c.summary | strip_html | jsonify }}
+      }
+      {% endcapture %}
+
+      <article class="dzs-card" role="listitem"
+               data-company='{{ data_json | strip_newlines | replace: "'", "&#39;" }}'>
+
+        <!-- Media -->
+        <div class="dzs-media">
+          {% if c.logo %}
+            <img loading="lazy" src="{{ c.logo }}" alt="{{ c.title }} logo">
+          {% else %}
+            <div class="dzs-placeholder">{{ c.callsign | default: c.title | truncate: 10 }}</div>
+          {% endif %}
+        </div>
+
+        <!-- Body -->
+        <div class="dzs-body">
+          <h3 class="dzs-title">{{ c.title }}</h3>
+
+          <div class="dzs-row dzs-calls">
+            {% if c.callsign %}<span>Callsign: <strong>{{ c.callsign }}</strong></span>{% endif %}
+            {% if c.icao %}<span>ICAO: <strong>{{ c.icao }}</strong></span>{% endif %}
+          </div>
+
+          {% if c.summary %}
+            <p class="dzs-summary">{{ c.summary }}</p>
+          {% endif %}
+
+          <div class="dzs-badges">
+            {% if c.network %}<span class="dzs-badge">{{ c.network }}</span>{% endif %}
+            {% if c.recruiting %}<span class="dzs-badge dzs-badge-accent">recruiting</span>{% endif %}
+            {% if c.status %}
+              <span class="dzs-badge dzs-status-{{ c.status | downcase }}">{{ c.status }}</span>
+            {% endif %}
+            {% for o in c.ops %}<span class="dzs-badge">{{ o }}</span>{% endfor %}
+            {% for h in c.hubs %}<span class="dzs-badge">{{ h }}</span>{% endfor %}
+          </div>
+        </div>
+
+        <!-- Actions -->
+        <div class="dzs-actions">
+          <button class="dzs-btn dzs-btn-primary" data-action="details">Details</button>
+          {% if c.website %}<a class="dzs-btn" href="{{ c.website }}" target="_blank" rel="noopener">Website</a>{% endif %}
+          {% if c.tracker %}<a class="dzs-btn" href="{{ c.tracker }}" target="_blank" rel="noopener">Tracker</a>{% endif %}
+          {% if c.discord %}<a class="dzs-btn" href="{{ c.discord }}" target="_blank" rel="noopener">Discord</a>{% endif %}
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  <!-- Modal -->
+  <dialog id="dzs-modal" aria-labelledby="dzs-title" aria-describedby="dzs-summary">
+    <article class="dzs-modal-card">
+      <button id="dzs-close" aria-label="Close">✕</button>
+      <div class="dzs-modal-media"><img id="dzs-banner" alt=""></div>
+      <h3 id="dzs-title"></h3>
+      <p id="dzs-summary"></p>
+
+      <div id="dzs-fields" class="dzs-fields"></div>
+
+      <div id="dzs-links" class="dzs-actions dzs-actions-wrap"></div>
+    </article>
+  </dialog>
+
+  <!-- Styles (namespaced, no external libs) -->
+  <style>
+    /* === DZS Companies – Full CSS (light theme) === */
+:root{
+  --dzs-bg: #f9fafb;
+  --dzs-card: #ffffff;
+  --dzs-border: #e5e7eb;
+  --dzs-text: #111827;
+  --dzs-muted: #6b7280;
+  --dzs-primary: #111827;
+  --dzs-accent: #2563eb;
+  --dzs-good: #16a34a;
+  --dzs-bad: #dc2626;
+  --dzs-radius: 14px;
+  --dzs-gap: 1rem;
+  --dzs-shadow: 0 4px 12px rgba(0,0,0,.08);
+}
+
+/* Container */
+.dzs-companies{ margin: 1rem 0 2.2rem; }
+
+/* ---------- Controls (modern pill style) ---------- */
+.dzs-controls{
+  display:grid; gap:var(--dzs-gap);
+  grid-template-columns: 1.2fr 0.8fr 0.8fr 1fr auto;
+  align-items:center; margin-bottom: 1.2rem;
+}
+.dzs-controls input,
+.dzs-controls select{
+  -webkit-appearance:none; -moz-appearance:none; appearance:none;
+  background:#fff; color:var(--dzs-text);
+  border:1px solid var(--dzs-border);
+  border-radius:999px;
+  height:44px; line-height:44px;
+  padding:0 2.75rem 0 1rem; /* room for select chevron */
+  font-size:.95rem; box-shadow:var(--dzs-shadow);
+  transition:border-color .15s ease, box-shadow .15s ease, background .15s ease;
+}
+.dzs-controls input{ padding:0 1rem; } /* search has no arrow */
+.dzs-controls input::placeholder{ color:var(--dzs-muted); }
+/* custom chevron for selects (inline SVG) */
+.dzs-controls select{
+  background-image:
+    url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><polyline points='6 9 12 15 18 9'/></svg>");
+  background-repeat:no-repeat; background-position:right 14px center; background-size:16px 16px;
+}
+.dzs-controls input:focus,
+.dzs-controls select:focus{
+  border-color:var(--dzs-accent);
+  outline:none;
+  box-shadow:0 0 0 3px color-mix(in srgb, var(--dzs-accent) 18%, transparent);
+}
+.dzs-count{ color: var(--dzs-muted); font-weight:600; }
+@media (max-width: 860px){
+  .dzs-controls{ grid-template-columns:1fr 1fr; }
+  .dzs-count{ justify-self:start; }
+}
+
+/* ---------- Grid & Card ---------- */
+.dzs-grid{
+  display:grid; gap:1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+.dzs-card{
+  display:flex; flex-direction:column;
+  background: var(--dzs-card);
+  border:1px solid var(--dzs-border);
+  border-radius: 16px;
+  box-shadow: var(--dzs-shadow);
+  transition: transform .15s ease, box-shadow .15s ease;
+  overflow:hidden;
+}
+.dzs-card:hover{ transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,.12); }
+
+/* Media header */
+.dzs-media{
+  height: 90px; background: var(--dzs-bg);
+  display:flex; align-items:center; justify-content:center;
+  border-bottom:1px solid var(--dzs-border);
+}
+.dzs-media img{ max-height: 70%; max-width: 90%; object-fit: contain; }
+.dzs-placeholder{ color: var(--dzs-muted); font-weight:700; }
+
+/* Body */
+.dzs-body{ padding: .9rem 1rem; display:flex; flex-direction:column; gap:.4rem; }
+.dzs-title{ margin:0; font-size:1.1rem; font-weight:700; color: var(--dzs-text); }
+.dzs-row{ font-size:.9rem; color: var(--dzs-muted); display:flex; gap:.8rem; flex-wrap:wrap; }
+.dzs-row strong{ color: var(--dzs-text); }
+.dzs-summary{ color: var(--dzs-text); font-size:.95rem; }
+
+/* Badges */
+.dzs-badges{ display:flex; gap:.4rem; flex-wrap:wrap; margin-top:.3rem; }
+.dzs-badge{
+  padding:.22rem .6rem; border:1px solid var(--dzs-border);
+  border-radius: 999px; font-size:.78rem;
+  background:#f3f4f6; color: var(--dzs-text);
+}
+.dzs-badge-accent{ background: var(--dzs-accent); color:#fff; border-color: transparent; }
+.dzs-status-active{ background: var(--dzs-good); color:#fff; border:none; }
+.dzs-status-inactive{ background: var(--dzs-bad); color:#fff; border:none; }
+
+/* ---------- Actions (buttons) ---------- */
+.dzs-actions{
+  display:flex; flex-wrap:wrap; gap:.5rem;       /* wrap fixes overflow */
+  padding:.8rem 1rem;
+  border-top:1px solid var(--dzs-border);
+  background:#f9fafb;
+  box-sizing:border-box;
+}
+.dzs-btn{
+  flex:0 1 auto; white-space:nowrap;
+  padding:.55rem .85rem; border-radius: 12px;
+  border:1px solid var(--dzs-border);
+  background:#fff; color: var(--dzs-text);
+  font-size:.85rem; font-weight:600;
+  cursor:pointer; text-decoration:none;
+  transition: border-color .15s ease, background .15s ease;
+}
+.dzs-btn:hover{ border-color: var(--dzs-accent); background:#f3f4f6; }
+.dzs-btn-primary{ background: var(--dzs-primary); color:#fff; border:none; }
+.dzs-btn-primary:hover{ background:#000; }
+
+/* ---------- Modal ---------- */
+dialog#dzs-modal{ border:none; border-radius: 16px; padding:0; width:min(760px, 96%); }
+dialog::backdrop{ background: rgba(0,0,0,.45); }
+.dzs-modal-card{ position:relative; display:flex; flex-direction:column; gap:.8rem; background:#fff; color: var(--dzs-text); border-radius: 16px;}
+#dzs-close{ position:absolute; right:.7rem; top:.6rem; border:none; background:transparent; font-size:1.2rem; color: var(--dzs-muted); cursor:pointer; }
+.dzs-modal-media{ background:#000; height: 220px; display:flex; align-items:center; justify-content:center; }
+.dzs-modal-media img{ width:100%; height:100%; object-fit:cover; }
+#dzs-title, #dzs-summary{ padding: 0 1rem; margin:.4rem 0; }
+.dzs-fields{
+  padding: 0 1rem 1rem;
+  display:grid; gap:.6rem; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+.dzs-fields div{ background:#f9fafb; border:1px solid var(--dzs-border); border-radius:12px; padding:.55rem .7rem; }
+.dzs-fields strong{ display:block; font-size:.75rem; color: var(--dzs-muted); margin-bottom:.2rem; }
+
+/* A11Y helpers */
+.dzs-visuallyhidden{ position:absolute !important; height:1px; width:1px; overflow:hidden; clip:rect(1px,1px,1px,1px); white-space:nowrap; }
+  </style>
+
+  <!-- Script -->
+  <script>
+    (function(){
+      const grid = document.getElementById('dzs-grid');
+      const q = document.getElementById('dzs-q');
+      const net = document.getElementById('dzs-network');
+      const ops = document.getElementById('dzs-ops');
+      const hub = document.getElementById('dzs-hub');
+      const count = document.getElementById('dzs-count');
+      const total = parseInt(document.querySelector('.dzs-companies').dataset.total || '0', 10);
+
+      const modal = document.getElementById('dzs-modal');
+      const closeBtn = document.getElementById('dzs-close');
+
+      function norm(s){ return (s||'').toString().toLowerCase(); }
+
+      function match(card){
+        const d = JSON.parse(card.dataset.company || '{}');
+        const QQ = norm(q.value), H = norm(hub.value);
+        if(QQ){
+          const hay = [d.title, d.callsign, d.icao].map(norm).join(' ');
+          if(!hay.includes(QQ)) return false;
+        }
+        if(net.value && d.network !== net.value) return false;
+        if(ops.value && !(Array.isArray(d.ops) && d.ops.includes(ops.value))) return false;
+        if(H){
+          const hubs = (d.hubs||[]).map(norm).join(' ');
+          if(!hubs.includes(H)) return false;
+        }
+        return true;
+      }
+
+      function render(){
+        const cards = Array.from(grid.children);
+        let visible = 0;
+        cards.forEach(c => {
+          const ok = match(c);
+          c.style.display = ok ? '' : 'none';
+          if(ok) visible++;
+        });
+        count.textContent = `${visible} / ${total}`;
+      }
+
+      function openDetails(card){
+        const d = JSON.parse(card.dataset.company || '{}');
+        // Banner/Logo
+        const banner = modal.querySelector('#dzs-banner');
+        banner.src = d.banner || d.logo || '';
+        banner.alt = d.title ? `${d.title} banner` : 'banner';
+
+        // Title & summary
+        modal.querySelector('#dzs-title').textContent = d.title || '';
+        modal.querySelector('#dzs-summary').textContent = d.summary || '';
+
+        // Fields
+        const fields = [];
+        if(d.callsign) fields.push(`<div><strong>Callsign</strong>${d.callsign}</div>`);
+        if(d.icao) fields.push(`<div><strong>ICAO</strong>${d.icao}</div>`);
+        if(d.network) fields.push(`<div><strong>Network</strong>${d.network}</div>`);
+        if(d.status) fields.push(`<div><strong>Status</strong>${d.status}</div>`);
+        if(d.recruiting) fields.push(`<div><strong>Recruiting</strong>Yes</div>`);
+        if(d.director) fields.push(`<div><strong>Director</strong>${d.director}</div>`);
+        if(d.founded) fields.push(`<div><strong>Founded</strong>${d.founded}</div>`);
+        if(d.ops && d.ops.length) fields.push(`<div style="grid-column:1/-1"><strong>Ops</strong>${d.ops.join(', ')}</div>`);
+        if(d.hubs && d.hubs.length) fields.push(`<div style="grid-column:1/-1"><strong>Hubs</strong>${d.hubs.join(', ')}</div>`);
+        if(d.fleet && d.fleet.length) fields.push(`<div style="grid-column:1/-1"><strong>Fleet</strong>${d.fleet.join(', ')}</div>`);
+        document.getElementById('dzs-fields').innerHTML = fields.join('');
+
+        // Links
+        const links = [];
+        if(d.website) links.push(`<a class="dzs-btn" href="${d.website}" target="_blank" rel="noopener">Website</a>`);
+        if(d.tracker) links.push(`<a class="dzs-btn" href="${d.tracker}" target="_blank" rel="noopener">Tracker</a>`);
+        if(d.discord) links.push(`<a class="dzs-btn" href="${d.discord}" target="_blank" rel="noopener">Discord</a>`);
+        document.getElementById('dzs-links').innerHTML = links.join('');
+
+        if(typeof modal.showModal === 'function') modal.showModal();
+        else modal.setAttribute('open','true');
+      }
+
+      grid.addEventListener('click', e=>{
+        const btn = e.target.closest('[data-action="details"]');
+        if(!btn) return;
+        const card = e.target.closest('.dzs-card');
+        if(card) openDetails(card);
+      });
+
+      [q, net, ops, hub].forEach(el => el.addEventListener('input', render));
+      closeBtn.addEventListener('click', ()=> modal.close ? modal.close() : modal.removeAttribute('open'));
+      // Close modal when clicking outside the modal content
+modal.addEventListener('click', (e) => {
+  const rect = modal.querySelector('.dzs-modal-card').getBoundingClientRect();
+  const inside =
+    e.clientX >= rect.left &&
+    e.clientX <= rect.right &&
+    e.clientY >= rect.top &&
+    e.clientY <= rect.bottom;
+  if (!inside) {
+    modal.close ? modal.close() : modal.removeAttribute('open');
+  }
+});
+      render();
+    })();
+  </script>
+</div>

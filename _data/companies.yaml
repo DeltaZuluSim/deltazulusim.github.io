@@ -1,0 +1,75 @@
+- id: vaaf
+  title: Aigle Azur Virtuel
+  callsign: ZI
+  icao: AAF
+  network: IVAO
+  ops: [civil]
+  hubs: [LFPO, LFPG, LFLL, LFML]
+  founded: 
+  status: active              # active | inactive
+  recruiting: true
+  director: "N. Tanguy"
+  website: https://www.aigleazur-vaaf.fr/
+  tracker: https://vamsys.io/register/vaaf
+  discord: https://discord.gg/FG639VgUjw
+  logo: /content/images/companies/vaaf-logo.png
+  banner: /content/images/companies/vaaf-banner.png
+  fleet: [A319, A320, A321, A330-200]
+  summary: "Aigle Azur Virtuel revives the legacy of Aigle Azur, offering an IVAO-partner airline with a flexible policy, custom liveries, and immersive flight experiences across MSFS, P3D, and X-Plane."
+
+# - id: dah-virtual
+#   title: DAH Virtual
+#   callsign: DAH
+#   icao: DAH
+#   network: IVAO
+#   ops: [civil]
+#   hubs: [DAAG]
+#   founded:
+#   status: active
+#   recruiting: true
+#   director: "Fares Moktefi"
+#   website: https://dz.ivao.aero/
+#   tracker:
+#   discord:
+#   logo: https://dz.ivao.aero/wp-content/uploads/2024/02/dah-virtual-768x171.png
+#   banner: https://dz.ivao.aero/wp-content/uploads/2024/02/Air-algerie-1.jpg
+#   fleet: [A330, B737]
+#   summary: "Air Algérie Virtual airline, representing national carrier operations for IVAO Algeria."
+
+# - id: getwings-va
+#   title: Get Wings VA
+#   callsign: GWZ
+#   icao: GWZ
+#   network: IVAO
+#   ops: [civil]
+#   hubs: [DAAG]
+#   founded:
+#   status: active
+#   recruiting: true
+#   director: "Ali Salem"
+#   website: https://dz.ivao.aero/
+#   tracker:
+#   discord:
+#   logo: https://dz.ivao.aero/wp-content/uploads/2024/02/Getwings-Logo-hybrid-Transparent-1800x400-logo-768x171.png
+#   banner: https://dz.ivao.aero/wp-content/uploads/2024/02/FENIX02.jpg
+#   fleet: [A320]
+#   summary: "Get Wings VA brings fun and professional virtual airline operations within IVAO Algeria."
+
+# - id: tassili-airlines-va
+#   title: Tassili Airlines VA
+#   callsign: TAL
+#   icao: TAL
+#   network: IVAO
+#   ops: [civil]
+#   hubs: [DAAG]
+#   founded: 2019
+#   status: inactive
+#   recruiting: false
+#   director: "Abdelkrim Halouani"
+#   website: https://dz.ivao.aero/
+#   tracker: https//tracker.tassili-va.com
+#   discord: https://discord.com/1234
+#   logo: https://dz.ivao.aero/wp-content/uploads/2024/02/TASSILI-LOGO.png
+#   banner: https://cdn.flightsim.to/images/24/tassili-airlines-pmdg-737-800-msfs-7t-vct-qT6nt.jpg?width=1400
+#   fleet: [B737, A320]
+#   summary: "Tassili Airlines Virtual airline, currently inactive."
