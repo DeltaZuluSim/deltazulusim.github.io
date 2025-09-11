@@ -20,6 +20,8 @@
       <option value="military">Military</option>
       <option value="helicopter">Helicopter</option>
       <option value="ga">GA</option>
+      <option value="cargo">Cargo</option>
+
     </select>
 
     <label class="dzs-visuallyhidden" for="dzs-hub">Hub</label>
@@ -38,7 +40,7 @@
         "title": {{ c.title | jsonify }},
         "callsign": {{ c.callsign | jsonify }},
         "icao": {{ c.icao | jsonify }},
-        "network": {{ c.network | default: "OFFLINE" | jsonify }},
+        "networks": {{ c.network | jsonify }},
         "ops": {{ c.ops | jsonify }},
         "hubs": {{ c.hubs | jsonify }},
         "founded": {{ c.founded | jsonify }},
@@ -81,7 +83,17 @@
           {% endif %}
 
           <div class="dzs-badges">
-            {% if c.network %}<span class="dzs-badge">{{ c.network }}</span>{% endif %}
+            {% if c.network %}
+  {% if c.network.first %}
+    {% assign dzs_nets = c.network %}
+  {% else %}
+    {% assign dzs_nets = c.network | split: "," %}
+  {% endif %}
+  {% for n in dzs_nets %}
+    <span class="dzs-badge">{{ n | strip }}</span>
+  {% endfor %}
+{% endif %}
+
             {% if c.recruiting %}<span class="dzs-badge dzs-badge-accent">recruiting</span>{% endif %}
             {% if c.status %}
               <span class="dzs-badge dzs-status-{{ c.status | downcase }}">{{ c.status }}</span>
@@ -280,7 +292,12 @@ dialog::backdrop{ background: rgba(0,0,0,.45); }
           const hay = [d.title, d.callsign, d.icao].map(norm).join(' ');
           if(!hay.includes(QQ)) return false;
         }
-        if(net.value && d.network !== net.value) return false;
+        if (net.value) {
+  const nets = Array.isArray(d.networks) ? d.networks
+              : (d.networks ? [d.networks] : []);
+  if (!nets.includes(net.value)) return false;
+}
+
         if(ops.value && !(Array.isArray(d.ops) && d.ops.includes(ops.value))) return false;
         if(H){
           const hubs = (d.hubs||[]).map(norm).join(' ');
@@ -315,7 +332,12 @@ dialog::backdrop{ background: rgba(0,0,0,.45); }
         const fields = [];
         if(d.callsign) fields.push(`<div><strong>Callsign</strong>${d.callsign}</div>`);
         if(d.icao) fields.push(`<div><strong>ICAO</strong>${d.icao}</div>`);
-        if(d.network) fields.push(`<div><strong>Network</strong>${d.network}</div>`);
+       {
+  const nets = Array.isArray(d.networks) ? d.networks
+              : (d.networks ? [d.networks] : []);
+  if (nets.length) fields.push(`<div><strong>Networks</strong>${nets.join(', ')}</div>`);
+}
+
         if(d.status) fields.push(`<div><strong>Status</strong>${d.status}</div>`);
         if(d.recruiting) fields.push(`<div><strong>Recruiting</strong>Yes</div>`);
         if(d.director) fields.push(`<div><strong>Director</strong>${d.director}</div>`);

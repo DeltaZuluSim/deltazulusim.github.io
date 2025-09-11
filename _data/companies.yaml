@@ -15,61 +15,101 @@
   logo: /content/images/companies/vaaf-logo.png
   banner: /content/images/companies/vaaf-banner.png
   fleet: [A319, A320, A321, A330-200]
-  summary: "Aigle Azur Virtuel revives the legacy of Aigle Azur, offering an IVAO-partner airline with a flexible policy, custom liveries, and immersive flight experiences across MSFS, P3D, and X-Plane."
+  summary: "Aigle Azur Virtuel revives the legacy of Aigle Azur, offering an IVAO-partner airline with a flexible policy and custom liveries."
 
-# - id: dah-virtual
-#   title: DAH Virtual
-#   callsign: DAH
-#   icao: DAH
-#   network: IVAO
-#   ops: [civil]
-#   hubs: [DAAG]
-#   founded:
-#   status: active
-#   recruiting: true
-#   director: "Fares Moktefi"
-#   website: https://dz.ivao.aero/
-#   tracker:
-#   discord:
-#   logo: https://dz.ivao.aero/wp-content/uploads/2024/02/dah-virtual-768x171.png
-#   banner: https://dz.ivao.aero/wp-content/uploads/2024/02/Air-algerie-1.jpg
-#   fleet: [A330, B737]
-#   summary: "Air Algérie Virtual airline, representing national carrier operations for IVAO Algeria."
+- id: vdah
+  title: Air Algérie Virtuel
+  callsign: AH
+  icao: DAH
+  network:  IVAO
+  ops: [civil]
+  hubs: [DAAG, DAOO, DAAE, DABB, DABC, DAUA, DAAT]
+  founded:
+  status: active
+  recruiting: true
+  director: "Fares Moktefi"
+  website: https://vamsys.io/login/dzvirtual
+  tracker:
+  discord: https://discord.gg/HKaTXugSw9
+  logo: /content/images/companies/vdah-logo.png
+  banner: /content/images/companies/vdah-banner.png
+  fleet: [A330, B737, B736; B738]
+  summary: "Air Algérie Virtual airline, representing national carrier operations for IVAO Algeria."
 
-# - id: getwings-va
-#   title: Get Wings VA
-#   callsign: GWZ
-#   icao: GWZ
-#   network: IVAO
-#   ops: [civil]
-#   hubs: [DAAG]
-#   founded:
-#   status: active
-#   recruiting: true
-#   director: "Ali Salem"
-#   website: https://dz.ivao.aero/
-#   tracker:
-#   discord:
-#   logo: https://dz.ivao.aero/wp-content/uploads/2024/02/Getwings-Logo-hybrid-Transparent-1800x400-logo-768x171.png
-#   banner: https://dz.ivao.aero/wp-content/uploads/2024/02/FENIX02.jpg
-#   fleet: [A320]
-#   summary: "Get Wings VA brings fun and professional virtual airline operations within IVAO Algeria."
+- id: vgew
+  title: Getwings VA
+  callsign: GT
+  icao: GEW
+  network: [IVAO, VATSIM]
+  ops: [civil]
+  hubs: [DAAG]
+  founded: 2022
+  status: active
+  recruiting: true
+  director: "Ali Salem"
+  website: https://virtualgetwings.com/
+  tracker:
+  discord:
+  logo: /content/images/companies/gew-logo.png
+  banner: /content/images/companies/gew-banner.png
+  fleet: [A320]
+  summary: "Getwings VA brings fun and professional virtual airline operations within IVAO Algeria."
 
-# - id: tassili-airlines-va
-#   title: Tassili Airlines VA
-#   callsign: TAL
-#   icao: TAL
-#   network: IVAO
-#   ops: [civil]
-#   hubs: [DAAG]
-#   founded: 2019
-#   status: inactive
-#   recruiting: false
-#   director: "Abdelkrim Halouani"
-#   website: https://dz.ivao.aero/
-#   tracker: https//tracker.tassili-va.com
-#   discord: https://discord.com/1234
-#   logo: https://dz.ivao.aero/wp-content/uploads/2024/02/TASSILI-LOGO.png
-#   banner: https://cdn.flightsim.to/images/24/tassili-airlines-pmdg-737-800-msfs-7t-vct-qT6nt.jpg?width=1400
-#   fleet: [B737, A320]
-#   summary: "Tassili Airlines Virtual airline, currently inactive."
+
+- id: vdbh
+  title: Domestic Airlines Virtual
+  callsign: BH
+  icao: DBH
+  network: 
+  ops: [civil]
+  hubs: [DAAT]
+  founded:
+  status: active
+  recruiting: 
+  director: ""
+  website: https://vamsys.io/login/dzvirtual
+  tracker:
+  discord: https://discord.gg/HKaTXugSw9
+  logo: /content/images/companies/vdbh-logo.png
+  banner: /content/images/companies/vdbh-banner.png
+  fleet: []
+  summary: "Domestic Airlines Virtual simulates Algeria’s new domestic carrier"
+
+- id: vdth
+  title: Tassili Airlines VA
+  callsign: SF
+  icao: DTH
+  network: [IVAO]
+  ops: [civil]
+  hubs: [DAAG]
+  founded: 2019
+  status: inactive
+  recruiting: false
+  director: "Abdelkrim Halouani"
+  website: 
+  tracker: 
+  discord: 
+  logo: /content/images/companies/vdth-logo.png
+  banner: /content/images/companies/vdth-banner.png
+  fleet: [ATR 42, ATR 72]
+  summary: "Tassili Airlines Virtual airline, currently inactive."
+
+
+- id: vkzw
+  title: Khalifa Airways Virtual
+  callsign: K6
+  icao: KZW
+  network: 
+  ops: [civil, cargo]
+  hubs: [DAAG]
+  founded: 
+  status: inactive
+  recruiting: false
+  director: "Unknown"
+  website: 
+  tracker: 
+  discord: 
+  logo: /content/images/companies/vkzw-logo.png
+  banner: /content/images/companies/vkzw-banner.png
+  fleet: [A310, A319, A320, A330, A340, B737, B777, ATR 42, ATR 72]
+  summary: "Khalifa Airways Virtual revives the iconic Algerian airline, offering civil and cargo operations within IVAO with a diverse fleet and hub in Algiers."

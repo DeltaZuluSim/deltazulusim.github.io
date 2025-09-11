@@ -44,6 +44,9 @@ main:
   # - title: "Community Resources"
   #   url: /categories/community-resources
 
+  - title: "Virtual Companies"
+    url: /companies/
+
   - title: "Contribute"
     url: /contribute/
   - title: "Privacy Policy"
