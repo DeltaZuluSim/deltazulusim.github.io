@@ -22,15 +22,15 @@
   callsign: AH
   icao: DAH
   network:  IVAO
-  ops: [civil]
+  ops: [civil, cargo]
   hubs: [DAAG, DAOO, DAAE, DABB, DABC, DAUA, DAAT]
   founded:
   status: active
   recruiting: true
-  director: "Fares Moktefi"
-  website: https://vamsys.io/login/dzvirtual
-  tracker:
-  discord: https://discord.gg/HKaTXugSw9
+  director: "Ilyes B"
+  website: 
+  tracker: https://vamsys.io/register/vairalgerie
+  discord: https://discord.gg/HKaTXugSw9 
   logo: /content/images/companies/vdah-logo.png
   banner: /content/images/companies/vdah-banner.png
   fleet: [A330, B737, B736; B738]
@@ -67,8 +67,8 @@
   status: active
   recruiting: 
   director: ""
-  website: https://vamsys.io/login/dzvirtual
-  tracker:
+  website: 
+  tracker: https://vamsys.io/register/vairalgerie
   discord: https://discord.gg/HKaTXugSw9
   logo: /content/images/companies/vdbh-logo.png
   banner: /content/images/companies/vdbh-banner.png
