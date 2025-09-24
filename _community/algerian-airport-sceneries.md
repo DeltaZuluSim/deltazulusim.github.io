@@ -44,14 +44,13 @@ resources:
 
   - icao: "DAUA"
     airport_name: "Adrar"
-    author: "EDDB2020"
-    author_url: "https://fr.flightsim.to/profile/EDDB2020"
-    notice: "This scenery is not updated anymore by the author."
-    image_url: "https://cdn.flightsim.to/images/24/adrar-daua-basic-airport-enhancement-7080-1674586463-bdPpz.jpg?width=1400"
-    download_url: "https://fr.flightsim.to/file/48583/adrar-daua-basic-airport-enhancement"
+    author: "abdo_dz"
+    author_url: "https://en.flightsim.to/profile/abdo_dz"
+    image_url: "https://cdn.flightsim.to/images/27/airport-adrar-daua-203858-1755726719-FApzI.jpg?width=1400"
+    download_url: "https://en.flightsim.to/file/96649/airport-adrar-daua"
     MSFS2020: true
     MSFS2024: false
-    
+
   - icao: "DAOI"
     airport_name: "Chlef"
     author: "moh_3431"
