@@ -1,3 +1,11 @@
+- name: "Tassili-Run-01"
+  type: "Training"
+  lat: 26.37
+  lng: 8.84
+  image: "/content/images/sceneries/tassili-run01/tassili-run0105.webp"
+  link: "/sceneries/tassili-run01/"
+  description: "SO Multiplayer - Tassili Run 01"
+
 - name: "D50E-01"
   type: "Training"
   lat: 34.38
