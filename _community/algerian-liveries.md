@@ -14,6 +14,15 @@ header:
 
 resources:
 
+  - id: "ATR 42/72-600"
+    name: "Air Algerie Domestic Airlines"
+    designer: "Asobo"
+    author: "fethelnour737"
+    author_url : "https://flightsim.to/profile/fethelnour737"
+    image_url: "https://cdn.flightsim.to/images/27/air-algerie-_domestic-airlines-321711-1752258489-1xrco.jpg"
+    download_url: "https://flightsim.to/file/94943/air-algerie-domestic-airlines-atr-72"
+    MSFS2020: true
+
   - id: "FENIX A320 V2 CFM"
     name: "Khalifa Airways"
     designer: "FENIX"

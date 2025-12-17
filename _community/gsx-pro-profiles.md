@@ -11,6 +11,15 @@ header:
   teaser: /content/images/community/gsxpro.webp
 
 resources:
+
+  - icao: 
+    airport_name: "GSX Fuel Truck - NAFTAL ALGERIA"
+    designer: 
+    author: "fethelnour737"
+    author_url : "https://flightsim.to/profile/fethelnour737"
+    image_url: "https://cdn.flightsim.to/images/26/gsx-fuel-truck---naftal--algeria-321711-1713537633-fluTG.jpg"
+    download_url: "https://deltazulusim.short.gy/gsx/naftal"
+
   - icao: "DAAG"
     airport_name: "Alger Houari Boumediene"
     designer: "NetDesign"
