@@ -44,8 +44,8 @@
   ops: [civil]
   hubs: [DAAG]
   founded: 2022
-  status: active
-  recruiting: true
+  status: inactive
+  recruiting: false
   director: "Ali Salem"
   website: https://virtualgetwings.com/
   tracker: https://vamsys.io/register/getwingsreg
