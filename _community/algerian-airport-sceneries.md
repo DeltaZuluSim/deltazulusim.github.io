@@ -164,12 +164,12 @@ resources:
 
   - icao: "DAOB"
     airport_name: "Tiaret"
-    author: "mokhtarbo33"
-    author_url : "https://en.flightsim.to/profile/mokhtarbo33"
-    image_url: "https://cdn.flightsim.to/images/25/daob-abdelhafid-boussouf-bou-chekif-tiaret-57256-1682322604-sc0ui.jpg?width=1400"
+    author: "kari5963r"
+    author_url : "https://flightsim.to/profile/kari5963r"
+    image_url: "https://cdn.flightsim.to/images/27/aroport-tiaret-daob-492664-1738249574-k6BSH.jpg"
     download_url: "https://deltazulusim.short.gy/sceneries/daob"
     MSFS2020: true
-    MSFS2024: false
+    MSFS2024: true
 ---
 
 {% include community_sceneries %}
