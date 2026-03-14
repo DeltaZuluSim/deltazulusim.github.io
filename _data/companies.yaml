@@ -38,21 +38,21 @@
 
 - id: vavt
   title: AVT CLUB
-  callsign: 
-  icao: 
-  network: 
-  ops: 
-  hubs: 
+  callsign: 7V
+  icao: AVT
+  network: [IVAO, VATSIM]
+  ops: [civil]
+  hubs: [DAAG]
   founded: 2024
   status: active
-  recruiting: 
+  recruiting: true
   director: "Sami.M"
   website: 
   tracker: 
   discord: https://discord.gg/vwr28EskKQ
   logo: /content/images/companies/avt-logo.png
   banner: /content/images/companies/avt-banner.png
-  fleet: [B738]
+  fleet: [B738, A330]
   summary: "AVT Academy, a virtual community for pilot training and flight simulation."
 
 - id: vgew
