@@ -36,6 +36,25 @@
   fleet: [A330, B737, B736; B738]
   summary: "Air Algérie Virtual airline, representing national carrier operations for IVAO Algeria."
 
+- id: vavt
+  title: AVT CLUB
+  callsign: 
+  icao: 
+  network: 
+  ops: 
+  hubs: 
+  founded: 2024
+  status: active
+  recruiting: 
+  director: "Sami.M"
+  website: 
+  tracker: 
+  discord: https://discord.gg/vwr28EskKQ
+  logo: /content/images/companies/avt-logo.png
+  banner: /content/images/companies/avt-banner.png
+  fleet: [B738]
+  summary: "AVT Academy, a virtual community for pilot training and flight simulation."
+
 - id: vgew
   title: Getwings VA
   callsign: GT

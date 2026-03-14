@@ -14,6 +14,15 @@ header:
 
 resources:
 
+  - id: "Boeing 737-800"
+    name: "AVT CLUB - 7T-FBA Othello"
+    designer: "PMDG"
+    author: "AVT_Academy"
+    author_url : "https://fr.flightsim.to/profile/AVT_Academy"
+    image_url: "https://cdn.flightsim.to/images/28/avt-c-l-u-b---livery--7t-fba--othello-825869-1769603664-20sSM.jpg"
+    download_url: "https://fr.flightsim.to/addon/103663/avt-c-l-u-b-livery-7t-fba-othello"
+    MSFS2020: true
+
   - id: "ATR 42/72-600"
     name: "Air Algerie Domestic Airlines"
     designer: "Asobo"
