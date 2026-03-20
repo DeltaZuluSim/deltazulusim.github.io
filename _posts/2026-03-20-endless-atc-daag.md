@@ -1,8 +1,15 @@
 ---
 title: "DAAG Alger Approach – Endless ATC Custom location"
 excerpt: "Realistic Endless ATC configuration for DAAG (Alger), featuring dual runway operations, custom traffic, and optimized approach flows without SIDs."
+toc: true
 header:
   teaser: /content/images/blog/endless-atc-daag.webp
+  overlay_color: "#000"
+  overlay_filter: "0.5"
+  overlay_image: /content/images/blog/endless-atc-daag.webp
+  actions:
+    - label: "<i class='fas fa-download'></i> Download"
+      url: "#download"
 
 categories:
   - Addons
@@ -12,11 +19,9 @@ tags:
   - ATC
   - Endless ATC
   - Approach
+
 ---
-
-## Overview
-
-This custom location brings **Alger Approach (DAAG – Houari Boumediene)** to Endless ATC with a focus on realism, stability, and smooth traffic flow.
+A custom location brings **Alger Approach (DAAG – Houari Boumediene)** to Endless ATC with a focus on realism, stability, and smooth traffic flow.
 
 The configuration is designed to reproduce real-world traffic patterns around Algiers while remaining fully compatible with the limitations of Endless ATC.
 
