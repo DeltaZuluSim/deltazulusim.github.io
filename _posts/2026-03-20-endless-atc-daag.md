@@ -169,7 +169,7 @@ This helps:
 ## Download
 
 Available here:  
-<a href="https://github.com/DeltaZuluSim/data/releases/download/EndlessATC.DAAG/DAAG.txt" class="btn btn--success">
+<a href="https://deltazulusim.short.gy/addons/endless-atc-daag" class="btn btn--success">
   <i class="fas fa-download"></i> Download
 </a>
 
