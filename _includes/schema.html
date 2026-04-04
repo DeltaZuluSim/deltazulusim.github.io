@@ -2,7 +2,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Organization",
-  "name": {{ site.title | jsonify }},
+  "name": {{ site.name | jsonify }},
   "alternateName": "DZS",
   "url": {{ '/' | absolute_url | jsonify }},
   "logo": {{ site.logo | absolute_url | jsonify }},
@@ -14,7 +14,7 @@
 {
   "@context": "https://schema.org",
   "@type": "WebSite",
-  "name": {{ site.title | jsonify }},
+  "name": {{ site.name | jsonify }},
   "alternateName": "DZS",
   "url": {{ '/' | absolute_url | jsonify }}
 }
