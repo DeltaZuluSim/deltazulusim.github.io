@@ -1,11 +1,14 @@
 <!-- begin _includes/seo.html -->
 {%- assign title_separator = site.title_separator | default: '-' -%}
 
-{%- assign page_title = page.title | default: site.title | replace: '|', '&#124;' -%}
-{%- assign seo_title = page_title | append: " " | append: title_separator | append: " " | append: site.title | replace: '|', '&#124;' -%}
+{%- assign page_title = page.title | default: site.title | markdownify | strip_html | strip_newlines | escape_once -%}
+{%- assign site_title = site.title | markdownify | strip_html | strip_newlines | escape_once -%}
 
-{%- assign page_title = page_title | markdownify | strip_html | strip_newlines | escape_once -%}
-{%- assign seo_title  = seo_title  | markdownify | strip_html | strip_newlines | escape_once -%}
+{%- if page.url == '/' -%}
+  {%- assign seo_title = site_title -%}
+{%- else -%}
+  {%- assign seo_title = page_title | append: " " | append: title_separator | append: " " | append: site_title -%}
+{%- endif -%}
 
 {%- assign canonical_url = page.canonical_url | default: page.url | replace: "/index.html", "/" | absolute_url %}
 
@@ -51,6 +54,7 @@
 
 {% if seo_description %}
   <meta property="og:description" content="{{ seo_description }}">
+  <meta name="application-name" content="{{ site.title }}">
 {% endif %}
 
 {% if page_large_image %}
