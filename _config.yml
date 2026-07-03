@@ -122,8 +122,11 @@ social:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/deltazulusim"
+    - label: "Discord"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.gg/BHg3QqyNnT"
 
-# Analytics
+# Analytics 
 analytics:
   provider               : false # false (default), "google", "google-universal", "google-gtag", "custom"
   google:
@@ -157,13 +160,16 @@ author:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: "https://www.instagram.com/deltazulusim"
+    - label: "Discord"
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.gg/BHg3QqyNnT"
 
 # Site Footer
 footer:
   links:
     - label: "Discord"
-      icon: "fa-brands fa-discord"
-      url: https://discord.gg/EEeKMt86xP
+      icon: "fab fa-fw fa-discord"
+      url: "https://discord.gg/BHg3QqyNnT"
     - label: "Twitter"
       icon: "fab fa-fw fa-twitter-square"
       url: https://x.com/deltazulusim
@@ -182,6 +188,7 @@ footer:
     - label: "Instagram"
       icon: "fab fa-fw fa-instagram"
       url: https://www.instagram.com/deltazulusim
+
 
 
 # Reading Files
