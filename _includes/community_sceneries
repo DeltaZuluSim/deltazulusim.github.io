@@ -22,10 +22,14 @@
   </div>
 
   <div class="flex-container" style="margin-top: 5px;">
-      <span class="left">
+        {% if resource.icao and resource.icao != "None" %}
+        <span class="left">
           ICAO: <code>{{ resource.icao }}</code>
-      </span>
-      <span class="center">
+        </span>
+        <span class="center">
+        {% else %}
+        <span class="left">
+        {% endif %}
         {% if resource.MSFS2020 == true and resource.MSFS2024 == true %}
             MSFS: <code>2020</code>/<code>2024</code>
         {% elsif resource.MSFS2020 == true %}

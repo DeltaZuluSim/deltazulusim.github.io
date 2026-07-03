@@ -15,6 +15,15 @@ header:
 resources:
 
   - icao: "None"
+    airport_name: "Algiers City Landmarks"
+    author: "walidbvnks"
+    author_url : "https://flightsim.to/profile/walidbvnks"
+    image_url: "https://cdn.flightsim.to/images/28/20260703_162023_02e4ba058053e88b_algiers-city-scenery-addon.webp"
+    download_url: "https://flightsim.to/addon/111360/algiers-city-scenery-addon"
+    MSFS2020: true
+    MSFS2024: true
+
+  - icao: "None"
     airport_name: "Constantine City"
     author: "Abdelkrim"
     author_url : "https://flightsim.to/profile/Abdelkrim"

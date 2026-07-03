@@ -181,6 +181,14 @@ civilian:
     link: "/community/algerian-airport-sceneries/#tiaret-daob"
     description: "Tiaret Airport"
 
+  - name: "None"
+    type: "City"
+    lat: 36.70
+    lng: 3.21
+    image: "https://cdn.flightsim.to/images/28/20260703_162023_02e4ba058053e88b_algiers-city-scenery-addon.webp"
+    link: "/community/algerian-city-sceneries/#algiers-city-landmarks"
+    description: "Algiers City Landmarks"
+
 military:
   - name: "DAAN"
     type: "Air base"
