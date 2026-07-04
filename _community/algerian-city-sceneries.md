@@ -19,7 +19,7 @@ resources:
     author: "walidbvnks"
     author_url : "https://flightsim.to/profile/walidbvnks"
     image_url: "https://cdn.flightsim.to/images/28/20260703_162023_02e4ba058053e88b_algiers-city-scenery-addon.webp"
-    download_url: "https://flightsim.to/addon/111360/algiers-city-scenery-addon"
+    download_url: "https://fr.flightsim.to/addon/111417/algiers-city-landmarks"
     MSFS2020: true
     MSFS2024: true
 
